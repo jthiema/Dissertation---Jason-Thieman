@@ -1,0 +1,61 @@
+\ProvidesFile{appendices/ap-FastTiming.tex}
+
+\chapter{Utilizing Induced Currents for Fast Timing Information to Realize 4-Dimensional Tracking in Pixel Detectors}
+
+\section{Overview and Motivation}
+To increase the physics reach potential of high energy collision experiments, the high luminosity LHC (HL-LHC) upgrade aims to vastly increase the instantaneous luminosity of the LHC beyond its current value. 
+As instantaneous collider luminosity increases, silicon pixel tracking detectors in HL-LHC experiments are faced with the challenge of resolving the trajectories of high energy particles in environments with high pileup, rate, and radiation.
+With an expected pileup of up to 200 events per bunch crossing at the HL-LHC, precise timing information would dramatically improve the reconstruction process by providing another dimension to separate vertices and avoid a loss of events due to pileup degradation.
+
+To achieve precise timing measurements, the HL-LHC CMS detectors has designed the MIP Timing Detector (MTD) sub-detector to measure arrival times of high-energy particles.
+The hybrid design of the MTD places LYSO scintillating crystals read-out by SiPMs in the barrel, as well as Low Gain Avalanche Diodes (LGADs) in the end-caps, between the calorimeter and muon system layers, to complement timing information provided by the electromagnetic calorimeters and provide time-of-flight information with timing resolutions on the order of a few tens of picoseconds.
+
+Hybrid silicon pixel detectors consisting of silicon sensors bump-bonded to readout chips currently constitute state of the art silicon tracking detector technology and are the front-runners for track reconstruction and vertex identification in the high instantaneous luminosity environment of the HL-LHC.
+While these detectors have high granularity for spatial measurements, the timing resolution is relatively poor, because the sensors and readout electronics have cumbersome interconnects with high capacitance additions to the pre-amplifiers. 
+Pixel detectors able to provide 4D information for tracking have not yet been realized.
+
+
+\section{Small Pixels, Signal, and Noise}
+Collaborating with Dr. Ron Lipton at Fermi National Accelerator Laboratory (FNAL), we explore whether small, low capacitance pixels integrated with fast electronics show promise for realizing the timing resolution required for 4D tracking.
+Smaller pixels provide better resolution, better efficiency by avoiding in-pixel pileup, and have higher radiation tolerance due to less leakage current per pixel.
+
+The timing resolution ($\sigma_t$) in a system limited by "jitter," i.e. early or late firing fluctuations due to the presence of noise, can be expressed as:
+\begin{equation}
+\sigma_t =\frac{\sigma_n}{\frac{d V}{d t}\vert_{V_T}} \approx t_r\frac{Noise}{Signal}
+\end{equation}
+where $\sigma_n$ is the system noise, $\frac{d V}{d t}\vert_{V_T}$ is the slope of the signal at the threshold, and $t_r$ is the rise time of the signal to the threshold crossing.
+The system noise is proportional the load capacitance, and the inverse square root of the transconductance, i.e. $\sigma_n \propto \frac{C_L}{g_m}$.
+Therefore, maximizing signal to noise, minimizing rise times $t_r$, increasing $g_m$, and minimizing load capacitance $C_L$ yield better timing resolutions.
+
+\section{3D Integration}
+For the noise component of minimizing jitter, 3-Dimensional integrated circuit (3DIC) technologies show promise for efforts towards realizing the timing resolution required for 4D tracking by enabling fine pitch, low capacitance bonding and interconnects as a replacement to bump-bonding for hybrid silicon pixel detectors. 
+The Ziptronix Direct Bonding Interconnect (DBI) technique bonds planarized silicon wafers and electrically connects layers via the insertion of Through Silicon Vias (TSV). 
+Due to lower pixel load capacitance, a hybrid, (DBI) bonded VIPIC 3D prototype assembly demonstrated nearly a factor of two decrease in noise relative to a bump-bonded assembly.
+In general, 3DIC technologies have many potential implementations for integrating silicon sensors with dense readout electronics, with advantages including radiation hardness, low mass, and decreasing costs, that could make them ideally suited for application in high-energy particle silicon pixel detectors.
+
+\section{Induced Currents for Fast Timing}
+Signal current, as registered by an electrode, begins before any charge is collected by the electrode.  
+Current is instantaneously induced in the electrode as electrostatic flux lines ending on the electrode change due to charges moving in the vicinity.
+According to the Ramo-Shockley theorem, current induced on an electrode in a multi-electrode system can be calculated from the coupling between the moving charge and the electrode, using a "weighting field," depending on geometry and doping, that is determined by setting the potential of the electrode under consideration to 1, and setting the potential of all other electrodes to 0.
+The instantaneous current registered by an electrode by a charge moving in the vicinity can be expressed in terms of charge $q$, velocity $\vec{v}$, and weighting field $vec{E_W}$ as:
+\begin{equation}
+i = -q \vec{v} \cdot \vec{E_W}
+\end{equation}
+Induced currents have a very fast rise time, but if the charge is not collected by the electrode under consideration, then the induced signal current will change sign and integrate to zero.
+For geometries where the pixel pitch is small compared to the substrate thickness, charge moving far from the surface will induce currents in a cluster of electrodes surrounding the nodes that collect charge.
+If detectors have sufficiently low capacitance couple to fast electronics, the induced current signal can be utilized to provide timing information for 4D tracking.
+
+\section{FEA Simulations with TCAD}
+Silvaco Technology Computer-Aided Design (TCAD) are used to explore models for planar sensors, in order to optimize the doping and geometry to achieve large induced currents with fast rise times.
+The TCAD simulation uses Finite Element Analysis (FEA) to simulate the electrical properties and behavior of semiconductor models, in this case by calculating the electric field in the model, the weighting fields of the individual electrodes, and the current induced at each electrode due to the motion of charge carriers in the substrate.
+Both 3D (3 x 3) and 2D (1 x 9) arrays of pixels, with aluminium electrodes coupled to a silicon substrate, were simulated.
+Different pixel pitches, substrate thicknesses, doping schemes, and bias voltages were considered for these simulations.
+Electrons are the preferred charge carrier, as they have higher mobility than holes and thus higher velocity, and larger induced currents, for the same electric field strength.
+For the doping scheme, n-on-n is preferred over n-on-p, because the electric field will be maximal near the backside, and thus induce larger signals.
+Intermediate p-regions between electrodes, called "p-stops," help shape the electric field and prevent unwanted diffusion of charges away from electrodes.
+Two kinds of pulses were injected into the bulk of the substrate, either localized at a specific depth to simulate an absorbed X-ray, or uniformly through the depth at an angle of incidence to simulate a Minimum Ionizing Particle (MIP).
+The simulated currents are injected into a Simulation Program with Integrated Circuit Emphasis (SPICE) model of an amplifier including noise, and the timing resolution is extracted from a Gaussian fit of the resulting pulses.
+
+
+
+\micro\metre
