@@ -282,6 +282,7 @@
 % See
 %     https://mirror.math.princeton.edu/pub/CTAN/macros/latex/contrib/siunitx/siunitx.pdf
 \usepackage{siunitx}
+
   \DeclareBinaryPrefix\kibi{Ki}{10}
   \DeclareBinaryPrefix\mebi{Mi}{20}
   \DeclareBinaryPrefix\gibi{Gi}{30}
@@ -335,6 +336,7 @@
   \DeclareSIUnit \lb      {lb}                                  % pound
   \DeclareSIUnit \lm      {lm}                                  % \lumen
   \DeclareSIUnit \lx      {lx}                                  % \lux
+  \DeclareSIUnit \micron  {\mu m}
   \DeclareSIUnit \MJ      {MJ}                                  % \mega\joule
   \DeclareSIUnit \mbar    {mbar}                                % \milli\bar
   \DeclareSIUnit \min     {min}                                 % \minute
