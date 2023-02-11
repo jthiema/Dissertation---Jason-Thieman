@@ -37,23 +37,23 @@ The lists of triggers for each of the three years were provided in collaboration
 The dilepton final state of \ttbar events is characterized by the presence of at least two high-\pT isolated leptons with opposite electric charge, large missing transverse energy (\MET), and two jets resulting from the hadronization of bottom quarks.
 The identification and reconstruction of the different objects is performed using the particle-flow (PF) event-reconstruction algorithm, which combines information from all the raw sub-detector signals to accurately identify and reconstruct individual particle objects for each event. 
 \subsection{Electrons}
-Electron candidates are selected from the reconstructed GSF electrons with $p_{T}>$ 15 \GeV and $\abs{\eta_{SuperCluster}}<$ 2.4, removing the barrel-endcap gap 1.4442 $< \abs{\eta_{SuperCluster}}<$ 1.566. 
+Electron candidates are selected from the reconstructed Gaussian Sum Filter {GSF) electrons with $\pT > \SI{15}{\GeV}$ and $\abs{\eta_{SuperCluster}}<$ 2.4, removing the barrel-endcap gap 1.4442 $< \abs{\eta_{SuperCluster}}<$ 1.566. 
 Selected electrons must to pass the tight identification tracking requirements, including relative isolation, as recommended by the CMS EGamma Physics Object Group.
 Corrections to scale the raw energy measurements and smear the electron resolutions, to match the accuracy and precision of reconstructed electrons in MC simulated data to those in recorded data, are also applied.
 \subsection{Muons}
-Particle-Flow (PF) muons selected for this measurement are required to be reconstructed as Global Muons, relatively isolated, with $p_{T}>$ 15 GeV and $\abs{\eta}<$ 2.4, and to be identified as passing tight identification tracking criteria recommended by the CMS Muon Physics Object Group.
+Particle-Flow (PF) muons selected for this measurement are required to be reconstructed as Global Muons, relatively isolated, with $\pT > \SI{15}{\GeV}$ and $\abs{\eta}<$ 2.4, and to be identified as passing tight identification tracking criteria recommended by the CMS Muon Physics Object Group.
 Corrections to scale the raw energy measurements and smear the muon resolutions, to match the accuracy and precision of reconstructed muons in MC simulated data to those in recorded data, are also applied.
 \subsection{Jets}
 Particle candidates found by the PF algorithm are clustered into jets using the anti-kT algorithm with distance parameter $R = 0.4$ (AK4). 
-Selected jets should have $p_{T} >$ 30 GeV, $\abs{\eta} <2.4$, and pass tight jet identification requirements recommended by CMS Jet-MET Physics Object Group.
-In order to remove overlap of selected jets with the selected leptons, jet objects within $\Delta R(jet,lepton)<$ 0.4 of selected leptons are not counted, where $\Delta R$ is defined as the square root of the pseudorapidity difference and the azimuthal difference, added in quadrature, and is invariant under longitudinal Lorentz boosts.
+Selected jets should have $\pT > \SI{30}{\GeV}$, $\abs{\eta} <2.4$, and pass tight jet identification requirements recommended by CMS Jet-MET Physics Object Group.
+In order to remove overlap of selected jets with the selected leptons, jet objects within $\Delta R(jet,lepton) < 0.4$ of selected leptons are not counted, where $\Delta R$ is defined as the square root of the pseudorapidity difference and the azimuthal difference, added in quadrature, and is invariant under longitudinal Lorentz boosts.
 \subsection{Missing Transverse Energy}
 In order to reduce the instrumental noise in the detector, \MET filters are applied as is recommended by CMS Jet-MET Physics Object Group.
 An event selection requirement of $\MET > 100$ is included because of the high threshold of \MET triggers.
 \subsection{Event Selection Criteria}
 Events with exactly two high-\pT isolated PF leptons (electrons or muons) with opposite electric charge, PF leptons (electrons or muons) are selected. 
-Both electrons and muons are required to have $\abs\eta < 2.4$, with $p_{T} >$ 25 \GeV ($p_{T} >$ 15 \GeV) for the leading (sub-leading) lepton.  
-The invariant mass of the two leptons is required to be greater than 20 \GeV.  
+Both electrons and muons are required to have $\abs\eta < 2.4$, with $\pT > \SI{25}{\GeV}$ ($\pT > \SI{15}{\GeV}$) for the leading (sub-leading) lepton.  
+The invariant mass of the two leptons is required to be greater than \SI{20}{\GeV}.  
 Selected events are required to have at least one jet passing the loose working point of the DeepCSV b-tagging algorithm.
 
 \section{Statistical and Systematic Uncertainties}
@@ -105,7 +105,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2016preVFP_TrigSF/g_lepBpt_emu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2016preVFP_TrigSF/g_emu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2016preVFP data set in the $e\mu$ channel as a function of electron and muon \pT.
+    \caption{Efficiencies and scale factors for the 2016preVFP data set in the \emu channel as a function of electron and muon \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2016preVFP_1}
@@ -122,7 +122,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2016preVFP_TrigSF/g_lepBpt_ee_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2016preVFP_TrigSF/g_ee_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2016preVFP data set in the $ee$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2016preVFP data set in the \ee channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2016preVFP_2}
@@ -139,7 +139,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2016preVFP_TrigSF/g_lepBpt_mumu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2016preVFP_TrigSF/g_mumu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2016preVFP data set in the $\mu\mu$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2016preVFP data set in the \mumu channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2016preVFP_3}
@@ -156,7 +156,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.50\textwidth]{fig_2016preVFP_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.50\textwidth]{fig_2016preVFP_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016preVFP data set in the $e\mu$ (top), $ee$ (middle) and $\mu\mu$ (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016preVFP data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
     \label{TrigSF_2016preVFP_4}
   \end{center}
 \end{figure}
@@ -175,7 +175,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2016postVFP_TrigSF/g_lepBpt_emu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2016postVFP_TrigSF/g_emu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2016postVFP data set in the $e\mu$ channel as a function of electron and muon \pT.
+    \caption{Efficiencies and scale factors for the 2016postVFP data set in the \emu channel as a function of electron and muon \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2016postVFP_1}
@@ -192,7 +192,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2016postVFP_TrigSF/g_lepBpt_ee_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2016postVFP_TrigSF/g_ee_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2016postVFP data set in the $ee$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2016postVFP data set in the \ee channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2016postVFP_2}
@@ -209,7 +209,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2016postVFP_TrigSF/g_lepBpt_mumu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2016postVFP_TrigSF/g_mumu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2016postVFP data set in the $\mu\mu$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2016postVFP data set in the \mumu channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2016postVFP_3}
@@ -226,7 +226,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.50\textwidth]{fig_2016postVFP_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.50\textwidth]{fig_2016postVFP_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016postVFP data set in the $e\mu$ (top), $ee$ (middle) and $\mu\mu$ (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016postVFP data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
     \label{TrigSF_2016postVFP_4}
   \end{center}
 \end{figure}
@@ -245,7 +245,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2017_TrigSF/g_lepBpt_emu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2017_TrigSF/g_emu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2017 data set in the $e\mu$ channel as a function of electron and muon \pT.
+    \caption{Efficiencies and scale factors for the 2017 data set in the \emu channel as a function of electron and muon \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2017_1}
@@ -262,7 +262,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2017_TrigSF/g_lepBpt_ee_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2017_TrigSF/g_ee_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2017 data set in the $ee$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2017 data set in the \ee channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2017_2}
@@ -279,7 +279,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2017_TrigSF/g_lepBpt_mumu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2017_TrigSF/g_mumu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2017 data set in the $\mu\mu$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2017 data set in the \mumu channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2017_3}
@@ -296,7 +296,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.50\textwidth]{fig_2017_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.50\textwidth]{fig_2017_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2017 data set in the $e\mu$ (top), $ee$ (middle) and $\mu\mu$ (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2017 data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
     \label{TrigSF_2017_4}
   \end{center}
 \end{figure}
@@ -315,7 +315,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2018_TrigSF/g_lepBpt_emu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2018_TrigSF/g_emu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2018 data set in the $e\mu$ channel as a function of electron and muon \pT.
+    \caption{Efficiencies and scale factors for the 2018 data set in the \emu channel as a function of electron and muon \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2018_1}
@@ -332,7 +332,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2018_TrigSF/g_lepBpt_ee_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2018_TrigSF/g_ee_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2018 data set in the $ee$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2018 data set in the \ee channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2018_2}
@@ -349,7 +349,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.32\textwidth]{fig_2018_TrigSF/g_lepBpt_mumu_data.pdf}
       \includegraphics[width=0.32\textwidth]{fig_2018_TrigSF/g_mumu_lepBpt_FullSystUncBand.pdf}\\
     \end{tabular}
-    \caption{Efficiencies and scale factors for the 2018 data set in the $\mu\mu$ channel as a function of leading and sub-leading lepton \pT.
+    \caption{Efficiencies and scale factors for the 2018 data set in the \mumu channel as a function of leading and sub-leading lepton \pT.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_2018_3}
@@ -366,7 +366,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
       \includegraphics[width=0.50\textwidth]{fig_2018_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.50\textwidth]{fig_2018_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2018 data set in the $e\mu$ (top), $ee$ (middle) and $\mu\mu$ (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2018 data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT.}
     \label{TrigSF_2018_4}
   \end{center}
 \end{figure}
@@ -375,7 +375,7 @@ Values of $\alpha$ as a function of leading and sub-leading lepton \pT, eta, and
 \newpage
 \section{Search for Lorentz Invariance Violation in \ttbar Production}
 Lorentz symmetry, i.e. that the laws of physics are the same in all inertial frames of reference, is a fundamental principle of general relativity and relativistic quantum field theories.
-The search for violation of Lorentz symmetry involves looking for deviations from this symmetry, which could indicate the presence of new physics BSM.
+The search for violation of Lorentz symmetry involves looking for deviations from this symmetry, which could indicate the presence of new physics Beyond the Standard Model (BSM).
 One method to test the validity of Lorentz symmetry is to search for a modulation of the \ttbar cross section as a function of sidereal time (the orientation of the experiment relative to the fixed position of stars in the sky).
 In order to accommodate a search and provide time dependence, the dilepton trigger efficiency scale factors were measured 1-Dimensionally as a function of sidereal time using the same method outlined above, with the exception of not including the number of vertices partition as a source of event topology systematic uncertainty.
 \subsection{Translating UNIX Time to Sidereal Time}
@@ -390,8 +390,8 @@ The following formula is used to translate UNIX time to sidereal time:
 In this equation:
 \begin{itemize}
 \item $\Omega_{sidereal}$ is the angular velocity of earth's rotation around its axis in sidereal time: $\Omega_{sidereal} = 2\pi / 86400 s^{-1}$ (sidereal). 
-\item On the other hand, $\Omega_{UTC}$ is the angular velocity of earth's rotation around its axis in UTC time: $\Omega_{UTC} = 2\pi / 86164 s^{-1}$ (UTC). 
-\item The symbol $t_{UNIX}$ represents the event timestamp recorded at CMS, in UNIX time; this is the number of UTC seconds since the UNIX epoch, i.e. the 1st of January 1970. However, handling large number of seconds is sometimes not practical and a $t_0$ origin is subtracted to set the origin at the first second of 2016.
+\item $\Omega_{UTC}$ is the angular velocity of earth's rotation around its axis in UTC time: $\Omega_{UTC} = 2\pi / 86164 s^{-1}$ (UTC). 
+\item $t_{UNIX}$ is the event timestamp recorded at CMS, in UNIX time; this is the number of UTC seconds since the UNIX epoch, i.e. the 1st of January 1970. However, handling large number of seconds is sometimes not practical and a $t_0$ origin is subtracted to set the origin at the first second of 2016.
 \item The azimuth angle $\phi_{UNIX}$ encodes the phase between the Unix epoch and "J2000", which is the origin of sidereal time count. J2000 is defined as the direction pointed by the crossing of ecliptic and equator plans, at noon the 1st of January 2000, on the side of the earth were the Sun moves from the Southern hemisphere to the Northern hemisphere. 
 \item The azimuth $\phi_{longitude}$ is the effective longitude of the beam at CMS relative to the Greenwich meridian, in radians.
 \end{itemize}
@@ -407,7 +407,7 @@ In this equation:
       \includegraphics[width=0.32\textwidth]{fig_2016_sidereal/g_emu_sidereel_FullSystUncBand.pdf}
       \includegraphics[width=0.50\textwidth]{fig_2016_sidereal/g_emu_sidereel_ErrorsBreakdown.pdf}\\
     \end{tabular}
-    \caption{Trigger scale factors for the 2016 data set in the $e\mu$ channel as a function of sidereal time.
+    \caption{Trigger scale factors for the 2016 data set in the \emu channel as a function of sidereal time.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_SideReal_2016_1}
@@ -424,7 +424,7 @@ In this equation:
       \includegraphics[width=0.32\textwidth]{fig_2017_sidereal/g_emu_sidereal_FullSystUncBand.pdf}
       \includegraphics[width=0.50\textwidth]{fig_2017_sidereal/g_emu_sidereal_ErrorsBreakdown.pdf}\\
     \end{tabular}
-    \caption{Trigger scale factors for the 2017 data set in the $e\mu$ channel as a function of sidereal time.
+    \caption{Trigger scale factors for the 2017 data set in the \emu channel as a function of sidereal time.
             The error bars indicate the statistical uncertainty, and the shaded band corresponds to the systematic uncertainty.
             }
     \label{TrigSF_SideReal_2017_1}
