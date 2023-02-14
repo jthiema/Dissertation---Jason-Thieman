@@ -526,6 +526,7 @@
 % is not loaded and LuaLaTeX should not be used.
 \usepackage[compat=1.1.0]{tikz-feynman}
 
+
 % The vertical space between a table heading and the table contents
 % in a tabular environment.
 \newcommand{\tabularspace}{\noalign{\vspace*{2pt}}}
@@ -534,19 +535,22 @@
 % but 1 is small and high and 2 is small and low.
 \usepackage{xfrac}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
 
 \newcommand{\ttbar}{\ensuremath{t\bar{t}}\xspace}
 \renewcommand{\pp}{\ensuremath{pp}\xspace}
-\newcommand{\beamenergy}{\ensuremath{\sqrt{s}=13~\text{Te\hspace{-.08em}V}}\xspace}
-\newcommand{\invfb}{fb$^{-1}$}
-\newcommand{\lumivalueRuniiUL}{137.7\xspace \invfb}
-\newcommand{\lumierrRuniiUL}{1.6\%}
+\newcommand{\beamenergy}{\ensuremath{\sqrt{s}=\SI{13}{\TeV}}\xspace}
+\newcommand{\invfb}{\ensuremath{\si{\femto \b}^{-1}}\xspace}
+\newcommand{\lumivalueRuniiUL}{137.7 \invfb \xspace}
+\newcommand{\lumierrRuniiUL}{1.6\% \xspace}
 
 \renewcommand{\ee}{\ensuremath{ee}\xspace}
 \newcommand{\emu}{\ensuremath{e\mu}\xspace}
 \newcommand{\mumu}{\ensuremath{\mu\mu}\xspace}
 
-\newcommand{\metxy}{\ensuremath{E\!\!\!\!/_\text{x,y}}}
+\newcommand{\metxy}{\ensuremath{E\!\!\!\!/_\text{x,y}}\xspace}
 \newcommand{\pTmiss}{\ensuremath{\pT^\text{miss}}\xspace}
 \newcommand{\ETmiss}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
 \newcommand{\MET}{\ETmiss}
@@ -667,7 +671,8 @@
 % Put chapter \include commands here.
 %
 \include{chapters/ch-Motivation_Theory}
-
+\include{chapters/ch-LHC_CMS}
+\include{chapters/ch-Top_Quark_Physics}
 
 
 

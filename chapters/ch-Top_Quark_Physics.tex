@@ -1,0 +1,391 @@
+\ProvidesFile{chapters/ch-Top_Quark_Physics.tex}
+
+\chapter{Top Quark Physics}
+The top quark was predicted in 1973 by Kobayashi and Maskawa, when the Cabibbo matrix was extended to the CKM matrix in order to accommodate the experimental discovery of CP-violation in precision measurements of kaon regeneration.
+This extension necessarily required three quark generations, when at the time only the up, down, and strange quarks were known.
+The charm quark was discovered in 1974 and the bottom quark in 1976.
+After searching for two decades, the top quark was finally discovered in 1995 at Fermi National Acceleration Laboratory (FNAL), jointly by the CDF and D0 Tevatron Experiments.
+It is the heaviest elementary particle ever discovered, with a measured mass $m_t = 172.69 \pm 0.30 \; \si{\GeV}$~\cite{bib:PDG}, the top quark has mass equivalent to a Tungsten isotope containing 184 nucleons; it is $\sim 35$ times heavier than the next heaviest quark, the bottom quark~\ref{QuarkMasses}.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{c}
+        \includegraphics[width=0.325\textwidth]{fig_TopQuark/TopQuarkMass.png}
+        \includegraphics[width=0.45\textwidth]{fig_TopQuark/LHC_topmass_oct22.pdf}
+    \end{tabular}
+    \caption{The top quark is the heaviest elementary particle ever discovered and is $\sim 35$ times heavier than the next heaviest quark, the bottom quark (Left).
+            Summary of the ATLAS and CMS direct measurements of top quark mass (Right)~\cite{LHCTopWGSummaryPlots}.
+            }
+    \label{QuarkMasses}
+  \end{center}
+\end{figure}
+Due to its very large mass, the top quark has a very short life time, or equivalently, a large decay width.
+The top quark full decay width is larger than the QCD hadronization scale and much larger than the spin decorrelation scale.
+Thus, not only do the top quarks decay before hadronizing to form bound states, but also their properties, including spin information, are transferred to their decay products.
+The spin information of top quarks is observable in the angular kinematic distributions of their decay products.
+These properties makes top quarks unique in the quark sector, as top quark measurements are the only opportunity to study the properties of bare quarks, free of confinement effects.
+
+\section{Top Quark Pair Production}
+Because the large mass, production of top quarks have only been possible by Tevatron and LHC high-energy accelerator experiments.
+At these colliders, the majority of top quarks are produced in \ttbar pairs by the strong interaction, but single $t$ production by the electroweak interaction is also possible.
+For \ttbar production, three parton production processes are possible at hadron colliders: gluon-gluon ($gg$) fusion, quark/anti-quark ($q\bar{q}$) annihilation, and quark-gluon scattering.
+While at the Tevatron quark$\slash$anti-quark annihilation was the dominant production mechanism, for \beamenergy proton-proton collisions at the LHC, the gluon density of the proton parton distribution function (PDF), i.e. the probability density $f$ of finding a specific parton within the proton with a certain fraction $x$ of the proton's longitudinal momentum at particular resolution scale $\mu_F = Q$, is much higher than the quark density~\ref{Parton_Distribution_Functions}, and $gg$ fusion accounts for $\sim 90 \%$ of \ttbar production.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{c}
+        \includegraphics[width=0.80\textwidth]{fig_TopQuark/Parton_Distribution_Functions.png}
+    \end{tabular}
+    \caption{The proton PDF gives the probability density $f$ of finding a specific parton within the proton with a certain fraction $x$ of the proton's longitudinal momentum at resolution scale $\mu_F = Q$.
+    Shown for scales $Q = \SI{3.1}{\GeV}$ (Left) and at $Q = \SI{100}{\GeV}$ (Right), according to the NNPDF collaboration~\cite{Ball:2267455}.
+            }
+    \label{Parton_Distribution_Functions}
+  \end{center}
+\end{figure}
+~\cite{Ball:2267455}
+The inclusive \ttbar production cross-section in proton-proton ($pp$) collisions~\ref{ttbar_crosssection} is calculated by convoluting the proton PDFs with the partonic cross-sections, and summing over all parton constituents of the proton, i.e. gluons, valence quarks, and sea quarks:
+\begin{align}
+\sigma_{\ttbar}\left(s, m_{\ttbar}\right)=\sum_{i, j=g, q, \bar{q}} \int d x_i d x_j f_i\left(x_i, \mu_F^2\right) f_j\left(x_j, \mu_F^2\right) \cdot \hat{\sigma}_{i j \rightarrow \ttbar}\left(\hat{s}, m_{\ttbar}, \mu_F, \mu_R, \alpha_S(\mu_R)\right)
+\label{ttbar_crosssection}
+\end{align}
+where , $f_{i(j)}$ are the proton PDF, $x_{i(j)}$ are the parton momentum fraction of the proton longitudinal momentum, $\mu_F$ is the factorization scale, $\sigma_{i j \rightarrow \ttbar}$ are the exclusive partonic cross-sections for \ttbar production, $\hat{s} = s \cdot x_i \cdot x_j$ is the squared center-of-mass energy of the parton collision, $m_{\ttbar}$ is the \ttbar invariant mass, $\mu_R$ is the renormalization scale, $\alpha_s(\mu_R)$ is the coupling constant of the strong interaction, and \beamenergy is the center-of-mass energy of the proton-proton collision.
+The factorization scale $\mu_F$ is arbitrarily chosen and usually set to the momentum transfer $Q$.
+The renormalization scale $\mu_R$ is the arbitrarily chosen high-energy cutoff for the renormalization procedure, used in perturbation theory to separate divergences from higher order corrections.
+The calculation of $\sigma_{i j \rightarrow \ttbar}$ involves using Fermi's golden rule and the scattering matrix elements of the incoming partons and outgoing \ttbar pair, integrating over the phase space, summing over the outgoing spin and color states, and averaging over the incoming ones.
+For hard parton scattering processes at high energy proton colliders $\alpha_S(\mu_R) << 1$, so the partonic cross sections can be expanded in a power series expansion of $\alpha_S$ and be calculated in perturbation theory. 
+Perturbative calculations to accuracies $\mathcal{O}(\alpha^2_S)$, $\mathcal{O}(\alpha^3_S)$, and $\mathcal{O}(\alpha^4_S)$ are referred to as leading-order (LO), next-to-leading-order (NLO), and next-to-next-to-leading-order (NNLO), respectively.
+For QCD \ttbar production, three channels of LO $gg$ fusion and one channel of LO $q\bar{q}$ annihilation parton production processes are possible.
+LO Feynman diagrams for these processes are shown in figure~\ref{ttbar_production_LO_feynman_diagrams}.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{cccc}
+        \includegraphics[width=0.225\textwidth]{fig_TopQuark/feynman_ttbar_LHC_gggtt.png}
+        \includegraphics[width=0.225\textwidth]{fig_TopQuark/feynman_ttbar_LHC_ggttt.png}
+        \includegraphics[width=0.225\textwidth]{fig_TopQuark/feynman_ttbar_LHC_ggttbart.png}
+        \includegraphics[width=0.225\textwidth]{fig_TopQuark/feynman_ttbar_LHC_qqgtt.png}
+    \end{tabular}
+    \caption{LO Feynman diagrams for QCD \ttbar production: three channels of $gg$ fusion and one channel of $q\bar{q}$ annihilation~\cite{d0_diagrams}.
+            }
+    \label{ttbar_production_LO_feynman_diagrams}
+  \end{center}
+\end{figure}
+Quark-gluon scattering can also produce \ttbar pairs, but only at NLO and higher orders.
+At NNLO with next-to-next-to-leading-logarithmic (NNLL) precision for \beamenergy, assuming $m_t = \SI{172.5}{\GeV}$, the inclusive \ttbar production cross-section is calculated to be $\sigma_{\ttbar} = 831.76 \substack{+19.77 \\ -29.20} \; (\text{Scale}) \; \pm 35.06 \; (\text{PDF} + \alpha_S) \; \si{\pico \b}$.
+A summary of \ttbar cross-section measurements by LHC and Tevatron experiments as a function of the centre-of-mass energy, as well as a summary of \ttbar cross-section measurements by ATLAS and CMS at \beamenergy are shown in figure~\ref{ttbar_cross-section}.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{cc}
+        \includegraphics[width=0.50\textwidth]{fig_TopQuark/tt_curve_toplhcwg_nov22.pdf}
+        \includegraphics[width=0.30\textwidth]{fig_TopQuark/tt_xsec_13TeV_nov22.pdf}
+    \end{tabular}
+    \caption{Summary of LHC and Tevatron measurements of the top-pair production cross-section as a function of the centre-of-mass energy compared to the NNLO QCD calculation complemented with NNLL resummation (Left).
+    Summary of measurements of the top-pair production cross-section at \beamenergy compared to the exact NNLO QCD calculation complemented with NNLL resummation (Right)~\cite{LHCTopWGSummaryPlots}.
+            }
+    \label{ttbar_cross-section}
+  \end{center}
+\end{figure}
+
+\section{Decays of Top Quark Pairs}
+The top quark decay width $\Gamma_t$ implies a lifetime of $\tau_t = \frac{1}{\Gamma_t}=\SI{4.6e-25}{\s}$ before decaying via the weak interaction into an on-shell $W$-boson and and down-type quark ($t \rightarrow W^+ q$).
+The branching ratio of each mode can be calculated using elements of the CKM matrix $B_x = \frac{\vert V_{tx} \vert^2}{\vert V_{tb} \vert^2 + \vert V_{ts} \vert^2 + \vert V_{td} \vert^2}$, and while any of the down-type quarks are possible, because $\vert V_{tb} \vert = 0.999118 \; >> \; \vert V_{ts} \vert = 0.04110 \; \text{or} \; \vert V_{td} \vert = 0.00857$~\cite{bib:PDG}, $t \rightarrow W^+ b$ dominates with a branching ratio $ B_b \approx 99.8\%$.
+
+The $W$-boson can decay hadronically $W^+ \rightarrow q \bar{q^\prime}$, where $q$ is an up-type quark ($u$ or $c$) and $\bar{q^\prime}$ is an anti-down-type quark ($d$ or $s$) of the same generation, or leptonically $W^+ \rightarrow \bar{\ell} \nu_\ell$, where $\bar{\ell}$ is an anti-lepton ($\bar{e}$, $\bar{\mu}$, or $\bar{\tau}$) and $\nu_\ell$ is a neutrino of the same lepton flavor~\ref{t_decay}.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{cc}
+        \includegraphics[width=0.30\textwidth]{fig_TopQuark/feynman_t_decay_Vtb_blue.png}
+        \includegraphics[width=0.30\textwidth]{fig_TopQuark/feynman_t_decay_ljetsqq_pink.png}
+    \end{tabular}
+    \caption{The branching modes of $t \rightarrow W^+ q$ depend on the values of CKM matrix elements (Left).
+             The $W$-boson can decay hadronically or leptonically (Right)~\cite{d0_diagrams}.
+    }
+    \label{t_decay}
+  \end{center}
+\end{figure}
+Ignoring phase space considerations, the relative branching fractions of the hadronic and leptonc decay modes are given by the ratio of flavor and color combinations:
+\begin{align}
+\frac{\text { hadronic }}{\text { leptonic }}=\frac{\{u \bar{d}, c \bar{s} \} \times \{R, B, G\}}{\{e \bar{\nu_e}, \mu \bar{\nu_\mu}, \tau \bar{\nu_\tau} \}}=6 / 3
+\end{align}
+Including phase space considerations, the hadronic $W$-boson decay mode occurs $\sim 67.4 \%$ of the time, and the lepton mode occurs the other $\sim 32.6 \%$~\cite{bib:PDG}.
+
+For a \ttbar pair, depending on the $W$-boson decays of the $t$ and $\bar{t}$, there are three decay modes: 
+\begin{itemize}
+    \item {\bf Fully Hadronic:} $t\bar{t} \rightarrow W^+ b \; W^- \bar{b} \rightarrow q \bar{q^\prime} b \; \bar{q^{\prime\prime}}  q^{\prime\prime\prime} \bar{b}$, also referred to as "all jets"
+    \item {\bf Semi-Leptonic:} $t\bar{t} \rightarrow W^+ b \; W^- \bar{b} \rightarrow  q \bar{q^\prime} b \; \ell \bar{\nu_{\ell}} \bar{b} $ or $t\bar{t} \rightarrow W^+ b \; W^- \bar{b} \rightarrow  \bar{\ell} \nu_\ell b \; \bar{q^{\prime\prime}}  q^{\prime\prime\prime} \bar{b}$, also referred to as "lepton + jets"
+    \item {\bf Dileptonic:} $t\bar{t} \rightarrow W^+ b \; W^- \bar{b} \rightarrow \bar{\ell} \nu_\ell b \; \ell^{\prime} \bar{\nu_{\ell^{\prime}}} \bar{b}$
+\end{itemize}
+Examples of LO Feynman diagrams for the \ttbar decay modes are shown in figure~\ref{Top_Pair_Decay_FeynmanDiagrams}.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{c}
+        \includegraphics[width=0.90\textwidth]{fig_TopQuark/ttbar_decay_feynman_diagrams.png}
+    \end{tabular}
+    \caption{Examples of LO Feynman diagrams for the \ttbar decay modes: Fully Hadronic (Left), Semi-Leptonic (Middle), and Dileptonic (Right)~\cite{d0_diagrams}
+            }
+    \label{Top_Pair_Decay_FeynmanDiagrams}
+  \end{center}
+\end{figure}
+Because hadronic $W$-boson decay modes are more common than leptonic ones, for \ttbar decays the dileptonic mode occurs least often $\sim 10.7 \%$~\cite{bib:PDG}.
+A schematic classifying \ttbar decay modes, together with a chart showing the relative branching fractions, is shown in figure~\ref{Top_Pair_Decay_Channels}.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{cc}
+        \includegraphics[width=0.40\textwidth]{fig_TopQuark/Top_Pair_Decay_Channels.png}
+        \includegraphics[width=0.45\textwidth]{fig_TopQuark/Top_Pair_Branching_Fractions.png}
+    \end{tabular}
+    \caption{A schematic classifying \ttbar decay modes (Left), and chart showing the relative branching fractions (Right)~\cite{d0_diagrams}
+            }
+    \label{Top_Pair_Decay_Channels}
+  \end{center}
+\end{figure}
+Furthermore, $/tau$ can decay either hadronically or leptonically via a virtual $W$-boson.
+For lepton decays of $\tau \rightarrow \ell \bar{\nu_\ell} \nu_\tau$, the $\tau$ decay into a lepton, an anti-neutrino of the same lepton flavor, and a tau flavor neutrino.
+The lepton branching fractions of $\tau$ decays are $\sim 17.82 \%$ for $\ell = e$ and $\sim 17.39 \%$ for $\ell = \mu$~\cite{bib:PDG}.
+Therefore, including $\tau$ decays, the \ttbar dileptonic final state branching fraction is $\sim 6.6 \%$.
+
+\section{Top Quark Spin in \ttbar Production and Top Decay}
+In general, hadronization of quarks dilutes their spin information.
+Moreover, the spins of quarks can be flipped by processes such as gluon radiation, causing spin decorrelation.
+For the top quark however, it has already been mentioned that the full decay width $\Gamma_t = 1.42 \substack{+0.19 \\ -0.15} \; \si{\GeV}$~\cite{bib:PDG} is larger than the QCD hadronization scale ($\lambda_{QCD} \approx \SI{0.38}{\GeV}$~\cite{Groote_1998}) and much larger than the spin decorrelation scale ($\lambda_{QCD}^2/m_t \sim \SI{0.08}{\MeV}$~\cite{Stelzer_1996}).
+Thus, not only does a top quark decay before hadronizing to form bound states, but also its spin properties are transferred, without dilution, to its decay products and that information is observable in their angular kinematic distributions.
+These properties makes top quarks unique in the quark sector, as top quark measurements are the only opportunity to study the spin properties of free quarks.
+
+For the spin quantization axes, we consider the top quark helicity basis ($\hat{k}, \hat{n}, \hat{r}$) in the zero momentum frame (ZMF) of the \ttbar system.
+In this reference frame, the helicity axis $\hat{k}$, is defined as the direction of the top quark.
+The axis $\hat{n}$ is transverse to the production plane made by $\hat{k}$ direction of the incoming parton $\hat{p}$, i.e. the direction of the proton beam $\hat{z}$, and the axis $\hat{r}$ is orthogonal to the other two axes, forming a right-handed coordinate system:
+\begin{align}
+\begin{array}{c}
+\hat{n}=\frac{\operatorname{sign}(\cos \Theta)}{\sin \Theta}(\hat{p} \times \hat{k}) \\
+\hat{r}=\frac{\operatorname{sign}(\cos \Theta)}{\sin \Theta}(\hat{p} - \hat{k}\cos \Theta)
+\end{array}
+\label{helcity_basis}
+\end{align}
+where $\Theta$ is the top quark scattering angle and $\operatorname{sign}(\cos \Theta)$ helps defines a “forward” direction for each event, the importance of which will be made explicit later, so that $\hat{n}$ and $\hat{r}$ flip signs as $\Theta$ crosses $\frac{\pi}{2}$.
+The helicity basis spin quantization axes are shown in figure~\ref{helicity_basis}.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{c}
+        \includegraphics[width=0.9\textwidth]{fig_TopQuark/helicity_basis.png}
+    \end{tabular}
+    \caption{The helicity basis spin quantization axes in the \ttbar ZMF;
+            $\hat{n}$ and $\hat{r}$ flip signs as $\Theta$ crosses $\frac{\pi}{2}$.
+            }
+    \label{helicity_basis}
+  \end{center}
+\end{figure}
+
+At LO, the kinematic and spin properties of a \ttbar pair can be completely described in the \ttbar ZMF by the invariant mass $m_{\ttbar}$ and the top scattering angle $\Theta$.
+Helicity is defined as spin direction projected onto the linear momentum direction, and for massive particles, helicity is reference frame dependent.
+In the helicity basis of the \ttbar ZMF, squared matrix elements for the $q\bar{q}$ annihilation LO Feynman diagram in figure~\ref{ttbar_production_LO_feynman_diagrams} separated into like-helicity ($L L, R R$) and unlike-helicity ($L R, R L$) \ttbar pairs are~\cite{PhysRevD.53.4886}:
+\begin{align}
+\begin{array}{c}
+\sum_{L L, R R}\vert\mathcal{M}(q \bar{q} \rightarrow t \bar{t})\vert^2=8 (4 \pi \alpha_S)^2 \left(1-\beta^2\right) \sin ^2 \Theta \\
+\sum_{L R, R L}\vert\mathcal{M}(q \bar{q} \rightarrow t \bar{t})\vert^2=8 (4 \pi \alpha_S)^2 \left(1+\cos ^2 \Theta\right)
+\end{array}
+\label{qq_matrix_elements}
+\end{align}
+where $\beta=\sqrt{1-4 m_t^2 / m_{\ttbar}^2}$ is the speed of the top quark (as a fraction of $c$) in the \ttbar ZMF and is completely determined by $m_{\ttbar}$.
+In the helicity basis of the \ttbar ZMF, squared matrix elements for the $gg$ fusion LO Feynman diagram in figure~\ref{ttbar_production_LO_feynman_diagrams} separated into like-helicity ($L L, R R$) and unlike-helicity ($L R, R L$) \ttbar pairs are~\cite{PhysRevD.53.4886}:
+\begin{align}
+\begin{array}{c}
+\sum_{L L, R R}\vert\mathcal{M}(g g \rightarrow t \bar{t})\vert^2=\frac{16}{3} (4 \pi \alpha_S)^2 (\frac{7+9 \beta^2 \cos ^2 \Theta}{\left(1-\beta^2 \cos ^2 \Theta\right)^2}) \left(1-\beta^2\right)\left(1+\beta^2+\beta^2 \sin ^4 \Theta\right) \\
+\sum_{L R, R L}\vert\mathcal{M}(g g \rightarrow t \bar{t})\vert^2=\frac{16}{3} (4 \pi \alpha_S)^2 (\frac{7+9 \beta^2 \cos ^2 \Theta}{\left(1-\beta^2 \cos ^2 \Theta\right)^2}) \beta^2 \sin ^2 \Theta\left(1+\cos ^2 \Theta\right).
+\end{array}
+\label{gg_matrix_elements}
+\end{align}
+These expressions include summation over the spins of the incoming partons, as well as summation over the colors of both the incoming and outgoing states, but factors averaging over the spins and colors have not been included.
+
+Equations~\ref{qq_matrix_elements} indicate that in the high energy limit ($\beta \rightarrow 1$), the production of like-helicity \ttbar pairs by $q\bar{q}$ annihilation is suppressed.
+Equations~\ref{gg_matrix_elements} indicate that in the high energy limit ($\beta \rightarrow 1$), the production of like-helicity \ttbar pairs by $gg$ fusion is also suppressed, but additionally at low energies $\beta << 1$, production of unlike-helicity \ttbar pairs is suppressed relative to the production of like-helicity pairs by a factor ($\beta^2$).
+The breakdown of the total \ttbar cross section into like-helicity and unlike-helicity pairs as a function of $m_{\ttbar}$ using the helicity basis for the $\sqrt{s}=\SI{14}{\TeV}$ LHC is shown in figure~\ref{LHC_ttbar_helicity_differential}.
+Near threshold, the dominant spin states of the \ttbar system are ${}^{1}S_{0}$ for like-helicity \ttbar pairs from $gg$ fusion and ${}^{3}S_{1}$ for unlike-helicity \ttbar pairs from $q\bar{q}$ annihilation.
+The different parton production processes and helicity combinations manifest themselves in the \ttbar final state particle angular kinematic distributions.
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{c}
+        \includegraphics[width=0.7\textwidth]{fig_TopQuark/LHC_ttbar_helicity_differential.png}
+    \end{tabular}
+    \caption{Differential cross section for \ttbar production as a function of $m_{\ttbar}$, for the $\sqrt{s}=\SI{14}{\TeV}$ LHC, decomposed into $L L + R R$ and $L R + R L$ helicities in the zero momentum frame of the \ttbar pair for both $q\bar{q}$ and $gg$ components using the helicity basis~\cite{PhysRevD.53.4886}.
+            }
+    \label{LHC_ttbar_helicity_differential}
+  \end{center}
+\end{figure}
+
+The differential decay rates for top quark daughter or granddaughter particle $x$, can be parameterized as:
+\begin{align}
+\frac{1}{\Gamma} \frac{d \Gamma}{d\left(\cos \theta_x\right)}=\frac{1}{2}[1+P(\hat{a})\kappa_x \cos \theta_x]
+\end{align}
+where $\theta_x$ is the angle between the arbitrary spin quantization axis $\hat{a}$ and the momentum direction of $x$, $P(\hat{a}) = \langle 2 \mathbf{S}_t \cdot \hat{a} \rangle$ is the polarization of the top quark with respect to $\hat{a}$, and $\kappa_x$ is the top spin analyzing power of particle $x$.
+For $\hat{a}$ set to the direction of the top quark spin, $P(\hat{a}) = 1$, and $\kappa_x$ denotes what fraction of the top polarization information gets transferred from the top to its daughter or granddaughter particle $x$.
+The top spin analyzing power at NLO is shown for the various daughter and granddaughter particles table~\ref{spin_analyzing_power_NLO}.
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{lr}
+\multicolumn{2}{c}{ Top Spin Analyzing Power at NLO } \\
+\hline$\kappa_b$ & $-0.39$ \\
+$\kappa_{W^{+}}$ & $0.39$ \\
+$\boldsymbol{\kappa}_{l^{+}}$ & $\mathbf{0.998}$ \\
+$\kappa_{\bar{d}, \bar{s}}$ & $0.93$ \\
+$\kappa_{u, c}$ & $-0.31$
+\end{tabular}
+\caption{The top spin analyzing power at NLO for the various daughter and granddaughter decay particles of the top quark~\cite{BRANDENBURG2002235}.
+         }
+\label{spin_analyzing_power_NLO}
+\end{center}
+\end{table}
+For charged lepton granddaughters of top quarks, the top spin analyzing power is close to unity, and when combined with the experimental advantages that charged leptons can be triggered on efficiently and reconstructed precisely, it is concluded that the leptonic decay mode is the optimal proxy for studies of top quark spin properties.
+
+\section{Top Quark Polarizations and \ttbar Spin Correlations}
+Top quarks and anti-quarks, produced in \ttbar pairs at hadron colliders via the strong interaction, are not polarized at LO due to the parity conserving nature of QCD (longitudinal polarisation) and approximate T-invariance of QCD (transverse polarisation).
+However, as was shown in the previous section, the spins of top quarks produced in \ttbar pairs are strongly correlated with spins of anti-top quarks, with dependence on $m_{\ttbar}$, $\Theta$, and choice of spin quantization axes. 
+The squared matrix element for the \ttbar production and decay can be written as~\cite{Bernreuther}:
+\begin{align}
+\begin{array}{c}
+\vert\mathcal{M}(gg/q\bar{q} \to \ttbar \to (\bar{\ell} \nu b)(\ell \bar{\nu} \bar{b}) )\vert^2 \sim Tr[\rho R \bar{\rho}]
+\end{array}
+\label{ttbar_squared_matrix_element}
+\end{align}
+where $R$ is the spin density matrix related to on-shell \ttbar production and $\rho$ is the decay density matrix.
+The production spin density matrix $R$ can be decomposed in the spin spaces of $t$ and $\bar{t}$ using a basis of Pauli matrices~\cite{Bernreuther}:
+\begin{align}
+R^I \propto \tilde{A} \mathbbm{1} \otimes  \mathbbm{1} + \tilde{B}_i^+ \sigma^i \otimes \mathbbm{1} + \tilde{B}_i^- \mathbbm{1} \otimes \sigma^i + \tilde{C}_{ij} \sigma^i \otimes \sigma^j
+\label{spin_density_matrix_decomposition}
+\end{align}
+where intial state $I = gg / q\bar{q}$ at fixed energy and top direction, $\tilde{A}$ determines the differential cross section for \ttbar production, $\mathbbm{1}$ is the $2\times2$ identity matrix, $\sigma^{i(j)}$ are the Pauli matrices, $\tilde{B}^\pm$ are 3-vectors that characterize the top quark ($+$) and anti-quark ($-$) polarizations along each of the spin quantization axes, and $\tilde{C}$ is a $3\times3$ matrix that characterizes the correlations between the top quark and anti-quark spins along each pair of spin quantization axes.
+$\tilde{B}_i^\pm$ and $ \tilde{C}_{ij} $ can be further decomposed using the \ttbar ZMF helicity basis $\{\hat{k},\hat{n},\hat{r}\}$~\cite{Bernreuther}:
+\begin{align}
+\begin{array}{l}
+\tilde{B}_i^\pm =  b_k^\pm \hat{k_i} + b_n^\pm \hat{n_i} + b_r^\pm \hat{r_i} \\
+\tilde{C}_{ij}  =  c_{kk} \hat{k_i}\hat{k_j} + c_{nn} \hat{n_i}\hat{n_j} + c_{rr} \hat{r_i}\hat{r_j} \\ 
+\;\;\;\;\; + \; c_{rk} (\hat{r_i}\hat{k_j} + \hat{k_i}\hat{r_j}) +  c_{kn} (\hat{k_i}\hat{n_j} + \hat{n_i}\hat{k_j})  +  c_{nr} (\hat{n_i}\hat{r_j} + \hat{r_i}\hat{n_j}) \\
+\;\;\;\;\; + \; c_{n} (\hat{r_i}\hat{k_j} - \hat{k_i}\hat{r_j}) +  c_{r} (\hat{k_i}\hat{n_j} - \hat{n_i}\hat{k_j})  +  c_{k} (\hat{n_i}\hat{r_j} - \hat{r_i}\hat{n_j})
+\end{array}
+\label{spin_density_matrix_decomposition_expansion}
+\end{align}
+where the coefficients $b^\pm$ and $c$ are functions of $m_{\ttbar}$ and $\cos \Theta$.
+The helicity basis is chosen is because of its stability with regard to reconstruction errors and the spin correlations are strong using this basis.
+By construction, the coefficient functions $b^\pm$ and $c$ have definite properties with respect to discrete symmetries $P$, $CP$, $T$, and identical particle exchange ($Bose$), and as a result, these coefficients can help distinguish NP effects with SMEFT.
+The $P$, $CP$, and $T_N$ (naive time-reversal symmetry at tree-level) invariance of QCD forces many of these coefficients to be small or zero before considering electroweak and higher-order QCD loop corrections.
+The Bose symmetry of $I = gg$ implies $R^{gg}(\hat{k},\hat{p}) = R^{gg}(-\hat{k},\hat{p})$; hence the importance of $\operatorname{sign}(\cos \Theta)$ in the definition of $\{\hat{k},\hat{n},\hat{r}\}$~\ref{helcity_basis}, to allow non-zero coefficients when the parton production process is $gg$ fusion.
+A summary of transformation properties of the coefficient functions with respect to $P$, $CP$, $T_N$, and $Bose$ ($I = gg$ only) symmetries~\cite{Bernreuther} is shown in table~\ref{coefficient_function_symmetries}, 
+\begin{table}[!h]
+\begin{center}
+\begin{math}
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+& \mathrm{CP} & \mathrm{P} & \mathrm{T}_{\mathrm{N}} & \mathrm{CPT}_{\mathrm{N}} & \text { Bose } \\
+\hline 
+A^I & A^I & A^I & A^I & A^I & A^{g g} \\
+b_r^{I \pm} & b_r^{I \mp} & -b_r^{I \pm} & b_r^{I \pm} & b_r^{I \mp} & b_r^{g g \pm} \\
+b_k^{I \pm} & b_k^{I \mp} & -b_k^{I \pm} & b_k^{I \pm} & b_k^{I \mp} & b_k^{g g \pm} \\
+b_n^{I \pm} & b_n^{I \mp} & b_n^{I \pm} & -b_n^{I \pm} & -b_n^{I \mp} & b_n^{g g \pm} \\
+c_{r r}^I & c_{r r}^I & c_{r r}^I & c_{r r}^I & c_{r r}^I & c_{r r}^{g g} \\
+c_{k k}^I & c_{k k}^I & c_{k k}^I & c_{k k}^I & c_{k k}^I & c_{k k}^{g g} \\
+c_{n n}^I & c_{n n}^I & c_{n n}^I & c_{n n}^I & c_{n n}^I & c_{n n}^{g g} \\
+c_{r k}^I & c_{r k}^I & c_{r k}^I & c_{r k}^I & c_{r k}^I & c_{r k}^{g g} \\
+c_{r n}^I & c_{r n}^I & -c_{r n}^I & -c_{r n}^I & -c_{r n}^I & c_{r n}^{g g} \\
+c_{k n}^I & c_{k n}^I & -c_{k n}^I & -c_{k n}^I & -c_{k n}^I & c_{k n}^{g g} \\
+c_r^I & -c_r^I & -c_r^I & -c_r^I & c_r^I & c_r^{g g} \\
+c_k^I & -c_k^I & -c_k^I & -c_k^I & c_k^I & c_k^{g g} \\
+c_n^I & -c_n^I & c_n^I & c_n^I & -c_n^I & c_n^{g g} \\
+\hline
+\end{array}
+\end{math}
+\caption{Transformation properties of the coefficient functions with respect to CP, P, and $\mathrm{T_N}$ symmetries for $I = gg, q\bar{q}$~\cite{Bernreuther}. 
+        In the last column, all the coefficients of the initial state $I = gg$ are even under Bose symmetry because of the $\operatorname{sign}(\cos \Theta)$ factor in the definition of $\{\hat{k},\hat{n},\hat{r}\}$~\ref{helcity_basis}.
+        }
+\label{coefficient_function_symmetries}
+\end{center}
+\end{table}
+
+As has been already mentioned, top quark spins cannot be measured directly, but can be traced in the differential angular distributions of their charged lepton granddaughters.
+For \ttbar dileptonic events, the normalized fourfold angular cross-section for the two leptons is:
+\begin{align}
+\frac{1}{\sigma} \frac{d \sigma}{d \Omega_1 d \Omega_2}=\frac{1}{(4 \pi)^2}\left(1+\vec{B}_1 \cdot \hat{\ell}_1+\vec{B}_2 \cdot \hat{\ell}_2-\hat{\ell}_1 \cdot \overleftrightarrow{C} \cdot \hat{\ell}_2\right)
+\label{fourfold_angular_distribution}
+\end{align}
+where 1 and 2 correspond to the top quark and anti-quark respectively and $\hat{\ell}_{1(2)}$ are the charged lepton directions in their grandfather top quark's (anti-quark's) ZMF.
+$\vec{B}_{1(2)}$ are 3-vectors sensitive to $\tilde{B}^\pm$, and $\overleftrightarrow{C}$ is a $3\times3$ matrix sensitive to $\tilde{C}$, with each coefficient probing a single coefficient function:
+\begin{itemize}
+\item The top (anti-top) polarization coefficients are $B_{1}(i)$ ($B_{2}(i)$), with respect to spin quantization axis $i$, and are sensitive to coefficient functions $b^+_i$ ($b^-_i$).
+\item The diagonal spin correlation coefficients are $C(i,i)$, with respect to spin quantization axis $i$, and are sensitive to $c_{ii}$.
+\item The cross spin correlation coefficients are $C(i,j)$ and $C(j,i)$,  for each pair of spin quantization axes $i$ and $j$, with the sums and differences $C(i,j) \pm C(j,i)$ sensitive to $c_{ij}$ and $c_{i}$~\ref{spin_density_matrix_decomposition_expansion}.
+\end{itemize}
+Unlike the coefficient functions of $\tilde{B}^\pm$ and $\tilde{C}$, the coefficients of $\vec{B}_{1(2)}$ and $\overleftrightarrow{C}$ are directly observable final state variables.
+A summary of the polarization and spin correlation coefficients, which coefficient functions they probe, and which contributions in the differential parton cross-sections the coefficients are sensitive to, is summarized in table~\ref{coefficients_sensitive}.
+\begin{table}[!h]
+\begin{center}
+\begin{math}
+\begin{array}{|c|c|c|}
+\hline 
+\text { Coefficients } & \text { Coefficient Functions } & \text { Contributions } \\
+\hline 
+C(n, n) & c_{n n}^I & \text { P-, CP-even } \\
+C(r, r) & c_{r r}^I & \text { P-, CP-even } \\
+C(k, k) & c_{k k}^I & \text { P-, CP-even } \\
+C(r, k)+C(k, r) & c_{r k}^I & \text { P-, CP-even } \\
+C(n, r)+C(r, n) & c_{r n}^I & \text { P-odd, CP-even, absorptive } \\
+C(n, k)+C(k, n) & c_{k n}^I & \text { P-odd, CP-even, absorptive } \\
+C(r, k)-C(k, r) & c_n^I & \text { P-even, CP-odd, absorptive } \\
+C(n, r)-C(r, n) & c_k^I & \text { P-odd, CP-odd } \\
+C(n, k)-C(k, n) & -c_r^I & \text { P-odd, CP-odd } \\
+B_1(n)+B_2(n) & b_n^{I+}+b_n^{I-} & \text { P-, CP-even, absorptive } \\
+B_1(n)-B_2(n) & b_n^{I+}-b_n^{I-} & \text { P-even, CP-odd } \\
+B_1(r)+B_2(r) & b_r^{I+}+b_r^{I-} & \text { P-odd, CP-even } \\
+B_1(r)-B_2(r) & b_r^{I+}-b_r^{I-} & \text { P-odd, CP-odd, absorptive } \\
+B_1(k)+B_2(k) & b_k^{I+}+b_k^{I-} & \text { P-odd,CP-even } \\
+B_1(k)-B_2(k) & b_k^{I+}-b_k^{I-} & \text { P-odd, CP-odd, absorptive } \\
+\hline
+\end{array}
+\end{math}
+\caption{A summary of the polarization and spin correlation coefficients, which coefficient functions they probe, and which contributions in the differential parton cross-sections the coefficients are sensitive to~\cite{Bernreuther}. 
+        }
+\label{coefficients_sensitive}
+\end{center}
+\end{table}
+
+Integrating out the azimuthal angles of the normalized fourfold angular cross-section~\ref{fourfold_angular_distribution} yields the normalized polar angle double cross-section,
+\begin{align}
+\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i d \cos \theta_2^j}=\frac{1}{4}\left(1+B_1(i) \cos \theta_1^i+B_2(j) \cos \theta_2^j-C(i, j) \cos \theta_1^i \cos \theta_2^j\right),
+\label{double_angular_distribution}
+\end{align}
+from which can be derived single-differential cross-sections:
+\begin{align}
+\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_{1(2)}^i} & =\frac{1}{2}\left(1+B_{1(2)}(i) \cos \theta_{1(2)}^i\right),
+\label{single_angular_distribution_polar}
+\end{align}
+\begin{align}
+\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i \cos \theta_2^i} & =\frac{1}{2}\left(1-C(i, i) \cos \theta_1^i \cos \theta_2^i\right) \log \left(\frac{1}{\left \vert \cos \theta_1^i \cos \theta_2^i\right \vert}\right),
+\label{single_angular_distribution_diagonal}
+\end{align}
+\begin{align}
+\frac{1}{\sigma} \frac{\mathrm{d} \sigma}{\mathrm{d} x_{\pm}} = 
+= \frac{1}{2} \left(1-\frac{C(i, j) \pm C(j, i)}{2} {x_{\pm}} \right) \cos ^{-1} \left \vert x_{\pm} \right \vert
+\label{single_angular_distribution_cross}
+\end{align}
+\begin{center}
+for $i \neq j$ where $x_{\pm} = \cos \theta_1^i \cos \theta_2^j \pm \cos \theta_1^j \cos \theta_2^i$.
+\end{center}
+These single-differential cross-sections would otherwise be even functions if not for the presence of the coefficients.
+Thus the 15 coefficients can be extracted from the mean or asymmetry of the following single-differential cross-sections:
+\begin{itemize}
+\item The 6 top (anti-top) polarization coefficients $\cos\theta_1^i$ ($\cos\theta_2^i$) using~\ref{single_angular_distribution_polar},
+\item  The 3 diagonal spin correlation coefficients $C(i,i)$ using~\ref{single_angular_distribution_diagonal}, and
+\item  Sums and differences of the 6 cross spin correlation coefficients $C(i,j) \pm C(j,i)$ using~\ref{single_angular_distribution_cross}.
+\end{itemize}
+
+The above decomposition is true for any subset of the full phase space, so differential measurements of the polarization and spin correlations involve partitioning the phase space and in each partition repeating the procedure of measuring the relevant single-differential cross-sections then extracting the coefficients.
+
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{c}
+        \includegraphics[width=0.9\textwidth]{fig_Theory/}
+    \end{tabular}
+    \caption{
+            }
+    \label{}
+  \end{center}
+\end{figure}
+
+
+
+
+

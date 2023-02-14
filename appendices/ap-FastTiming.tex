@@ -14,15 +14,14 @@ Hybrid silicon pixel detectors consisting of silicon sensors bump-bonded to read
 While these detectors have high granularity for spatial measurements, the timing resolution is relatively poor, because the sensors and readout electronics have cumbersome interconnects with high capacitance additions to the pre-amplifiers. 
 Pixel detectors able to provide 4D information for tracking have not yet been realized.
 
-
 \section{Small Pixels, Signal, and Noise}
-Collaborating with Dr. Ron Lipton at Fermi National Accelerator Laboratory (FNAL), we explore whether small, low capacitance pixels integrated with fast electronics show promise for realizing the timing resolution required for 4D tracking.
+Collaborating with FNAL scientist Dr. Ron Lipton, we explore whether small, low capacitance pixels integrated with fast electronics show promise for realizing the timing resolution required for 4D tracking.
 Smaller pixels provide better resolution, better efficiency by avoiding in-pixel pileup, and have higher radiation tolerance due to less leakage current per pixel~\cite{Garcia-Sciveres_2018}.
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{c}
-        \includegraphics[width=0.5\textwidth]{fig_FastTiming/Jitter.png}
+        \includegraphics[width=0.45\textwidth]{fig_FastTiming/Jitter.png}
     \end{tabular}
     \caption{Fluctuations in signal amplitude crossing a voltage threshold translate into timing fluctuations called "jitter."
             }            
@@ -43,11 +42,11 @@ For the noise component of minimizing jitter, 3-Dimensional integrated circuit (
 The hybrid Ziptronix Direct Bonding Interconnect (DBI) technique bonds planarized silicon wafers and electrically connects layers via the insertion of Through Silicon Vias (TSV). 
 Due to lower load capacitance, a hybrid, (DBI) bonded VIPIC 3D prototype assembly demonstrated nearly a factor of two decrease in noise~\ref{FusionBondedNoise_PixelPitchCapacitance} relative to a bump-bonded assembly~\cite{Lipton:2018mqk}.  
 Moreover, TCAD simulations predict that smaller pixel pitch results in lower detector capacitance.
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{cc}
-        \includegraphics[width=0.5\textwidth]{fig_FastTiming/FusionBondedNoise.png}
-        \includegraphics[width=0.4\textwidth]{fig_FastTiming/PixelPitch_Capacitance.png}
+        \includegraphics[width=0.45\textwidth]{fig_FastTiming/FusionBondedNoise.png}
+        \includegraphics[width=0.35\textwidth]{fig_FastTiming/PixelPitch_Capacitance.png}
     \end{tabular}
     \caption{The noise in hybrid bonded VIPIC 3D assembly is almost a factor of two lower than the equivalent conventionally bump bonded parts due to lower $C_L$ (Left).
             TCAD simulations predict that smaller pixel pitch results in lower detector capacitance (Right).
@@ -72,32 +71,32 @@ If detectors have sufficiently low capacitance and are integrated with fast elec
 \section{FEA Simulations with TCAD}
 Silvaco Technology Computer-Aided Design (TCAD) are used to explore models for planar sensors, in order to optimize the doping and geometry to achieve large induced currents with fast rise times.
 The TCAD simulation uses Finite Element Analysis (FEA) to simulate the electrical properties and behavior of semiconductor models, in this case by calculating the electric field in the model, the weighting fields of the individual electrodes, and the current induced at each electrode due to the motion of charge carriers in the substrate.
-Both 3D (3 \times 3) and 2D (1 \times 9) models of pixel arrays, consist ting of aluminium electrodes coupled to a silicon substrate, are simulated~\ref{Materials_Model}.
+Both 3D ($3 \times 3$) and 2D ($1 \times 9$) models of pixel arrays, consist ting of aluminium electrodes coupled to a silicon substrate, are simulated~\ref{Materials_Model}.
 Different pixel pitches (\SI{25}{\micron} - \SI{100}{\micron}), substrate thicknesses(\SI{50}{\micron} - \SI{300}{\micron}), doping schemes ($n$-on-$n$, $n$-on-$p$), and bias voltages (\SI{100}{\V} - \SI{400}{\V}) were considered for these simulations.
 Electrons are the preferred charge carrier, as they have higher mobility than holes and thus higher velocity, inducing larger currents, for the same electric field strength.
 For the doping scheme, $n$-on-$n$ has an electric field maximal near the bottom-side, whereas $n$-on-$p$ has an electric field maximal near the top~\ref{Doping_ElectricField}.
 Even in the absence of an externally applied voltage, every $pn$-junction has a "built-in" electric field between the $p$- and $n$- sides from thermal diffusion of mobile charge carriers.
 Intermediate p-regions between electrodes, called "p-stops," help shape the electric field and prevent unwanted diffusion of charges away from collecting electrodes.
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{cc}
-      \includegraphics[width=0.5\textwidth]{fig_FastTiming/Materials.png}
-      \includegraphics[width=0.3\textwidth]{fig_FastTiming/Model3D.png}
+      \includegraphics[width=0.45\textwidth]{fig_FastTiming/Materials.png}
+      \includegraphics[width=0.275\textwidth]{fig_FastTiming/Model3D.png}
     \end{tabular}
-    \caption{2D 1 \times 9 (Left) and 3D 3 \times 3 (Right) models of \SI{25}{\micron} pitch pixel arrays, consisting of aluminium electrodes (labeled) coupled to a silicon substrate.
+    \caption{2D $1 \times 9$ (Left) and 3D $3 \times 3$ (Right) models of \SI{25}{\micron} pitch pixel arrays, consisting of aluminium electrodes (labeled) coupled to a silicon substrate.
             }
     \label{Materials_Model}
   \end{center}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{cc}
-      \includegraphics[width=0.5\textwidth]{fig_FastTiming/Net_Doping_nonn.png}
-      \includegraphics[width=0.5\textwidth]{fig_FastTiming/ElectricField_nonn.png} \\
-      \includegraphics[width=0.5\textwidth]{fig_FastTiming/Net_Doping_nonp.png}
-      \includegraphics[width=0.5\textwidth]{fig_FastTiming/ElectricField_nonp.png} \\
+      \includegraphics[width=0.45\textwidth]{fig_FastTiming/Net_Doping_nonn.png}
+      \includegraphics[width=0.45\textwidth]{fig_FastTiming/ElectricField_nonn.png} \\
+      \includegraphics[width=0.45\textwidth]{fig_FastTiming/Net_Doping_nonp.png}
+      \includegraphics[width=0.45\textwidth]{fig_FastTiming/ElectricField_nonp.png} \\
     \end{tabular}
-    \caption{Doping (Left) and "built-in" electric field (Right) profiles for TCAD simulated models of 1 \times 9 (2D) array of pixels with 25 \si{\micron} pitch between aluminium electrodes coupled to a silicon substrate.
+    \caption{Doping (Left) and "built-in" electric field (Right) profiles for TCAD simulated models of $1 \times 9$ (2D) array of pixels with 25 \si{\micron} pitch between aluminium electrodes coupled to a silicon substrate.
             $n$-on-$n$ (Top) has an electric field maximal near the bottom-side, whereas $n$-on-$p$ (Bottom) has an electric field maximal near the top.
             }
     \label{Doping_ElectricField}
@@ -110,10 +109,10 @@ Simulated signal currents induced on electrodes by a locally ionizing x-ray at v
 The rich diversity of signal shapes in figure~\ref{Signal_MIP_Multi} demonstrate that thick detectors with small pixels have potential for distinguishing tracks as a function of angle of incidence by using information from the collective pulse shapes of nearby pixels. 
 The time between the initial current pulse and the peak current in a set of pixel shapes, for example, could be correlated in the readout electronics to measure the track angle.
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{c}
-        \includegraphics[width=1.0\textwidth]{fig_FastTiming/CurrentDensity_xray.png}
+        \includegraphics[width=.90\textwidth]{fig_FastTiming/CurrentDensity_xray.png}
     \end{tabular}
     \caption{Current density profiles visualizing the motion of mobile charges after localized ionization by an absorbed x-ray:
             .1 \si{\ns} (Top Left), .5 \si{\ns} (Top Middle), 1 \si{\ns} (Top Right), 1.5 \si{\ns} (Bottom Left), 2.0 \si{\ns} (Bottom Middle), 2.5 \si{\ns} (Bottom Right).
@@ -122,10 +121,10 @@ The time between the initial current pulse and the peak current in a set of pixe
     \label{CurrentDensity_xray}
   \end{center}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{c}
-        \includegraphics[width=1.0\textwidth]{fig_FastTiming/CurrentDensity_MIP.png}
+        \includegraphics[width=.90\textwidth]{fig_FastTiming/CurrentDensity_MIP.png}
     \end{tabular}
     \caption{Current density profiles visualizing the motion of mobile charges after uniform ionization at a 15 degree angle of incidence by a MIP:
             .1 \si{\ns} (Top Left), .5 \si{\ns} (Top Middle), 1 \si{\ns} (Top Right), 1.5 \si{\ns} (Bottom Left), 2.0 \si{\ns} (Bottom Middle), 2.5 \si{\ns} (Bottom Right).
@@ -135,10 +134,10 @@ The time between the initial current pulse and the peak current in a set of pixe
   \end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{c}
-        \includegraphics[width=1.0\textwidth]{fig_FastTiming/Signal_xray_Multi.png}
+        \includegraphics[width=.90\textwidth]{fig_FastTiming/Signal_xray_Multi.png}
     \end{tabular}
     \caption{Currents induced on electrodes by a locally ionizing x-ray at various depths (\SI{10}{\micron}, \SI{100}{\micron}, \SI{190}{\micron}) from the central electrode of a \SI{200}{\micron} thick detector with \SI{25}{\micron} pitch pixels biased at \SI{400}{\V}.
     The ionization is localized directly below Electrode 5 (E4).
@@ -146,10 +145,10 @@ The time between the initial current pulse and the peak current in a set of pixe
     \label{Signal_xray_Multi}
   \end{center}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{c}
-        \includegraphics[width=1.0\textwidth]{fig_FastTiming/Signal_MIP_Multi.png}
+        \includegraphics[width=.90\textwidth]{fig_FastTiming/Signal_MIP_Multi.png}
     \end{tabular}
     \caption{Currents induced on electrodes by a uniformly ionizing MIP at various angles of incidence with respect to the surface of a \SI{200}{\micron} thick detector with \SI{25}{\micron} pitch pixels biased at \SI{400}{\V}.
             The track at 0 degrees is incident on Electrode 5 (E4).
@@ -162,10 +161,10 @@ The time between the initial current pulse and the peak current in a set of pixe
 The same pattern emerges that is most clearly demonstrated with the case of simulated x-ray absorption~\ref{Signal_xray}.
 On the picosecond timescale, there is an initial current spike, that is similar for all nearby pixels with pitch small compared to ionization depth.
 On the nanosecond timescale, charges-collecting electrodes detect a large signal current, but for electrodes not collecting charges, the current changes sign and integrates to zero.
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{c}
-      \includegraphics[width=0.5\textwidth]{fig_FastTiming/Signal_xray.png}
+      \includegraphics[width=0.50\textwidth]{fig_FastTiming/Signal_xray.png}
     \end{tabular}
     \caption{Signal for an X-ray deposited at \SI{190}{\micron} in a \SI{200}{\micron} thick detector with \SI{25}{\micron} pitch pixels biased at \SI{400}{\V}.
             }
@@ -177,10 +176,10 @@ The simulated currents are injected into a Simulation Program with Integrated Ci
 The pulse shape from the central electrode peaks at $\sim$\SI{1}{\V} after $\sim$\SI{12}{\ns}, and the edge electrode peaks at $\sim$\SI{25}{\mV} after $\sim$\SI{2}{\ns}.
 The threshold is set at \SI{130}{\mV} above baseline for the central electrode and \SI{10}{\mV} above baseline for the edge electrode.
 The jitter timing resolution is extracted from a Gaussian fit of the arrival times of an ensemble of resulting pulses that differ only due to jitter noise.
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{center}
     \begin{tabular}{c}
-      \includegraphics[width=0.5\textwidth]{fig_FastTiming/TimingResolutions.png}
+      \includegraphics[width=0.80\textwidth]{fig_FastTiming/TimingResolutions.png}
     \end{tabular}
     \caption{Pulse shapes and jitter timing resolution, of central (charge collecting) and edge (induced current) electrodes, for a simulated x-ray ionization at a depth of \SI{185}{\micron} in a \SI{200}{\micron} thick detector.
         (a) Pulse shapes for the central and edge electrode. 
