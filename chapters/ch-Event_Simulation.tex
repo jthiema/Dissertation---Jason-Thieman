@@ -1,0 +1,53 @@
+\ProvidesFile{chapters/ch-Event_Simulation.tex}
+
+\chapter{Monte Carlo Event Simulation}
+In particle physics, completely analytical simulations are far too complicated and computationally expensive to be feasible.
+Instead, numerical Monte Carlo (MC) techniques employ a combination of analytical and phenomenological models to simulate $pp$ collisions, the production and decay of particles, and the detector response.
+MC simulations are used to optimize the analysis of data, study the performance of the detector, and to compare the results of experiments to theoretical predictions.
+
+\section{Matrix Element}
+The matrix elements of the signal processes between two incoming partons can be calculated to NLO using perturbation theory in QCD and QED.
+
+
+
+
+
+Protons are composite particles made of partons, so the proton collisions picture is
+particularly messy and complicated. Let’s sort through this.
+Partons in the incoming protons (large pink ellipses) undergo initial state parton
+shower (yellow) and interact in the signal process (big cyan blob).
+The products of the signal interaction undergo final state parton shower (cyan). The
+resulting partons hadronize into colorless states (magenta blobs) that subsequently
+decay into stable particles (pink circles) and form cones of hadrons coined “jets.”
+A secondary interaction between proton remnants is shown as a green blob, which
+undergoes a parton shower (green), which hadronizes and decays into stable
+particles that form jets. This secondary interaction is, together with the beam
+remnants (red blobs), part of what is called the underlying event.
+Electromagnetic radiation (blue) can be emitted by charged particles at any stage.
+
+
+Then parton shower algorithms are used as a phenomenological approximation to account for higher order effects.
+The final state particles passing through the detector and interacting with the magnetic field and detector geometry, are simulated using GEANT, and the resulting MC events can be reconstructed just as actual recorded events.
+There are some other complexities, considerations, and choices: factorization and
+renormalization scales, choice of Parton Distribution Function set, matching parton
+showers and matrix element calculations to avoid double counting, choice of color
+reconnection model, underlying event tune, etc. and all of these are associated with
+systematic uncertainties that will be discussed later.
+So, the Monte Carlo simulated events are not perfect, and they do contain modeling
+assumptions, but the combination of perturbate QCD and phenomenological models
+make the simulations accurate enough to help facilitate precision measurements.
+
+
+
+
+
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{c}
+        \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/}
+    \end{tabular}
+    \caption{
+            }
+    \label{}
+  \end{center}
+\end{figure}

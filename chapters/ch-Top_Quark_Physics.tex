@@ -1,6 +1,6 @@
 \ProvidesFile{chapters/ch-Top_Quark_Physics.tex}
 
-\chapter{Top Quark Physics}
+\chapter{Top Quark Physics at the LHC}
 The top quark was predicted in 1973 by Kobayashi and Maskawa, when the Cabibbo matrix was extended to the CKM matrix in order to accommodate the experimental discovery of CP-violation in precision measurements of kaon regeneration.
 This extension necessarily required three quark generations, when at the time only the up, down, and strange quarks were known.
 The charm quark was discovered in 1974 and the bottom quark in 1976.
@@ -100,7 +100,7 @@ The $W$-boson can decay hadronically $W^+ \rightarrow q \bar{q^\prime}$, where $
     \label{t_decay}
   \end{center}
 \end{figure}
-Ignoring phase space considerations, the relative branching fractions of the hadronic and leptonc decay modes are given by the ratio of flavor and color combinations:
+Ignoring phase space considerations, the relative branching fractions of the hadronic and leptonic decay modes are given by the ratio of flavor and color combinations:
 \begin{align}
 \frac{\text { hadronic }}{\text { leptonic }}=\frac{\{u \bar{d}, c \bar{s} \} \times \{R, B, G\}}{\{e \bar{\nu_e}, \mu \bar{\nu_\mu}, \tau \bar{\nu_\tau} \}}=6 / 3
 \end{align}
@@ -143,7 +143,7 @@ Therefore, including $\tau$ decays, the \ttbar dileptonic final state branching 
 
 \section{Top Quark Spin in \ttbar Production and Top Decay}
 In general, hadronization of quarks dilutes their spin information.
-Moreover, the spins of quarks can be flipped by processes such as gluon radiation, causing spin decorrelation.
+Moreover, the spins of quarks can be depolarized by processes such as gluon radiation, causing spin decorrelation.
 For the top quark however, it has already been mentioned that the full decay width $\Gamma_t = 1.42 \substack{+0.19 \\ -0.15} \; \si{\GeV}$~\cite{bib:PDG} is larger than the QCD hadronization scale ($\lambda_{QCD} \approx \SI{0.38}{\GeV}$~\cite{Groote_1998}) and much larger than the spin decorrelation scale ($\lambda_{QCD}^2/m_t \sim \SI{0.08}{\MeV}$~\cite{Stelzer_1996}).
 Thus, not only does a top quark decay before hadronizing to form bound states, but also its spin properties are transferred, without dilution, to its decay products and that information is observable in their angular kinematic distributions.
 These properties makes top quarks unique in the quark sector, as top quark measurements are the only opportunity to study the spin properties of free quarks.
@@ -209,12 +209,11 @@ The different parton production processes and helicity combinations manifest the
   \end{center}
 \end{figure}
 
-The differential decay rates for top quark daughter or granddaughter particle $x$, can be parameterized as:
+The differential decay rate of top quark daughter or granddaughter particle $x$, for an ensemble of polarized top quarks at rest with polarization $0 \leq \vect{P} \leq 1$, can be parameterized~\cite{BRANDENBURG2002235} as:
 \begin{align}
-\frac{1}{\Gamma} \frac{d \Gamma}{d\left(\cos \theta_x\right)}=\frac{1}{2}[1+P(\hat{a})\kappa_x \cos \theta_x]
+\frac{1}{\Gamma} \frac{d \Gamma}{d\left(\cos \theta_x\right)}=\frac{1}{2}[1+ \vert \vect{P} \vert \kappa_x \cos \theta_x]
 \end{align}
-where $\theta_x$ is the angle between the arbitrary spin quantization axis $\hat{a}$ and the momentum direction of $x$, $P(\hat{a}) = \langle 2 \mathbf{S}_t \cdot \hat{a} \rangle$ is the polarization of the top quark with respect to $\hat{a}$, and $\kappa_x$ is the top spin analyzing power of particle $x$.
-For $\hat{a}$ set to the direction of the top quark spin, $P(\hat{a}) = 1$, and $\kappa_x$ denotes what fraction of the top polarization information gets transferred from the top to its daughter or granddaughter particle $x$.
+where $\theta_x$ is the angle between $\vect{P}$ and the momentum direction of $x$ in the top quark ZMF and $\kappa_x$ is the top spin analyzing power of particle $x$, denoting what fraction of the top polarization information gets transferred from the top to its daughter or granddaughter particle $x$.
 The top spin analyzing power at NLO is shown for the various daughter and granddaughter particles table~\ref{spin_analyzing_power_NLO}.
 \begin{table}[!h]
 \begin{center}
@@ -222,7 +221,7 @@ The top spin analyzing power at NLO is shown for the various daughter and grandd
 \multicolumn{2}{c}{ Top Spin Analyzing Power at NLO } \\
 \hline$\kappa_b$ & $-0.39$ \\
 $\kappa_{W^{+}}$ & $0.39$ \\
-$\boldsymbol{\kappa}_{l^{+}}$ & $\mathbf{0.998}$ \\
+$\boldsymbol{\kappa}_{\ell}$ & $\mathbf{0.998}$ \\
 $\kappa_{\bar{d}, \bar{s}}$ & $0.93$ \\
 $\kappa_{u, c}$ & $-0.31$
 \end{tabular}
@@ -231,7 +230,7 @@ $\kappa_{u, c}$ & $-0.31$
 \label{spin_analyzing_power_NLO}
 \end{center}
 \end{table}
-For charged lepton granddaughters of top quarks, the top spin analyzing power is close to unity, and when combined with the experimental advantages that charged leptons can be triggered on efficiently and reconstructed precisely, it is concluded that the leptonic decay mode is the optimal proxy for studies of top quark spin properties.
+For charged lepton granddaughters of top quarks, the top spin analyzing power ($\kappa_\ell$) is close to unity, and when combined with the experimental advantages that charged leptons can be triggered on efficiently and reconstructed precisely, it is concluded that the leptonic decay mode is the optimal proxy for studies of top quark spin properties.
 
 \section{Top Quark Polarizations and \ttbar Spin Correlations}
 Top quarks and anti-quarks, produced in \ttbar pairs at hadron colliders via the strong interaction, are not polarized at LO due to the parity conserving nature of QCD (longitudinal polarisation) and approximate T-invariance of QCD (transverse polarisation).
@@ -302,12 +301,13 @@ For \ttbar dileptonic events, the normalized fourfold angular cross-section for 
 \frac{1}{\sigma} \frac{d \sigma}{d \Omega_1 d \Omega_2}=\frac{1}{(4 \pi)^2}\left(1+\vec{B}_1 \cdot \hat{\ell}_1+\vec{B}_2 \cdot \hat{\ell}_2-\hat{\ell}_1 \cdot \overleftrightarrow{C} \cdot \hat{\ell}_2\right)
 \label{fourfold_angular_distribution}
 \end{align}
-where 1 and 2 correspond to the top quark and anti-quark respectively and $\hat{\ell}_{1(2)}$ are the charged lepton directions in their grandfather top quark's (anti-quark's) ZMF.
-$\vec{B}_{1(2)}$ are 3-vectors sensitive to $\tilde{B}^\pm$, and $\overleftrightarrow{C}$ is a $3\times3$ matrix sensitive to $\tilde{C}$, with each coefficient probing a single coefficient function:
+where $\hat{\ell}_{1(2)}$ is the charged lepton direction in its grandfather top quark's (anti-quark's) ZMF.
+$\vec{B}_{1(2)}$ are 3-vectors sensitive to $\tilde{B}^\pm$, and $\overleftrightarrow{C}$ is a $3\times3$ matrix sensitive to $\tilde{C}$.
+Each coefficient probes a single coefficient function:
 \begin{itemize}
-\item The top (anti-top) polarization coefficients are $B_{1}(i)$ ($B_{2}(i)$), with respect to spin quantization axis $i$, and are sensitive to coefficient functions $b^+_i$ ($b^-_i$).
-\item The diagonal spin correlation coefficients are $C(i,i)$, with respect to spin quantization axis $i$, and are sensitive to $c_{ii}$.
-\item The cross spin correlation coefficients are $C(i,j)$ and $C(j,i)$,  for each pair of spin quantization axes $i$ and $j$, with the sums and differences $C(i,j) \pm C(j,i)$ sensitive to $c_{ij}$ and $c_{i}$~\ref{spin_density_matrix_decomposition_expansion}.
+\item The top (anti-top) polarization coefficients are $B_{1}(\hat{i})$ ($B_{2}(\hat{j})$), with respect to spin quantization axis $\hat{i}$($\hat{j}$), and are sensitive to coefficient functions $b^+_i$ ($b^-_j$).
+\item The diagonal spin correlation coefficients are $C(\hat{i},\hat{i})$, with respect to spin quantization axis $\hat{i}$, and are sensitive to $c_{ii}$.
+\item The cross spin correlation coefficients are $C(\hat{i},\hat{j})$ and $C(\hat{j},\hat{i})$,  for each pair of spin quantization axes $\hat{i}$ and $\hat{j}$, with the sums and differences $C(\hat{i},\hat{j}) \pm C(\hat{j},\hat{i})$ sensitive to $c_{ij}$ and $c_{i}$~\ref{spin_density_matrix_decomposition_expansion}.
 \end{itemize}
 Unlike the coefficient functions of $\tilde{B}^\pm$ and $\tilde{C}$, the coefficients of $\vec{B}_{1(2)}$ and $\overleftrightarrow{C}$ are directly observable final state variables.
 A summary of the polarization and spin correlation coefficients, which coefficient functions they probe, and which contributions in the differential parton cross-sections the coefficients are sensitive to, is summarized in table~\ref{coefficients_sensitive}.
@@ -318,21 +318,21 @@ A summary of the polarization and spin correlation coefficients, which coefficie
 \hline 
 \text { Coefficients } & \text { Coefficient Functions } & \text { Contributions } \\
 \hline 
-C(n, n) & c_{n n}^I & \text { P-, CP-even } \\
-C(r, r) & c_{r r}^I & \text { P-, CP-even } \\
-C(k, k) & c_{k k}^I & \text { P-, CP-even } \\
-C(r, k)+C(k, r) & c_{r k}^I & \text { P-, CP-even } \\
-C(n, r)+C(r, n) & c_{r n}^I & \text { P-odd, CP-even, absorptive } \\
-C(n, k)+C(k, n) & c_{k n}^I & \text { P-odd, CP-even, absorptive } \\
-C(r, k)-C(k, r) & c_n^I & \text { P-even, CP-odd, absorptive } \\
-C(n, r)-C(r, n) & c_k^I & \text { P-odd, CP-odd } \\
-C(n, k)-C(k, n) & -c_r^I & \text { P-odd, CP-odd } \\
-B_1(n)+B_2(n) & b_n^{I+}+b_n^{I-} & \text { P-, CP-even, absorptive } \\
-B_1(n)-B_2(n) & b_n^{I+}-b_n^{I-} & \text { P-even, CP-odd } \\
-B_1(r)+B_2(r) & b_r^{I+}+b_r^{I-} & \text { P-odd, CP-even } \\
-B_1(r)-B_2(r) & b_r^{I+}-b_r^{I-} & \text { P-odd, CP-odd, absorptive } \\
-B_1(k)+B_2(k) & b_k^{I+}+b_k^{I-} & \text { P-odd,CP-even } \\
-B_1(k)-B_2(k) & b_k^{I+}-b_k^{I-} & \text { P-odd, CP-odd, absorptive } \\
+C(\hat{n},\hat{n}) & c_{n n}^I & \text { P-, CP-even } \\
+C(\hat{r},\hat{r}) & c_{r r}^I & \text { P-, CP-even } \\
+C(\hat{k},\hat{k}) & c_{k k}^I & \text { P-, CP-even } \\
+C(\hat{r},\hat{k})+C(\hat{k},\hat{r}) & c_{r k}^I & \text { P-, CP-even } \\
+C(\hat{n},\hat{r})+C(\hat{r},\hat{n}) & c_{r n}^I & \text { P-odd, CP-even, absorptive } \\
+C(\hat{n},\hat{k})+C(\hat{k},\hat{n}) & c_{k n}^I & \text { P-odd, CP-even, absorptive } \\
+C(\hat{r},\hat{k})-C(\hat{k},\hat{r}) & c_n^I & \text { P-even, CP-odd, absorptive } \\
+C(\hat{n},\hat{r})-C(\hat{r},\hat{n}) & c_k^I & \text { P-odd, CP-odd } \\
+C(\hat{n},\hat{k})-C(\hat{k},\hat{n}) & -c_r^I & \text { P-odd, CP-odd } \\
+B_1(\hat{n})+B_2(\hat{n}) & b_n^{I+}+b_n^{I-} & \text { P-, CP-even, absorptive } \\
+B_1(\hat{n})-B_2(\hat{n}) & b_n^{I+}-b_n^{I-} & \text { P-even, CP-odd } \\
+B_1(\hat{r})+B_2(\hat{r}) & b_r^{I+}+b_r^{I-} & \text { P-odd, CP-even } \\
+B_1(\hat{r})-B_2(\hat{r}) & b_r^{I+}-b_r^{I-} & \text { P-odd, CP-odd, absorptive } \\
+B_1(\hat{k})+B_2(\hat{k}) & b_k^{I+}+b_k^{I-} & \text { P-odd,CP-even } \\
+B_1(\hat{k})-B_2(\hat{k}) & b_k^{I+}-b_k^{I-} & \text { P-odd, CP-odd, absorptive } \\
 \hline
 \end{array}
 \end{math}
@@ -344,12 +344,26 @@ B_1(k)-B_2(k) & b_k^{I+}-b_k^{I-} & \text { P-odd, CP-odd, absorptive } \\
 
 Integrating out the azimuthal angles of the normalized fourfold angular cross-section~\ref{fourfold_angular_distribution} yields the normalized polar angle double cross-section,
 \begin{align}
-\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i d \cos \theta_2^j}=\frac{1}{4}\left(1+B_1(i) \cos \theta_1^i+B_2(j) \cos \theta_2^j-C(i, j) \cos \theta_1^i \cos \theta_2^j\right),
+\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i d \cos \theta_2^j}=\frac{1}{4}\left(1+B_1(\hat{i}) \cos \theta_1^i+B_2(\hat{j}) \cos \theta_2^j-C(\hat{i},\hat{j}) \cos \theta_1^i \cos \theta_2^j\right),
 \label{double_angular_distribution}
 \end{align}
-from which can be derived single-differential cross-sections:
+\begin{center}
+where 
+\end{center}
 \begin{align}
-\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_{1(2)}^i} & =\frac{1}{2}\left(1+B_{1(2)}(i) \cos \theta_{1(2)}^i\right),
+\begin{array}{c}
+B_1(\hat{i}) = P(\hat{i})\kappa_\ell,\\
+B_2(\hat{j}) = -\bar{P}(\hat{j})\kappa_\ell,\\
+C(\hat{i}, \hat{j})=\kappa_{\ell}^2 \frac{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)-\sigma(\uparrow \downarrow)-\sigma(\downarrow \uparrow)}{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)+\sigma(\uparrow \downarrow)+\sigma(\downarrow \uparrow)}
+\end{array}
+\label{ttbar_squared_matrix_element}
+\end{align}
+with $P(\hat{i}) = \langle 2 \vect{S_t} \cdot \hat{i} \rangle$, $\bar{P}(\hat{j}) = \langle 2 \vect{S_{\bar{t}}} \cdot \hat{j} \rangle$, and the first (second) arrow of $\sigma(\uparrow \downarrow)$ referring to the spin state of the top quark (anti-quark) along spin quantization axis $\hat{i}$ $(\hat{j})$.
+The quantity $\cos \theta_1^k = \hat{\ell}_1 \cdot \hat{k}$, as an example, can be calculated by taking the dot product of the charged lepton direction in its grandfather top quark's ZMF with the $\hat{k}$ helicity basis spin quantization axis in the \ttbar ZMF, and can be demonstrated to be Lorentz invariant.
+
+From~\ref{double_angular_distribution} can be derived single-differential cross-sections:
+\begin{align}
+\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_{1(2)}^i} & =\frac{1}{2}\left(1+B_{1(2)}(\hat{i}) \cos \theta_{1(2)}^i\right),
 \label{single_angular_distribution_polar}
 \end{align}
 \begin{align}
@@ -357,33 +371,22 @@ from which can be derived single-differential cross-sections:
 \label{single_angular_distribution_diagonal}
 \end{align}
 \begin{align}
-\frac{1}{\sigma} \frac{\mathrm{d} \sigma}{\mathrm{d} x_{\pm}} = 
-= \frac{1}{2} \left(1-\frac{C(i, j) \pm C(j, i)}{2} {x_{\pm}} \right) \cos ^{-1} \left \vert x_{\pm} \right \vert
+\frac{1}{\sigma} \frac{\mathrm{d} \sigma}{\mathrm{d} x_{\pm}} = \frac{1}{2} \left(1-\frac{C(\hat{i},\hat{j}) \pm C(\hat{j},\hat{i})}{2} {x_{\pm}} \right) \cos ^{-1} \left \vert x_{\pm} \right \vert
 \label{single_angular_distribution_cross}
 \end{align}
 \begin{center}
-for $i \neq j$ where $x_{\pm} = \cos \theta_1^i \cos \theta_2^j \pm \cos \theta_1^j \cos \theta_2^i$.
+for $\hat{i} \neq \hat{j}$ where $x_{\pm} = \cos \theta_1^i \cos \theta_2^j \pm \cos \theta_1^j \cos \theta_2^i$.
 \end{center}
 These single-differential cross-sections would otherwise be even functions if not for the presence of the coefficients.
 Thus the 15 coefficients can be extracted from the mean or asymmetry of the following single-differential cross-sections:
 \begin{itemize}
-\item The 6 top (anti-top) polarization coefficients $\cos\theta_1^i$ ($\cos\theta_2^i$) using~\ref{single_angular_distribution_polar},
-\item  The 3 diagonal spin correlation coefficients $C(i,i)$ using~\ref{single_angular_distribution_diagonal}, and
-\item  Sums and differences of the 6 cross spin correlation coefficients $C(i,j) \pm C(j,i)$ using~\ref{single_angular_distribution_cross}.
+\item The 6 top quark (anti-quark) polarization coefficients $\cos\theta_1^i$ ($\cos\theta_2^i$) using~\ref{single_angular_distribution_polar},
+\item  The 3 diagonal spin correlation coefficients $C(\hat{i},\hat{i})$ using~\ref{single_angular_distribution_diagonal}, and
+\item  Sums and differences of the 6 cross spin correlation coefficients $C(\hat{i},\hat{j}) \pm C(\hat{j},\hat{i})$ using~\ref{single_angular_distribution_cross}.
 \end{itemize}
 
 The above decomposition is true for any subset of the full phase space, so differential measurements of the polarization and spin correlations involve partitioning the phase space and in each partition repeating the procedure of measuring the relevant single-differential cross-sections then extracting the coefficients.
 
-\begin{figure}[!h]
-  \begin{center}
-    \begin{tabular}{c}
-        \includegraphics[width=0.9\textwidth]{fig_Theory/}
-    \end{tabular}
-    \caption{
-            }
-    \label{}
-  \end{center}
-\end{figure}
 
 
 
