@@ -28,30 +28,9 @@ These properties makes top quarks unique in the quark sector, as top quark measu
 Because the large mass, production of top quarks have only been possible by Tevatron and LHC high-energy accelerator experiments.
 At these colliders, the majority of top quarks are produced in \ttbar pairs by the strong interaction, but single $t$ production by the electroweak interaction is also possible.
 For \ttbar production, three parton production processes are possible at hadron colliders: gluon-gluon ($gg$) fusion, quark/anti-quark ($q\bar{q}$) annihilation, and quark-gluon scattering.
-While at the Tevatron quark$\slash$anti-quark annihilation was the dominant production mechanism, for \beamenergy proton-proton collisions at the LHC, the gluon density of the proton parton distribution function (PDF), i.e. the probability density $f$ of finding a specific parton within the proton with a certain fraction $x$ of the proton's longitudinal momentum at particular resolution scale $\mu_F = Q$, is much higher than the quark density~\ref{Parton_Distribution_Functions}, and $gg$ fusion accounts for $\sim 90 \%$ of \ttbar production.
-\begin{figure}[!h]
-  \begin{center}
-    \begin{tabular}{c}
-        \includegraphics[width=0.80\textwidth]{fig_TopQuark/Parton_Distribution_Functions.png}
-    \end{tabular}
-    \caption{The proton PDF gives the probability density $f$ of finding a specific parton within the proton with a certain fraction $x$ of the proton's longitudinal momentum at resolution scale $\mu_F = Q$.
-    Shown for scales $Q = \SI{3.1}{\GeV}$ (Left) and at $Q = \SI{100}{\GeV}$ (Right), according to the NNPDF collaboration~\cite{Ball:2267455}.
-            }
-    \label{Parton_Distribution_Functions}
-  \end{center}
-\end{figure}
-~\cite{Ball:2267455}
-The inclusive \ttbar production cross-section in proton-proton ($pp$) collisions~\ref{ttbar_crosssection} is calculated by convoluting the proton PDFs with the partonic cross-sections, and summing over all parton constituents of the proton, i.e. gluons, valence quarks, and sea quarks:
-\begin{align}
-\sigma_{\ttbar}\left(s, m_{\ttbar}\right)=\sum_{i, j=g, q, \bar{q}} \int d x_i d x_j f_i\left(x_i, \mu_F^2\right) f_j\left(x_j, \mu_F^2\right) \cdot \hat{\sigma}_{i j \rightarrow \ttbar}\left(\hat{s}, m_{\ttbar}, \mu_F, \mu_R, \alpha_S(\mu_R)\right)
-\label{ttbar_crosssection}
-\end{align}
-where , $f_{i(j)}$ are the proton PDF, $x_{i(j)}$ are the parton momentum fraction of the proton longitudinal momentum, $\mu_F$ is the factorization scale, $\sigma_{i j \rightarrow \ttbar}$ are the exclusive partonic cross-sections for \ttbar production, $\hat{s} = s \cdot x_i \cdot x_j$ is the squared center-of-mass energy of the parton collision, $m_{\ttbar}$ is the \ttbar invariant mass, $\mu_R$ is the renormalization scale, $\alpha_s(\mu_R)$ is the coupling constant of the strong interaction, and \beamenergy is the center-of-mass energy of the proton-proton collision.
-The factorization scale $\mu_F$ is arbitrarily chosen and usually set to the momentum transfer $Q$.
-The renormalization scale $\mu_R$ is the arbitrarily chosen high-energy cutoff for the renormalization procedure, used in perturbation theory to separate divergences from higher order corrections.
-The calculation of $\sigma_{i j \rightarrow \ttbar}$ involves using Fermi's golden rule and the scattering matrix elements of the incoming partons and outgoing \ttbar pair, integrating over the phase space, summing over the outgoing spin and color states, and averaging over the incoming ones.
-For hard parton scattering processes at high energy proton colliders $\alpha_S(\mu_R) << 1$, so the partonic cross sections can be expanded in a power series expansion of $\alpha_S$ and be calculated in perturbation theory. 
-Perturbative calculations to accuracies $\mathcal{O}(\alpha^2_S)$, $\mathcal{O}(\alpha^3_S)$, and $\mathcal{O}(\alpha^4_S)$ are referred to as leading-order (LO), next-to-leading-order (NLO), and next-to-next-to-leading-order (NNLO), respectively.
+While at the Tevatron quark$\slash$anti-quark annihilation was the dominant production mechanism, for \beamenergy proton-proton collisions at the LHC, the gluon density of the proton PDF is much higher than the quark density~\ref{Parton_Distribution_Functions}, and $gg$ fusion accounts for $\sim 90 \%$ of \ttbar production.
+
+The inclusive \ttbar production cross-section in proton-proton ($pp$) collisions~\ref{ttbar_crosssection} is calculated by convoluting the proton PDFs with the partonic cross-sections, and summing over all parton constituents of the proton, i.e. gluons, valence quarks, and sea quarks.
 For QCD \ttbar production, three channels of LO $gg$ fusion and one channel of LO $q\bar{q}$ annihilation parton production processes are possible.
 LO Feynman diagrams for these processes are shown in figure~\ref{ttbar_production_LO_feynman_diagrams}.
 \begin{figure}[!h]

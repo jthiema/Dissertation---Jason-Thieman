@@ -63,21 +63,21 @@ Final states after the collisions are measured and recorded by the CMS, ATLAS, A
 \subsection{Luminosity}
 When two particle beams cross paths in a particle accelerator, the number of events of a particular process that occur per second is given by:
 \begin{align}
-{\frac{dN_{\text {Events}}}{dt}}= L_{\text{Inst}} \cdot \sigma_{\text{Process}}
+{\frac{dN_{\text {Events}}}{dt}}= \mathcal{L}_{\text{Inst}} \cdot \sigma_{\text{Process}}
 \end{align}
-where $L_{inst}$ is the instantaneous luminosity and $\sigma_{\text{Process}}$ is the cross-section of the process under consideration.
+where $\mathcal{L}_{inst}$ is the instantaneous luminosity and $\sigma_{\text{Process}}$ is the cross-section of the process under consideration.
 For the \beamenergy LHC, the total cross-section for all inelastic processes has been measured to be $\sigma_{\text{Inelastic}} = 68.6 \pm 0.5 \; (\text{Syst}) \; \pm 1.6 \; (\text{Lumi}) \; \si{\m \b}$~\cite{inelasticprotonprotoncrosssection}.
 The instantaneous luminosity can be parameterized~\cite{Karacheban:2294183} as:
 \begin{align}
-L_{\text{Inst}}=\frac{N_b^2 n_b f_{\mathrm{rev}}}{A_{eff}}
+\mathcal{L}_{\text{Inst}}=\frac{N_b^2 n_b f_{\mathrm{rev}}}{A_{eff}}
 \end{align}
 where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches per beam, $f_{\mathrm{rev}}$ the revolution frequency in the collider, and $A_eff$ is the effective area of the luminous region, and is measured frequently from Van der Meer (VdM) scans.
 $L_{\text{Inst}}$ decays over time due to the intensity degradation and beam emittance, with a mean life of $\sim \SI{15}{\h}$~\cite{LyndonEvans_2008}.
 For a particular process, the total number of events that occur in a recorded data set is given by:
 \begin{align}
-N_{\text {Events}}= L \cdot \sigma_{\text{Process}}
+N_{\text {Events}}= \mathcal{L} \cdot \sigma_{\text{Process}}
 \end{align}
-where $L = \int L_{\text{Inst}} \,dt$ is the instantaneous luminosity integrated over the corresponding period of time the data was recorded, i.e. the integrated luminosity.
+where $\mathcal{L} = \int \mathcal{L}_{\text{Inst}} \,dt$ is the instantaneous luminosity integrated over the corresponding period of time the data was recorded, i.e. the integrated luminosity.
 
 \section{The Compact Muon Solenoid Detector}
 The Compact Muon Solenoid (CMS) is a general-purpose detector, built for testing predictions of the SM, exploring models BSM, and discovering NP.
@@ -229,7 +229,7 @@ A global fit of the muon momentum using both the silicon tracker and muon system
 
 \subsection{Trigger and Data Acquisition System}
 CMS wants to collect the most relevant data from bunch crossings with a $\SI{40}{\MHz}$ event rate.
-Each bunch crossing generates $\sim \SI{1}{\Mbi}$ of data, but due to limited bandwidth, the detectors cannot readout and store $\sim \SI{40}{\Tbi \per \s}$, so a trigger system is necessary to reject the least interesting 99.999\% of events in quasi-real time, and reduce the event rate to $\sim \SI{100}{\Hz}$ before storage.
+Each bunch crossing generates $\sim \SI{1}{\M \byte}$ of data, but due to limited bandwidth, the detectors cannot readout and store $\sim \SI{40}{\T \byte \per \s}$, so a trigger system is necessary to reject the least interesting 99.999\% of events in quasi-real time, and reduce the event rate to $\sim \SI{100}{\Hz}$ before storage.
 To accomplish this, CMS has a highly reliable and efficient trigger system, composed of detector electronics, a L1 hardware trigger, a readout network, and a High Level software Trigger (HLT).
 The L1 trigger uses hardware processors and information from the calorimeters and muon systems to reduce the event rate to $\SI{100}{\kHz}$.
 The data acquisition then passes the complete readout of the event data to the HLT, which can perform fast reconstruction and event selection to filter events and reduce the rate of stored events to $\sim \SI{100}{\Hz}$.
