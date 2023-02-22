@@ -539,12 +539,14 @@
 \usepackage{amssymb}
 \usepackage{bbm}
 
+\usepackage{lineno}
+\linenumbers
+
+
 \newcommand{\ttbar}{\ensuremath{t\bar{t}}\xspace}
 \renewcommand{\pp}{\ensuremath{pp}\xspace}
 \newcommand{\beamenergy}{\ensuremath{\sqrt{s}=\SI{13}{\TeV}}\xspace}
 \newcommand{\invfb}{\ensuremath{\si{\femto \b}^{-1}}\xspace}
-\newcommand{\lumivalueRuniiUL}{137.7 \invfb \xspace}
-\newcommand{\lumierrRuniiUL}{1.6\% \xspace}
 
 \renewcommand{\ee}{\ensuremath{ee}\xspace}
 \newcommand{\emu}{\ensuremath{e\mu}\xspace}
@@ -560,6 +562,31 @@
 \newcommand{\Powheg}{{\textsc{Powhegv2}}}
 \newcommand{\Pythia} {{\textsc{Pythia8}}}
 \newcommand{\Geant} {{\textsc{Geant4}}}
+\newcommand{\MadSpin} {{\textsc{MadSpin}}} 
+\newcommand{\Herwig} {{\textsc{Herwig++}}} 
+\newcommand{\MGaMCatNLO} {MG5\_aMC@NLO(FxFx)} 
+\newcommand{\MGaMCatNLOOnly} {MG5\_aMC@NLO} 
+\newcommand{\MGMLM} {MG5\_aMC@NLO(MLM)} 
+
+
+\newcommand{\lumivalueSixPreVFP}{19.50\xspace \invfb} 
+\newcommand{\lumierrSixPreVFP}{1.2\%}
+\newcommand{\lumivalueSixPostVFP}{16.81\xspace \invfb} 
+\newcommand{\lumierrSixPostVFP}{1.2\%}
+\newcommand{\lumivalueSeven}{41.48\xspace \invfb} 
+\newcommand{\lumierrSeven}{2.3\%}
+\newcommand{\lumivalueEight}{59.83\xspace \invfb} 
+\newcommand{\lumierrEight}{2.5\%}
+\newcommand{\lumivalueRuniiUL}{137.7\xspace \invfb} 
+\newcommand{\lumierrRuniiUL}{1.6\%}
+
+\newcommand{\dy}{\ensuremath{Z/\gamma^*}}
+\newcommand{\wjets}{\ensuremath{W+}jets} 
+\newcommand{\zjets}{\ensuremath{Z+}jets} 
+\newcommand{\tw}{\ensuremath{tW}} 
+\renewcommand{\vv}{\ensuremath{\mathrm{WW/WZ/ZZ}}}
+
+
 
 % Define \I.
 % \I1 does \indent once, \I2 does \indent twice, etc.
@@ -674,11 +701,15 @@
 % Put chapter \include commands here.
 %
 \include{chapters/ch-Motivation_Theory}
+\include{chapters/ch-Top_Quark_Physics}
 \include{chapters/ch-LHC_CMS}
 \include{chapters/ch-Event_Simulation}
-\include{chapters/ch-Top_Quark_Physics}
-
-
+\include{chapters/ch-Event_Reconstruction}
+\include{chapters/ch-Event_Selection}
+\include{chapters/ch-TTBar_Reconstruction}
+\include{chapters/ch-Systematic_Uncertainties}
+\include{chapters/ch-Cross_Section_Measurement}
+\include{chapters/ch-Results}
 
 % Summary and/or conclusions are optional but often used.
 % The summary and/or conclusions often are the last

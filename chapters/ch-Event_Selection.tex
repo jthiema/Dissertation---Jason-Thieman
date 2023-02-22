@@ -1,0 +1,132 @@
+\ProvidesFile{chapters/ch-Event_Selection.tex}
+
+\chapter{Datasets and Event Selection}
+The signal process for this measurement is the production of top quark pairs followed by top quark decays $t\to W^+ b$ and $\bar{t}\to W^- \bar{b}$, and subsequent leptonic W boson decays into final state muons $W\to \mu\nu$ and electrons $W\to e\nu$, both "prompt" and "via tau", i.e. via the decay of the W boson into a tau $W\to \tau\nu$ and its subsequent leptonic decay into a final state electron $\tau\to e\nu$ or muon $\tau\to \mu\nu$.
+The analysis has been carried out using the CMS EDM and official software framework for event generation, simulation, and reconstruction, following recommendations for ultra-legacy Run II analyses by the Physics Performance and Datasets (PPD) and the Physics Data And Monte Carlo Validation (PdmV) groups.
+
+\section{Datasets}
+
+\subsection{Recorded Datasets}
+This measurement is performed using \lumivalueSixPreVFP $\pm$ \lumierrSixPreVFP, \lumivalueSixPostVFP $\pm$ \lumierrSixPostVFP, \lumivalueSeven $\pm$ \lumierrSeven, and \lumivalueEight $\pm$ \lumierrEight\ (Total: \lumivalueRuniiUL $\pm$ \lumierrRuniiUL) of data collected with the CMS experiment at the LHC with \beamenergy, during 2016, 2017, and 2018 respectively.
+Only the runs and luminosity sections that had good functioning of every CMS sub-detector were selected for analysis.
+
+\subsection{Simulated Datasets}
+MC simulations are used to estimate signal and background contributions. 
+The dileptonic \ttbar signal sample is produced using the \Powheg\ event generator with NLO ME calculations. 
+PS and hadronization of the \ttbar signal sample is performed using \Pythia. 
+The matrix-element jets are matched to parton showers using the \Powheg\ method. 
+The MC simulations assume that $m_t = \SI{172.5}{\GeV}$, and the PDFs are described using NNPDF3.1.
+
+The major sources of background contributions are semi-leptonic \ttbar, fully hadronic \ttbar, single top quark in association with a $W$ boson ($tW$), \ttbar in association with $W/Z$ bosons, \zjets, \wjets, and diboson ($WW$, $WZ$, and $ZZ$). 
+The semi-leptonic \ttbar, fully hadronic \ttbar, and $tW$ background samples are produced with \Powheg\ and \Pythia. 
+The \ttbar in association with $W$ bosons samples are produced with \MGaMCatNLOOnly+\MadSpin\ and \Pythia.
+The \ttbar in association with $Z$ bosons samples are produced with \MGaMCatNLO\ and \Pythia.
+The \zjets\ samples are produced with both \MGMLM\ and \MGaMCatNLO\ and showered with \Pythia.
+The \wjets\ samples are produced with \MGMLM\ and \Pythia.
+The $WW$, $WZ$, and $ZZ$ samples are produced with \Pythia.
+
+\section{Event Selection and Simulation Corrections}
+The \ttbar dilepton final state is characterized by the presence of at least two high-\pT isolated leptons with opposite electric charge, large MET (\ETmiss), and two jets created from the hadronization of $b$-quarks.
+The reconstruction of the different objects is performed using the PF algorithm.
+The object identification criteria follow the recommendations for ultra-legacy Run II analyses by the CMS Top Physics Analysis Group (Top PAG).
+
+\subsection{Triggers}
+To maximize the trigger efficiency, dilepton data streams and single lepton streams are both used for this measurement.
+In order to ensure no double-counting of events, events passing the dilepton triggers are vetoed when processing the single lepton data streams.
+Approximately 10\% of dilepton events that failed to pass the dilepton trigger requirements are recovered by including the single lepton data streams.
+The trigger efficiency is measured in data as a function of the lepton $\pT$ and used to correct the MC simulations.
+
+\subsection{Primary Vertex Requirements and Pileup Corrections}
+The PV of an event is required to associated with at least four tracks and be in the vicinity of the nominal interaction point with $\vert r \vert < \SI{2}{\cm}$ and $\vert z \vert < \SI{24}{\cm}$. 
+Charged-hadron subtraction (CHS) is used to remove charged PU contributions and the L1FastJet algorithm is applied to subtract the remaining neutral contributions.
+The number of PU events in MC simulations is typically based on an estimate of the expected number of interactions per bunch crossing and PU reweighting is performed using the instantaneous luminosity per bunch crossing in data, and the total $pp$ inelastic cross section of $\SI{69.2}{\m \b}$, to correct the PU distribution of the MC simulation.
+
+\subsection{Muons}
+PF muon candidates are required to have a transverse momentum $\pT > \SI{20}{\GeV}$ and a pseudorapidity restricted to the coverage of the inner tracker $\vert \eta \vert < 2.4$.
+They are also required to be reconstructed as global muons and fulfill tight selection criteria: 
+\begin{itemize}
+    \item at least six hits in the tracker layers
+    \item at least one hit in the pixel detector
+    \item muon segments in at least two muon stations
+    \item at least one muon-chamber hit included in the global-muon track fit
+    \item $\chi^2/ndof < 10$ for the global muon fit
+    \item its track has transverse impact parameter $d_xy< \SI{2}{\mm}$ and longitudinal distance $d_z< \SI{5}{\mm}$ with respect to the primary vertex
+\end{itemize}
+These criteria suppress hadronic "punch-through" fake-muons and muons produced in hadron decays to ensure high purity and provide good $\pT$ measurements.
+To remove leptons overlapping with jets, PF muon candidates are required to fulfill the isolation condition $I^{PF}_{Rel}< 0.15$, where $I^{PF}_{Rel}$ is calculated as: 
+\begin{align}
+I^{PF}_{Rel} = \frac{1}{\pT(\mu)}(I_\mathrm{CH} + \max(0, I_\mathrm{N} + I_\mathrm{PH} - 0.5 I_\mathrm{CH,pu}))
+\end{align}
+and divided by the \pT of the muon.
+It is the \pT-sum of charged (CH), neutral (N), and photon-like (PH) transverse energy deposits from charged hadron, neutral hadron and photon PF candidates, relative to the \pT of the muon, inside a cone, in $\eta$-$\phi$ space, of $\Delta R < 0.4$ around the muon.
+$I_\mathrm{CH,pu}$ is the sum over charged PF candidates not originating from the main primary vertex and its subtraction compensates for PU contributions. 
+Corrections are also applied that scale the raw energy measurements and smear the muon resolutions to match the accuracy and precision of reconstructed muons in MC simulation to those in recorded data.
+Identification and isolation efficiency corrections for muons are also applied, and are measured as a function of \pT and $\eta$ using a "tag-and-probe" method with an orthogonal dataset.
+
+\subsection{Electrons}
+PF electron candidates are required to have transverse momentum $\pT > \SI{20}{\GeV}$ and a pseudorapidity restricted to the coverage of the inner tracker $\vert \eta \vert < 2.4$.
+The gap between the barrel and endcap region of the ECAL ($1.4442 < \vert \eta_\mathrm{sc} \vert < 1.5660$) is excluded, where $\eta_\mathrm{sc}$ is the pseudorapidity of the ECAL supercluster.
+To ensure high purity, the electron selection uses tight identification and isolation criteria.
+The electron isolation considers photons $\gamma$, neutral hadrons $\mathrm{nh}$, and charged hadrons $\mathrm{ch}$ as identified by the PF algorithm in a cone, in $\eta$-$\phi$ space, of $\Delta R < 0.3$ around the electron.
+The relative isolation is calculated as: 
+\begin{align}
+I^{PF}_{Rel} = I_{\mathrm{ch}} + \max(I_\gamma + I_{\mathrm{nh}} - \rho A_{\mathrm{eff}}, 0)
+\end{align}
+and divided by the \pT of the electron.
+$A_{eff}$ is an $\eta$ dependent effective area that gives information about the susceptibility to soft contamination and is chosen such that isolation is flat with respect to the number of PU interactions. 
+It is used in combination with $\rho$, which is an estimate of the energy density per unit area contributed by PU interactions, to subtract energy deposition from PU interactions from the isolation.
+$\rho$, the energy deposition per area due to unclustered objects, is estimated from the fixed grid approach and the $\rho A_{eff}$ term ensures that the isolation efficiency is almost independent of the PU conditions.
+Corrections are also applied that scale the raw energy measurements and smear the electron resolutions to match the accuracy and precision of reconstructed electrons in MC simulation to those in recorded data.
+Identification and reconstruction efficiency corrections for electrons are also applied, and are measured as a function of \pT and $\eta$ using a "tag-and-probe" method with an orthogonal dataset.
+
+\subsection{Lepton Pair}
+Events with a dilepton system consisting of exactly two oppositely-charged leptons passing the electron and muon object selection criteria are accepted for further consideration.
+If more than two leptons are reconstructed in the event, then the event is vetoed.
+The leading selected lepton is required to have $\pT > \SI{25}{\GeV}$.
+The event is then unambiguously classified as \ee, \emu, or \mumu depending on the type of the selected lepton pair, and the event is discarded if there are additional leptons in the event, other than the two which enter the defined lepton pair.
+The invariant mass of the selected lepton pair is required to be larger than $\SI{20}{\GeV}$ to suppress background events from decays of heavy-flavour resonances and Drell-Yan processes.
+Moreover, in the \mumu and \ee decay channels, events are rejected if the dilepton invariant mass is within the vicinity of the $Z$ boson mass $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$, where background from $Z$ boson production is dominant.
+
+\subsection{Jets}
+Jets are clustered from reconstructed PF candidates using the anti-$k_T$ clustering algorithm with radius parameter $R = 0.4$.
+Events are required to have at least two jets with transverse momentum $\pT > \SI{30}{\GeV}$ and within the coverage of the inner tracker $\vert \eta \vert < 2.4$. 
+The following identification criteria is applied to efficiently identify jets (efficiency \sim $98\% - 99\%$) while rejecting jets with significant lepton fractions (purity \sim $98\%$) :
+\begin{itemize}
+\item Neutral Hadron Fraction $<0.9$
+\item Neutral EM Fraction $<0.9$
+\item Number of Constituents $>1$
+\item Muon Fraction $<0.8$
+\item Charged Hadron Fraction $>0$
+\item Charged Multiplicity $> 0$
+\item Charged EM Fraction $<0.8$ 
+\end{itemize}
+Additionally, a cleaning of leptons from jets is applied if $\Delta R(jet,lepton)<0.4$, to exclude jets overlapping with selected leptons used in the analysis.
+Events with jets in regions of the calorimeter that produced anomalously high or low jet rates are vetoed in MC and recorded data.
+
+Jet energy corrections (JEC) are applied that adjust the jet energy scale (JES) to match the accuracy of reconstructed jet energies in MC simulation to those in recorded data.
+To reduce the contribution coming from PU, the CHS algorithm removes charged particles and the L1FastJet algorithm removes the remaining neutral contributions from PU vertices before clustering jets~\cite{bib:JME18001}.
+L2L3 MC-truth corrections are applied to both data and MC simulation to correct for the variation of detector resolution as a function of jet $\eta$ and \pT.
+Any remaining discrepancies in the accuracy of jet energy measurements due to detector response and other effects are eliminated with the application of L2L3Residual corrections.
+Jet energy resolution (JER) corrections are applied by smearing the jets in MC simulation to match the precision of jets in recorded data.
+
+\subsection{Missing Transverse Energy}
+The calculation of the MET (\ETmiss) is based on PF objects, where PU-per-particle-identification (PUPPI)~\cite{bib:PUPPI} is used for PU mitigation.
+PUPPI is an alternative to the PF CHS algorithm which gives weights to particles based on the probability that they come from PU or the PV.
+The JEC (JES and JER) and lepton energy scale corrections are propagated to the \ETmiss.
+Events in the \mumu and \ee channels are required to have $\ETmiss > \SI{40}{\GeV}$, but no requirement on \ETmiss is applied in the \emu channel.
+
+\subsection{b-Jets}
+Selected events are required to have at least one jet tagged as having originate from a $b$-quark.
+In this analysis, the DeepJet $b$-tagging algorithm~\cite{bib:Bols_2020}, which uses uses approximately 650 input variables, divided into four categories (global variables, charged PF candidate features, neutral PF candidate features, and secondary vertex features associated with the jet) as inputs for a deep neural network, is used to tag all reconstructed jets in the event.
+In this analysis, a DeepJet medium working point is used with light ($l$)-jet mistag efficiency of $\sim 1\%$.
+
+Due to the differences between $b$-tagging algorithm efficiencies in recorded data and MC simulation, MC simulated events are reweighted with corrective scale factors after selection.
+Data-to-simulation corrective scale factors ($SF_{BTV}$) for the $b$-tagging efficiency of individual $b$-jets, and \textit{mistag rate} $c$-jets and light-($l$) jets, are measured with an orthogonal QCD multi-jet dataset and parameterized as a function of the jet \pT.
+To correct the possible differences of the b-tagging efficiency due to the different kinematics of the \ttbar events and the QCD multijet events used to measure the data-to-simulation corrective scale factors, the $b$-tagging efficiency ($\varepsilon_{MC}$) of $b$-jets and mistag rate for $c$- and $l$-jets, which do not only depend on the jet kinematic properties but also on the event selection, are estimated in this analysis using the MC simulated \ttbar signal events.
+The probability $P$ of a given configuration of jets in MC simulation and data is defined as:
+\begin{align}
+P(MC) = \prod_{\substack{i=tagged}} \varepsilon_i \prod_{\substack{j=not~tagged}} (1 - \varepsilon_j),
+P(DATA) = \prod_{\substack{i=tagged}} SF_i\varepsilon_i \prod_{\substack{j=not~tagged}} (1 - SF_j\varepsilon_j),
+\end{align}
+where $\varepsilon_i$ and $ SF_i $ refer respectively to $\varepsilon_{MC}$ and $SF_{BTV}$, which are the functions of the jet flavor, jet \pT, and jet $\eta$. 
+Afterwards, the event weight is computed accordingly to $w_{b-tag} = \frac{P(DATA)}{P(MC)}$.

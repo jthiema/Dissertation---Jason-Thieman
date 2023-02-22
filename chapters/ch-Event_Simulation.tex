@@ -25,7 +25,7 @@ where $w$ is the global event weight, $\mathcal{L}$ is the measured integrated l
 
 \section{Parton Distribution Functions}
 For inelastic $pp$ collisions at the LHC, partons within the proton are at sufficient energies to be asymptotically free, and the hard process can be treated as a direct parton-parton interaction.
-Protons are composed of not only three valence quarks, but also gluons and a sea of virtual quarks .
+Protons are composed of not only three valence quarks, but also gluons and a sea of virtual quarks.
 The proton parton distribution functions (PDF), shown in figure~\ref{Parton_Distribution_Functions}, give the probability density $f$ of finding a specific parton within the proton with a certain fraction $x$ of the proton's longitudinal momentum at factorization scale $\mu_F$.
 \begin{figure}[!h]
   \begin{center}
@@ -48,14 +48,14 @@ Perturbative calculations to accuracies $\mathcal{O}(\alpha^2_S)$, $\mathcal{O}(
 The partonic cross-sections are convoluted with the proton PDFs to obtain $pp$ collision production cross-sections~\cite{BUCKLEY2011145}.
 The cross-section or the scattering process $IJ \rightarrow X$ can be expressed as:
 \begin{align}
-\sigma_{IJ \rightarrow X}(s) = \sum_{i, j = g, q, \bar{q}}^{} \int_{0}^{1} \mathrm{~d} x_i \mathrm{~d} x_j \int f_{\sfrac{i}{I}}\left(x_i, \mu_F^2\right) f_{\sfrac{j}{J}}\left(x_j, \mu_F^2\right) \cdot \mathrm{~d}\hat{\sigma}_{i j \rightarrow X}\left(\hat{s}, \Phi_X, \mu_F, \mu_R, \alpha_S\right) \\
+\sigma_{IJ \rightarrow X}(s, \mu_F, \mu_R) = \sum_{i, j = g, q, \bar{q}}^{} \int_{0}^{1} \mathrm{~d} x_i \mathrm{~d} x_j f_{\sfrac{i}{I}}\left(x_i, \mu_F^2\right) f_{\sfrac{j}{J}}\left(x_j, \mu_F^2\right) \cdot \hat{\sigma}_{i j \rightarrow X}\left(\hat{s}, \mu_F, \mu_R, \alpha_S\right) \\
 =\sum_{i, j=g, q, \bar{q}} \int_{0}^{1} \mathrm{~d} x_i \mathrm{~d} x_j \int \mathrm{~d} \Phi_X f_{\sfrac{i}{I}}\left(x_i, \mu_F^2\right) f_{\sfrac{j}{J}}\left(x_j, \mu_F^2\right) \cdot \frac{1}{2 \hat{s}}\left\vert \mathcal{M}_{i j \rightarrow X}\right\vert^2\left(\Phi_X, \mu_F, \mu_R, \alpha_S\right)
 \label{ttbar_crosssection}
 \end{align}
 where $i(j)$ are the parton constituents of proton $I(J)$, $f_{{\sfrac{i}{I}}({\sfrac{j}{J}})}$ are the parton $i(j)$ PDF of proton $I(J)$, $x_{i(j)}$ are the parton $i(j)$ momentum fraction of proton $I(J)$, $\mu_F$ is the factorization scale, $\mu_R$ is the renormalization scale, $\sigma_{i j \rightarrow X}$ are the exclusive partonic cross-sections for $X$ production, $\hat{s} = s \cdot x_i \cdot x_j$ is the squared center-of-mass energy of the parton collision, \beamenergy is the center-of-mass energy of the proton-proton collision, $\alpha_S$ is the coupling constant of the strong interaction, $\Phi_X$ is the final state phase space, and $\left\vert \mathcal{M}_{i j \rightarrow X}\right\vert^2$ is the matrix element (ME) squared.
 The factorization scale $\mu_F$ is conventionally set to the energy scale of the high-energy protons in the collision.
 The renormalization scale $\mu_R$ is the arbitrarily chosen high-energy cutoff for the renormalization procedure, used in perturbation theory to separate divergences from higher order corrections.
-The ME are calculated by summing over the relevant fix-order Feynman diagrams ($\mathcal{M}_{i j \rightarrow n}=\sum_k \mathcal{F}_{i j \rightarrow X}^{(k)}$), summing over the outgoing spin and color quantum numbers, and averaging over the incoming ones.
+The ME are calculated by summing over the contributions from the relevant fix-order Feynman diagrams ($\mathcal{M}_{i j \rightarrow X}=\sum_k \mathcal{F}_{i j \rightarrow X}^{(k)}$), summing over the outgoing spin and color quantum numbers, and averaging over the incoming ones.
 At LO, ME calculations only include the interaction between incoming partons, but higher order ME calculations will additionally include real emission and virtual loop corrections.
 The real emission corrections correspond to radiated partons, which are classified as initial state radiation (ISR) and final state radiation (FSR) depending on whether they are emitted by the incoming or outgoing particles.
 This measurement uses the Positive Weight Hard Event Generator v2 (\Powheg) event generator, which perform ME calculations with NLO accuracy and accounts for polarizations in \ttbar production and top quark decays.
@@ -64,12 +64,12 @@ This measurement uses the Positive Weight Hard Event Generator v2 (\Powheg) even
 Parton shower (PS) models account for higher order QCD and QED radiative emissions beyond the accuracy of fixed order perturbative approximations.
 Showers of outgoing partons are created as partons radiate gluons and gluons radiate other gluons or produce $q\bar{q}$ pairs.
 In this measurement, the PS is modelled using (\Pythia).
-In \Pythia the radiative emissions are modeled as a Markov chain, where each emission is treated as independent, with the probability of an additional emission being determined by the splitting functions and the kinematics of the partons involved~\cite{pythia8.3}.
+In \Pythia\ the radiative emissions are modeled as a Markov chain, where each emission is treated as independent, with the probability of an additional emission being determined by the splitting functions and the kinematics of the partons involved~\cite{pythia8.3}.
 The algorithm continues to iteratively split the partons in a cascade of emissions until they reach an energy scale where perturbation theory breaks down.
 
 A matching procedure is used to avoid double-counting radiative emissions from the ME calculation and the PS models~\cite{StefanoFrixione_2007}.
-In \Powheg, the $h_damp$ parameter controls the matching procedure by modifying the scale at which radiative emissions from the PS are discarded in favor of the ME calculations.
-Lower (higher) values of $h_damp$ result in softer (harder) radiated emissions and less (more) events with high \pT jets.
+In \Powheg, the $h_{damp}$ parameter controls the matching procedure by modifying the scale at which radiative emissions from the PS are discarded in favor of the ME calculations.
+Lower (higher) values of $h_{damp}$ result in softer (harder) radiated emissions and less (more) events with high \pT jets.
 
 For $pp$ collisions, besides the parton interaction in the hard process, the remaining constituent partons of the colliding protons, referred to as the beam-beam remnants (BBR), can also interact.
 These multiple parton interactions (MPI) can produce additional independent scattering processes that contribute to the underlying event (UE).
@@ -87,12 +87,13 @@ Further snaps continue until the potential energy of the tubes are not sufficien
 In these models, individual partons do not hadronize independently, but rather colour-connected systems of partons hadronize collectively~\cite{BUCKLEY2011145}.
 The scenario in which color lines connecting different partons may rearrange themselves before the formation of final hadrons is referred to as color reconnection (CR).
 To more accurately describe the data, phenomenological CR models are used to simulate color-flow.
-\Pythia uses a MPI-based CR scheme in which there is a probability that the partons of the lower-\pT proton are added to the strings defined by the higher-\pT proton in such a way as to give the smallest total string length.
+\Pythia\ uses a MPI-based CR scheme in which there is a probability that the partons of the lower-\pT proton are added to the strings defined by the higher-\pT proton in such a way as to give the smallest total string length.
 
 \section{Detector Response}
-The interaction of the MC generated final state particles with the CMS detector are simulated with the GEometry ANd Tracking (\Geant) toolkit and the CMS event data model (EDM).
-\Geant divides the the trajectory of particles traversing the detector into small, finite steps and calculates the probability that the particles will interact with the material in the detector based on their properties and the properties of the material they are passing through~\cite{AGOSTINELLI2003250}.
-If an interaction occurs, \Geant calculates the resulting energy deposition, any secondary particles that are produced, and the response of the readout electronics and trigger system including the effects of noise and other sources of background.
-To provide an accurate simulation, \Geant uses a detailed description of the detector geometry and materials, calibrations, and electronics performance including dead channels.
+The interaction of the MC generated final state particles with the CMS detector are simulated with the GEometry ANd Tracking (\Geant v10.4.3) toolkit.
+\Geant\ divides the the trajectory of particles traversing the detector into small, finite steps and calculates the probability that the particles will interact with the material in the detector based on their properties and the properties of the material they are passing through~\cite{AGOSTINELLI2003250}.
+A complete set physics models for the electromagnetic, strong and weak interactions are included in \Geant.
+If an interaction occurs, \Geant\ calculates the resulting energy deposition, generates any secondary particles that are produced, and simulates the response of the readout electronics and trigger system including the effects of noise and other sources of background.
+To provide an accurate simulation, \Geant\ uses a detailed description of the detector geometry and materials, calibrations, and electronics performance including dead channels.
 Experimental data is used to parameterize detector response and validate the simulation~\cite{Bayatian:922757}.
-The resulting simulated events can be reconstructed exactly as actual events recorded by the CMS detector.
+The collection of \Geant-simulated detector responses for an event is stored in the raw CMS event data model (EDM) format and can be reconstructed exactly as actual events recorded by the CMS detector.

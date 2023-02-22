@@ -115,8 +115,8 @@ A schematic classifying \ttbar decay modes, together with a chart showing the re
     \label{Top_Pair_Decay_Channels}
   \end{center}
 \end{figure}
-Furthermore, $/tau$ can decay either hadronically or leptonically via a virtual $W$-boson.
-For lepton decays of $\tau \rightarrow \ell \bar{\nu_\ell} \nu_\tau$, the $\tau$ decay into a lepton, an anti-neutrino of the same lepton flavor, and a tau flavor neutrino.
+Furthermore, $\tau$ can decay either hadronically or leptonically via a virtual $W$-boson.
+For lepton decays of $\tau \rightarrow \ell \bar{\nu_\ell} \nu_\tau$, the $\tau$ decays into a lepton, an anti-neutrino of the same lepton flavor, and a tau flavor neutrino.
 The lepton branching fractions of $\tau$ decays are $\sim 17.82 \%$ for $\ell = e$ and $\sim 17.39 \%$ for $\ell = \mu$~\cite{bib:PDG}.
 Therefore, including $\tau$ decays, the \ttbar dileptonic final state branching fraction is $\sim 6.6 \%$.
 
@@ -217,14 +217,14 @@ However, as was shown in the previous section, the spins of top quarks produced 
 The squared matrix element for the \ttbar production and decay can be written as~\cite{Bernreuther}:
 \begin{align}
 \begin{array}{c}
-\vert\mathcal{M}(gg/q\bar{q} \to \ttbar \to (\bar{\ell} \nu b)(\ell \bar{\nu} \bar{b}) )\vert^2 \sim Tr[\rho R \bar{\rho}]
+\vert\mathcal{M}(gg/q\bar{q} \to \ttbar \to (\bar{\ell} \nu_\ell b)(\ell^\prime \bar{\nu_{\ell^\prime}} \bar{b}) )\vert^2 \sim Tr[\rho R \bar{\rho}]
 \end{array}
 \label{ttbar_squared_matrix_element}
 \end{align}
 where $R$ is the spin density matrix related to on-shell \ttbar production and $\rho$ is the decay density matrix.
 The production spin density matrix $R$ can be decomposed in the spin spaces of $t$ and $\bar{t}$ using a basis of Pauli matrices~\cite{Bernreuther}:
 \begin{align}
-R^I \propto \tilde{A} \mathbbm{1} \otimes  \mathbbm{1} + \tilde{B}_i^+ \sigma^i \otimes \mathbbm{1} + \tilde{B}_i^- \mathbbm{1} \otimes \sigma^i + \tilde{C}_{ij} \sigma^i \otimes \sigma^j
+R^I \propto \tilde{A} \mathbbm{1} \otimes  \mathbbm{1} + \tilde{B}_i^+ \sigma^i \otimes \mathbbm{1} + \tilde{B}_j^- \mathbbm{1} \otimes \sigma^j + \tilde{C}_{ij} \sigma^i \otimes \sigma^j
 \label{spin_density_matrix_decomposition}
 \end{align}
 where intial state $I = gg / q\bar{q}$ at fixed energy and top direction, $\tilde{A}$ determines the differential cross section for \ttbar production, $\mathbbm{1}$ is the $2\times2$ identity matrix, $\sigma^{i(j)}$ are the Pauli matrices, $\tilde{B}^\pm$ are 3-vectors that characterize the top quark ($+$) and anti-quark ($-$) polarizations along each of the spin quantization axes, and $\tilde{C}$ is a $3\times3$ matrix that characterizes the correlations between the top quark and anti-quark spins along each pair of spin quantization axes.
@@ -240,9 +240,9 @@ $\tilde{B}_i^\pm$ and $ \tilde{C}_{ij} $ can be further decomposed using the \tt
 \end{align}
 where the coefficients $b^\pm$ and $c$ are functions of $m_{\ttbar}$ and $\cos \Theta$.
 The helicity basis is chosen is because of its stability with regard to reconstruction errors and the spin correlations are strong using this basis.
-By construction, the coefficient functions $b^\pm$ and $c$ have definite properties with respect to discrete symmetries $P$, $CP$, $T$, and identical particle exchange ($Bose$), and as a result, these coefficients can help distinguish NP effects with SMEFT.
-The $P$, $CP$, and $T_N$ (naive time-reversal symmetry at tree-level) invariance of QCD forces many of these coefficients to be small or zero before considering electroweak and higher-order QCD loop corrections.
-The Bose symmetry of $I = gg$ implies $R^{gg}(\hat{k},\hat{p}) = R^{gg}(-\hat{k},\hat{p})$; hence the importance of $\operatorname{sign}(\cos \Theta)$ in the definition of $\{\hat{k},\hat{n},\hat{r}\}$~\ref{helcity_basis}, to allow non-zero coefficients when the parton production process is $gg$ fusion.
+By construction, the coefficient functions $b^\pm$ and $c$ have definite properties with respect to discrete symmetries $P$, $CP$, $T_N$ (naive time-reversal symmetry at tree-level), and identical particle exchange ($Bose$), and as a result, these coefficients can help distinguish NP effects with SMEFT~\cite{Bernreuther}.
+The $P$, $CP$, and $T$ invariance of QCD forces many of these coefficients to be small or zero before considering electroweak and higher-order QCD loop corrections.
+The Bose symmetry of $I = gg$ implies $R^{gg}(\hat{k},\hat{p}) = R^{gg}(-\hat{k},\hat{p})$; hence the importance of $\operatorname{sign}(\cos \Theta)$ in the definition of $\{\hat{k},\hat{n},\hat{r}\}$(see equation~\ref{helcity_basis}), to allow non-zero coefficients when the parton production process is $gg$ fusion.
 A summary of transformation properties of the coefficient functions with respect to $P$, $CP$, $T_N$, and $Bose$ ($I = gg$ only) symmetries~\cite{Bernreuther} is shown in table~\ref{coefficient_function_symmetries}, 
 \begin{table}[!h]
 \begin{center}
@@ -268,14 +268,14 @@ c_n^I & -c_n^I & c_n^I & c_n^I & -c_n^I & c_n^{g g} \\
 \end{array}
 \end{math}
 \caption{Transformation properties of the coefficient functions with respect to CP, P, and $\mathrm{T_N}$ symmetries for $I = gg, q\bar{q}$~\cite{Bernreuther}. 
-        In the last column, all the coefficients of the initial state $I = gg$ are even under Bose symmetry because of the $\operatorname{sign}(\cos \Theta)$ factor in the definition of $\{\hat{k},\hat{n},\hat{r}\}$~\ref{helcity_basis}.
+        In the last column, all the coefficients of the initial state $I = gg$ are even under Bose symmetry because of the $\operatorname{sign}(\cos \Theta)$ factor in the definition of $\{\hat{k},\hat{n},\hat{r}\}$ (see quation~\ref{helcity_basis}).
         }
 \label{coefficient_function_symmetries}
 \end{center}
 \end{table}
 
 As has been already mentioned, top quark spins cannot be measured directly, but can be traced in the differential angular distributions of their charged lepton granddaughters.
-For \ttbar dileptonic events, the normalized fourfold angular cross-section for the two leptons is:
+For \ttbar dileptonic events, the normalized fourfold angular cross-section~\cite{Bernreuther} for the two leptons is:
 \begin{align}
 \frac{1}{\sigma} \frac{d \sigma}{d \Omega_1 d \Omega_2}=\frac{1}{(4 \pi)^2}\left(1+\vec{B}_1 \cdot \hat{\ell}_1+\vec{B}_2 \cdot \hat{\ell}_2-\hat{\ell}_1 \cdot \overleftrightarrow{C} \cdot \hat{\ell}_2\right)
 \label{fourfold_angular_distribution}
@@ -335,7 +335,7 @@ B_1(\hat{i}) = P(\hat{i})\kappa_\ell,\\
 B_2(\hat{j}) = -\bar{P}(\hat{j})\kappa_\ell,\\
 C(\hat{i}, \hat{j})=\kappa_{\ell}^2 \frac{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)-\sigma(\uparrow \downarrow)-\sigma(\downarrow \uparrow)}{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)+\sigma(\uparrow \downarrow)+\sigma(\downarrow \uparrow)}
 \end{array}
-\label{ttbar_squared_matrix_element}
+\label{Polarizations_and_Spin_Correlations}
 \end{align}
 with $P(\hat{i}) = \langle 2 \vect{S_t} \cdot \hat{i} \rangle$, $\bar{P}(\hat{j}) = \langle 2 \vect{S_{\bar{t}}} \cdot \hat{j} \rangle$, and the first (second) arrow of $\sigma(\uparrow \downarrow)$ referring to the spin state of the top quark (anti-quark) along spin quantization axis $\hat{i}$ $(\hat{j})$.
 The quantity $\cos \theta_1^k = \hat{\ell}_1 \cdot \hat{k}$, as an example, can be calculated by taking the dot product of the charged lepton direction in its grandfather top quark's ZMF with the $\hat{k}$ helicity basis spin quantization axis in the \ttbar ZMF, and can be demonstrated to be Lorentz invariant.
@@ -364,7 +364,7 @@ Thus the 15 coefficients can be extracted from the mean or asymmetry of the foll
 \item  Sums and differences of the 6 cross spin correlation coefficients $C(\hat{i},\hat{j}) \pm C(\hat{j},\hat{i})$ using~\ref{single_angular_distribution_cross}.
 \end{itemize}
 
-The above decomposition is true for any subset of the full phase space, so differential measurements of the polarization and spin correlations involve partitioning the phase space and in each partition repeating the procedure of measuring the relevant single-differential cross-sections then extracting the coefficients.
+The above decomposition is true for any subset of the full phase space, so differential measurements of the polarization and spin correlations involve partitioning the phase space and, in each partition, repeating the procedure of measuring the relevant single-differential cross-sections then extracting the coefficients.
 
 
 
