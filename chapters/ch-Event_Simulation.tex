@@ -1,12 +1,13 @@
 \ProvidesFile{chapters/ch-Event_Simulation.tex}
 
 \chapter{Monte Carlo Event Simulation}
+\label{Monte_Carlo_Event_Simulation}
 In particle physics, completely analytical simulations are far too complicated and computationally expensive to be feasible.
 Instead, numerical Monte Carlo (MC) techniques employ a combination of analytical calculations and both probabilistic and phenomenological models to simulate $pp$ collisions, the production, decay, and showering of particles, as well as the detector response.
 MC simulations are used to optimize the analysis of data, study the performance of the detector, and to compare the results of experiments to theoretical predictions.
 These simulations are not perfect, as they do contain approximations, modeling assumptions, and systematic uncertainties, but they are accurate enough to make per cent precision measurements possible.
 A schematic representation of the different steps of MC simulation for $pp$ collisions is shown in figure~\ref{MC_simulation}.
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_Event_Simulation/MC_simulation.png}
@@ -18,16 +19,18 @@ A schematic representation of the different steps of MC simulation for $pp$ coll
 \end{figure}
 
 To minimize statistical uncertainties, MC simulations are usually performed with statistics much higher than in data recorded by the detector, and can be reweighted to match the luminosity of recorded data:
+\begin{linenomath*}
 \begin{align}
-w = \frac{\mathcal{L} \cdot \sigma_{\text{Process}}}{N_{\text{Gen}}}
+\mathcal{W} = \frac{\mathcal{L} \cdot \sigma_{\text{Process}}}{N_{\text{Gen}}}
 \end{align}
-where $w$ is the global event weight, $\mathcal{L}$ is the measured integrated luminosity of recorded data, $\sigma_{\text{Process}}$ is the cross-section of the simulated process, and $N_{\text{Gen}}$ is weighted sum of simulated events.
+\end{linenomath*}
+where $\mathcal{W}$ is the global event weight, $\mathcal{L}$ is the measured integrated luminosity of recorded data, $\sigma_{\text{Process}}$ is the cross-section of the simulated process, and $N_{\text{Gen}}$ is weighted sum of simulated events.
 
 \section{Parton Distribution Functions}
 For inelastic $pp$ collisions at the LHC, partons within the proton are at sufficient energies to be asymptotically free, and the hard process can be treated as a direct parton-parton interaction.
 Protons are composed of not only three valence quarks, but also gluons and a sea of virtual quarks.
 The proton parton distribution functions (PDF), shown in figure~\ref{Parton_Distribution_Functions}, give the probability density $f$ of finding a specific parton within the proton with a certain fraction $x$ of the proton's longitudinal momentum at factorization scale $\mu_F$.
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.80\textwidth]{fig_Event_Simulation/Parton_Distribution_Functions.png}
@@ -47,11 +50,13 @@ For hard parton scattering processes at high energy proton colliders $\alpha_S <
 Perturbative calculations to accuracies $\mathcal{O}(\alpha^2_S)$, $\mathcal{O}(\alpha^3_S)$, and $\mathcal{O}(\alpha^4_S)$ are referred to as leading-order (LO), next-to-leading-order (NLO), and next-to-next-to-leading-order (NNLO), respectively.
 The partonic cross-sections are convoluted with the proton PDFs to obtain $pp$ collision production cross-sections~\cite{BUCKLEY2011145}.
 The cross-section or the scattering process $IJ \rightarrow X$ can be expressed as:
+\begin{linenomath*}
 \begin{align}
 \sigma_{IJ \rightarrow X}(s, \mu_F, \mu_R) = \sum_{i, j = g, q, \bar{q}}^{} \int_{0}^{1} \mathrm{~d} x_i \mathrm{~d} x_j f_{\sfrac{i}{I}}\left(x_i, \mu_F^2\right) f_{\sfrac{j}{J}}\left(x_j, \mu_F^2\right) \cdot \hat{\sigma}_{i j \rightarrow X}\left(\hat{s}, \mu_F, \mu_R, \alpha_S\right) \\
 =\sum_{i, j=g, q, \bar{q}} \int_{0}^{1} \mathrm{~d} x_i \mathrm{~d} x_j \int \mathrm{~d} \Phi_X f_{\sfrac{i}{I}}\left(x_i, \mu_F^2\right) f_{\sfrac{j}{J}}\left(x_j, \mu_F^2\right) \cdot \frac{1}{2 \hat{s}}\left\vert \mathcal{M}_{i j \rightarrow X}\right\vert^2\left(\Phi_X, \mu_F, \mu_R, \alpha_S\right)
 \label{ttbar_crosssection}
 \end{align}
+\end{linenomath*}
 where $i(j)$ are the parton constituents of proton $I(J)$, $f_{{\sfrac{i}{I}}({\sfrac{j}{J}})}$ are the parton $i(j)$ PDF of proton $I(J)$, $x_{i(j)}$ are the parton $i(j)$ momentum fraction of proton $I(J)$, $\mu_F$ is the factorization scale, $\mu_R$ is the renormalization scale, $\sigma_{i j \rightarrow X}$ are the exclusive partonic cross-sections for $X$ production, $\hat{s} = s \cdot x_i \cdot x_j$ is the squared center-of-mass energy of the parton collision, \beamenergy is the center-of-mass energy of the proton-proton collision, $\alpha_S$ is the coupling constant of the strong interaction, $\Phi_X$ is the final state phase space, and $\left\vert \mathcal{M}_{i j \rightarrow X}\right\vert^2$ is the matrix element (ME) squared.
 The factorization scale $\mu_F$ is conventionally set to the energy scale of the high-energy protons in the collision.
 The renormalization scale $\mu_R$ is the arbitrarily chosen high-energy cutoff for the renormalization procedure, used in perturbation theory to separate divergences from higher order corrections.
@@ -67,12 +72,16 @@ In this measurement, the PS is modelled using (\Pythia).
 In \Pythia\ the radiative emissions are modeled as a Markov chain, where each emission is treated as independent, with the probability of an additional emission being determined by the splitting functions and the kinematics of the partons involved~\cite{pythia8.3}.
 The algorithm continues to iteratively split the partons in a cascade of emissions until they reach an energy scale where perturbation theory breaks down.
 
-A matching procedure is used to avoid double-counting radiative emissions from the ME calculation and the PS models~\cite{StefanoFrixione_2007}.
+A matching and merging procedure is used to avoid double-counting radiative emissions from the ME calculation and the PS models~\cite{StefanoFrixione_2007}.
+Two general NLO matching methods exist, namely $\textsc{Powheg}$ and $\textsc{MC@NLO}$, available in $\Powheg$ and automated in $\MGaMCatNLOOnly$ respectively~\cite{pythia8.3}.
 In \Powheg, the $h_{damp}$ parameter controls the matching procedure by modifying the scale at which radiative emissions from the PS are discarded in favor of the ME calculations.
 Lower (higher) values of $h_{damp}$ result in softer (harder) radiated emissions and less (more) events with high \pT jets.
+$\textsc{MLM}$ and $\textsc{UMEPS}$ are tree-level methods for merging, while $\textsc{FxFx}$, which combines $\textsc{MC@NLO}$ matching with $\textsc{MLM}$ matching, and $\textsc{UNLOPS}$, which is an extension of $\textsc{UMEPS}$, are for NLO merging~\cite{pythia8.3}.
+$\textsc{UNLOPS}$ is the preferred NLO merging scheme in \Pythia, but the $\textsc{FxFx}$ procedure is used for NLO MC simulations when when the ME calculations were performed by $\MGaMCatNLOOnly$.
 
 For $pp$ collisions, besides the parton interaction in the hard process, the remaining constituent partons of the colliding protons, referred to as the beam-beam remnants (BBR), can also interact.
 These multiple parton interactions (MPI) can produce additional independent scattering processes that contribute to the underlying event (UE).
+Pileup (PU) additionally 
 PS models in event generators have a adjustable parameters to control the behavior of event modeling, and a set of these parameters, which has been adjusted to better fit some aspects of the data, is referred to as a UE tune~\cite{Sirunyan:2669320}.
 The CP5 UE tune was chosen for all simulated samples for this measurement.
 

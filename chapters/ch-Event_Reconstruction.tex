@@ -1,6 +1,7 @@
 \ProvidesFile{chapters/ch-Event_Reconstruction.tex}
 
-\chapter{Particle-Flow Event Reconstruction}
+\chapter{Particle-Flow Reconstruction}
+\label{Particle-Flow_Reconstruction}
 The CMS detector consists of several sub-detector layers that exploit the different properties of particles to identify them and measure their energy-momenta and trajectories.
 For reconstructing particle object from their interaction with the detector, the CMS experiment has a developed a holistic particle-flow (PF) reconstruction algorithm that combines the measurements from all relevant sub-detector layers~\cite{Sirunyan:2270046}.
 The algorithm links the charged-particle tracks measured in the inner silicon tracker with the energy deposits in the calorimeters and the muon tracks measured in the outer muon tracking system.
@@ -18,7 +19,7 @@ KF assumes that the residuals between the predicted and measured trajectories ar
 The algorithm is seeded with tracks generated from two hits in consecutive layers in the pixel detector.
 The KF fits the expected trajectory of the particles based on measured charge and momentum, accounts for multiple scattering and energy loss of particles in the detector material, and updates the track parameters based on measurements in each detector layer.
 A visualization of the reconstructed tracks and identified vertices for an event with high PU recorded by the CMS detector in 2016 is shown in figure~\ref{Pileup}.
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.6\textwidth]{fig_Event_Reconstruction/Pileup.png}
@@ -32,7 +33,7 @@ A visualization of the reconstructed tracks and identified vertices for an event
 \section{Object Reconstruction}
 The main particles that are directly detected by CMS are muons, electrons, photons, charged hadrons (e.g. protons, pions, kaons), and neutral hadrons (e.g. neutrons).
 An illustration of the signatures left behind by these particles in the various sub-detectors is shown in figure~\ref{CMS_Layers}.
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CMS_Layers.png}
@@ -50,7 +51,7 @@ Photon reconstruction was not used for the measurement presented in this paper, 
 Muons leave tracks in the silicon tracker, their trajectories are curved due to the presence of the magnetic field of the solenoid, and they penetrate through the calorimeters and solenoid to leave ionization trails in the outer tracker.
 As is implied by its name, the CMS experiment was designed to detect muons with high reconstruction efficiency and low misidentification rate.
 Muons that are reconstructed independently in both the inner tracking detector and the outer muon system are referred to as global muons.
-A global fit of the muon momentum using both sub-detectors has momentum resolution of $1-3\%$ for low momentum muons ($\SI{20}{\GeV} < \pT < \SI{200}{\GeV}$), depending on $\eta$, and $5\%$ for high momentum muons ($\sim \SI{1}{\TeV}$)~\cite{Chatrchyan:1129810}.
+A global fit of the muon momentum using both sub-detectors has momentum resolution of $1-3\%$ for low momentum muons ($\SI{20}{\GeV} < \pT < \SI{200}{\GeV}$), depending on $\eta$, and $5\%$ for high momentum muons (\sim$\SI{1}{\TeV}$)~\cite{Chatrchyan:1129810}.
 If hadron shower remnants "punch-through" the HCAL and solenoid into the outer muon system, they may be misreconstructed as muons, but additional criteria can be used to balance the efficiency and purity of muon identification.
 
 \subsection{Electrons}
@@ -68,20 +69,24 @@ Charged hadrons leave tracks in the silicon tracker, their trajectories are curv
 The granularity of the inner silicon tracker is sufficiently fine to provide separation of individual particle trajectories within jets, and energy clusters are deposited in the calorimeters from the particles in the shower.
 The anti-$k_T$ jet clustering algorithm groups reconstructed particles into jets by merging the pair of particles with the smallest distance, calculating new distances between the merged object and the remaining particles, and repeating this process until all particles have been merged into jet objects~\cite{Matteo_Cacciari_2008}.
 For anti-$k_T$ jet clustering, the distance $d_{ij}$ between two particles $i$ and $j$ is defined as:
+\begin{linenomath*}
 \begin{align}
 d_{ij} = min(\sfrac{1}{p_{T,i}^2}, \sfrac{1}{p_{T,j}^2}) \times \sfrac{{\Delta R_ij}^2}{R^2}
 \end{align}
+\end{linenomath*}
 where $\Delta R$ is the angular separation between objects, defined in equation~\ref{DeltaR}, and $R$ is the radius parameter that determines the size of individual jets.
 The PF algorithm reduces the amount of energy that is mistakenly assigned to a jet due to pileup by removing clusters attributed to tracks originating at pileup vertices.
 
 \subsection{Missing Transverse Energy}
 For collisions at the LHC, there is no net momentum or force in the transverse direction, so \pT is conserved and sums to zero for both incoming protons and outgoing particles after the collision.
 This property is useful for inferring the production of particles invisible to the detector, i.e. neutrinos, from the missing transverse energy (MET):
+\begin{linenomath*}
 \begin{align}
 \vec{E}_T^{miss}=-\sum_{i} \vec{p}_{T,i}
 \end{align}
+\end{linenomath*}
 the negative vector sum of the transverse momenta for all PF reconstructed particles in an event~\ref{met_schematic}.
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.3\textwidth]{fig_Event_Reconstruction/met_schematic.pdf}.

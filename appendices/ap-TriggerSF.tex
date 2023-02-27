@@ -8,20 +8,24 @@ The methods used for the measurements and the determination of systematic uncert
 
 Trigger efficiencies measure the ability of the CMS trigger system to select potentially interesting events for further analysis.
 Differences between the observed trigger efficiencies of data recorded by the detector and the expected trigger efficiencies of simulated data can bias measured physics results, and these differences are corrected via trigger efficiency scale factors that are applied to the trigger efficiencies of simulated data, so that they match the observed trigger efficiencies of recorded data.
-Trigger efficiency corrective scale factors are calculated as:
+Trigger efficiency corrective scale factors ($\mathcal{SF}$) are calculated as:
+\begin{linenomath*}
 \begin{align}
-SF = \frac{\varepsilon^{data}}{\varepsilon^{MC}}
+\mathcal{SF} = \frac{\mathcal{E}^{data}}{\mathcal{E}^{MC}}
 \label{SF}
 \end{align}
-where $\varepsilon^{data}$ and $\varepsilon^{MC}$ are trigger efficiencies for data and Monte Carlo simulated data, respectively.
+\end{linenomath*}
+where $\mathcal{E}^{data}$ and $\mathcal{E}^{MC}$ are trigger efficiencies for data and Monte Carlo simulated data, respectively.
 
 The method used to measure the dilepton trigger efficiencies utilizes a set of cross-triggers, that are weakly correlated with the dilepton triggers, to count the number of events passing the cross-trigger and \ttbar dilepton final state event selection criteria (denominator), and from that set count also the subset that passes the dilepton triggers (numerator).
 Missing transverse energy (\MET) triggers are shown to be minimally correlated with the dilepton triggers, and they provide sufficient statistics for low statistical uncertainties, so they are used as the cross-triggers for these measurements. 
 The trigger efficiencies, for both data and Monte Carlo simulated data, are thus calculated as: 
+\begin{linenomath*}
 \begin{align}
-\varepsilon = \frac{N_{Events ~passing ~dilepton ~selection, ~\MET ~triggers, ~and ~dilepton ~triggers}}{N_{Events ~passing ~dilepton ~selection ~and ~\MET ~triggers}}
+\mathcal{E} = \frac{N_{Events ~passing ~dilepton ~selection, ~\MET ~triggers, ~and ~dilepton ~triggers}}{N_{Events ~passing ~dilepton ~selection ~and ~\MET ~triggers}}
 \label{efficiency}
 \end{align}
+\end{linenomath*}
 where, in addition to passing the triggers, events have to also pass the event selection criteria for the appropriate dilepton channel. 
 
 The dilepton trigger efficiency corrective scale factors are measured, separately in the \ee, \emu, \mumu channels, as 1-Dimensional and 2-Dimensional functions of leading and sub-leading lepton \pT.
@@ -83,10 +87,12 @@ For 2016, 2017, and 2018, the number of vertices partition are [$< 20$, $\geq 20
 The bin-by bin differences between the nominal measurement of the scale factor and a luminosity-weighted combination of scale factors measured for the individual runs in each era is taken as another source of systematic uncertainty.
 
 We estimate the correlation factor $(\alpha)$ between MET and dilepton ($DL$) triggers in \ttbar MC events by finding the fraction of events passing only the MET triggers ($\epsilon_{trigMET}^{MC}$), only the dilepton triggers ($\epsilon_{trigDL}^{MC}$) and passing both of them ($\epsilon_{trigDL,trigMET}^{MC}$): 
+\begin{linenomath*}
 \begin{align}
 \alpha=\frac{\epsilon_{trigDL}^{MC} \times \epsilon_{trigMET}^{MC}}{\epsilon_{trigDL,trigMET}^{MC}} \, .
 \label{alpha}
 \end{align}
+\end{linenomath*}
 If \MET and dilepton triggers are independent with no correlation, then $\epsilon_{trigDL,trigMET}^{MC} = \epsilon_{trigDL}^{MC} \times \epsilon_{trigMET}^{MC}$ or $\alpha = 1$ ($P\{A\cap B\} = P\{A\} \times P\{B\}$).
 The fraction $(\alpha)$ is determined for each channel and data set from equation \ref{alpha} and its difference from 1 is found to be small for all triggers studied. 
 Since these values are negligible with respect to the other systematic uncertainties, they are not added in quadrature for the final total uncertainty. 
@@ -97,7 +103,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
 \subsection{Trigger Efficiencies and Scale Factors: 2016preVFP}
 \label{TrigSFResults2016preVFP}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2016preVFP_TrigSF/g_lepApt_emu_MC.pdf}
@@ -114,7 +120,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2016preVFP_TrigSF/g_lepApt_ee_MC.pdf}
@@ -131,7 +137,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2016preVFP_TrigSF/g_lepApt_mumu_MC.pdf}
@@ -148,7 +154,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.45\textwidth]{fig_2016preVFP_TrigSF/h2D_lepABpt_emu.pdf}
@@ -163,7 +169,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.30\textwidth]{fig_2016preVFP_TrigSF/g_lepApt_emu_alpha.pdf}
@@ -183,7 +189,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
 \subsection{Trigger Efficiencies and Scale Factors: 2016postVFP}
 \label{TrigSFResults2016postVFP}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2016postVFP_TrigSF/g_lepApt_emu_MC.pdf}
@@ -200,7 +206,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2016postVFP_TrigSF/g_lepApt_ee_MC.pdf}
@@ -217,7 +223,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2016postVFP_TrigSF/g_lepApt_mumu_MC.pdf}
@@ -234,7 +240,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.45\textwidth]{fig_2016postVFP_TrigSF/h2D_lepABpt_emu.pdf}
@@ -249,7 +255,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.30\textwidth]{fig_2016postVFP_TrigSF/g_lepApt_emu_alpha.pdf}
@@ -269,7 +275,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
 \subsection{Trigger Efficiencies and Scale Factors: 2017}
 \label{TrigSFResults2017}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2017_TrigSF/g_lepApt_emu_MC.pdf}
@@ -286,7 +292,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2017_TrigSF/g_lepApt_ee_MC.pdf}
@@ -303,7 +309,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2017_TrigSF/g_lepApt_mumu_MC.pdf}
@@ -320,7 +326,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.45\textwidth]{fig_2017_TrigSF/h2D_lepABpt_emu.pdf}
@@ -335,7 +341,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.30\textwidth]{fig_2017_TrigSF/g_lepApt_emu_alpha.pdf}
@@ -355,7 +361,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
 \subsection{Trigger Efficiencies and Scale Factors: 2018}
 \label{TrigSFResults2018}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2018_TrigSF/g_lepApt_emu_MC.pdf}
@@ -372,7 +378,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2018_TrigSF/g_lepApt_ee_MC.pdf}
@@ -389,7 +395,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{ccc}
       \includegraphics[width=0.30\textwidth]{fig_2018_TrigSF/g_lepApt_mumu_MC.pdf}
@@ -406,7 +412,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.45\textwidth]{fig_2018_TrigSF/h2D_lepABpt_emu.pdf}
@@ -421,7 +427,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
   \end{center}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.30\textwidth]{fig_2018_TrigSF/g_lepApt_emu_alpha.pdf}
@@ -437,7 +443,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
 \end{figure}
 
 
-\section{Search for Lorentz Invariance Violation in \ttbar Production}
+\section{Search for Lorentz Invariance Violation in \ensuremath{\mathrm{t\bar{t}}} Production}
 Lorentz symmetry, i.e. that the laws of physics are the same in all inertial frames of reference, is a fundamental principle of general relativity and relativistic quantum field theories.
 The search for violation of Lorentz symmetry involves looking for deviations from this symmetry, which could indicate the presence of new physics Beyond the Standard Model (BSM).
 One method to test the validity of Lorentz symmetry is to search for a modulation of the \ttbar cross section as a function of sidereal time (the orientation of the experiment relative to the fixed position of stars in the sky).
@@ -448,9 +454,11 @@ The sidereal day, which is the time it takes for one rotation of the Earth relat
 In UNIX time, the rotational period of the earth (sidereal day) lasts approximately 23h 56min 4s, i.e. 86164 UNIX seconds. 
 The sidereal second is defined in such a way that the rotational period of the earth is exactly 24h, i.e. 86400 sidereal seconds.
 The following formula is used to translate UNIX time to sidereal time:
-\begin{equation}
+\begin{linenomath*}
+\begin{align}
 \Omega_{sidereal} t_{sidereal} = \Omega_{UTC} \times (t_{UNIX} - t_0) + \phi_{UNIX} + \phi_{longitude}
-\end{equation}
+\end{align}
+\end{linenomath*}
 In this equation:
 \begin{itemize}
 \item $\Omega_{sidereal}$ is the angular velocity of earth's rotation around its axis in sidereal time: $\Omega_{sidereal} = 2\pi / 86400 s^{-1}$ (sidereal). 
@@ -463,7 +471,7 @@ In this equation:
 \subsection{Time Dependent Trigger Scale Factors: 2016}
 \label{TrigSFResults_SideReal_2016}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.30\textwidth]{fig_2016_sidereal/g_emu_sidereel_FullSystUncBand.pdf}
@@ -479,7 +487,7 @@ In this equation:
 \subsection{Time Dependent Trigger Scale Factors: 2017}
 \label{TrigSFResults_SideReal_2017}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
       \includegraphics[width=0.30\textwidth]{fig_2017_sidereal/g_emu_sidereal_FullSystUncBand.pdf}

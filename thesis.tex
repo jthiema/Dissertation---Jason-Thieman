@@ -102,7 +102,7 @@
 %       This is the First Line\\[-6pt]
 %       and this is the Second Line%
 %     }
-\def\ZZtitle{Differential Measurements of Top Quark Polarizations and Spin Correlations in \lowercase{\ensuremath{\mathbf{t\bar{t}}}} Dilepton final states from \lowercase{\ensuremath{\mathbf{pp}}} collisions at \ensuremath{\mathbf{\sqrt{\lowercase{s}}=13~\text{T\lowercase{e}\hspace{-.08em}V}}} with the CMS Experiment}
+\def\ZZtitle{Differential Measurements of Top Quark Polarizations and Spin Correlations in \lowercase{\ensuremath{\mathrm{\mathbf{t\bar{t}}}}} Dilepton Final States from Proton-Proton Collisions at \ensuremath{\mathrm{\mathbf{\sqrt{\lowercase{s}}=}}} 13 TeV with the CMS Experiment}
 
 
 % showcolophon
@@ -548,9 +548,9 @@
 \newcommand{\beamenergy}{\ensuremath{\sqrt{s}=\SI{13}{\TeV}}\xspace}
 \newcommand{\invfb}{\ensuremath{\si{\femto \b}^{-1}}\xspace}
 
-\renewcommand{\ee}{\ensuremath{ee}\xspace}
-\newcommand{\emu}{\ensuremath{e\mu}\xspace}
-\newcommand{\mumu}{\ensuremath{\mu\mu}\xspace}
+\renewcommand{\ee}{\ensuremath{e^{+}e^{-}}\xspace}
+\newcommand{\emu}{\ensuremath{e^{\pm}\mu^{\mp}}\xspace}
+\newcommand{\mumu}{\ensuremath{\mu^{+}\mu^{-}}\xspace}
 
 \newcommand{\metxy}{\ensuremath{E\!\!\!\!/_\text{x,y}}\xspace}
 \newcommand{\pTmiss}{\ensuremath{\pT^\text{miss}}\xspace}
@@ -559,14 +559,18 @@
 \newcommand{\pT}{\ensuremath{p_{\mathrm{T}}}\xspace}
 \newcommand{\HT}{\ensuremath{H_{\mathrm{T}}}\xspace}
 
+\newcommand{\mll}{\ensuremath{m_{\ell \bar{\ell}}}\xspace}
+
+
 \newcommand{\Powheg}{{\textsc{Powhegv2}}}
 \newcommand{\Pythia} {{\textsc{Pythia8}}}
 \newcommand{\Geant} {{\textsc{Geant4}}}
 \newcommand{\MadSpin} {{\textsc{MadSpin}}} 
 \newcommand{\Herwig} {{\textsc{Herwig++}}} 
-\newcommand{\MGaMCatNLO} {MG5\_aMC@NLO(FxFx)} 
-\newcommand{\MGaMCatNLOOnly} {MG5\_aMC@NLO} 
-\newcommand{\MGMLM} {MG5\_aMC@NLO(MLM)} 
+\newcommand{\MGaMCatNLO} {\textsc{MadGraph5\_aMc@NLO(FxFx)}}
+\newcommand{\MGaMCatNLOOnly} {\textsc{MadGraph5\_aMc@NLO}}
+\newcommand{\MGMLM} {\textsc{MadGraph5\_aMc@NLO(MLM)}}
+\newcommand{\MG} {\textsc{MadGraph5(MLM)}}
 
 
 \newcommand{\lumivalueSixPreVFP}{19.50\xspace \invfb} 
@@ -584,8 +588,28 @@
 \newcommand{\wjets}{\ensuremath{W+}jets} 
 \newcommand{\zjets}{\ensuremath{Z+}jets} 
 \newcommand{\tw}{\ensuremath{tW}} 
-\renewcommand{\vv}{\ensuremath{\mathrm{WW/WZ/ZZ}}}
 
+\newcommand{\xsecDYTenFifty}{22635.1}
+\newcommand{\xsecDYFiftyInf}{6225.4}
+\newcommand{\xsecTTBAR}{831.76}
+\newcommand{\xsecTTBARdilept}{831.76\times0.10706}
+\newcommand{\xsecTTBARljets}{831.76\times0.44113}
+\newcommand{\xsecTTBARhadronic}{831.76\times0.45441}
+\newcommand{\xsecSINGLETOPtw}{35.85\times0.54559}
+\newcommand{\xsecWlnu}{61526.7}
+\newcommand{\xsecWW}{118.7}
+\newcommand{\xsecWZ}{47.13}
+\newcommand{\xsecZZ}{16.523}
+\newcommand{\xsecTTWJETSlnu}{0.2043}
+\newcommand{\xsecTTWJETSqq}{0.4062}
+\newcommand{\xsecTTZllnunu}{0.2529}
+\newcommand{\xsecTTZqq}{0.5297}
+
+\newcommand{\mtt} {\ensuremath{m_{\ttbar}}\xspace}
+\newcommand{\ytt} {\ensuremath{y_{\ttbar}}\xspace}
+\newcommand{\pttt} {\ensuremath{\pT^{\ttbar}}\xspace}
+\newcommand{\yt} {\ensuremath{y_t}\xspace}
+\newcommand{\ptt} {\ensuremath{\pT^t}\xspace}
 
 
 % Define \I.
@@ -700,16 +724,15 @@
 %
 % Put chapter \include commands here.
 %
+\include{chapters/ch-Introduction}
 \include{chapters/ch-Motivation_Theory}
-\include{chapters/ch-Top_Quark_Physics}
 \include{chapters/ch-LHC_CMS}
+\include{chapters/ch-Top_Quark_Physics}
 \include{chapters/ch-Event_Simulation}
 \include{chapters/ch-Event_Reconstruction}
 \include{chapters/ch-Event_Selection}
-\include{chapters/ch-TTBar_Reconstruction}
-\include{chapters/ch-Systematic_Uncertainties}
 \include{chapters/ch-Cross_Section_Measurement}
-\include{chapters/ch-Results}
+%\include{chapters/ch-Results}
 
 % Summary and/or conclusions are optional but often used.
 % The summary and/or conclusions often are the last

@@ -1,10 +1,11 @@
 \ProvidesFile{chapters/ch-LHC_CMS.tex}
 
 \chapter{The CMS Experiment at the LHC}
+\label{The_CMS_Experiment_at_the_LHC}
 
 \section{The Large Hadron Collider}
-Experiments to discover and determine the properties of SM particles are done at particle accelerator facilities.
-The Large Hadron Collider (LHC) is a \SI{27}{\km} circular particle accelerator located at the European Center for Nuclear Research (CERN) designed to accelerate two counter-rotating proton beams to energies up to \SI{7}{\TeV} ($99.999999\%$ the speed of light) and collide them at designated interaction points (IP).
+Experiments to discover and determine the properties of SM particles are performed at particle accelerator facilities.
+The Large Hadron Collider (LHC) is a $\SI{27}{\km}$ circular particle accelerator located at the European Center for Nuclear Research (CERN) designed to accelerate two counter-rotating proton beams to energies up to $\SI{6.8}{\TeV}$ ($99.999999\%$ the speed of light) and collide them at designated interaction points (IP).
 The LHC is the largest and most powerful particle accelerator ever built; its design, construction, and operation are towering engineering achievements of mankind, requiring an international collaboration of thousands of scientists, engineers, and technicians from more than 100 countries.
 The successful operation of the LHC has contributed to our understanding of the fundamental nature of matter by providing conditions to test the hypotheses of the SM and enabling many important discoveries in particle physics.
 The primary design criteria for the LHC was to provide conditions for elucidating the nature of EWSB, testing the hypothesis of the BEH mechanism, and discovering the Higgs boson.
@@ -12,13 +13,13 @@ The primary design criteria for the LHC was to provide conditions for elucidatin
 \subsection{Probing Small Scales with High Energy}
 During 2016, 2017, and 2018, the LHC operated with beam energies of $\SI{6.5}{\TeV}$, corresponding to center-of-mass collision energies of $\SI{13}{\TeV}$.
 Recently, the LHC finished upgrading the beam energies to $\SI{6.8}{\TeV}$.
-After operating at $\sqrt{s}=\SI{13.6}{\TeV}$ through 2025, the LHC plans to upgrade to a high luminosity phase, and substantial R\&D effort is being done now to prepare accelerator and detector upgrades for high luminosity environments.
+After operating at $\sqrt{s}=\SI{13.6}{\TeV}$ through 2025, the LHC plans to vastly increase the instantaneous luminosity, and substantial R\&D effort is being done now to prepare accelerator and detector upgrades for high luminosity (HL-LHC) environments.
 
 The De Broglie relation states that the wavelength of a particle is inversely proportional to its energy.
 According to Heisenberg's uncertainty principle, the position of a particle with a short wavelength cannot be precisely determined.
 Thus, the motivation for building higher energy particle colliders is to probe smaller distance scales.
-In the 20th century, particle accelerator energy increased many orders of magnitude from $\sim \SI{100}{\keV}$ in the 1930s to $\sim \SI{10}{\TeV}$ in the 2010s~\ref{energy_distanceprobed}, and current distance scales probed are down to $\sim \SI{e-19}{\m}$.
-\begin{table}[!h]
+In the 20th century, particle accelerator energy increased many orders of magnitude from \sim$\SI{100}{\keV}$ in the 1930s to \sim$\SI{10}{\TeV}$ in the 2010s (see table~\ref{energy_distanceprobed}), and current distance scales probed are down to \sim$\SI{e-19}{\m}$.
+\begin{table}[!htb]
 \begin{center}
 \begin{math}
 \begin{array}{|c|c|c|}
@@ -31,7 +32,7 @@ In the 20th century, particle accelerator energy increased many orders of magnit
 \hline
 \end{array}
 \end{math}
-\caption{In the 20th century, particle accelerator energy increased many orders of magnitude from $\sim \SI{100}{\keV}$ in the 1930s to $\sim \SI{10}{\TeV}$ in the 2010s, and current distance scales probed are down to $\sim \SI{e-19}{\m}$.
+\caption{In the 20th century, particle accelerator energy increased many orders of magnitude from \sim$\SI{100}{\keV}$ in the 1930s to \sim$\SI{10}{\TeV}$ in the 2010s, and current distance scales probed are down to \sim$\SI{e-19}{\m}$.
         }
 \label{energy_distanceprobed}
 \end{center}
@@ -40,7 +41,7 @@ In the 20th century, particle accelerator energy increased many orders of magnit
 \subsection{Accelerator Complex at CERN}
 Before reaching the LHC, protons must first be accelerated through a series of smaller accelerators at CERN's accelerator complex.
 A schematic of the LHC at CERN's accelerator complex in Geneva at the border of Switzerland and France is shown in figure~\ref{CERN_LHC}.
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CERN_LHC.png}
@@ -52,9 +53,9 @@ A schematic of the LHC at CERN's accelerator complex in Geneva at the border of 
 \end{figure}
 Protons are produced from hydrogen gas by inducing electric discharge in a duoplasmatron.
 The $\SI{80}{\m}$ Linear Accelerator 2 (Linac 2) accelerates protons to an energy of $\SI{50}{\MeV}$ before injecting them into the $\SI{628}{\m}$ circumference Proton Synchrotron Booster (PSB), which divides the beam into bunches consisting of more than 100 billion protons with $\SI{25}{\ns}$ separation, and further increases the proton energy to $\SI{1.4}{\GeV}$.
-The proton bunches are further injected into the $\SI{7}{\km}$ circumference Super Proton Synchrotron (SPS), which increases the proton energy to \SI{450}{\GeV} before finally injecting them into the LHC, which accelerates them to their final (2016, 2017, and 2018) energy of $\SI{6.5}{\TeV}$.
+The proton bunches are then injected into the $\SI{7}{\km}$ circumference Super Proton Synchrotron (SPS), which increases the proton energy to $\SI{450}{\GeV}$ before finally injecting them into the LHC, which accelerates them to their final (2016, 2017, and 2018) energy of $\SI{6.5}{\TeV}$.
 Radiofrequency (RF) cavities with electric fields oscillating at a frequency resonant with the bunching frequency are used to accelerate the protons.
-Ultra-high vacuum conditions $\sim \SI{e-11}{\m \bar}$ are maintained in the beam pipes.
+Ultra-high vacuum conditions \sim$\SI{e-11}{\mbar}$ are maintained in the beam pipes.
 Superconducting magnetic cooled with superfluid helium to temperatures below $\SI{2}{\K}$ and operating at fields exceeding $\SI{8}{\T}$~\cite{LyndonEvans_2008} are used to shape and control the beam directions.
 Dipole magnets bend the beams around the ring and quadrupole magnets are used to focus and collimate the beams.
 At the four LHC IPs, proton bunches cross at a rate of $\SI{40}{\MHz}$, creating collisions corresponding to temperatures a billion times hotter than the core of the sun.
@@ -62,29 +63,36 @@ Final states after the collisions are measured and recorded by the CMS, ATLAS, A
 
 \subsection{Luminosity}
 When two particle beams cross paths in a particle accelerator, the number of events of a particular process that occur per second is given by:
+\begin{linenomath*}
 \begin{align}
 {\frac{dN_{\text {Events}}}{dt}}= \mathcal{L}_{\text{Inst}} \cdot \sigma_{\text{Process}}
 \end{align}
+\end{linenomath*}
 where $\mathcal{L}_{inst}$ is the instantaneous luminosity and $\sigma_{\text{Process}}$ is the cross-section of the process under consideration.
 For the \beamenergy LHC, the total cross-section for all inelastic processes has been measured to be $\sigma_{\text{Inelastic}} = 68.6 \pm 0.5 \; (\text{Syst}) \; \pm 1.6 \; (\text{Lumi}) \; \si{\m \b}$~\cite{inelasticprotonprotoncrosssection}.
 The instantaneous luminosity can be parameterized~\cite{Karacheban:2294183} as:
+\begin{linenomath*}
 \begin{align}
 \mathcal{L}_{\text{Inst}}=\frac{N_b^2 n_b f_{\mathrm{rev}}}{A_{eff}}
 \end{align}
-where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches per beam, $f_{\mathrm{rev}}$ the revolution frequency in the collider, and $A_eff$ is the effective area of the luminous region, and is measured frequently from Van der Meer (VdM) scans.
-$L_{\text{Inst}}$ decays over time due to the intensity degradation and beam emittance, with a mean life of $\sim \SI{15}{\h}$~\cite{LyndonEvans_2008}.
+\end{linenomath*}
+where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches per beam, $f_{\mathrm{rev}}$ the revolution frequency in the collider, and $A_eff = \sqrt{\varepsilon_x \beta_x} \sqrt{\varepsilon_y \beta_y}$ is the effective area of the luminous region, where $\beta_{x,y}$ and $\varepsilon_{x,y}$ are the beam amplitude and emittance transverse to the beam axis and are measured regularly during Van der Meer (VdM) scans.
+$L_{\text{Inst}}$ decays over time due to the intensity degradation and beam emittance, with a mean life of \sim$\SI{15}{\h}$~\cite{LyndonEvans_2008}.
 For a particular process, the total number of events that occur in a recorded data set is given by:
+\begin{linenomath*}
 \begin{align}
 N_{\text {Events}}= \mathcal{L} \cdot \sigma_{\text{Process}}
 \end{align}
+\end{linenomath*}
 where $\mathcal{L} = \int \mathcal{L}_{\text{Inst}} \,dt$ is the instantaneous luminosity integrated over the corresponding period of time the data was recorded, i.e. the integrated luminosity.
 
 \section{The Compact Muon Solenoid Detector}
+Particle detectors measure electrical signals and collect scintillated light produced by particles interacting with the material of the detector.
 The Compact Muon Solenoid (CMS) is a general-purpose detector, built for testing predictions of the SM, exploring models BSM, and discovering NP.
 The primary design benchmarks for CMS were precision studies of QCD, electroweak, and flavor physics, as well as detection of the Higgs boson.
 CMS is a collection of sub-detectors that are layered cylindrically around the IP, with barrel and end-cap/disk components, that provide the detector with near-hermetic coverage of the solid angle.
 An exploded view of the CMS detector layout with labeled sub-detectors is shown in figure~\ref{CMS_Detector}.
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CMS_Detector.pdf}
@@ -105,20 +113,33 @@ When analyzing the kinematics of high-energy particle collisions, it is more con
 \item The transverse momentum $\pT = \sqrt {{p_x}^2+{p_y}^2}$ is the momentum component of a particle perpendicular to the beam axis. 
 \item The pseudorapidity $\eta$ is a measure of the angle between the particle's momentum vector and the beam axis.
 Pseudorapidity is defined as: 
+\begin{linenomath*}
 \begin{align}
 \eta=\frac{1}{2} \ln \frac{\vert\vec{p}\vert+p_z}{\vert\vec{p}\vert-p_z}=-\ln \left[\tan \left(\frac{\theta}{2}\right)\right]
 \end{align}
+\end{linenomath*}
 in terms of the polar angle $\theta$, which is measured from the z-axis.
-One advantage of using this coordinate is that differences in $\eta$ are Lorentz invariant for longitudinal Lorentz boosts along the beam axis.
+For particles with $m {{\ll}\!\!\!\!/} \; \vert \vec{p} \vert$, it is sometimes preferable to use rapidity, defined as:
+\begin{linenomath*}
+\begin{align}
+y=\frac{1}{2} \ln \frac{E+p_z}{E-p_z}
+\label{Rapidity}
+\end{align}
+\end{linenomath*}
+which converges to pseudorapidity in the ultra-relativistic limit.
+One advantage of using pseudorapidity (rapidity) is that differences in $\eta$ ($y$) are Lorentz invariant for longitudinal Lorentz boosts along the beam axis.
 \item The azimuthal angle $\phi$ is the angle in the transverse plane between the particle's momentum vector and the $\hat{x}$-axis.
 \end{itemize}
-The $\eta$ and $\phi$ coordinates are useful for defining a measure of angular separation between objects $i$ and $j$ in the detector:
+The energy $E$ of a particle, together with its 3-vector $\langle \pT, \eta, \phi \rangle$, form a 4-vector $(E,\pT, \eta, \phi)$ that fully characterizes the particle's momentum and energy in space and time.
+
+A measure of angular separation between objects $i$ and $j$ can be defined using $\eta$ and $\phi$ coordinates:
+\begin{linenomath*}
 \begin{align}
 \Delta R_{ij} = \sqrt {{(\phi_i - \phi_j)}^2+{(\eta_i - \eta_j)}^2};
 \label{DeltaR}
 \end{align}
+\end{linenomath*}
 this quantity is useful for clustering particle showers into jets and rejecting events with overlapping objects.
-The energy $E$ of a particle, together with its 3-vector $\langle \pT, \eta, \phi \rangle$, form a 4-vector $(E,\pT, \eta, \phi)$ that fully characterizes the particle's momentum and energy in space and time.
 
 \subsection{Solenoid Magnet}
 Central to the design of the CMS detector, and the source of its name, is the $\SI{12.9}{\m}$-long, $\SI{5.9}{\m}$ inner diameter superconducting solenoid, providing an axial and uniform $\SI{3.8}{\T}$ magnetic field within the solenoid, and a return field outside the solenoid that is confined by an iron yoke that contains and guides the field.
@@ -135,7 +156,7 @@ The inner tracker cylindrical volume of length $\SI{5.8}{\m}$ and diameter $\SI{
 
 The silicon pixel tracker operates closest to the IP, in the region with the highest radiation and particle flux from the $pp$ collisions.
 The primary limiting factor for impact parameter resolution is the radial distance of the innermost tracking layer.
-In the barrel region, three layers of pixel detectors, $\SI{53}{\cm}$ long, are at radial distances $r = 4.4, 7.3, 10.2 \si{\cm}$ from the beam, while in the forward regions, two end-cap disks with radii $\SI{6}{\cm}$ and $\SI{15}{\cm}$ are placed on each side at $z = \pm \SI{34.5}{\cm}$ and $\SI{46.5}{\cm}$~\ref{Inner_Tracker}.
+In the barrel region, three layers of pixel detectors, $\SI{53}{\cm}$ long, are at radial distances $r = 4.4, 7.3, 10.2 \si{\cm}$ from the beam, while in the forward regions, two end-cap disks with radii $\SI{6}{\cm}$ and $\SI{15}{\cm}$ are placed on each side at $z = \pm \SI{34.5}{\cm}$ and $\SI{46.5}{\cm}$ (see figure~\ref{Inner_Tracker}).
 The doping scheme for the pixels is $n$-on-$n$, which can be operated partially depleted even at high fluence.
 To minimize occupancy in the inner region of high particle flux and achieve good vertex resolution for the identification primary and secondary vertices, pixel detectors are high granular and finely segmented in two dimensions with pixel size $\approx 100 \times 150 \; \mu \si{\m \squared}$.
 The pixel detector consists of 1440 modules that cover a total area of $\approx \SI{1}{\m \squared}$, so altogether it contains about 66 million pixels.
@@ -145,8 +166,8 @@ The spatial resolution of the pixel detector is $10 \; \mu \si{\m}$ ($20 \; \mu 
 During the LHC winter shutdown between 2016 and 2017, the entire pixel tracker was replaced with the Phase-1 upgrade~\cite{Lipinski_2017}.
 A fourth layer was added in the barrel region, the radius of the innermost layer was reduced from $r = \SI{4.4}{\cm}$ to $r = \SI{2.9}{\cm}$, a fifth layer was added in the forward regions, and the total number of pixels increased to 124 million.
 The cooling system was replaced with evaporative \ce{CO2} cooling technology, which efficiently removes heat using of the latent heat of vaporization.
-After the replacement, the silicon inner tracker altogether contributes total radiation length up to $\sim 0.5 X_0$ and total interaction length up to $\sim 1.8 \lambda_I$, mostly from supports, cables, and cooling~\cite{Sirunyan:2270046}.
-\begin{figure}[!h]
+After the replacement, the silicon inner tracker altogether contributes total radiation length up to \sim$0.5 X_0$ and total interaction length up to \sim$1.8 \lambda_I$, mostly from supports, cables, and cooling~\cite{Sirunyan:2270046}.
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
         \includegraphics[width=0.40\textwidth]{fig_LHC_CMS/Pixel_Detector.pdf}
@@ -159,7 +180,7 @@ After the replacement, the silicon inner tracker altogether contributes total ra
   \end{center}
 \end{figure}
 
-Surrounding the pixel tracker is the silicon strip tracker~\ref{Inner_Tracker}, consisting of 15,148 modules with 24,244 silicon sensors, that cover a total area of $\approx \SI{198}{\m \squared}$, and altogether contains 9.6 million microstrips.
+Surrounding the pixel tracker is the silicon strip tracker (see figure~\ref{Inner_Tracker}), consisting of 15,148 modules with 24,244 silicon sensors, that cover a total area of $\approx \SI{198}{\m \squared}$, and altogether contains 9.6 million microstrips.
 In the barrel region, the strip tracker is separated into the Tracker Inner Barrel (TIB), which covers from $\SI{20}{\cm} < r < \SI{55}{\cm}$ out to $z = \pm \SI{65}{\cm}$, and the Tracker Outer Barrel (TOB), which covers from $\SI{55}{\cm} < r < \SI{116}{\cm}$ out to $z = \pm \SI{118}{\cm}$.
 In the forward regions, the strip tracker is separated into the Tracker Inner Disks (TID$^\pm$), which cover $\pm\SI{65}{\cm} < z < \pm\SI{124}{\cm}$ and $\SI{20}{\cm} < r < \SI{55}{\cm}$, and Tracker End-Caps (TEC$^\pm$), cover $\pm\SI{124}{\cm} < z < \pm\SI{282}{\cm}$ and $\SI{22.5}{\cm} < r < \SI{113.5}{\cm}$.
 The doping scheme for strips is $p$-on-$n$, which undergoes type inversion after enough radiation damage to the crystal lattice and change.
@@ -171,7 +192,7 @@ The single point resolutions of these measurements are $\approx 230 \; \mu \si{\
 
 \subsection{Electromagnetic Calorimeter}
 Surrounding the silicon inner tracker is the electromagnetic calorimeter (ECAL), consisting of 61,200 lead tungstate (\ce{PbWO4}) scintillating crystals in the barrel region (EB) and 7,324 crystals in both end-caps (EC).
-The EB covers out to $\vert \eta \vert < 1.479$, with inner radius $\SI{1.29}{\m}$, while the EE covers $1.479 < \vert \eta \vert < 3.0$, at a longitudinal distance $\vert z \vert = \SI{3.15}{\m}$ from the IP~\ref{ECAL_HCAL}.
+The EB covers out to $\vert \eta \vert < 1.479$, with inner radius $\SI{1.29}{\m}$, while the EE covers $1.479 < \vert \eta \vert < 3.0$, at a longitudinal distance $\vert z \vert = \SI{3.15}{\m}$ from the IP (see figure~\ref{ECAL_HCAL}).
 
 The ECAL measures the energy of particles, such as electrons, positrons, and photons, that primarily interact through the electromagnetic force.
 Lead tungstate is high density $\SI{8.28}{\g\per\cm\cubed}$, optically transparent, radiation-hard, fast, and has a short radiation length ($X_0 = \SI{0.89}{\cm}$).
@@ -182,7 +203,7 @@ The scintillation decay time of lead tungstate is less than $\SI{25}{\ns}$, and 
 The crystals are fully polished to totally internally reflect light down the crystal where it is collected by a silicon avalanche photodiodes in the EB and vacuum phototriodes in the EE, which are designed to be radiation-hard operate in the high magnetic field.
 In the $1.653 < \vert \eta \vert < 2.6$ region are preshower detectors that are primarily designed to distinguish photons originating from $\pi^0$ decays.
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{cc}
         \includegraphics[width=0.45\textwidth]{fig_LHC_CMS/ECAL.pdf}
@@ -196,7 +217,7 @@ In the $1.653 < \vert \eta \vert < 2.6$ region are preshower detectors that are 
 \end{figure}
 
 \subsection{Hadronic Calorimeter}
-Outside the ECAL is the hadronic calorimeter (HCAL), consisting of the HCAL Barrel (HB), which covers out to $\vert \eta \vert < 1.3$, the HCAL End-caps (HE), which cover $1.3 < \vert \eta \vert < 3$, and radiation-hard, quartz fibre hadron calorimeters that are placed in the forward region (HF) $3 < \vert \eta \vert < 5.2$~\ref{ECAL_HCAL}.
+Outside the ECAL is the hadronic calorimeter (HCAL), consisting of the HCAL Barrel (HB), which covers out to $\vert \eta \vert < 1.3$, the HCAL End-caps (HE), which cover $1.3 < \vert \eta \vert < 3$, and radiation-hard, quartz fibre hadron calorimeters that are placed in the forward region (HF) $3 < \vert \eta \vert < 5.2$ (see figure~\ref{ECAL_HCAL}).
 The HCAL is designed to measure jet energy by forcing their strongly-interacting hadron constituents to shower in brass absorber layers that alternate with scintillating plastic layers, in which the showers deposit their energy by exciting nearby atoms which subsequently relax by emitting light collected by hybrid photodiodes.
 The non-magnetic brass absorber layer is composed of 70\% \ce{Cu} and 30\% \ce{Zn}, has a nuclear interaction length of $\lambda_I = \SI{16.42}{\cm}$.
 In the barrel region, the HB does not have sufficient total interaction length for hadron showers to completely exhaust their energy in the calorimeter, so an Outer HCAL (HO) of scintillating plastic layers, that uses the solenoid as an additional absorber layer, is placed outside the solenoid and covers out to $\vert \eta \vert < 1.3$.
@@ -216,10 +237,10 @@ The muon system is aligned with the inner tracker in order for the detectors to 
 
 \subsection{Trigger and Data Acquisition System}
 CMS wants to collect the most relevant data from bunch crossings with a $\SI{40}{\MHz}$ event rate.
-Each bunch crossing generates $\sim \SI{1}{\M \byte}$ of data, but due to limited bandwidth, the detectors cannot readout and store $\sim \SI{40}{\T \byte \per \s}$, so a trigger system is necessary to reject the least interesting 99.999\% of events in quasi-real time, and reduce the event rate to $\sim \SI{100}{\Hz}$ before storage.
+Each bunch crossing generates \sim$\SI{1}{\M \byte}$ of data, but due to limited bandwidth, the detectors cannot readout and store \sim$\SI{40}{\T \byte \per \s}$, so a trigger system is necessary to reject the least interesting 99.9999\% of events in quasi-real time, and reduce the event rate to \sim$\SI{100}{\Hz}$ before storage.
 To accomplish this, CMS has a highly reliable and efficient trigger system, composed of detector electronics, a L1 hardware trigger, a readout network, and a High Level software Trigger (HLT).
-The L1 trigger uses hardware processors and information from the calorimeters and muon systems to reduce the event rate to $\SI{100}{\kHz}$.
-The data acquisition then passes the complete readout of the event data to the HLT, which can perform fast reconstruction and event selection to filter events and reduce the rate of stored events to $\sim \SI{100}{\Hz}$.
+The L1 trigger uses hardware processors and information from the calorimeters and muon systems to reduce the event rate to \sim$\SI{100}{\kHz}$.
+The data acquisition then passes the complete readout of the event data to the HLT, which can perform fast reconstruction and event selection to filter events and reduce the rate of stored events to \sim$\SI{100}{\Hz}$.
 
 
 
