@@ -1,8 +1,8 @@
 \ProvidesFile{chapters/ch-Event_Selection.tex}
 
-\chapter{Datasets, Event Selection, and Kinematic Reconstruction}
+\chapter{Datasets, Event Selection, and \ensuremath{\mathrm{t\bar{t}}} Kinematic Reconstruction}
 \label{Datasets_Event_Selection_Kinematic_Reconstruction}
-The signal process for this measurement is the production of top quark pairs followed by top quark decays $t\to W^+ b$ and $\bar{t}\to W^- \bar{b}$, and subsequent leptonic W boson decays into final state muons $W\to \mu\nu$ and electrons $W\to e\nu$, both "prompt" and "via tau", i.e. via the decay of the W boson into a tau $W\to \tau\nu$ and its subsequent leptonic decay into a final state electron $\tau\to e\nu$ or muon $\tau\to \mu\nu$.
+The signal process for this measurement is the production of top quark pairs followed by top quark decays $t\to W^+ b$ and $\bar{t}\to W^- \bar{b}$, and subsequent leptonic $W$ boson decays into final state muons $W\to \mu\nu$ and electrons $W\to e\nu$, both "prompt" and "via tau", i.e. via the decay of the W boson into a tau $W\to \tau\nu$ and its subsequent leptonic decay into a final state electron $\tau\to e\nu$ or muon $\tau\to \mu\nu$.
 The analysis has been carried out using the CMS EDM and official software framework for event generation, simulation, and reconstruction, following recommendations for ultra-legacy Run II analyses by the Physics Performance and Datasets (PPD) and the Physics Data And Monte Carlo Validation (PdmV) CMS groups.
 
 \section{Datasets}
@@ -20,8 +20,8 @@ The MC simulations assume that $m_t = \SI{172.5}{\GeV}$, and the PDFs are descri
 \Powheg\ assumes that the \ttbar branching fractions are flavor-independent with flavor-averaged branching fractions of $0.1091$, so correction factors were calculated and applied to correct each dilepton channel to the flavor-specific PDG value.
 The following flavor-specific branching fractions are taken from PDG~\cite{bib:PDG}: $b_{{\ensuremath{W\to e\nu}}} = 0.1071$ $\pm$ 0.0016, $b_{{\ensuremath{W\to \mu\nu}}} = 0.1063$ $\pm$ 0.0015, and $b_{{\ensuremath{W\to \tau\nu}}} = 0.1138$ $\pm$ 0.0021.
 The branching fraction of $\tau$ leptons decaying into a muon is given by $b_{{\ensuremath{\tau\to \mu\nu\nu}}} = 0.1741$ $\pm$ 0.0004 and for taus decaying to an electron it is $b_{{\ensuremath{\tau\to e\nu\nu}}} = 0.1783$ $\pm$ 0.0004.
-The following \ttbar dilepton branching fraction global correction factors were applied per prompt dilepton channel: $\mathcal{C}_{\ee} = 0.964261576$, $\mathcal{C}_{\emu} = 0.957058875$, and $\mathcal{C}_{\mumu} = 0.949909976$.  
-\ttbar dilepton events with at least one leptonic tau decay are considered as signal in this analysis and the following branching fraction global correction factors were applied per dilepton channel via tau: $\mathcal{C}_{\ee} = 1.029827957$, $\mathcal{C}_{\emu} = 1.026209047$, and $\mathcal{C}_{\mumu} = 1.022670477$.
+The following \ttbar dilepton branching fraction global correction factors were applied per prompt dilepton channel: $\mathcal{C}_{\ee} = 0.9643$, $\mathcal{C}_{\emu} = 0.9571$, and $\mathcal{C}_{\mumu} = 0.9499$.  
+\ttbar dilepton events with at least one leptonic tau decay are considered as signal in this analysis and the following branching fraction global correction factors were applied per dilepton channel via tau: $\mathcal{C}_{\ee} = 1.0298$, $\mathcal{C}_{\emu} = 1.0262$, and $\mathcal{C}_{\mumu} = 1.0227$.
 
 The major sources of background contributions are semi-leptonic \ttbar, fully hadronic \ttbar, dileptonic decays of single top quarks in association with a $W$ boson ($tW$ and $\bar{t}W$), \ttbar in association with $W/Z$ bosons, \zjets, \wjets, and $WW$, $WZ$, $ZZ$ diboson processes. 
 A summary of the MC simulated process for background processes is shown in table~\ref{simulated_Datasets}, including the ME generator, PS algorithm, and cross-section used for luminosity scaling.
@@ -56,7 +56,7 @@ A summary of the MC simulated process for background processes is shown in table
  \end{center}
 \end{table}
 
-\section{Event Selection and Simulation Corrections}
+\section{Event Selection and Object Corrections}
 The \ttbar dilepton final state is characterized by the presence of at least two high-\pT isolated leptons with opposite electric charge, large MET (\ETmiss), and two jets created from the hadronization of $b$-quarks.
 The reconstruction of the different objects is performed using the PF algorithm.
 The object identification criteria follow the recommendations for ultra-legacy Run II analyses by the CMS Top Physics Analysis Group (Top PAG).
@@ -255,7 +255,7 @@ Smearings without any solutions are given null weights.
 The top quark energy is calculated from its three-momentum and the top quark mass constraint $m_{t} = \SI{172.5}{\GeV}$.
 The final solution for top anti-quark four-momentum determined in an analogous procedure.
 
-\subsection{Comparison of \ensuremath{\mathrm{t\bar{t}}} Reconstruction for Dilepton Events: Prompt and Via \ensuremath{\mathrm{\tau}}}
+\subsection{Comparison of \ensuremath{\mathrm{t\bar{t}}} Reconstruction for Prompt and Via \ensuremath{\mathrm{\tau}} Dilepton Events}
 The assumption that the dilepton decay is prompt and there are only two neutrinos in the final state is not true when the dilepton decay is via intermediate $\tau$ leptons; such decays can have four or six neutrinos in the final state.
 The top quark and \ttbar reconstructed kinematic variables at detector level (REC) are presented versus the true variables at generator level (GEN), and additionally the resolutions are presented as the difference between the true and reconstructed variables in bins of the true variables. 
 Figures~\ref{fig:kinrec:resolution-mtt} through~\ref{fig:kinrec:resolution-yt} show resolution of \mtt, \ytt, \pttt, \yt, and \ptt\ distributions for both prompt and via tau reconstructed \ttbar dilepton events. 
@@ -357,16 +357,16 @@ where $f_{\zjets}$ and $f_{\text{Other}}$ are the fractions obtained from the fi
 Separate global normalization scale factors ($\mathcal{SF}$) are fitted in the \ee and \mumu channels:
 \begin{linenomath*}
 \begin{align}
-\mathcal{SF}_{ee} &= \frac{f_{\zjets}^{\ee} \cdot N_\text{Data}^{\ee}}{N_{\zjets}^{\ee}} \\
-\mathcal{SF}_{\mu\mu} &= \frac{f_{\zjets}^{\mumu} \cdot N_\text{Data}^{\mumu}}{N_{\zjets}^{\mumu}}
+\mathcal{SF}_{ee} &= \frac{f_{\zjets}^{\ee} \cdot \mathcal{N}_\text{Data}^{\ee}}{\mathcal{N}_{\zjets}^{\ee}} \\
+\mathcal{SF}_{\mu\mu} &= \frac{f_{\zjets}^{\mumu} \cdot \mathcal{N}_\text{Data}^{\mumu}}{\mathcal{N}_{\zjets}^{\mumu}}
 \end{align}
 \end{linenomath*}
-where $N_{\zjets}$ and $N_\text{Data}$ are the number of events in the \zjets\ template and data distribution.
+where $\mathcal{N}_{\zjets}$ and $\mathcal{N}_\text{Data}$ are the number of events in the \zjets\ template and data distribution.
 The \emu and combined channel scale factors are calculated as:
 \begin{linenomath*}
 \begin{gather}
 \mathcal{SF}_{\emu} = \sqrt{\mathcal{SF}_{\ee} \times \mathcal{SF}_{\mumu}} \\
-\mathcal{SF}_{\ell \bar{\ell}} = \frac{\mathcal{SF}_{\ee} \cdot N_\text{Data}^{\ee} + \mathcal{SF}_{\mumu} \cdot N_\text{Data}^{\mumu} + \mathcal{SF}_{\emu} \cdot N_\text{Data}^{\emu}}{N_\text{Data}^{\ee} + N_\text{Data}^{\mumu} + N_\text{Data}^{\emu}}.
+\mathcal{SF}_{\ell \bar{\ell}} = \frac{\mathcal{SF}_{\ee} \cdot \mathcal{N}_\text{Data}^{\ee} + \mathcal{SF}_{\mumu} \cdot \mathcal{N}_\text{Data}^{\mumu} + \mathcal{SF}_{\emu} \cdot \mathcal{N}_\text{Data}^{\emu}}{\mathcal{N}_\text{Data}^{\ee} + \mathcal{N}_\text{Data}^{\mumu} + \mathcal{N}_\text{Data}^{\emu}}.
 \end{gather}
 \end{linenomath*}
 To enhance \zjets\ statistics in the orthogonal phase space of the $Z$ boson mass peak control region, \MET and b-tagging event selection requirements are omitted, as is the requirement of a kinematic reconstruction solution.

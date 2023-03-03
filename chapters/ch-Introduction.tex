@@ -5,25 +5,38 @@
 Experiments to discover and determine the properties of Standard Model (SM) particles are performed at particle accelerator facilities, such as the Large Hadron Collider (LHC) at CERN, which is the largest and most powerful particle accelerator ever built.
 The measurements detailed in this dissertation are performed using \lumivalueRuniiUL $\pm$ \lumierrRuniiUL of data recorded by the Compact Muon Solenoid (CMS) experiment at the LHC with \beamenergy, during 2016, 2017, and 2018.
 
-The LHC is considered a top quark factory capable of producing tens of millions of top quarks in proton-proton ($pp$) collisions every year.
-Due to its unique properties and role in important processes, the top quark is important for precision measurements of the SM and is sensitive to new physics beyond the SM.
+The LHC is considered a top quark factory capable of producing tens of millions of top quarks from proton-proton ($pp$) collisions every year.
+Due to its unique properties and role in exotic processes, the top quark is important for precision measurements of the SM and is sensitive to new physics (NP) beyond the SM (BSM).
 Top quark measurements are the only opportunity to study the properties of bare quarks, free of confinement effects.
-With a very short life time caused by its exceptionally large mass, the top quark decays before hadronizing, and its properties, including spin information, are transferred to its decay products and observable in their angular kinematic distributions.
+With a very short life time caused by its exceptionally large mass, the top quark decays before hadronizing, and its properties, including spin information, are transferred to its decay products and observable in their kinematic distributions.
 
 This dissertation presents differential measurements of top quark ($t$ and $\bar{t}$) polarizations and top quark pair (\ttbar) spin correlations, which probe the independent coefficients of the top-spin dependent parts of the \ttbar production density matrix.
-The measurement targets all channels (\ee, \emu, \mumu) of the \ttbar dileptonic decay mode with final states containing two oppositely charged leptons.
-All measured distributions are unfolded to parton-level and compared to standard model predictions from Monte Carlo simulations with next-to-leading-order (NLO) accuracy in quantum chromodynamics (QCD) at 
-matrix-element level interfaced with parton-shower simulations.
-The spin coefficients are extracted from the unfolded distributions and provide a precision test of the SM.
+The measurements target all channels (\ee, \emu, \mumu) of the \ttbar dileptonic decay mode with final states containing two oppositely charged leptons.
+The measurements follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777}, but has been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce systematic uncertainties, and significantly increased luminosity.
+All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from Monte Carlo (MC) simulated SM predictions with next-to-leading-order (NLO) matrix element accuracy with parton-shower algorithms.
+The spin density coefficients are extracted from the unfolded distributions, constituting a precision test of the SM.
+The measurement results can be used for a multitude of subsequent analyses:
+\begin{itemize}
+    \item Effective field theory (EFT) interpretation to set limits on ten out of the eleven dimension-six operators relevant for hadronic \ttbar production~\cite{Sirunyan:2681777}
+    \item Supersymmetry (SUSY) interpretation to set limits of production of light supersymmetric top squarks~\cite{CMS-PAS-FTR-18-034}
+    \item Observe entanglement in the \ttbar system~\cite{Afik_2021}
+    \item Observe a violation of Belle's Inequality~\cite{Aguilar_Saavedra_2022}
+    \item Search for evidence of Toponium produce near \ttbar production threshold~\cite{PhysRevD.104.034023}
+\end{itemize}
 
+The contents of this dissertation is outlined as follows.
 A brief history of particle physics and a concise overview of the SM is given in Chapter~\ref{Motivation_and_Theoretical_Overview}.
-
-
-
+Descriptions LHC and CMS experiment can be found in Chapter~\ref{The_CMS_Experiment_at_the_LHC}.
+A summary of top quark physics at hadronic colliders, in particular considerations relevant to the spin properties of \ttbar production and top quark decay, is provided in Chapter~\ref{Top_Quark_Physics_at_the_LHC}. 
+An overview of Monte Carlo (MC) event simulation of $pp$ collisions is given in Chapter~\ref{Monte_Carlo_Event_Simulation}.
+The particle-flow (PF) algorithm for reconstruction of tracks, vertices, muons, electrons, jets, and missing transverse energy is described in Chapter~\ref{Particle-Flow_Reconstruction}.
+Chapter~\ref{Datasets_Event_Selection_Kinematic_Reconstruction} contains details regarding object and event selection, kinematic reconstruction of top quark pairs, background determination, event yields, and data sets used in the measurement.
+The unfolding procedure to obtain differential cross-sections, the extraction of spin density coefficients from those distributions, and the sources of systematic uncertainties are explained in Chapter~\ref{Measurements_of_Differential_Cross-sections}.
+...
 
 \section{Natural Units}
-The system of natural units is defined in terms of the fundamental physical constants.
-In this system, many expressions in physics are simplified by setting the speed of light ($c$) and the reduced Planck's constant ($\hbar$) to unity and dimensional quantities can be expressed in units of energy or inverse energy.
+The system of natural units is defined in terms of fundamental physical constants.
+In this system, many expressions in physics are simplified by setting the speed of light ($c$) and the reduced Planck's constant ($\hbar$) to unity, and dimensional quantities can be expressed in units of energy or inverse energy.
 For example, energy, momentum, and mass can be expressed in units of energy, while length and time can be expressed in units of inverse energy.
-In particle physics, energy is typically expressed in units of electronvolts (\si{\eV}), which is defined as the amount of kinetic energy gained by a single electron accelerated from rest through an electric potential difference of one volt in a vacuum.
+In particle physics, energy is typically expressed in units of electronvolts ($\si{\eV}$), which is defined as the amount of kinetic energy gained by a single electron accelerated from rest through an electric potential difference of $\SI{1}{\V}$ in a vacuum.
 When these units are used, the standard dimensions can be recovered by appropriately multiplying or dividing by $c$ and $\hbar$.

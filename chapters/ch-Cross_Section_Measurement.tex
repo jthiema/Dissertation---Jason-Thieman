@@ -3,8 +3,136 @@
 
 \chapter{Measurements of Differential Cross-sections}
 \label{Measurements_of_Differential_Cross-sections}
+The measurements follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777}, but has been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce systematic uncertainties, and significantly increased luminosity.
+All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from Monte Carlo (MC) simulated SM predictions with next-to-leading-order (NLO) matrix element accuracy with parton-shower algorithms.
+The spin density coefficients are extracted from the unfolded distributions, constituting a precision test of the SM.
+
+\section{Reconstructed Top Quark Polarization and \ensuremath{\mathrm{t\bar{t}}} Spin Correlation Observables}
+\label{Reconstructed_Polarization_Spin_Correlation_Observables}
+Top quark polarization and \ttbar spin correlation observables $\cos\theta_{1(2)}^i$, $\cos \theta_1^i \cos \theta_2^i$, and $\cos \theta_1^i \cos \theta_2^j \pm \cos \theta_1^j \cos \theta_2^i$ are calculated using reconstructed top quarks and leptons as described in section~\ref{Top_Quark_Polarizations_and_ttbar_Spin_Correlations}, where the quantity $\cos \theta_1^k = \hat{\bar{\ell}}_1 \cdot \hat{k}$, as an example, can be calculated by taking the dot product of the charged anti-lepton direction in its grandfather top quark's ZMF with the $\hat{k}$ helicity basis spin quantization axis in the \ttbar ZMF.
+Additionally, the following distributions are also measured:
+\begin{itemize}
+    \item Top quark polarization and \ttbar spin correlation observables with modified axes $\hat{r^*}$ and $\hat{k^*}$, equal to $\pm \hat{r}$ or $\pm \hat{k}$ depending on $\operatorname{sign}(\vert y_t \vert-\vert y_{\bar{t}} \vert)$, due to their sensitivity to SMEFT dimension-six operators
+    \item Linear Combinations of spin correlation observables $-\cos \theta_1^i \cos \theta_2^i \mp \cos \theta_1^j \cos \theta_2^j - \cos \theta_1^l \cos \theta_2^l$ and $-\cos \theta_1^i \cos \theta_2^j \mp \cos \theta_1^j \cos \theta_2^i - \cos \theta_1^l \cos \theta_2^l$ that have linear single-differential cross-sections in the full phase space with coefficients $-C^{ii} \mp C^{jj} - C^{ll}$ and $-C^{ij} \mp C^{ji} - C^{ll}$
+    \item  $\cos\varphi=\hat{\bar{\ell}}_{1} \cdot \hat{\ell}_2$, the dot product of the charged lepton directions in their grandfather top quark's ZMF, sensitive to coefficient $D = -\frac{1}{3}Tr[\matr{C}] = -\frac{1}{3}(C^{kk} + C^{rr} + C^{nn})$ with single-differential cross-section $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\varphi} = \tfrac{1}{2}(1-D\cos\varphi)$
+    \item $\cos\varphi_{\mathrm{lab}}=\hat{\bar{\ell}}^{lab}_1 \cdot \hat{\ell}^{lab}_2$, as above but using lepton directions measured in the laboratory frame
+    \item Lab frame observables $\vert \Delta\phi_{\ell\bar{\ell}} \vert$ ($\vert \Delta\eta_{\ell\bar{\ell}} \vert$), the difference in azimuthal angle $\phi$ (pseudorapidity $\eta$) between the two leptons in the lab frame, which are indirectly sensitive to the spin density coefficients and have excellent experimental resolution
+\end{itemize}
+Moreover, all measured distributions are measured both in the full selected phase space and differentially, with the phase space partitioned in bins of \ttbar invariant mass $m_{\ttbar}$.
+The differential measurements are well-motivated based on the revelations discussed in section~\ref{Top_Quark_Spin_in_ttbar_Production_and_Top_Decay}, that the kinematic and spin properties of a \ttbar pair can be completely described at LO in the \ttbar ZMF by the invariant mass $m_{\ttbar}$ and the top scattering angle $\Theta$.
+
+\section{Background Subtraction}
+\label{Background_Subtraction}
+Prior to unfolding, the predicted MC simulated signal and background rates are used to subtract the estimated background contributions in each bin of distributions measured with recorded data:
+\begin{linenomath*}
+\begin{align}
+N^{Signal}_{Data} = N^{Total}_{Data} \times \frac{N^{Signal}_{MC}}{N^{Total}_{MC}}.
+\label{Data_Background_Subtraction}
+\end{align}
+\end{linenomath*}
+Subtracting the estimated background from the measured data prior to unfolding reduces the impact of the unwanted backgrounds contributions and improves the accuracy of the unfolding procedure.
+Uncertainties on the subtracted background contributions are propagated to the remaining signal contributions.
+
+\section{Unfolding Procedure}
+\label{Unfolding_Procedure}
+Acceptance refers to the total number of events or particles that can be detected within the geometric coverage of the detector, and efficiency is the fraction of those events or particles that are detected.
+The CMS detector has limited acceptance and reconstruction efficiency as well as finite resolution.
+The event selection criteria and analysis techniques like the \ttbar kinematic reconstruction further trade acceptance and efficiency in exchange for a high purity of signal events.
+As a result, measured bins of reconstructed detector-level distributions $\vec{y}$ are distorted from the true generator-level distributions $\vec{x}$ by acceptance, efficiency, and bin-to-bin smearing effects:
+\begin{linenomath*}
+\begin{align}
+\vec{y} = \matr{M} \vec{x}
+\end{align}
+\end{linenomath*}
+where $\matr{M}$ is a response-matrix describing the acceptance$\times$efficiency in each bin of the true distribution as well as the migration of events between bins due to finite detector resolution and imperfect reconstruction techniques.
+To correct the bin of background-subtracted recorded data distributions for smearing and acceptance effects, TUnfold~\cite{TUnfold} of the ROOT data analysis framework is used to invert $\matr{M}$ and unfold the detector-level distributions $\vec{y}$ into parton-level distributions $\vec{x}$.
+The response-matrices $\matr{M}$ are constructed using signal process events from the $\Powheg + \Pythia$ MC simulation including smearing from the \Geant-simulated detector response.
+For each measured observable, the response-matrices are two-dimensional, reconstructed detector-level versus true generator-level distributions containing events that pass the event selection.
+In each generator-level bin, the true generated events in that bin that do not pass the event selection are filled in the underflow.
+For each measured distribution, the absolute differential cross-section, the differential cross-section normalized to unit area, and the extracted spin-density coefficients constitute the final results of the unfolding procedure.
+
+\subsection{Regularization}
+\label{Regularization}
+Regularized unfolding is used to suppress statistical fluctuations and reduce the impact of noise by introducing a term into the unfolding algorithm that incorporates assumption that constrain the unfolded result to be smoother.
+This technique helps prevent over-fitting data and improves the stability of the unfolded result.
+The unfolding for these measurements is performed using the TUnfoldDensity class~\cite{TUnfold}, which offers greater control over the regularization, using a $\chi^{2}$ fit to simultaneously invert $\matr{M}$ and regularize the unfolded result:
+\begin{linenomath*}
+\begin{align}
+\chi^{2}_{unf}&=\chi^{2}_{\matr{M}}+\tau^{2}\chi^{2}_{\matr{L}}+\lambda\sum_{i}(\matr{M}\vec{x}-\vec{y})_{i} \\
+\mathrm{where \quad} \chi^{2}_{\matr{M}}&=(\matr{M}\vec{x}-\vec{y})^{T}\matr{V}_{y}^{-1}(\matr{M}\vec{x}-\vec{y}) \\
+\chi^{2}_{\matr{L}}&={z}^{T}\matr{L}^{T}\matr{L}{z} \quad \text{where} \quad z_i = f_i \cdot (x_i - c \cdot x_{0,i})
+\label{eq:Chi2TUnfold}
+\end{align}
+\end{linenomath*}
+where $\matr{V}_{y}$ is the diagonal covariance matrix of the reconstructed detector-level distribution $\vec{y}$, $\matr{L}$ is a matrix specifying the regularization conditions, and .
+
+The $\chi^{2}_{\matr{M}}$ term is a least squares fit of the re-folded output $\matr{M}\vec{x}$ to the original data $\vec{y}$.
+In the absence of the other terms, the unfolded result will often have unacceptably large statistical fluctuations arising from strong anti-correlations between adjacent bins, and thus the expected shape $\vec{x}_{0}$ of the distribution is used to regularize the output via the $\chi^{2}_{\matr{L}}$ term, with the strength of the regularization controlled by the $\tau$ parameter. 
+Larger (smaller) values of $\tau$ mean the unfolded output will be over-smoothed (noisy) and more (less) strongly constrained by the generator-level MC vector $\vec{x}_{0}$).
+For each unfolded result, the value of $\tau$ is chosen by scanning for the $\tau$ that yields the minimum of $\rho_{avg}$, the mean of the global correlation coefficient $\rho_{i}$ in the bins of the unfolded distribution:
+\begin{linenomath*}
+\begin{align}
+\rho_{i} = \sqrt{1 - \frac{1}{[{(\matr{V}_{x}))}_{ii} \cdot {(\matr{V}_{x})^{-1})}_{ii}]}} \quad \text{with} \quad 0 \leq \rho_{i} \leq 1
+\end{align}
+\end{linenomath*}
+where $\matr{V}_{x}$ is the covariance matrix obtained through error propagation in the linear transformation of the reconstructed distribution $\vec{y}$ into the unfolded result $\vec{x}$, specified in equation~\ref{eq:Chi2TUnfold}.
+The $\lambda\Sigma_{i}(\matr{M}\vec{x}-\vec{y})_{i}$ term is a Lagrange multiplier that ensures the integral of the re-folded output matches that of the input.
+
+For the unfolded measurements presented in this dissertation, the $\matr{L}$ matrix is chosen such that the regularization minimizes the curvature of the difference between the unfolded distribution $\vec{x}$ and the generator-level MC distribution $c*\vec{x}_{0}$, where $c$ is a scale factor that normalizes the total number of reconstructed-level MC signal events to number observed in recorded data.
+Such regularization is unbiased when the shape of the true distribution (i.e. the expected value of the vector $x$) can only differ from the simulation by a linear function of the measured variable. This is true for observables such as $\cos\theta$, where the SM analytical form of the differential cross-section are known to depend linearly on the measured coefficient $B$: $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\theta} = \tfrac{1}{2} (1+B \cos\theta)$. 
+
+In order for the curvature matrix $L$ to provide unbiased regularization for observables with differential cross-sections that have non-linear dependence, TUnfoldDensity allows for the inclusion of "bin factor functions" in the regularization term, with an appropriate $f_i$ calculated for each bin such that $f_i \cdot (x_i - c \cdot x_{0,i})$ depend linearly on the measured coefficient. 
+The function $f(x)$ is calculated with $g(x) - g_{0}(x)$, the continuous analogue of $(x_i - c \cdot x_{0,i})$, such that $z(x) = f(x) \cdot (g(x) - g_{0}(x)) = \mathrm{constant} \times x$, where $g(x)$ is the functional form of the unfolded distribution and $g_{0}(x)$ is the functional form of the generated-level distribution in MC simulation (which assumes the SM value of the specific spin-density coefficient).
+The functional form of the distribution $g(x) = \tfrac{1}{\sigma}\tfrac{d\sigma}{dx}$ is known (see section ~\ref{Top_Quark_Polarizations_and_ttbar_Spin_Correlations}) for each of the observables measured in the top rest frame:
+\begin{linenomath*}
+\begin{align}
+x=\cos\theta_1^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} (1+B_1C^{i} x) \\ 
+x=\cos\theta_1^i\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} (1-C^{ii} x) \log \left(\frac{1}{\left \vert x \right \vert }\right) \\ 
+x=\cos\theta_1^i\cos\theta_2^j\pm \cos\theta_1^j\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} \left( 1 - \frac{C^{ij} \pm C^{ji}}{2} \, x \right)  \cos ^{-1}\left \vert x \right \vert \\
+\end{align}
+\end{linenomath*}
+Then, $f(x) \propto \frac{x}{g(x)-g_{0}(x)}$ follows:
+\begin{linenomath*}
+\begin{align}
+x=\cos\theta_1^i, \:\: f(x) &= 1 \\
+x=\cos\theta_1^i\cos\theta_2^i, \:\: f(x) &= \frac{1}{\log \left(\frac{1}{\left\vert x \right \vert }\right)} \\
+x=\cos\theta_1^i\cos\theta_2^j\pm \cos\theta_1^j\cos\theta_2^i, \:\: f(x) &=  \frac{1}{\cos ^{-1}\left \vert x \right \vert}
+\end{align}
+\end{linenomath*}
+All the distributions $g(x)$ considered are parameterized by only on a single coefficient, so $f(x)$ never has any dependence on any model parameters and the regularization is always unbiased, even if NP contributions are present in the recorded data. 
+The choice of constant factor for $f(x)$ is inconsequential, as it is reabsorbed into the value of $\tau$, and is arbitrarily chosen such that the average value of the distribution is unity.
+To apply the derived continuous bin factor functions to the binned distributions, $f(x)$ must integrated over the boundaries of each bin to calculate the appropriate $f_i$ for that bin. 
+
+For the observables measured in the laboratory frame ($\cos\varphi_{\mathrm{lab}}$, $\vert \Delta\phi_{\ell\bar{\ell}} \vert$, and $\vert \Delta\eta_{\ell\bar{\ell}} \vert$), analytical forms of the differential cross-sections are not known. 
+Furthermore, the distributions depend on more than a single coefficient, so the regularization cannot be made perfectly unbiased with respect to all of them simultaneously. 
+Fortunately, because the migration matrix is almost diagonal, the chosen regularization strength for these variables is so weak that the choice of $f$ makes little difference. 
+Analogous to the top rest frame observables, $f(x)$ is set equal to the reciprocal of the symmetrized SM distribution $1/\mathrm{SM_{sym}}(x)$, so that the regularization is unbiased to variations of the form $x \mathrm{SM_{sym}}(x)$. 
+
+\subsection{Binning}
+\label{Binning}
+Binning schemes for all distributions and matrices need to be chosen such that the resolution of the measured quantities are comparable to the bin widths.
+A binning scheme of six uniform bins ($[-1,\frac{-2}{3},\frac{-1}{3},0,\frac{1}{3},\frac{2}{3},1]$) is shown to match the measurement resolution for all spin density coefficient distributions, and four bins are used to partition the phase space for differential measurements in $m_{\ttbar}$ ($[250,450,600,800,\infty] \si{\GeV}$).
+To avoid having zero degrees of freedom in the least-squares term of $\chi^{2}_{Unf}$, reconstructed detector-level distributions are required to have twice as many bins as the true generator-level distributions.
+
+With any binning scheme, information about the dependence of acceptance, efficiency, and migration inside each bin is lost, so the unfolding will be inherently biased.
+By unfolding with a finer binning scheme, more information is retained, the bias can be mitigated, and the precision improved.
+The unbiased regularization method means finer bins can be used without concern that the explicit regularization of the curvature might cause more bias than the implicit regularization from binning.
+To assess this, linearity tests are performed by injecting changes in the spin-density coefficients by reweighting the simulated MC events and measuring the response of the unfolded results.
+Finer binning by a factor of four ($24 = 6 \cdot 4$ bins) is found to have near-perfect linearity and remove most of the implicit bias for one-dimensional unfolding, while for two-dimensional unfolding finer binning by a factor of two ($12 \times 8 = 6 \cdot 2 \times 4 \cdot 2$ bins) along each axis is found to be a good trade-off between removing bias and over-binning.
+To prevent the measurement sensitivity to features in the data smaller than the experimental resolution, the output distribution is re-binned immediately after the $\chi^2$ fit and $\tau$ scan is performed with the original binning.
+
+
+
+
+
+
+
+
+
+
 
 \section{Systematic Uncertainties}
+\label{Systematic_Uncertainties}
 Each systematic uncertainty is evaluated in every measurement bin by repeating the full analysis with up and down $\pm \; 1 \sigma$ variations of an input parameter or event weight correction factor.
 For each systematic source, the difference between the varied result and the nominal result provides the uncertainty.
 For systematics that have many highly-correlated contributions, the combined impact of all contributions is obtained by enveloping largest difference between the nominal value and varied results in each bin.
@@ -12,6 +140,7 @@ The total up and down systematic uncertainties in each bin is then obtained by a
 The averaged differences of the total up and down variations in each bin from the nominal provides the final estimate of the total systematic uncertainty.
 
 \subsection{Experimental Systematics}
+\label{Experimental_Systematics}
 Experimental systematic uncertainties arise from detector imperfections and limitations of data analysis techniques.
 Sources of experimental systematic uncertainties include detector response, object reconstruction, efficiencies, background modeling, calibrations, and alignment.
 \begin{itemize}
@@ -30,15 +159,15 @@ Sources of experimental systematic uncertainties include detector response, obje
     The total trigger SF uncertainty is the quadrature sum of the event topology, run-dependency, and statistical sources.
     The measurement is repeated with the trigger SFs varied up and down $\pm \; 1 \sigma$.
     \item {\bf L1 ECAL and Muon Prefiring} \\
-    In 2016 and 2017, a gradual timing shift of the ECAL was not properly propagated to the L1 trigger primitives, leading to an incorrect association of a significant fraction of high-$\vert\eta\vert$ trigger primitives to the previous bunch crossing.
-    As L1 forbids firing of two consecutive bunch crossings, events can self-veto due to this effect if a significant amount of ECAL energy is found in the region of $2<\vert\eta\vert<3$ (known as L1 ECAL prefiring).
+    In 2016 and 2017, a gradual timing shift of the ECAL was not properly propagated to the L1 trigger primitives, leading to an incorrect association of a significant fraction of high-$\vert \eta \vert$ trigger primitives to the previous bunch crossing.
+    As L1 forbids firing of two consecutive bunch crossings, events can self-veto due to this effect if a significant amount of ECAL energy is found in the region of $2<\vert \eta \vert<3$ (known as L1 ECAL prefiring).
     The effect is strongly eta and pt dependent.
     A similar effect is present in the muon system, where the BX assignment of the muon candidates can be wrong due to the limited time resolution of the muon detectors. 
     The L1 prefiring effect is not in MC simulated data and must be accounted for by reweighting events.
     L1 prefiring weights are computed as the product of the non-prefiring probability of all objects present in the event:
     \begin{linenomath*}
     \begin{align}
-    \mathcal{W}_{L1 \; Prefiring} = 1 - P(\text{Prefiring}) = \prod_{i=\text{photons, jets, muons}} (1 - \mathcal{E}_i^{pref} (\eta, \pT^{(EM,mu)}))
+    \mathcal{W}_{L1 \; Prefiring} = 1 - P(\text{Prefiring}) = \prod_{i=\text{photons, jets, muons}} (1 - \mathcal{E}_i^{Prefiring} (\eta, \pT))
     \end{align}
     \end{linenomath*}
     For 2016 and 2017 MC samples, the probability of both the ECAL and Muon prefiring is used to calculate the event weights, but for 2018 MC samples only the probability of Muon prefiring is used.
@@ -80,6 +209,7 @@ Sources of experimental systematic uncertainties include detector response, obje
 \end{itemize}
 
 \subsection{Model Systematics}
+\label{Model_Systematics}
 Model systematic uncertainties arise from assumptions such as parameters used to simulate MC events and can impact expected signal and background rates and distributions. 
 The impact of modelling assumptions is determined by repeating the analysis with dedicated simulation samples with altered parameters or by reweighting simulated events.
 \begin{itemize}
@@ -97,10 +227,10 @@ The impact of modelling assumptions is determined by repeating the analysis with
     Also, a separate variation of the $\alpha_S$ value, used in the NNPDF3.1 PDF set, is performed according to its uncertainties and is propagated through the analysis chain via event weights.
     \item {\bf Variation of $\alpha_S$ in Parton Shower} \\
     Event weights are used to evaluate an impact of the choice of the $\alpha_S$ value in the \Pythia parton shower simulation.
-    The uncertainties due to the ISR and FSR are estimated via separate variations of the $\alpha_S^{ISR}$ or $\alpha_S^{FSR}$ parameter by factors of 0.25(4.0) for the up(down) variations. 
+    The uncertainties due to the ISR and FSR are estimated via separate up and down variations of the $\alpha_S^{ISR}$ and $\alpha_S^{FSR}$. 
     Both $\alpha_S^{ISR}$ and $\alpha_S^{FSR}$ are treated as uncorrelated sources of uncertainty.
     \item {\bf Matrix Element and Parton Shower Matching} \\
-    The uncertainty for the matching of the matrix element emissions to those of the parton shower is evaluated with dedicated \Powheg+\Pythia\ simulation samples with up and down variations of the $hdamp = 1.379^{+0.926}_{-0.5052}m_t$ parameter with respect to its nominal value~\cite{Sirunyan:2669320}.
+    The uncertainty for the matching of the matrix element emissions to those of the parton shower is evaluated with dedicated \Powheg+\Pythia\ simulation samples with up and down variations of the $h_{damp} = 1.379^{+0.926}_{-0.5052}m_t$ parameter with respect to its nominal value~\cite{Sirunyan:2669320}.
     \item {\bf Underlying Event Tune} \\
     An underlying event tune is a set of parameters of the MC event generator parton showering algorithm, describing beam-beam remnants (BBR), particles arising from multiple parton interactions (MPI), hadronization, initial-state radiation (ISR), final-state radiation (FSR), etc., that has been adjusted to better describe some aspeects of the data.
     The choice of the underlying event tune, which is CP5 for all simulated samples used in this analysis, can impact the results of the measurements, and the related uncertainty is estimated using dedicated \Powheg+\Pythia\ simulations with up/down variations of the CP5 tune parameters accordingly to their uncertainties~\cite{Sirunyan:2669320}.
@@ -114,7 +244,7 @@ The impact of modelling assumptions is determined by repeating the analysis with
     To estimate the impact on the analysis of the uncertainty related to the mass of the top quark, which is assumed to be $\SI{172.5}{\GeV}$ in the default simulation, the measurement is repeated using two dedicated samples assuming top quark masses of $\SI{173.5}{\GeV}$ and $\SI{171.5}{\GeV}$.
     \item {\bf Top Quark Transverse Momentum} \\
     The \pT spectra of top quarks in \ttbar\ data has been found to be softer than modeled by MC simulations.
-    To assess the systematic variation of correcting the \Powheg+\Pythia\ top quark \pT to that measured in data at parton level, we use the \beamenergy top \pT reweighting function: $e^{p0+p1*p_T}$, with $p0 = 0.0615$ and $p1 = -0.0005$.
+    To assess the systematic variation of correcting the top quark \pT in the MC simulation to that measured in data, we use the \beamenergy top \pT reweighting function: $e^{p+q \cdot p_T}$, with $p = 0.0615$ and $q = -0.0005$.
     For each event, the overall weight is the geometric average of the weights obtained for the top quark and the top anti-quark.
     Figure~\ref{fig:fullRun2ULtopptreweighting} demonstrates the effect of reweighting function on the top $p_T$ spectrum.
     \begin{figure}

@@ -21,10 +21,10 @@ A schematic representation of the different steps of MC simulation for $pp$ coll
 To minimize statistical uncertainties, MC simulations are usually performed with statistics much higher than in data recorded by the detector, and can be reweighted to match the luminosity of recorded data:
 \begin{linenomath*}
 \begin{align}
-\mathcal{W} = \frac{\mathcal{L} \cdot \sigma_{\text{Process}}}{N_{\text{Gen}}}
+\mathcal{W} = \frac{\mathcal{L} \cdot \sigma_{\text{Process}}}{\mathcal{N}_{\text{Gen}}}
 \end{align}
 \end{linenomath*}
-where $\mathcal{W}$ is the global event weight, $\mathcal{L}$ is the measured integrated luminosity of recorded data, $\sigma_{\text{Process}}$ is the cross-section of the simulated process, and $N_{\text{Gen}}$ is weighted sum of simulated events.
+where $\mathcal{W}$ is the global event weight, $\mathcal{L}$ is the measured integrated luminosity of recorded data, $\sigma_{\text{Process}}$ is the cross-section of the simulated process, and $\mathcal{N}_{\text{Gen}}$ is weighted sum of simulated events.
 
 \section{Parton Distribution Functions}
 For inelastic $pp$ collisions at the LHC, partons within the proton are at sufficient energies to be asymptotically free, and the hard process can be treated as a direct parton-parton interaction.
@@ -42,7 +42,7 @@ The proton parton distribution functions (PDF), shown in figure~\ref{Parton_Dist
   \end{center}
 \end{figure}
 The PDF cannot be calculated from first principles, so it has to be determined experimentally from fitting a combination of data from different types of deep inelastic scattering and hadron collision measurements.
-This measurement uses the NNPDF3.1 set of PDFs.
+This measurement uses the NNPDF3.1 NLO set of PDFs.
 
 \section{Matrix Element Calculation and Production Cross-section}
 A hard interaction is an event is a process in which heavy objects are created or a large momentum transfer occurs.
