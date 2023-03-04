@@ -1,6 +1,6 @@
 \ProvidesFile{chapters/ch-Event_Reconstruction.tex}
 
-\chapter{Particle-Flow Reconstruction}
+\chapter{PARTICLE-FLOW RECONSTRUCTION}
 \label{Particle-Flow_Reconstruction}
 The CMS detector consists of several sub-detector layers that exploit the different properties of particles to identify them and measure their energy-momenta and trajectories.
 For reconstructing particle object from their interaction with the detector, the CMS experiment has a developed a holistic particle-flow (PF) reconstruction algorithm that combines the measurements from all relevant sub-detector layers~\cite{Sirunyan:2270046}.
@@ -48,6 +48,7 @@ After each step, tracks and clusters of reconstructed objects are removed from f
 Photon reconstruction was not used for the measurement presented in this paper, and therefore is skipped in the following subsections.
 
 \subsection{Muons}
+\label{PF_Reconstruction_Muons}
 Muons leave tracks in the silicon tracker, their trajectories are curved due to the presence of the magnetic field of the solenoid, and they penetrate through the calorimeters and solenoid to leave ionization trails in the outer tracker.
 As is implied by its name, the CMS experiment was designed to detect muons with high reconstruction efficiency and low misidentification rate.
 Muons that are reconstructed independently in both the inner tracking detector and the outer muon system are referred to as global muons.
@@ -55,6 +56,7 @@ A global fit of the muon momentum using both sub-detectors has momentum resoluti
 If hadron shower remnants "punch-through" the HCAL and solenoid into the outer muon system, they may be misreconstructed as muons, but additional criteria can be used to balance the efficiency and purity of muon identification.
 
 \subsection{Electrons}
+\label{PF_Reconstruction_Electrons}
 Electrons leave ionization trails in the silicon tracker, their trajectories are curved due to the presence of the magnetic field of the solenoid, and their energy is deposited in the ECAL.
 Electron tracks are seeded from the ECAL clusters and extrapolated back to the inner silicon tracker.
 Gaussian Sum Filtering (GSF), which assumes that the residuals between the predicted and measured trajectories are sums of multiple Gaussian distributions, is used to reconstruct electrons.
@@ -63,6 +65,7 @@ Thus the ECAL clusters from the electron and the bremsstrahlung photons in a win
 For non-isolated electrons, such as those produced in jets, the superclustering can result in large inefficiencies, so the ECAL seeding criteria is restricted with isolation requirements.
 
 \subsection{Jets}
+\label{PF_Reconstruction_Jets}
 Quarks and gluons produced in $pp$ collisions hadronize into collimated showers of particles called jets.
 Jets primarily consist of hadrons, but also can contain photons and leptons when hadrons in the jet radiate or decay before reaching the detector.
 Charged hadrons leave tracks in the silicon tracker, their trajectories are curved due to the presence of the magnetic field of the solenoid, deposit some energy in the ECAL, and exhaust their energy in the HCAL, while neutral hadrons do not leave tracks in the silicon tracker and exhaust their energy in the HCAL.

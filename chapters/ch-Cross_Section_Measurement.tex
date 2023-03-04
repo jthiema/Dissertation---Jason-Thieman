@@ -1,10 +1,9 @@
 \ProvidesFile{chapters/ch-Cross_Section_Measurement.tex}
 
-
-\chapter{Measurements of Differential Cross-sections}
+\chapter{MEASUREMENTS OF DIFFERENTIAL CROSS-SECTIONS}
 \label{Measurements_of_Differential_Cross-sections}
 The measurements follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777}, but has been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce systematic uncertainties, and significantly increased luminosity.
-All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from Monte Carlo (MC) simulated SM predictions with next-to-leading-order (NLO) matrix element accuracy with parton-shower algorithms.
+All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from MC simulated SM predictions with NLO matrix element accuracy with parton-shower algorithms.
 The spin density coefficients are extracted from the unfolded distributions, constituting a precision test of the SM.
 
 \section{Reconstructed Top Quark Polarization and \ensuremath{\mathrm{t\bar{t}}} Spin Correlation Observables}
@@ -13,8 +12,8 @@ Top quark polarization and \ttbar spin correlation observables $\cos\theta_{1(2)
 Additionally, the following distributions are also measured:
 \begin{itemize}
     \item Top quark polarization and \ttbar spin correlation observables with modified axes $\hat{r^*}$ and $\hat{k^*}$, equal to $\pm \hat{r}$ or $\pm \hat{k}$ depending on $\operatorname{sign}(\vert y_t \vert-\vert y_{\bar{t}} \vert)$, due to their sensitivity to SMEFT dimension-six operators
-    \item Linear Combinations of spin correlation observables $-\cos \theta_1^i \cos \theta_2^i \mp \cos \theta_1^j \cos \theta_2^j - \cos \theta_1^l \cos \theta_2^l$ and $-\cos \theta_1^i \cos \theta_2^j \mp \cos \theta_1^j \cos \theta_2^i - \cos \theta_1^l \cos \theta_2^l$ that have linear single-differential cross-sections in the full phase space with coefficients $-C^{ii} \mp C^{jj} - C^{ll}$ and $-C^{ij} \mp C^{ji} - C^{ll}$
-    \item  $\cos\varphi=\hat{\bar{\ell}}_{1} \cdot \hat{\ell}_2$, the dot product of the charged lepton directions in their grandfather top quark's ZMF, sensitive to coefficient $D = -\frac{1}{3}Tr[\matr{C}] = -\frac{1}{3}(C^{kk} + C^{rr} + C^{nn})$ with single-differential cross-section $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\varphi} = \tfrac{1}{2}(1-D\cos\varphi)$
+    \item Linear Combinations of spin correlation observables $-\cos \theta_1^i \cos \theta_2^i \mp \cos \theta_1^j \cos \theta_2^j - \cos \theta_1^l \cos \theta_2^l$ and $-\cos \theta_1^i \cos \theta_2^j \mp \cos \theta_1^j \cos \theta_2^i - \cos \theta_1^l \cos \theta_2^l$ that have linear single-differential cross-sections in the full phase space with coefficients $-C_{ii} \mp C_{jj} - C_{ll}$ and $-C_{ij} \mp C_{ji} - C_{ll}$
+    \item  $\cos\varphi=\hat{\bar{\ell}}_{1} \cdot \hat{\ell}_2$, the dot product of the charged lepton directions in their grandfather top quark's ZMF, sensitive to coefficient $D = -\frac{1}{3}Tr[\matr{C}] = -\frac{1}{3}(C_{kk} + C_{rr} + C_{nn})$ with single-differential cross-section $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\varphi} = \tfrac{1}{2}(1-D\cos\varphi)$
     \item $\cos\varphi_{\mathrm{lab}}=\hat{\bar{\ell}}^{lab}_1 \cdot \hat{\ell}^{lab}_2$, as above but using lepton directions measured in the laboratory frame
     \item Lab frame observables $\vert \Delta\phi_{\ell\bar{\ell}} \vert$ ($\vert \Delta\eta_{\ell\bar{\ell}} \vert$), the difference in azimuthal angle $\phi$ (pseudorapidity $\eta$) between the two leptons in the lab frame, which are indirectly sensitive to the spin density coefficients and have excellent experimental resolution
 \end{itemize}
@@ -60,7 +59,7 @@ The unfolding for these measurements is performed using the TUnfoldDensity class
 \begin{align}
 \chi^{2}_{unf}&=\chi^{2}_{\matr{M}}+\tau^{2}\chi^{2}_{\matr{L}}+\lambda\sum_{i}(\matr{M}\vec{x}-\vec{y})_{i} \\
 \mathrm{where \quad} \chi^{2}_{\matr{M}}&=(\matr{M}\vec{x}-\vec{y})^{T}\matr{V}_{y}^{-1}(\matr{M}\vec{x}-\vec{y}) \\
-\chi^{2}_{\matr{L}}&={z}^{T}\matr{L}^{T}\matr{L}{z} \quad \text{where} \quad z_i = f_i \cdot (x_i - c \cdot x_{0,i})
+\chi^{2}_{\matr{L}}&={(\vec{z})}^{T}\matr{L}^{T}\matr{L}{(\vec{z})} \quad \text{where} \quad z_i = f_i \cdot (x_i - c \cdot x_{0,i})
 \label{eq:Chi2TUnfold}
 \end{align}
 \end{linenomath*}
@@ -75,7 +74,7 @@ For each unfolded result, the value of $\tau$ is chosen by scanning for the $\ta
 \rho_{i} = \sqrt{1 - \frac{1}{[{(\matr{V}_{x}))}_{ii} \cdot {(\matr{V}_{x})^{-1})}_{ii}]}} \quad \text{with} \quad 0 \leq \rho_{i} \leq 1
 \end{align}
 \end{linenomath*}
-where $\matr{V}_{x}$ is the covariance matrix obtained through error propagation in the linear transformation of the reconstructed distribution $\vec{y}$ into the unfolded result $\vec{x}$, specified in equation~\ref{eq:Chi2TUnfold}.
+where $\matr{V}_{x}$ is the covariance matrix of the unfolded result $\vec{x}$ obtained through standard propagation of errors in the linear transformation of the reconstructed distribution $\vec{y}$ into $\vec{x}$, specified in equation~\ref{eq:Chi2TUnfold}.
 The $\lambda\Sigma_{i}(\matr{M}\vec{x}-\vec{y})_{i}$ term is a Lagrange multiplier that ensures the integral of the re-folded output matches that of the input.
 
 For the unfolded measurements presented in this dissertation, the $\matr{L}$ matrix is chosen such that the regularization minimizes the curvature of the difference between the unfolded distribution $\vec{x}$ and the generator-level MC distribution $c*\vec{x}_{0}$, where $c$ is a scale factor that normalizes the total number of reconstructed-level MC signal events to number observed in recorded data.
@@ -86,9 +85,9 @@ The function $f(x)$ is calculated with $g(x) - g_{0}(x)$, the continuous analogu
 The functional form of the distribution $g(x) = \tfrac{1}{\sigma}\tfrac{d\sigma}{dx}$ is known (see section ~\ref{Top_Quark_Polarizations_and_ttbar_Spin_Correlations}) for each of the observables measured in the top rest frame:
 \begin{linenomath*}
 \begin{align}
-x=\cos\theta_1^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} (1+B_1C^{i} x) \\ 
-x=\cos\theta_1^i\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} (1-C^{ii} x) \log \left(\frac{1}{\left \vert x \right \vert }\right) \\ 
-x=\cos\theta_1^i\cos\theta_2^j\pm \cos\theta_1^j\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} \left( 1 - \frac{C^{ij} \pm C^{ji}}{2} \, x \right)  \cos ^{-1}\left \vert x \right \vert \\
+x=\cos\theta_1^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} (1+B_1^{i} x) \\ 
+x=\cos\theta_1^i\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} (1-C_{ii} x) \log \left(\frac{1}{\left \vert x \right \vert }\right) \\ 
+x=\cos\theta_1^i\cos\theta_2^j\pm \cos\theta_1^j\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} \left( 1 - \frac{C_{ij} \pm C_{ji}}{2} \, x \right)  \cos ^{-1}\left \vert x \right \vert \\
 \end{align}
 \end{linenomath*}
 Then, $f(x) \propto \frac{x}{g(x)-g_{0}(x)}$ follows:
@@ -111,13 +110,13 @@ Analogous to the top rest frame observables, $f(x)$ is set equal to the reciproc
 \subsection{Binning}
 \label{Binning}
 Binning schemes for all distributions and matrices need to be chosen such that the resolution of the measured quantities are comparable to the bin widths.
-A binning scheme of six uniform bins ($[-1,\frac{-2}{3},\frac{-1}{3},0,\frac{1}{3},\frac{2}{3},1]$) is shown to match the measurement resolution for all spin density coefficient distributions, and four bins are used to partition the phase space for differential measurements in $m_{\ttbar}$ ($[250,450,600,800,\infty] \si{\GeV}$).
+A binning scheme of six uniform bins $[-1,-\frac{2}{3},-\frac{1}{3},0,\frac{1}{3},\frac{2}{3},1]$ is shown to match the measurement resolution for all spin density coefficient distributions, and four bins are used to partition the phase space for differential measurements in $m_{\ttbar}$ $[250,450,600,800,\infty] \; \si{\GeV}$.
 To avoid having zero degrees of freedom in the least-squares term of $\chi^{2}_{Unf}$, reconstructed detector-level distributions are required to have twice as many bins as the true generator-level distributions.
 
 With any binning scheme, information about the dependence of acceptance, efficiency, and migration inside each bin is lost, so the unfolding will be inherently biased.
 By unfolding with a finer binning scheme, more information is retained, the bias can be mitigated, and the precision improved.
 The unbiased regularization method means finer bins can be used without concern that the explicit regularization of the curvature might cause more bias than the implicit regularization from binning.
-To assess this, linearity tests are performed by injecting changes in the spin-density coefficients by reweighting the simulated MC events and measuring the response of the unfolded results.
+To assess this, linearity tests are performed by injecting the distributions with changes in the spin-density coefficients by reweighting the simulated MC events and measuring the response of the unfolded results.
 Finer binning by a factor of four ($24 = 6 \cdot 4$ bins) is found to have near-perfect linearity and remove most of the implicit bias for one-dimensional unfolding, while for two-dimensional unfolding finer binning by a factor of two ($12 \times 8 = 6 \cdot 2 \times 4 \cdot 2$ bins) along each axis is found to be a good trade-off between removing bias and over-binning.
 To prevent the measurement sensitivity to features in the data smaller than the experimental resolution, the output distribution is re-binned immediately after the $\chi^2$ fit and $\tau$ scan is performed with the original binning.
 
@@ -167,14 +166,13 @@ Sources of experimental systematic uncertainties include detector response, obje
     L1 prefiring weights are computed as the product of the non-prefiring probability of all objects present in the event:
     \begin{linenomath*}
     \begin{align}
-    \mathcal{W}_{L1 \; Prefiring} = 1 - P(\text{Prefiring}) = \prod_{i=\text{photons, jets, muons}} (1 - \mathcal{E}_i^{Prefiring} (\eta, \pT))
+    \mathcal{W}_{L1 \; Prefiring} = 1 - P(\text{Prefiring}) = \prod_{i=\text{photons, jets, muons}} (1 - \mathcal{E}_i^{Prefiring} (\pT,\eta))
     \end{align}
     \end{linenomath*}
-    For 2016 and 2017 MC samples, the probability of both the ECAL and Muon prefiring is used to calculate the event weights, but for 2018 MC samples only the probability of Muon prefiring is used.
-    To estimate the uncertainty due to this event reweighting, the measurement is repeated with the event weights varied by shifting all prefiring probabilities by $\pm \; 1 \sigma$.
+    For 2016 and 2017 MC samples, the probability of both the ECAL and muon prefiring is used to calculate the event weights, but for 2018 MC samples only the probability of Muon prefiring is used.
     \item {\bf Lepton Selection Efficiencies and Energy Corrections} \\
     The identification and isolation efficiencies for muons or identification and reconstruction efficiencies of electrons are estimated using a "tag-and-probe" method with $Z$ boson event samples as a function of \pT and $\eta$. 
-    Muon efficiency is well-described in the simulation, with SFs in the range $0.95 - 1.05$, while for the electrons the SFs are typically in the range $0.9 - 1.1$. 
+    Muon efficiency is well-described in the simulation, with SFs in the range $[0.95,1.05]$, while for the electrons the SFs are typically in the range $[0.9,1.1]$. 
     SFs are varied individually for each lepton type and each scale-factor component (i.e. identification/isolation for muons and identification+isolation/reconstruction for electrons). 
     To account for the potential differences in isolation properties of leptons in the \ttbar\ and \zjets\ topologies, an additional uncertainty of $0.5\%$ for muons and $1\%$ for electrons is assigned to the isolation component of scale factors.
     Furthermore, momentum scale and resolution corrections for muons and electrons are varied within their individual systematic uncertainties. 

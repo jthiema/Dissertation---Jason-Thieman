@@ -1,6 +1,6 @@
 \ProvidesFile{chapters/ch-Event_Selection.tex}
 
-\chapter{Datasets, Event Selection, and \ensuremath{\mathrm{t\bar{t}}} Kinematic Reconstruction}
+\chapter{DATASETS, EVENT SELECTION, AND \ensuremath{\mathrm{t\bar{t}}} KINEMATIC RECONSTRUCTION}
 \label{Datasets_Event_Selection_Kinematic_Reconstruction}
 The signal process for this measurement is the production of top quark pairs followed by top quark decays $t\to W^+ b$ and $\bar{t}\to W^- \bar{b}$, and subsequent leptonic $W$ boson decays into final state muons $W\to \mu\nu$ and electrons $W\to e\nu$, both "prompt" and "via tau", i.e. via the decay of the W boson into a tau $W\to \tau\nu$ and its subsequent leptonic decay into a final state electron $\tau\to e\nu$ or muon $\tau\to \mu\nu$.
 The analysis has been carried out using the CMS EDM and official software framework for event generation, simulation, and reconstruction, following recommendations for ultra-legacy Run II analyses by the Physics Performance and Datasets (PPD) and the Physics Data And Monte Carlo Validation (PdmV) CMS groups.
@@ -8,8 +8,10 @@ The analysis has been carried out using the CMS EDM and official software framew
 \section{Datasets}
 
 \subsection{Recorded Datasets}
-This measurement is performed using \lumivalueSixPreVFP $\pm$ \lumierrSixPreVFP~\cite{bib:lumipas16}, \lumivalueSixPostVFP $\pm$ \lumierrSixPostVFP~\cite{bib:lumipas16}, \lumivalueSeven $\pm$ \lumierrSeven~\cite{bib:lumipas17}, and \lumivalueEight $\pm$ \lumierrEight~\cite{bib:lumipas18} (Total: \lumivalueRuniiUL $\pm$ \lumierrRuniiUL) of data collected with the CMS experiment at the LHC with \beamenergy, during 2016, 2017, and 2018 respectively.
+These measurements are performed using \lumivalueSixPreVFP $\pm$ \lumierrSixPreVFP~\cite{bib:lumipas16}, \lumivalueSixPostVFP $\pm$ \lumierrSixPostVFP~\cite{bib:lumipas16}, \lumivalueSeven $\pm$ \lumierrSeven~\cite{bib:lumipas17}, and \lumivalueEight $\pm$ \lumierrEight~\cite{bib:lumipas18} (Total: \lumivalueRuniiUL $\pm$ \lumierrRuniiUL) of data collected with the CMS experiment at the LHC with \beamenergy, during 2016, 2017, and 2018 respectively.
 Only the runs and luminosity sections that had good functioning of every CMS sub-detector were selected for analysis.
+The measurements are performed using ultra legacy CMS data sets, which are are comprehensively documented, designed to be useful for a wide range of studies, preserved for long term access, and include high-level physics objects such as reconstructed leptons, jets, and missing transverse energy.
+The 2016 data set is separated into preVFP and postVFP, partitioning the year into the periods before and after heavily ionizing particle mitigation (HIPM) was implemented.
 
 \subsection{Simulated Datasets}
 MC simulations are used to estimate signal and background contributions. 
@@ -145,7 +147,7 @@ Any remaining discrepancies in the accuracy of jet energy measurements due to de
 Jet energy resolution (JER) corrections are applied by smearing the jets in MC simulation to match the precision of jets in recorded data.
 
 \subsection{Missing Transverse Energy}
-The calculation of the MET (\ETmiss) is based on PF objects, where PU-per-particle-identification (PUPPI)~\cite{bib:PUPPI} is used for PU mitigation.
+The calculation of the MET (\ETmiss) is based on PF objects, where pileup-per-particle-identification (PUPPI)~\cite{bib:PUPPI} is used for PU mitigation.
 PUPPI is an alternative to the PF CHS algorithm which gives weights to particles based on the probability that they come from PU or the PV.
 The JEC (JES and JER) and lepton energy scale corrections are propagated to the \ETmiss.
 Events in the \mumu and \ee channels are required to have $\ETmiss > \SI{40}{\GeV}$, but no requirement on \ETmiss is applied in the \emu channel.

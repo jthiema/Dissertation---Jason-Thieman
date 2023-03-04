@@ -437,6 +437,7 @@
   %%%% \DeclareOptionX{abbreviationsname}{\renewcommand{\ZZabbreviationsname}{#1}}
   \newcommand{\ZZabstractname}{ABSTRACT}
   %%%% \DeclareOptionX{abstractname}{\renewcommand{\ZZabstractname}{#1}}
+  
   \newcommand{\ZZacknowledgmentsname}{ACKNOWLEDGMENTS}
   %%%% \DeclareOptionX{acknowledgmentsname}{\renewcommand{\ZZacknowledgmentsname}{#1}}
   \renewcommand{\baselinestretch}{1.5}
@@ -2203,6 +2204,7 @@
       \ZZM{▯▯▯▯.*}
       \ZZAbort
     }
+
 
   % Legal \ZZacknowledgmentsname?
   \regex_match:nVTF

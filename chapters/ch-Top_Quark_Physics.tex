@@ -1,6 +1,6 @@
 \ProvidesFile{chapters/ch-Top_Quark_Physics.tex}
 
-\chapter{Top Quark Physics at the LHC}
+\chapter{TOP QUARK PHYSICS AT THE LHC}
 \label{Top_Quark_Physics_at_the_LHC}
 The top quark was predicted in 1973 by Kobayashi and Maskawa, when the Cabibbo matrix was extended to the CKM matrix in order to accommodate the experimental discovery of CP-violation in precision measurements of kaon regeneration.
 This extension necessarily required three quark generations, when at the time only the up, down, and strange quarks were known.
@@ -313,8 +313,8 @@ $\vec{B}_{1(2)}$ are 3-vectors sensitive to $\tilde{B}^\pm$, and $\matr{C}$ is a
 Each coefficient probes a single coefficient function:
 \begin{itemize}
 \item The top (anti-top) polarization coefficients are $B_1^{i}$ ($B_2^{j}$), with respect to spin quantization axis $\hat{i}$($\hat{j}$), and are sensitive to coefficient functions $b^+_i$ ($b^-_j$).
-\item The diagonal spin correlation coefficients are $C^{ii}$, with respect to spin quantization axis $\hat{i}$, and are sensitive to $c_{ii}$.
-\item The cross spin correlation coefficients are $C^{ij}$ and $C^{ji}$,  for each pair of spin quantization axes $\hat{i}$ and $\hat{j}$, with the sums and differences $C^{ij} \pm C^{ji}$ sensitive to $c_{ij}$ and $c_{i}$~\ref{spin_density_matrix_decomposition_expansion}.
+\item The diagonal spin correlation coefficients are $C_{ii}$, with respect to spin quantization axis $\hat{i}$, and are sensitive to $c_{ii}$.
+\item The cross spin correlation coefficients are $C_{ij}$ and $C_{ji}$,  for each pair of spin quantization axes $\hat{i}$ and $\hat{j}$, with the sums and differences $C_{ij} \pm C_{ji}$ sensitive to $c_{ij}$ and $c_{i}$~\ref{spin_density_matrix_decomposition_expansion}.
 \end{itemize}
 Unlike the coefficient functions of $\tilde{B}^\pm$ and $\tilde{C}$, the coefficients of $\vec{B}_{1(2)}$ and $\matr{C}$ are directly observable final state variables.
 A summary of the polarization and spin correlation coefficients, which coefficient functions they probe, and which contributions in the differential parton cross-sections the coefficients are sensitive to, is summarized in table~\ref{coefficients_sensitive}.
@@ -325,15 +325,15 @@ A summary of the polarization and spin correlation coefficients, which coefficie
 \hline 
 \text { Coefficients } & \text { Coefficient Functions } & \text { Contributions } \\
 \hline 
-C^{nn} & c_{n n}^I & \text { P-, CP-even } \\
-C^{rr} & c_{r r}^I & \text { P-, CP-even } \\
-C^{kk} & c_{k k}^I & \text { P-, CP-even } \\
-C^{rk}+C^{kr} & c_{r k}^I & \text { P-, CP-even } \\
-C^{nr}+C^{rn} & c_{r n}^I & \text { P-odd, CP-even, absorptive } \\
-C^{nk}+C^{kn} & c_{k n}^I & \text { P-odd, CP-even, absorptive } \\
-C^{rk}-C^{kr} & c_n^I & \text { P-even, CP-odd, absorptive } \\
-C^{nr}-C^{rn} & c_k^I & \text { P-odd, CP-odd } \\
-C^{nk}-C^{kn} & -c_r^I & \text { P-odd, CP-odd } \\
+C_{nn} & c_{n n}^I & \text { P-, CP-even } \\
+C_{rr} & c_{r r}^I & \text { P-, CP-even } \\
+C_{kk} & c_{k k}^I & \text { P-, CP-even } \\
+C_{rk}+C_{kr} & c_{r k}^I & \text { P-, CP-even } \\
+C_{nr}+C_{rn} & c_{r n}^I & \text { P-odd, CP-even, absorptive } \\
+C_{nk}+C_{kn} & c_{k n}^I & \text { P-odd, CP-even, absorptive } \\
+C_{rk}-C_{kr} & c_n^I & \text { P-even, CP-odd, absorptive } \\
+C_{nr}-C_{rn} & c_k^I & \text { P-odd, CP-odd } \\
+C_{nk}-C_{kn} & -c_r^I & \text { P-odd, CP-odd } \\
 B_1^{n}+B_2^{n} & b_n^{I+}+b_n^{I-} & \text { P-, CP-even, absorptive } \\
 B_1^{n}-B_2^{n} & b_n^{I+}-b_n^{I-} & \text { P-even, CP-odd } \\
 B_1^{r}+B_2^{r} & b_r^{I+}+b_r^{I-} & \text { P-odd, CP-even } \\
@@ -352,7 +352,7 @@ B_1^{k}-B_2^{k} & b_k^{I+}-b_k^{I-} & \text { P-odd, CP-odd, absorptive } \\
 Integrating out the azimuthal angles of the normalized fourfold angular cross-section~\ref{fourfold_angular_distribution} yields the normalized polar angle double cross-section,
 \begin{linenomath*}
 \begin{align}
-\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i d \cos \theta_2^j}=\frac{1}{4}\left(1+B_1^{i} \cos \theta_1^i+B_2^{j} \cos \theta_2^j-C^{ij} \cos \theta_1^i \cos \theta_2^j\right),
+\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i d \cos \theta_2^j}=\frac{1}{4}\left(1+B_1^{i} \cos \theta_1^i+B_2^{j} \cos \theta_2^j-C_{ij} \cos \theta_1^i \cos \theta_2^j\right),
 \label{double_angular_distribution}
 \end{align}
 \end{linenomath*}
@@ -364,7 +364,7 @@ where
 \begin{array}{c}
 B_1^{i} = P^{i}\kappa_\ell,\\
 B_2^{j} = -\bar{P}^{j}\kappa_\ell,\\
-C^{ij}=\kappa_{\ell}^2 \frac{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)-\sigma(\uparrow \downarrow)-\sigma(\downarrow \uparrow)}{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)+\sigma(\uparrow \downarrow)+\sigma(\downarrow \uparrow)}
+C_{ij}=\kappa_{\ell}^2 \frac{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)-\sigma(\uparrow \downarrow)-\sigma(\downarrow \uparrow)}{\sigma(\uparrow \uparrow)+\sigma(\downarrow \downarrow)+\sigma(\uparrow \downarrow)+\sigma(\downarrow \uparrow)}
 \end{array}
 \label{Polarizations_and_Spin_Correlations}
 \end{align}
@@ -379,11 +379,11 @@ From~\ref{double_angular_distribution} can be derived single-differential cross-
 \label{single_angular_distribution_polar}
 \end{align}
 \begin{align}
-\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i \cos \theta_2^i} & =\frac{1}{2}\left(1 - C^{ii} \cos \theta_1^i \cos \theta_2^i\right) \log \left(\frac{1}{\left \vert \cos \theta_1^i \cos \theta_2^i\right \vert}\right),
+\frac{1}{\sigma} \frac{d \sigma}{d \cos \theta_1^i \cos \theta_2^i} & =\frac{1}{2}\left(1 - C_{ii} \cos \theta_1^i \cos \theta_2^i\right) \log \left(\frac{1}{\left \vert \cos \theta_1^i \cos \theta_2^i\right \vert}\right),
 \label{single_angular_distribution_diagonal}
 \end{align}
 \begin{align}
-\frac{1}{\sigma} \frac{\mathrm{d} \sigma}{\mathrm{d} x_{\pm}} = \frac{1}{2} \left(1-\frac{C^{ij} \pm C^{ji}}{2} {x_{\pm}} \right) \cos ^{-1} \left \vert x_{\pm} \right \vert
+\frac{1}{\sigma} \frac{\mathrm{d} \sigma}{\mathrm{d} x_{\pm}} = \frac{1}{2} \left(1-\frac{C_{ij} \pm C_{ji}}{2} {x_{\pm}} \right) \cos ^{-1} \left \vert x_{\pm} \right \vert
 \label{single_angular_distribution_cross}
 \end{align}
 \end{linenomath*}
@@ -394,8 +394,8 @@ These single-differential cross-sections would otherwise be even functions if no
 Thus the 15 coefficients can be extracted from the mean or asymmetry of the following single-differential cross-sections:
 \begin{itemize}
 \item The 6 top quark (anti-quark) polarization coefficients $B_{1(2)}^{i}$ using~\ref{single_angular_distribution_polar},
-\item  The 3 diagonal spin correlation coefficients $C^{ii}$ using~\ref{single_angular_distribution_diagonal}, and
-\item  Sums and differences of the 6 cross spin correlation coefficients $C^{ij} \pm C^{ji}$ using~\ref{single_angular_distribution_cross}.
+\item  The 3 diagonal spin correlation coefficients $C_{ii}$ using~\ref{single_angular_distribution_diagonal}, and
+\item  Sums and differences of the 6 cross spin correlation coefficients $C_{ij} \pm C_{ji}$ using~\ref{single_angular_distribution_cross}.
 \end{itemize}
 
 The above decomposition is true for any subset of the full phase space, so differential measurements of the polarization and spin correlations involve partitioning the phase space and, in each partition, repeating the procedure of measuring the relevant single-differential cross-sections then extracting the coefficients.
