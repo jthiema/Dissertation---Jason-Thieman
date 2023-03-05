@@ -8,12 +8,12 @@ The algorithm links the charged-particle tracks measured in the inner silicon tr
 As there are trade-offs between reconstruction efficiency and misidentification rate, the criteria for classifying reconstructed objects are determined by dedicated CMS Physics Object Groups (POG) which perform expert analyses to optimize the efficiency and purity of object identification.
 
 \section{Track and Vertex Reconstruction}
+Every $\SI{25}{\ns}$, an average bunch crossing results in 1000 or more particles coming from 20 or more $pp$ collisions~\cite{Chatrchyan:1129810}.
 Track reconstruction is the determination of final state particles trajectories using the ionization trails left behind in the tracker sub-dectector layers, and is crucial for the identification and momenta measurement of charged particles.
-Pile-up (PU) refers to the situation where multiple $pp$ collisions (vertices) occur within the same bunch crossing, and vertexing is the determination from which vertex in the bunch crossing the final state particles originated.
-The primary vertex (PV) of an event is assumed to be the vertex corresponding to the hard-scatter interaction in the collision and is identified as the vertex with the highest sum of squared transverse momenta of its associated tracks.
+The situation where multiple $pp$ collisions (vertices) occur within the same bunch crossing is referred to as PU, and vertexing is the determination of vertices from the intersection of trajectories.
+The primary vertex (PV) of an event is the vertex corresponding to the hard-scattering interaction in the collision and is identified as the vertex with the highest sum of squared transverse momenta of its associated tracks.
 Vertexing is also important for the identification of secondary vertices, i.e. vertices separated from the beam line by $\gtrapprox \SI{1}{\mm}$ or more, which are usually attributed to the decay of short-lived heavy flavor mesons.
-Typical PU in CMS recorded data from 2016 through 2018 was around 20-30 vertices per bunch crossing, but high (low) extremes routinely occurred during the beginning (end) of beam fills due to instantaneous 
-luminosity decay.
+
 In the PF algorithm, iterative Kalman filtering (KF) is used to reconstruct the tracks and vertices of charged particles~\cite{Sirunyan:2270046}.
 KF assumes that the residuals between the predicted and measured trajectories are Gaussian distributions.
 The algorithm is seeded with tracks generated from two hits in consecutive layers in the pixel detector.
@@ -70,7 +70,8 @@ Quarks and gluons produced in $pp$ collisions hadronize into collimated showers 
 Jets primarily consist of hadrons, but also can contain photons and leptons when hadrons in the jet radiate or decay before reaching the detector.
 Charged hadrons leave tracks in the silicon tracker, their trajectories are curved due to the presence of the magnetic field of the solenoid, deposit some energy in the ECAL, and exhaust their energy in the HCAL, while neutral hadrons do not leave tracks in the silicon tracker and exhaust their energy in the HCAL.
 The granularity of the inner silicon tracker is sufficiently fine to provide separation of individual particle trajectories within jets, and energy clusters are deposited in the calorimeters from the particles in the shower.
-The anti-$k_T$ jet clustering algorithm groups reconstructed particles into jets by merging the pair of particles with the smallest distance, calculating new distances between the merged object and the remaining particles, and repeating this process until all particles have been merged into jet objects~\cite{Matteo_Cacciari_2008}.
+
+The anti-$k_T$ jet clustering algorithm groups reconstructed PF objects into jets by merging the pair of particles with the smallest distance, calculating new distances between the merged object and the remaining particles, and repeating this process until all particles have been merged into jet objects~\cite{Matteo_Cacciari_2008}.
 For anti-$k_T$ jet clustering, the distance $d_{ij}$ between two particles $i$ and $j$ is defined as:
 \begin{linenomath*}
 \begin{align}
@@ -79,6 +80,7 @@ d_{ij} = min(\sfrac{1}{p_{T,i}^2}, \sfrac{1}{p_{T,j}^2}) \times \sfrac{{\Delta R
 \end{linenomath*}
 where $\Delta R$ is the angular separation between objects, defined in equation~\ref{DeltaR}, and $R$ is the radius parameter that determines the size of individual jets.
 The PF algorithm reduces the amount of energy that is mistakenly assigned to a jet due to pileup by removing clusters attributed to tracks originating at pileup vertices.
+Due to complications such as assumptions about particle separation in the clustering algorithm, energy loss in the detector material, detector noise, pileup, detector granularity, association of neutral hadrons with interaction vertices, and the stochastic nature of particle showers in the HCAL, reconstructed jet energies and trajectories are typically associated with large systematic uncertainties.
 
 \subsection{Missing Transverse Energy}
 For collisions at the LHC, there is no net momentum or force in the transverse direction, so \pT is conserved and sums to zero for both incoming protons and outgoing particles after the collision.

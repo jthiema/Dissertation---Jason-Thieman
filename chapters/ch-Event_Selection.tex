@@ -168,7 +168,7 @@ P(Data) = \prod_{\substack{i=tagged}} \mathcal{SF}_i\mathcal{E}_i \prod_{\substa
 \end{align}
 \end{linenomath*}
 where $\mathcal{E}_i$ and $ \mathcal{SF}_i $ refer respectively to $\mathcal{E}_{MC}$ and $\mathcal{SF}_{BTV}$, which are functions of the jet flavor, jet \pT, and jet $\eta$. 
-Afterwards, the event weight is computed accordingly to $\mathcal{W}_{b-tag} = \frac{P(Data)}{P(MC)}$.
+Afterwards, the event weight is computed accordingly to $w_{b-tag} = \frac{P(Data)}{P(MC)}$.
 
 
 \section{\ensuremath{\mathrm{t\bar{t}}} Kinematic Reconstruction}
@@ -180,29 +180,29 @@ The constraint equations are constructed from the four-momenta of the objects pa
 The two neutrinos are assumed to be massless $m_{\nu} = m_{\bar{\nu}} = \SI{0}{\GeV}$:
 \begin{linenomath*}
 \begin{align}
-m_{\nu}^2 = E_{\nu}^2 - p_{x, \nu}^2 - p_{y, \nu}^2 - p_{z, \nu}^2 \\
-m_{\bar{\nu}}^2 = E_{\bar{\nu}}^2 - p_{x, \bar{\nu}}^2 - p_{y, \bar{\nu}}^2 - p_{z, \bar{\nu}}^2 
+m_{\nu}^2 &= E_{\nu}^2 - \sum_{i = x, y, z} p_{\nu_i}^2 \\
+m_{\bar{\nu}}^2 &= E_{\bar{\nu}}^2 - \sum_{i = x, y, z} p_{\bar{\nu}_i}^2
 \end{align}
 \end{linenomath*}
 The missing transverse energy is assumed to be entirely from the transverse momenta of the two neutrinos:
 \begin{linenomath*}
 \begin{align}
-E_{x}^{\text{miss}}=p_{x, \nu}+p_{x, \bar{\nu}} \\
-E_{y}^{\text{miss}}=p_{y, \nu}+p_{y, \bar{\nu}}
+E_{x}^{\text{miss}}=p_{\nu_x}+p_{\bar{\nu}_x} \\
+E_{y}^{\text{miss}}=p_{\nu_y}+p_{\bar{\nu}_y}
 \end{align}
 \end{linenomath*}
 The lepton (anti-lepton) and the anti-neutrino (neutrino) are assumed to have an invariant mass equal to the W boson mass of $m_{W^\pm} = \SI{80.4}{\GeV}$:
 \begin{linenomath*}
 \begin{align}
-m_{W^{+}}^2 =\left(E_{\bar{\ell}}+E_\nu\right)^2-\left(p_{x, \bar{\ell}}+p_{x, \nu}\right)^2  -\left(p_{y, \bar{\ell}}+p_{y, \nu}\right)^2-\left(p_{z, \bar{\ell}}+p_{z, \nu}\right)^2 \\
-m_{W^{-}}^2 =\left(E_{\ell}+E_{\bar{\nu}}\right)^2-\left(p_{x, \ell}+p_{x, \bar{\nu}}\right)^2 -\left(p_{y, \ell}+p_{y, \bar{\nu}}\right)^2-\left(p_{z, \ell}+p_{z, \bar{\nu}}\right)^2
+m_{W^{+}}^2 &=\left(E_{\bar{\ell}}+E_\nu\right)^2- \sum_{i = x, y, z} \left(p_{\bar{\ell}_i}+p_{\nu_i}\right)^2  \\
+m_{W^{-}}^2 &=\left(E_{\ell}+E_{\bar{\nu}}\right)^2- \sum_{i = x, y, z} \left(p_{\ell_i}+p_{\bar{\nu}_i}\right)^2
 \end{align}
 \end{linenomath*}
 Finally, the reconstructed top quark and anti-quark are assumed to have an invariant mass of $m_{t} = m_{\bar{t}} = \SI{172.5}{\GeV}$:
 \begin{linenomath*}
 \begin{align}
-m_t^2 =\left(E_{\bar{\ell}}+E_\nu+E_b\right)^2-\left(p_{x, \bar{\ell}}+p_{x, \nu}+p_{x, b}\right)^2 -\left(p_{y, \bar{\ell}}+p_{y, \nu}+p_{y, b}\right)^2-\left(p_{z, \bar{\ell}}+p_{z, \nu}+p_{z, b}\right)^2 \\
-m_{\bar{t}}^2 =\left(E_{\ell}+E_{\bar{\nu}}+E_{\bar{b}}\right)^2-\left(p_{x, \ell}+p_{x, \bar{\nu}}+p_{x, \bar{b}}\right)^2 -\left(p_{y, \ell}+p_{y, \bar{\nu}}+p_{y, \bar{b}}\right)^2-\left(p_{z, \ell}+p_{z, \bar{\nu}}+p_{z, \bar{b}}\right)^2
+m_t^2 &= \left(E_{\bar{\ell}}+E_\nu+E_b\right)^2- \sum_{i = x, y, z} \left(p_{\bar{\ell}_i}+p_{\nu_i}+p_{b_i}\right)^2 \\
+m_{\bar{t}}^2 &= \left(E_{\ell}+E_{\bar{\nu}}+E_{\bar{b}}\right)^2 - \sum_{i = x, y, z} \left(p_{\ell_i}+p_{\bar{\nu}_i}+p_{\bar{b}_i}\right)^2 
 \end{align}
 \end{linenomath*}
 The constraint equations can be simplified to a single $4^{\text{th}}$ order polynomial equation for one of the neutrino four-momenta components, which can be solved analytically with up to a four-fold ambiguity to obtain the neutrino and top quark four-momenta.
@@ -250,9 +250,10 @@ The true lepton-b-jet invariant mass distribution used to calculated solution li
 For each smearing, the jet--lepton assignments which yield the maximum weight are chosen.
 A weighted average of all smeared solutions provides the final solution to the top quark three-momentum:
 \begin{align}
-\langle \vec{p}_{t} \rangle = \frac{1}{\mathcal{W}_s} \sum_{i=1}^{100} \mathcal{W}_i \cdot \vec{p}_{t,\,i} \quad \mbox{with} \quad \mathcal{W}_s = \sum_{i=1}^{100} \mathcal{W}_{i}
+%\langle \vec{p}_{t} \rangle = \frac{1}{w_s} \sum_{i=1}^{100} w_i \cdot \vec{p}_{t,\,i} \quad \mbox{with} \quad w_s = \sum_{i=1}^{100} w_{i}
+\langle \vec{p}_{(t / \bar{t})} \rangle = \frac{1}{w(m_{\ell b})_{\Sigma}} \sum_i^{100} w(m_{\ell b})_i \cdot \vec{p}_{(t / \bar{t})_i}
 \end{align}
-where $\mathcal{W}_i$ and $\vec{p}_{t,\,i}$ denote the weight and reconstructed top quark three-momentum obtained for the $i$-th smearing of the event.
+where $w(m_{\ell b})_i$ and $\vec{p}_{{(t / \bar{t})}_i}$ denote the weight and reconstructed top quark three-momentum obtained for the $i$-th smearing of the event.
 Smearings without any solutions are given null weights.
 The top quark energy is calculated from its three-momentum and the top quark mass constraint $m_{t} = \SI{172.5}{\GeV}$.
 The final solution for top anti-quark four-momentum determined in an analogous procedure.
@@ -359,16 +360,16 @@ where $f_{\zjets}$ and $f_{\text{Other}}$ are the fractions obtained from the fi
 Separate global normalization scale factors ($\mathcal{SF}$) are fitted in the \ee and \mumu channels:
 \begin{linenomath*}
 \begin{align}
-\mathcal{SF}_{ee} &= \frac{f_{\zjets}^{\ee} \cdot \mathcal{N}_\text{Data}^{\ee}}{\mathcal{N}_{\zjets}^{\ee}} \\
-\mathcal{SF}_{\mu\mu} &= \frac{f_{\zjets}^{\mumu} \cdot \mathcal{N}_\text{Data}^{\mumu}}{\mathcal{N}_{\zjets}^{\mumu}}
+\mathcal{SF}_{ee} &= \frac{f_{\zjets}^{\ee} \cdot N_\text{Data}^{\ee}}{N_{\zjets}^{\ee}} \\
+\mathcal{SF}_{\mu\mu} &= \frac{f_{\zjets}^{\mumu} \cdot N_\text{Data}^{\mumu}}{N_{\zjets}^{\mumu}}
 \end{align}
 \end{linenomath*}
-where $\mathcal{N}_{\zjets}$ and $\mathcal{N}_\text{Data}$ are the number of events in the \zjets\ template and data distribution.
+where $N_{\zjets}$ and $N_\text{Data}$ are the number of events in the \zjets\ template and data distribution.
 The \emu and combined channel scale factors are calculated as:
 \begin{linenomath*}
 \begin{gather}
 \mathcal{SF}_{\emu} = \sqrt{\mathcal{SF}_{\ee} \times \mathcal{SF}_{\mumu}} \\
-\mathcal{SF}_{\ell \bar{\ell}} = \frac{\mathcal{SF}_{\ee} \cdot \mathcal{N}_\text{Data}^{\ee} + \mathcal{SF}_{\mumu} \cdot \mathcal{N}_\text{Data}^{\mumu} + \mathcal{SF}_{\emu} \cdot \mathcal{N}_\text{Data}^{\emu}}{\mathcal{N}_\text{Data}^{\ee} + \mathcal{N}_\text{Data}^{\mumu} + \mathcal{N}_\text{Data}^{\emu}}.
+\mathcal{SF}_{\ell \bar{\ell}} = \frac{\mathcal{SF}_{\ee} \cdot N_\text{Data}^{\ee} + \mathcal{SF}_{\mumu} \cdot N_\text{Data}^{\mumu} + \mathcal{SF}_{\emu} \cdot N_\text{Data}^{\emu}}{N_\text{Data}^{\ee} + N_\text{Data}^{\mumu} + N_\text{Data}^{\emu}}.
 \end{gather}
 \end{linenomath*}
 To enhance \zjets\ statistics in the orthogonal phase space of the $Z$ boson mass peak control region, \MET and b-tagging event selection requirements are omitted, as is the requirement of a kinematic reconstruction solution.

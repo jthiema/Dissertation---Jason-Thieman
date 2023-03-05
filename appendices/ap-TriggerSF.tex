@@ -8,10 +8,10 @@ The methods used for the measurements and the determination of systematic uncert
 
 Trigger efficiencies measure the ability of the CMS trigger system to select potentially interesting events for further analysis.
 Differences between the observed trigger efficiencies of data recorded by the detector and the expected trigger efficiencies of simulated data can bias measured physics results, and these differences are corrected via trigger efficiency scale factors that are applied to the trigger efficiencies of simulated data, so that they match the observed trigger efficiencies of recorded data.
-Trigger efficiency corrective scale factors ($\mathcal{SF_{\text{Trig}}}$) are calculated as:
+Trigger efficiency corrective scale factors ($SF_{\text{Trig}}$) are calculated as:
 \begin{linenomath*}
 \begin{align}
-\mathcal{SF_{\text{Trig}}} = \frac{\mathcal{E}^{data}}{\mathcal{E}^{MC}}
+SF_{\text{Trig}} = \frac{\mathcal{E}^{data}}{\mathcal{E}^{MC}}
 \label{SF}
 \end{align}
 \end{linenomath*}
@@ -22,7 +22,7 @@ Missing transverse energy (\MET) triggers are shown to be minimally correlated w
 The trigger efficiencies, for both data and Monte Carlo simulated data, are thus calculated as: 
 \begin{linenomath*}
 \begin{align}
-\mathcal{E} = \frac{\mathcal{N}_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers}\} \; \cap \; \{\text{Dilepton triggers\}}}}{\mathcal{N}_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers\}}}}
+\mathcal{E} = \frac{N_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers}\} \; \cap \; \{\text{Dilepton triggers\}}}}{N_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers\}}}}
 \label{efficiency}
 \end{align}
 \end{linenomath*}

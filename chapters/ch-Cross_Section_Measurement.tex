@@ -32,19 +32,42 @@ N^{Signal}_{Data} = N^{Total}_{Data} \times \frac{N^{Signal}_{MC}}{N^{Total}_{MC
 Subtracting the estimated background from the measured data prior to unfolding reduces the impact of the unwanted backgrounds contributions and improves the accuracy of the unfolding procedure.
 Uncertainties on the subtracted background contributions are propagated to the remaining signal contributions.
 
-\section{Unfolding Procedure}
-\label{Unfolding_Procedure}
-Acceptance refers to the total number of events or particles that can be detected within the geometric coverage of the detector, and efficiency is the fraction of those events or particles that are detected.
+\section{Acceptance, Efficiency, Smearing, Purity, and Stability}
 The CMS detector has limited acceptance and reconstruction efficiency as well as finite resolution.
-The event selection criteria and analysis techniques like the \ttbar kinematic reconstruction further trade acceptance and efficiency in exchange for a high purity of signal events.
-As a result, measured bins of reconstructed detector-level distributions $\vec{y}$ are distorted from the true generator-level distributions $\vec{x}$ by acceptance, efficiency, and bin-to-bin smearing effects:
+Acceptance refers to the total number of events or particles that can be detected within the geometric coverage of the detector, and efficiency is the fraction of those events or particles that are reconstructed.
+The acceptance$\times$efficiency is described by diagonal matrix $\matr{A}$, in each bin of the true distribution, with 
+The smearing of events between bin is described by matrix $\matr{S}$, due to finite detector resolution and imperfect reconstruction techniques.
+The $\matr{A}$ and $\matr{S}$ matrices can be quantified as:
+\begin{linenomath*}
+\begin{align}
+\matr{A}_{ij} = \frac{N_{ \{ x_i \} \cup \{ y \}}}{N_{ \{ x_i \} }} \quad \quad
+\matr{S}_{ij} = \frac{N_{ \{ y_j \} }}{N_{ \{ x_i \} \cup \{ y \}}}
+\end{align}
+\end{linenomath*}
+where $N_{ \{ x_i \} \cup \{ y \}}$ is the number of events generated in the $i$th bin that were reconstructed in any bin, $N_{ \{ x_i \} }$ is the number of events generated the $i$th bin, and $N_{ \{ y_j \} }$ is the number of events reconstructed in the $j$th bin.
+
+The migration of events between bins due to smearing is also characterized by measures of purity of stability.
+Purity refers to the fraction of events in the reconstructed detector-level distribution that were actually generated in the same bin of the true generator-level distribution, with a high (low) purity for a bin indicating that a small (large) number of events in that bin of the reconstructed detector-level distribution migrated in from other bins in the true generator-level distribution.
+Stability refers to the fraction of events in a bin of the true generator-level distribution that were reconstructed in the same bin, with a high (low) stability indicating that a small (large) number of events in that bin of the true generator-level distribution migrated out to other bins of the of the reconstructed detector-level distribution.
+Purity and stability can be quantified as:
+\begin{linenomath*}
+\begin{align}
+(\text{Purity})_i = \frac{N_{ \{ x_i \} \cup \{ y_i \} }}{N_{ \{ y_i \} }} \quad \quad
+(\text{Stability})_i = \frac{N_{ \{ x_i \} \cup \{ y_i \} }}{N_{ \{ x_i \} }}
+\end{align}
+\end{linenomath*}
+where $N_{ \{ y_i \} }$ is the number of events reconstructed in the $i$th bin, $N_{ \{ x_i \} }$ is the number of events generated in the $i$ bin, and $N_{ \{ x_i \} \cup \{ y_i \} }$ is the number of events generated in the $i$th bin that were also reconstructed in the $i$th bin.
+
+\section{Unfolding Procedure}
+The event selection criteria and analysis techniques such as the \ttbar kinematic reconstruction trade acceptance and efficiency in exchange for a high purity of signal events.
+As a result, measured bins of reconstructed detector-level distributions $\vec{y}$ are distorted from the true generator-level distributions $\vec{x}$ by acceptance, efficiency, and bin-to-bin migrations:
 \begin{linenomath*}
 \begin{align}
 \vec{y} = \matr{M} \vec{x}
 \end{align}
 \end{linenomath*}
-where $\matr{M}$ is a response-matrix describing the acceptance$\times$efficiency in each bin of the true distribution as well as the migration of events between bins due to finite detector resolution and imperfect reconstruction techniques.
-To correct the bin of background-subtracted recorded data distributions for smearing and acceptance effects, TUnfold~\cite{TUnfold} of the ROOT data analysis framework is used to invert $\matr{M}$ and unfold the detector-level distributions $\vec{y}$ into parton-level distributions $\vec{x}$.
+where $\matr{M}$ is the response-matrix constructed from $\matr{A}$ and $\matr{S}$.
+To correct the bin of background-subtracted recorded data distributions for smearing and acceptance effects, the TUnfold~\cite{TUnfold} package of the ROOT data analysis framework is used to invert $\matr{M}$ and unfold the detector-level distributions $\vec{y}$ into parton-level distributions $\vec{x}$.
 The response-matrices $\matr{M}$ are constructed using signal process events from the $\Powheg + \Pythia$ MC simulation including smearing from the \Geant-simulated detector response.
 For each measured observable, the response-matrices are two-dimensional, reconstructed detector-level versus true generator-level distributions containing events that pass the event selection.
 In each generator-level bin, the true generated events in that bin that do not pass the event selection are filled in the underflow.
@@ -107,10 +130,14 @@ Furthermore, the distributions depend on more than a single coefficient, so the 
 Fortunately, because the migration matrix is almost diagonal, the chosen regularization strength for these variables is so weak that the choice of $f$ makes little difference. 
 Analogous to the top rest frame observables, $f(x)$ is set equal to the reciprocal of the symmetrized SM distribution $1/\mathrm{SM_{sym}}(x)$, so that the regularization is unbiased to variations of the form $x \mathrm{SM_{sym}}(x)$. 
 
+For differential unfolding of the observables as a function of $m_{\ttbar}$, TUnfold "unwraps" the two-dimensional distributions into one-dimensional distributions and the unfolding procedure is performed similarly to as previously described. 
+TUnfold allows regularization along the axis of the observable to prevent spurious statistical fluctuations as discussed before, while not regularizing along the $m_{\ttbar}$ axis, as its functional form is not known.
+
+
 \subsection{Binning}
 \label{Binning}
 Binning schemes for all distributions and matrices need to be chosen such that the resolution of the measured quantities are comparable to the bin widths.
-A binning scheme of six uniform bins $[-1,-\frac{2}{3},-\frac{1}{3},0,\frac{1}{3},\frac{2}{3},1]$ is shown to match the measurement resolution for all spin density coefficient distributions, and four bins are used to partition the phase space for differential measurements in $m_{\ttbar}$ $[250,450,600,800,\infty] \; \si{\GeV}$.
+A binning scheme of six uniform bins $[-1,-\frac{2}{3},-\frac{1}{3},0,+\frac{1}{3},+\frac{2}{3},+1]$ is shown to match the measurement resolution for all spin density coefficient distributions, and four bins are used to partition the phase space for differential measurements in $m_{\ttbar}$ $[250,450,600,800,\infty] \; \si{\GeV}$.
 To avoid having zero degrees of freedom in the least-squares term of $\chi^{2}_{Unf}$, reconstructed detector-level distributions are required to have twice as many bins as the true generator-level distributions.
 
 With any binning scheme, information about the dependence of acceptance, efficiency, and migration inside each bin is lost, so the unfolding will be inherently biased.
@@ -120,13 +147,21 @@ To assess this, linearity tests are performed by injecting the distributions wit
 Finer binning by a factor of four ($24 = 6 \cdot 4$ bins) is found to have near-perfect linearity and remove most of the implicit bias for one-dimensional unfolding, while for two-dimensional unfolding finer binning by a factor of two ($12 \times 8 = 6 \cdot 2 \times 4 \cdot 2$ bins) along each axis is found to be a good trade-off between removing bias and over-binning.
 To prevent the measurement sensitivity to features in the data smaller than the experimental resolution, the output distribution is re-binned immediately after the $\chi^2$ fit and $\tau$ scan is performed with the original binning.
 
-
-
-
-
-
-
-
+\section{Conversion to Differential Cross-Sections}
+The $i$th bin of the absolute differential cross-sections are obtained from the unfolded distributions $\vec{x}$ as:
+\begin{linenomath*}
+\begin{align}
+(\frac{d\sigma}{dx})_i = \frac{1}{\Delta x_i} \frac{x_i}{BF \cdot \mathcal{L}} 
+\end{align}
+\end{linenomath*}
+where $\Delta x_i$ is the bin width, $BF$ is the branching fraction of the \ttbar decay mode and channel, and $\mathcal{L}$ is the integrated luminosity.
+Dividing by the total \ttbar production cross-section $BF \cdot \mathcal{L} \cdot \sum_i x_i$ normalizes the absolute differential cross-sections to unity:
+\begin{linenomath*}
+\begin{align}
+(\frac{d\sigma}{dx})_i = \frac{1}{\Delta x_i} \frac{x_i}{\sum_i x_i} 
+\end{align}
+\end{linenomath*}
+which is independent of $BF$ and $\mathcal{L}$, as these factors only effect the total rate of the distribution and not the shape.
 
 
 
@@ -166,7 +201,7 @@ Sources of experimental systematic uncertainties include detector response, obje
     L1 prefiring weights are computed as the product of the non-prefiring probability of all objects present in the event:
     \begin{linenomath*}
     \begin{align}
-    \mathcal{W}_{L1 \; Prefiring} = 1 - P(\text{Prefiring}) = \prod_{i=\text{photons, jets, muons}} (1 - \mathcal{E}_i^{Prefiring} (\pT,\eta))
+    w_{L1 \; Prefiring} = 1 - P(\text{Prefiring}) = \prod_{i=\text{photons, jets, muons}} (1 - \mathcal{E}_i^{Prefiring} (\pT,\eta))
     \end{align}
     \end{linenomath*}
     For 2016 and 2017 MC samples, the probability of both the ECAL and muon prefiring is used to calculate the event weights, but for 2018 MC samples only the probability of Muon prefiring is used.
