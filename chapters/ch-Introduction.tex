@@ -11,10 +11,16 @@ Due to its unique properties and role in exotic processes, the top quark is impo
 Top quark measurements are the only opportunity to study the properties of bare quarks, free of confinement effects.
 With a very short life time caused by its exceptionally large mass, the top quark decays before hadronizing, and its properties, including spin information, are transferred to its decay products and observable in their kinematic distributions.
 
+Measurements of \ttbar spin correlations in the dilepton mode have been performed by both CMS and ATLAS using $\SI{36}{\femto \b}$ of data taken during 2016 at \beamenergy~\cite{arxiv.1905.08634}\cite{Sirunyan:2681777}\cite{Aaboud:2667501}.
+Both experiments unfolded their results to parton level and extrapolated to the full phase space.
+CMS TOP-18-006, for which I collaborated as a coauthor, was published in Physics Review D and directly measured all the independent coefficients of the top-spin dependent parts of the \ttbar production density matrix in all dilepton channels.
+Both CMS and ATLAS made indirect measurements of $\vert \Delta\phi_{\ell\bar{\ell}} \vert$, the azimuthal angular separation of the two leptons in the laboratory frame, but ATLAS additionally also measured $\vert \Delta\eta_{\ell\bar{\ell}} \vert$, the difference in pseudorapity between the two leptons in the laboratory frame, and performed their $\vert \Delta\phi_{\ell\bar{\ell}} \vert$ measurements differentially as a function of \ttbar invariant mass in the \emu channel.
+The ATLAS observation of a $3.2 \sigma$ deviation in their measurement of $\vert \Delta\phi_{\ell\bar{\ell}} \vert$ is in tension with the CMS result, which could possibly be explained by missing higher-order corrections to the top quark kinematics in Monte Carlo (MC) simulations.
+
 This dissertation presents differential measurements of top quark ($t$ and $\bar{t}$) polarizations and top quark pair (\ttbar) spin correlations, which probe the independent coefficients of the top-spin dependent parts of the \ttbar production density matrix.
 The measurements target all channels (\ee, \emu, \mumu) of the \ttbar dileptonic decay mode with final states containing two oppositely charged leptons.
 The measurements follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777}, but has been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce systematic uncertainties, and significantly increased luminosity.
-All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from Monte Carlo (MC) simulated SM predictions with next-to-leading-order (NLO) matrix element accuracy with parton-shower algorithms.
+All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from MC simulated SM predictions with next-to-leading-order (NLO) matrix element accuracy with parton-shower algorithms.
 The spin density coefficients are extracted from the unfolded distributions, constituting a precision test of the SM.
 The measurement results can be used for a multitude of subsequent analyses:
 \begin{itemize}
@@ -25,6 +31,26 @@ The measurement results can be used for a multitude of subsequent analyses:
     \item Search for evidence of Toponium produce near \ttbar production threshold~\cite{PhysRevD.104.034023}
 \end{itemize}
 
+One of the ingredients for the \ttbar spin correlation measurements is a set of scale factors correcting the trigger efficiencies in MC simulation to those observed in data.
+I performed a detailed measurement of these scale factors, which were approved by the EGamma and Muon CMS Physics Object Groups as well as by the CMS Top Quark Physics Analysis Group, and the results were centrally provided to be used by virtually all CMS Run II measurements analyzing \ttbar events decaying via the dileptonic mode.
+In order to accommodate a search for Lorentz violation, I collaborated as a coauthor and additionally provided measurements of the dilepton trigger efficiency scale factors as a function of sidereal time.
+
+My contributions to the operation of the CMS experiment to R\&D efforts for the upcoming high luminosity LHC (HL-LHC) phase are many-fold.
+I have shifted many weeks in the CMS Remote Operations Center at Fermi National Accelerator Laboratory (FNAL) monitoring offline the data quality of the CMS silicon pixel and strip sub-detectors and certifying collision data sets for tracking quality.
+During the long shutdown phase in between Runs II and III, I was promoted to on-call expert, and later to shift leader, for the certification of ultra-legacy data sets.
+Moreover, I developed data quality monitoring tools for the monitoring inefficient modules in the silicon strip sub-detector.
+
+Also at FNAL, I contributed to the testing of HL-LHC pixel detector prototypes at the FNAL Test Beam Facility (FTBF).
+The FTBF is an environment to probe the prototypes, consisting of RD-53a readout chips bump-bonded to both planar and three-dimensional sensors, under controlled conditions.
+Spills of several hundred thousand protons with energies up to $\SI{100}{\GeV}$ are provided by the accelerator facility every $\SI{60}{\s}$.
+The CMS Tracking Telescope is placed along the beam line, and consists of silicon strip and pixel planes that are made with left over parts from the silicon tracker that is currently installed in CMS.
+The prototypes under testing are placed in the telescope, between two sections of planes, and their performance is probed with a set of beam tracks that are well-identified and reconstructed by the tracking telescope.
+Besides data acquisition, I also contributed to the offline analysis of the data by identifying the reconstruction and alignment routines that were most effective, and automating these routines in a workflow with built-in quality checks that allowed us to efficiently align the telescope and produce measurement results for large quantities of data.
+
+Collaborating under the guidance of FNAL R\&D scientist Ron Lipton, we performed a series of TCAD and SPICE simulations to explore the plausibility of exploiting the initial transient induced current
+described by the Ramo-Shockley Theorem to achieve the timing precision required for four-dimensional tracking.
+The results of these studies were presented at the ULITIMA fast timing conference at Argonne in October 2018, and the conference proceedings were published to Nuclear Instrumentation and Methods in Physics~\cite{LIPTON2019162423}.
+
 The contents of this dissertation is outlined as follows.
 A brief history of particle physics and a concise overview of the SM is given in Chapter~\ref{Motivation_and_Theoretical_Overview}.
 Descriptions LHC and CMS experiment can be found in Chapter~\ref{The_CMS_Experiment_at_the_LHC}.
@@ -32,11 +58,13 @@ A summary of top quark physics at hadronic colliders, in particular consideratio
 An overview of Monte Carlo (MC) event simulation of $pp$ collisions is given in Chapter~\ref{Monte_Carlo_Event_Simulation}.
 The particle-flow (PF) algorithm for reconstruction of tracks, vertices, muons, electrons, jets, and missing transverse energy is described in Chapter~\ref{Particle-Flow_Reconstruction}.
 Chapter~\ref{Datasets_Event_Selection_Kinematic_Reconstruction} contains details regarding object and event selection, kinematic reconstruction of top quark pairs, background determination, event yields, and data sets used in the measurement.
-The unfolding procedure to obtain differential cross-sections, the extraction of spin density coefficients from those distributions, and the sources of systematic uncertainties are explained in Chapter~\ref{Measurements_of_Differential_Cross-sections}.
-...
+The unfolding procedure to obtain differential cross-sections and the sources of systematic uncertainties are explained in Chapter~\ref{Measurements_of_Differential_Cross-sections}.
+The method for extracting of spin density coefficients from the differential cross-sections and measurement results are presented in Chapter~\ref{Results}.
+Appendix~\ref{Trigger_Efficiency_Scale_Factors} contains a complete overview of trigger efficiency and corrective scale factor measurements that were used by virtually all CMS Run II measurements analyzing \ttbar events decaying via the dileptonic mode.
+Simulation results investigating whether small pixels integrated with fast electronics show promise for realizing the timing resolution required for four-dimensional tracking are presented in Appendix~\ref{Fast_Timing}.
 
 \section{Natural Units}
-The system of natural units is defined in terms of fundamental physical constants.
+In this dissertation, some quantities are expressed, when conventional, using the system of natural units.
 In this system, many expressions in physics are simplified by setting the speed of light ($c$) and the reduced Planck's constant ($\hbar$) to unity, and dimensional quantities can be expressed in units of energy or inverse energy.
 For example, energy, momentum, and mass can be expressed in units of energy, while length and time can be expressed in units of inverse energy.
 In particle physics, energy is typically expressed in units of electronvolts ($\si{\eV}$), which is defined as the amount of kinetic energy gained by a single electron accelerated from rest through an electric potential difference of $\SI{1}{\V}$ in a vacuum.

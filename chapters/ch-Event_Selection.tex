@@ -67,7 +67,7 @@ The object identification criteria follow the recommendations for ultra-legacy R
 To maximize the trigger efficiency, dilepton data streams and single lepton streams are both used for this measurement.
 In order to ensure no double-counting of events, events passing the dilepton triggers are vetoed when processing the single lepton data streams.
 Approximately 10\% of dilepton events that failed to pass the dilepton trigger requirements are recovered by including the single lepton data streams.
-The trigger efficiency is measured in data as a function of the lepton $\pT$ and used to correct the MC simulations.
+The trigger efficiency is measured in data as a function of the lepton \pT and used to correct the MC simulations.
 
 \subsection{Primary Vertex Requirements and Pileup Corrections}
 The PV of an event is required to associated with at least four tracks and be in the vicinity of the nominal interaction point with $\vert r \vert < \SI{2}{\cm}$ and $\vert z \vert < \SI{24}{\cm}$. 
@@ -85,7 +85,7 @@ They are also required to be reconstructed as global muons and fulfill tight sel
     \item $\chi^2/ndof < 10$ for the global muon fit
     \item its track has transverse impact parameter $d_xy< \SI{2}{\mm}$ and longitudinal distance $d_z< \SI{5}{\mm}$ with respect to the primary vertex
 \end{itemize}
-These criteria suppress hadronic "punch-through" fake-muons and muons produced in hadron decays to ensure high purity and provide good $\pT$ measurements.
+These criteria suppress hadronic "punch-through" fake-muons and muons produced in hadron decays to ensure high purity and provide good \pT measurements.
 To remove leptons overlapping with jets, PF muon candidates are required to fulfill the isolation condition $I^{PF}_{Rel}< 0.15$, where $I^{PF}_{Rel}$ is calculated as: 
 \begin{linenomath*}
 \begin{align}
@@ -102,17 +102,7 @@ Identification and isolation efficiency corrections for muons are also applied, 
 PF electron candidates are required to have transverse momentum $\pT > \SI{20}{\GeV}$ and a pseudorapidity restricted to the coverage of the inner tracker $\vert \eta \vert < 2.4$.
 The gap between the barrel and endcap region of the ECAL ($1.4442 < \vert \eta_\mathrm{sc} \vert < 1.5660$) is excluded, where $\eta_\mathrm{sc}$ is the pseudorapidity of the ECAL supercluster.
 To ensure high purity, the electron selection uses tight identification and isolation criteria.
-The electron isolation considers photons $\gamma$, neutral hadrons $\mathrm{nh}$, and charged hadrons $\mathrm{ch}$ as identified by the PF algorithm in a cone, in $\eta$-$\phi$ space, of $\Delta R < 0.3$ around the electron.
-The relative isolation is calculated as: 
-\begin{linenomath*}
-\begin{align}
-I^{PF}_{Rel} = I_{\mathrm{ch}} + \max(I_\gamma + I_{\mathrm{nh}} - \rho A_{\mathrm{eff}}, 0)
-\end{align}
-\end{linenomath*}
-and divided by the \pT of the electron.
-$A_{eff}$ is an $\eta$ dependent effective area that gives information about the susceptibility to soft contamination and is chosen such that isolation is flat with respect to the number of PU interactions. 
-It is used in combination with $\rho$, which is an estimate of the energy density per unit area contributed by PU interactions, to subtract energy deposition from PU interactions from the isolation.
-$\rho$, the energy deposition per area due to unclustered objects, is estimated from the fixed grid approach and the $\rho A_{eff}$ term ensures that the isolation efficiency is almost independent of the PU conditions.
+The electron isolation considers photons $\gamma$, neutral hadrons $\mathrm{nh}$, and charged hadrons $\mathrm{ch}$ as identified by the PF algorithm in a $\eta$-$\phi$ space cone of $\Delta R < 0.3$ around the electron.
 Corrections are also applied that scale the raw energy measurements and smear the electron resolutions to match the accuracy and precision of reconstructed electrons in MC simulation to those in recorded data.
 Identification and reconstruction efficiency corrections for electrons are also applied, and are measured as a function of \pT and $\eta$ using a "tag-and-probe" method with an orthogonal dataset.
 

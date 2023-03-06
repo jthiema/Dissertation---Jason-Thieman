@@ -40,11 +40,11 @@ The smearing of events between bin is described by matrix $\matr{S}$, due to fin
 The $\matr{A}$ and $\matr{S}$ matrices can be quantified as:
 \begin{linenomath*}
 \begin{align}
-\matr{A}_{ij} = \frac{N_{ \{ x_i \} \cup \{ y \}}}{N_{ \{ x_i \} }} \quad \quad
-\matr{S}_{ij} = \frac{N_{ \{ y_j \} }}{N_{ \{ x_i \} \cup \{ y \}}}
+\matr{A}_{ij} = \frac{N_{ \{ x_i \} \cap \{ \vec{y} \}}}{N_{ \{ x_i \} }} \quad \quad
+\matr{S}_{ij} = \frac{N_{ \{ y_j \} }}{N_{ \{ x_i \} \cap \{ \vec{y} \}}}
 \end{align}
 \end{linenomath*}
-where $N_{ \{ x_i \} \cup \{ y \}}$ is the number of events generated in the $i$th bin that were reconstructed in any bin, $N_{ \{ x_i \} }$ is the number of events generated the $i$th bin, and $N_{ \{ y_j \} }$ is the number of events reconstructed in the $j$th bin.
+where $N_{ \{ x_i \} \cap \{ \vec{y} \}}$ is the number of events generated in the $i$th bin that were reconstructed in any bin, $N_{ \{ x_i \} }$ is the number of events generated the $i$th bin, and $N_{ \{ y_j \} }$ is the number of events reconstructed in the $j$th bin.
 
 The migration of events between bins due to smearing is also characterized by measures of purity of stability.
 Purity refers to the fraction of events in the reconstructed detector-level distribution that were actually generated in the same bin of the true generator-level distribution, with a high (low) purity for a bin indicating that a small (large) number of events in that bin of the reconstructed detector-level distribution migrated in from other bins in the true generator-level distribution.
@@ -52,22 +52,22 @@ Stability refers to the fraction of events in a bin of the true generator-level 
 Purity and stability can be quantified as:
 \begin{linenomath*}
 \begin{align}
-(\text{Purity})_i = \frac{N_{ \{ x_i \} \cup \{ y_i \} }}{N_{ \{ y_i \} }} \quad \quad
-(\text{Stability})_i = \frac{N_{ \{ x_i \} \cup \{ y_i \} }}{N_{ \{ x_i \} }}
+(\text{Purity})_i = \frac{N_{ \{ x_i \} \cap \{ y_i \} }}{N_{ \{ y_i \} }} \quad \quad
+(\text{Stability})_i = \frac{N_{ \{ x_i \} \cap \{ y_i \} }}{N_{ \{ x_i \} \cap \{ \vec{y} \}}}
 \end{align}
 \end{linenomath*}
-where $N_{ \{ y_i \} }$ is the number of events reconstructed in the $i$th bin, $N_{ \{ x_i \} }$ is the number of events generated in the $i$ bin, and $N_{ \{ x_i \} \cup \{ y_i \} }$ is the number of events generated in the $i$th bin that were also reconstructed in the $i$th bin.
+where $N_{ \{ y_i \} }$ is the number of events reconstructed in the $i$th bin, $N_{ \{ x_i \} \cap \{ \vec{y} \}}$ is the number of events generated in the $i$th bin that were reconstructed in any bin, and $N_{ \{ x_i \} \cap \{ y_i \} }$ is the number of events generated in the $i$th bin that were also reconstructed in the $i$th bin.
 
 \section{Unfolding Procedure}
 The event selection criteria and analysis techniques such as the \ttbar kinematic reconstruction trade acceptance and efficiency in exchange for a high purity of signal events.
 As a result, measured bins of reconstructed detector-level distributions $\vec{y}$ are distorted from the true generator-level distributions $\vec{x}$ by acceptance, efficiency, and bin-to-bin migrations:
 \begin{linenomath*}
 \begin{align}
-\vec{y} = \matr{M} \vec{x}
+\vec{y}_{\text{MC}} = \matr{M} \vec{x}_{\text{MC}} \quad \quad \xrightarrow[\text{Unfolding}]{\text{Naive}} \quad \quad \vec{x} = \matr{M}^{-1} \vec{y}
 \end{align}
 \end{linenomath*}
 where $\matr{M}$ is the response-matrix constructed from $\matr{A}$ and $\matr{S}$.
-To correct the bin of background-subtracted recorded data distributions for smearing and acceptance effects, the TUnfold~\cite{TUnfold} package of the ROOT data analysis framework is used to invert $\matr{M}$ and unfold the detector-level distributions $\vec{y}$ into parton-level distributions $\vec{x}$.
+To correct the bin of background-subtracted recorded data distributions for smearing and acceptance effects, the TUnfold~\cite{TUnfold} package of the ROOT data analysis framework is used to simultaneously invert $\matr{M}$ and unfold the detector-level distributions $\vec{y}$ of recorded data into distributions $\vec{x}$ that have been corrected for bin migrations and extrapolated to parton-level.
 The response-matrices $\matr{M}$ are constructed using signal process events from the $\Powheg + \Pythia$ MC simulation including smearing from the \Geant-simulated detector response.
 For each measured observable, the response-matrices are two-dimensional, reconstructed detector-level versus true generator-level distributions containing events that pass the event selection.
 In each generator-level bin, the true generated events in that bin that do not pass the event selection are filled in the underflow.
@@ -75,22 +75,22 @@ For each measured distribution, the absolute differential cross-section, the dif
 
 \subsection{Regularization}
 \label{Regularization}
-Regularized unfolding is used to suppress statistical fluctuations and reduce the impact of noise by introducing a term into the unfolding algorithm that incorporates assumption that constrain the unfolded result to be smoother.
+Regularized unfolding is used to suppress statistical fluctuations and reduce the impact of noise by introducing a term into the unfolding algorithm that incorporates assumptions that constrain the unfolded result to be smoother.
 This technique helps prevent over-fitting data and improves the stability of the unfolded result.
 The unfolding for these measurements is performed using the TUnfoldDensity class~\cite{TUnfold}, which offers greater control over the regularization, using a $\chi^{2}$ fit to simultaneously invert $\matr{M}$ and regularize the unfolded result:
 \begin{linenomath*}
 \begin{align}
 \chi^{2}_{unf}&=\chi^{2}_{\matr{M}}+\tau^{2}\chi^{2}_{\matr{L}}+\lambda\sum_{i}(\matr{M}\vec{x}-\vec{y})_{i} \\
 \mathrm{where \quad} \chi^{2}_{\matr{M}}&=(\matr{M}\vec{x}-\vec{y})^{T}\matr{V}_{y}^{-1}(\matr{M}\vec{x}-\vec{y}) \\
-\chi^{2}_{\matr{L}}&={(\vec{z})}^{T}\matr{L}^{T}\matr{L}{(\vec{z})} \quad \text{where} \quad z_i = f_i \cdot (x_i - c \cdot x_{0,i})
+\chi^{2}_{\matr{L}}&={(\vec{z})}^{T}\matr{L}^{T}\matr{L}{(\vec{z})} \quad \text{where} \quad z_i = f_i \cdot (x_i - c \cdot x^{\text{MC}}_i)
 \label{eq:Chi2TUnfold}
 \end{align}
 \end{linenomath*}
 where $\matr{V}_{y}$ is the diagonal covariance matrix of the reconstructed detector-level distribution $\vec{y}$, $\matr{L}$ is a matrix specifying the regularization conditions, and .
 
 The $\chi^{2}_{\matr{M}}$ term is a least squares fit of the re-folded output $\matr{M}\vec{x}$ to the original data $\vec{y}$.
-In the absence of the other terms, the unfolded result will often have unacceptably large statistical fluctuations arising from strong anti-correlations between adjacent bins, and thus the expected shape $\vec{x}_{0}$ of the distribution is used to regularize the output via the $\chi^{2}_{\matr{L}}$ term, with the strength of the regularization controlled by the $\tau$ parameter. 
-Larger (smaller) values of $\tau$ mean the unfolded output will be over-smoothed (noisy) and more (less) strongly constrained by the generator-level MC vector $\vec{x}_{0}$).
+In the absence of the other terms, the unfolded result will often have unacceptably large statistical fluctuations arising from strong anti-correlations between adjacent bins, and thus the expected shape $\vec{x}_{\text{MC}}$ of the distribution is used to regularize the output via the $\chi^{2}_{\matr{L}}$ term, with the strength of the regularization controlled by the $\tau$ parameter. 
+Larger (smaller) values of $\tau$ mean the unfolded output will be over-smoothed (noisy) and more (less) strongly constrained by the generator-level MC vector $\vec{x}_{\text{MC}}$).
 For each unfolded result, the value of $\tau$ is chosen by scanning for the $\tau$ that yields the minimum of $\rho_{avg}$, the mean of the global correlation coefficient $\rho_{i}$ in the bins of the unfolded distribution:
 \begin{linenomath*}
 \begin{align}
@@ -100,11 +100,12 @@ For each unfolded result, the value of $\tau$ is chosen by scanning for the $\ta
 where $\matr{V}_{x}$ is the covariance matrix of the unfolded result $\vec{x}$ obtained through standard propagation of errors in the linear transformation of the reconstructed distribution $\vec{y}$ into $\vec{x}$, specified in equation~\ref{eq:Chi2TUnfold}.
 The $\lambda\Sigma_{i}(\matr{M}\vec{x}-\vec{y})_{i}$ term is a Lagrange multiplier that ensures the integral of the re-folded output matches that of the input.
 
-For the unfolded measurements presented in this dissertation, the $\matr{L}$ matrix is chosen such that the regularization minimizes the curvature of the difference between the unfolded distribution $\vec{x}$ and the generator-level MC distribution $c*\vec{x}_{0}$, where $c$ is a scale factor that normalizes the total number of reconstructed-level MC signal events to number observed in recorded data.
-Such regularization is unbiased when the shape of the true distribution (i.e. the expected value of the vector $x$) can only differ from the simulation by a linear function of the measured variable. This is true for observables such as $\cos\theta$, where the SM analytical form of the differential cross-section are known to depend linearly on the measured coefficient $B$: $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\theta} = \tfrac{1}{2} (1+B \cos\theta)$. 
+For the unfolded measurements presented in this dissertation, the $\matr{L}$ matrix is chosen such that the regularization minimizes the curvature of the difference between the unfolded distribution $\vec{x}$ and the generator-level MC distribution $c*\vec{x}_{\text{MC}}$, where $c$ is a scale factor that normalizes the total number of reconstructed-level MC signal events to number observed in recorded data.
+Curvature regularization is unbiased when the shape of $\vec{x}$ can only differ from the shape of the MC simulation $c*\vec{x}_{\text{MC}}$ by a linear function of the measured variable. 
+This is true for observables such as $\cos\theta$, where the SM analytical form of the differential cross-section are known to depend linearly on the measured coefficient $B$: $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\theta} = \tfrac{1}{2} (1+B \cos\theta)$. 
 
-In order for the curvature matrix $L$ to provide unbiased regularization for observables with differential cross-sections that have non-linear dependence, TUnfoldDensity allows for the inclusion of "bin factor functions" in the regularization term, with an appropriate $f_i$ calculated for each bin such that $f_i \cdot (x_i - c \cdot x_{0,i})$ depend linearly on the measured coefficient. 
-The function $f(x)$ is calculated with $g(x) - g_{0}(x)$, the continuous analogue of $(x_i - c \cdot x_{0,i})$, such that $z(x) = f(x) \cdot (g(x) - g_{0}(x)) = \mathrm{constant} \times x$, where $g(x)$ is the functional form of the unfolded distribution and $g_{0}(x)$ is the functional form of the generated-level distribution in MC simulation (which assumes the SM value of the specific spin-density coefficient).
+In order for the curvature matrix $L$ to provide unbiased regularization for observables with differential cross-sections that have non-linear dependence, TUnfoldDensity allows for the inclusion of bin factor functions in the regularization term, with an appropriate $f_i$ calculated for each bin such that $f_i \cdot (x_i - c \cdot x^{\text{MC}}_i)$ depend linearly on the measured coefficient. 
+The function $f(x)$ is calculated with $g(x) - g_{\text{MC}}(x)$, the continuous analogue of $(x_i - c \cdot x^{\text{MC}}_i)$, such that $z(x) = f(x) \cdot (g(x) - g_{\text{MC}}(x)) = \mathrm{constant} \times x$, where $g(x)$ is the functional form of the unfolded distribution and $g_{\text{MC}}(x)$ is the functional form of the generated-level distribution in MC simulation (which assumes the SM value of the specific spin-density coefficient).
 The functional form of the distribution $g(x) = \tfrac{1}{\sigma}\tfrac{d\sigma}{dx}$ is known (see section ~\ref{Top_Quark_Polarizations_and_ttbar_Spin_Correlations}) for each of the observables measured in the top rest frame:
 \begin{linenomath*}
 \begin{align}
@@ -113,7 +114,7 @@ x=\cos\theta_1^i\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} 
 x=\cos\theta_1^i\cos\theta_2^j\pm \cos\theta_1^j\cos\theta_2^i, \:\: g(x) &= \frac{1}{\sigma}\frac{d\sigma}{dx} = \frac{1}{2} \left( 1 - \frac{C_{ij} \pm C_{ji}}{2} \, x \right)  \cos ^{-1}\left \vert x \right \vert \\
 \end{align}
 \end{linenomath*}
-Then, $f(x) \propto \frac{x}{g(x)-g_{0}(x)}$ follows:
+Then, $f(x) \propto \frac{x}{g(x)-g_{\text{MC}}(x)}$ follows:
 \begin{linenomath*}
 \begin{align}
 x=\cos\theta_1^i, \:\: f(x) &= 1 \\
@@ -137,7 +138,7 @@ TUnfold allows regularization along the axis of the observable to prevent spurio
 \subsection{Binning}
 \label{Binning}
 Binning schemes for all distributions and matrices need to be chosen such that the resolution of the measured quantities are comparable to the bin widths.
-A binning scheme of six uniform bins $[-1,-\frac{2}{3},-\frac{1}{3},0,+\frac{1}{3},+\frac{2}{3},+1]$ is shown to match the measurement resolution for all spin density coefficient distributions, and four bins are used to partition the phase space for differential measurements in $m_{\ttbar}$ $[250,450,600,800,\infty] \; \si{\GeV}$.
+A binning scheme of six uniform bins $[-1,-\frac{2}{3},-\frac{1}{3},0,+\frac{1}{3},+\frac{2}{3},+1]$ is shown to match the measurement resolution for all spin density coefficient distributions, and for differential measurements in $m_{\ttbar}$, four bins are used to partition the phase space $[250,450,600,800,\infty] \; \si{\GeV}$.
 To avoid having zero degrees of freedom in the least-squares term of $\chi^{2}_{Unf}$, reconstructed detector-level distributions are required to have twice as many bins as the true generator-level distributions.
 
 With any binning scheme, information about the dependence of acceptance, efficiency, and migration inside each bin is lost, so the unfolding will be inherently biased.

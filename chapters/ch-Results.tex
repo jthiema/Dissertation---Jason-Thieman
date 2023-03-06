@@ -3,4 +3,44 @@
 \chapter{RESULTS}
 \label{Results}
 
-\section{Extraction of Spin-Density Coefficients}
+\section{Extraction of Coefficients from Differential Cross-Sections}
+The coefficients $C$ that parameterize the single-differential cross-sections: 
+\begin{linenomath*}
+\begin{align}
+g(x;C) = (1 \pm Cx)g(x;0)
+\end{align}
+\end{linenomath*}
+are extracted from asymmetries statistics $A_i$ between bins $i$ and $b+1-i$, defined as:
+\begin{linenomath*}
+\begin{align}
+A_i = \frac{N_{b+1-i} - N_i}{N_{b+1-i} + N_i} \quad \text{for} \quad i = 1,2,..,b/2
+\end{align}
+\end{linenomath*}
+where for these measurements $b=6$ is the number of bins for all single-differential cross-sections.
+Using the known analytic form of the distribution, as well as the property that the coefficient induces an asymmetry between bins $i$ and $b+1-i$, $A_i$ can be written as:
+\begin{linenomath*}
+\begin{align}
+A_i &= \frac{\int_{bin} (1 \pm C_i x)g(x;0) \; dx  - \int_{bin} (1 \mp C_i x)g(x;0) \; dx}{\int_{bin} (1 \pm C_i x)g(x;0) \; dx  + \int_{bin} (1 \mp C_i x)g(x;0) \; dx} \\
+\text{which implies} \quad C_i &= \pm A_i  \frac{\int_{bin} g(x;0) \; dx}{\int_{bin} x g(x;0) \; dx}.
+\end{align}
+\end{linenomath*}
+where $C_i$ is the coefficient extracted from the asymmetry between bins $i$ and $b+1-i$, and the integrals over the bin region $\int_{bin} g(x;0) \; dx$ and $\int_{bin} x g(x;0) \; dx$ are evaluated using Mathematica.
+The $C_i$ measurements, with covariance matrix $V^C$, can be combined for an optimal weighted measurement of $C$:
+\begin{linenomath*}
+\begin{align*}
+C &= \frac{\sum_i C_i a_i}{\sum_i a_i} \quad \quad \sigma^2_C = \frac{\vec{a}^T V^C \vec{a}}{\left( \sum_i a_i \right)^2}
+\end{align*}
+\end{linenomath*}
+with weights $a_i$ determined by minimizing the variance of the combined measurement $\sigma^2_C$:
+\begin{linenomath*}
+\begin{align*}
+  a_1 &= \frac{b_1}{b_1+b_2+b_3} \quad \quad & b_1 &= V^C_{2,2}V^C_{3,3} - V^C_{2,3}V^C_{2,3} - V^C_{1,2}(V^C_{3,3}-V^C_{2,3}) - V^C_{1,3}(V^C_{2,2}-V^C_{2,3}) \\
+  a_2 &= \frac{b_2}{b_1+b_2+b_3} \quad \text{where} \quad & b_2 &= V^C_{1,1}V^C_{3,3} - V^C_{1,3}V^C_{1,3} - V^C_{1,2}(V^C_{3,3}-V^C_{1,3}) - V^C_{2,3}(V^C_{1,1}-V^C_{1,3}) \\
+  a_3 &= \frac{b_3}{b_1+b_2+b_3} \quad \quad & b_3 &= V^C_{1,1}V^C_{2,2} - V^C_{1,2}V^C_{1,2} - V^C_{1,3}(V^C_{2,2}-V^C_{1,2}) - V^C_{2,3}(V^C_{1,1}-V^C_{1,2}) \\
+\end{align*}
+\end{linenomath*}
+For small coefficients, these statistics can be shown to satisfy the Cramér-Rao bound and provide the minimum variances for unbiased estimators of the coefficients.
+For double differential measurements as a function of $m_{\ttbar}$, the coefficient extraction procedure is performed in an identical way in each of sub-phase space regions partitioned by the $m_{\ttbar}$ bin boundaries.
+
+
+

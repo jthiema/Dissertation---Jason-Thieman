@@ -11,10 +11,6 @@ The successful operation of the LHC has contributed to our understanding of the 
 The primary design criteria for the LHC was to provide conditions for elucidating the nature of EWSB, testing the hypothesis of the BEH mechanism, and discovering the Higgs boson.
 
 \subsection{Probing Small Scales with High Energy}
-During 2016, 2017, and 2018, the LHC operated with beam energies of $\SI{6.5}{\TeV}$, corresponding to center-of-mass collision energies of $\SI{13}{\TeV}$.
-Recently, the LHC finished upgrading the beam energies to $\SI{6.8}{\TeV}$.
-After operating at $\sqrt{s}=\SI{13.6}{\TeV}$ through 2025, the LHC plans to vastly increase the instantaneous luminosity, and substantial R\&D effort is being done now to prepare accelerator and detector upgrades for high luminosity (HL-LHC) environments.
-
 The De Broglie relation states that the wavelength of a particle is inversely proportional to its energy.
 According to Heisenberg's uncertainty principle, the position of a particle with a short wavelength cannot be precisely determined.
 Thus, the motivation for building higher energy particle colliders is to probe smaller distance scales.
@@ -77,13 +73,13 @@ The instantaneous luminosity can be parameterized~\cite{Karacheban:2294183} as:
 \mathcal{L}_{\text{Inst}}=\frac{N_b^2 n_b f_{\mathrm{rev}}}{A_{eff}}
 \end{align}
 \end{linenomath*}
-where $N_b = \num{1.15e11}$ is the number of particles per bunch, $n_b=2808$ the number of bunches per beam, $f_{\mathrm{rev}} = \SI{11245}{\Hz}$ the revolution frequency in the collider, and $A_{eff} = \sqrt{\varepsilon_x \beta_x \varepsilon_y \beta_y}$ is the effective area of the luminous region, where $\beta_{x,y}$ and $\varepsilon_{x,y}$ are the beam amplitude and emittance transverse to the beam axis and are measured regularly during Van der Meer (VdM) scans.
-$L_{\text{Inst}}$ decays over time due to the intensity degradation and beam emittance, with a mean life of \sim$\SI{15}{\h}$~\cite{LyndonEvans_2008}.
-The high $L_{\text{Inst}}$ of the LHC typically results in many proton-proton collisions.
-The number of collisions per interaction is referred to as pile-up (PU), and for a given bunch crossing is quantified as:
+where $N_b = \num{1.15e11}$ is the number of particles per bunch, $n_b=2808$ the number of bunches per beam, $f_{\mathrm{rev}} = \SI{11245}{\Hz}$ the revolution frequency in the collider, and $A_{eff} = \sqrt{\varepsilon_x \beta_x \varepsilon_y \beta_y}$ is the effective area of the luminous region, where $\beta_{x,y}$ and $\varepsilon_{x,y}$ are the beam amplitude and emittance transverse to the beam axis, and is measured regularly during Van der Meer (VdM) scans.
+$\mathcal{L}_{\text{Inst}}$ decays over time due to the intensity degradation and beam emittance, with a mean life of \sim$\SI{15}{\h}$~\cite{LyndonEvans_2008}.
+The high $\mathcal{L}_{\text{Inst}}$ of the LHC typically results in many proton-proton interactions per bunch crossing.
+The number of collisions per bunch cross is referred to as pile-up (PU), and is quantified as:
 \begin{linenomath*}
 \begin{align}
-PU = \frac{L_{\text{Inst}} \cdot \sigma_{\text{Inelastic}}}{n_b f_{\mathrm{rev}}}
+PU = \frac{\mathcal{L}_{\text{Inst}} \cdot \sigma_{\text{Inelastic}}}{n_b f_{\mathrm{rev}}}
 \end{align}
 \end{linenomath*}
 Typical PU in CMS recorded data from 2016 through 2018 was around 20-30 interaction vertices per bunch crossing, but high (low) extremes routinely occurred during the beginning (end) of beam fills due to instantaneous 
@@ -95,6 +91,11 @@ N_{\text {Events}}= \mathcal{L} \cdot \sigma_{\text{Process}}
 \end{align}
 \end{linenomath*}
 where $\mathcal{L} = \int \mathcal{L}_{\text{Inst}} \,dt$ is the instantaneous luminosity integrated over the corresponding period of time the data was recorded, i.e. the integrated luminosity.
+
+\subsection{Upcoming High Luminosity - LHC Phase}
+During 2016, 2017, and 2018, the LHC operated with beam energies of $\SI{6.5}{\TeV}$, corresponding to center-of-mass collision energies of $\SI{13}{\TeV}$.
+Recently, the LHC finished upgrading the beam energies to $\SI{6.8}{\TeV}$.
+After operating at $\sqrt{s}=\SI{13.6}{\TeV}$ through 2025, the LHC plans to vastly increase the instantaneous luminosity, and substantial R\&D effort is being done now to prepare accelerator and detector upgrades for high luminosity (HL-LHC) environments.
 
 \section{The Compact Muon Solenoid Detector}
 Particle detectors measure electrical signals and collect scintillated light produced by particles interacting with the material of the detector.
@@ -256,7 +257,7 @@ The muon system is designed with three different types of gaseous particle detec
 \end{itemize}
 The layout for one quadrant of the muon system is shown in figure~\ref{Muon_System}.
 The RPCs have inferior spatial resolution compared to the DTs and CSCs, but have excellent timing resolution and are primarily used for muon triggering.
-The muon system is aligned with the inner tracker in order for the detectors to work together in triggering, identifying, and reconstructing muon tracks.
+The muon system is aligned with the inner tracker in order for the detectors to work together to identify muons and reconstruct their trajectories.
 \begin{figure}[!htb]
   \begin{center}
     \begin{tabular}{c}
