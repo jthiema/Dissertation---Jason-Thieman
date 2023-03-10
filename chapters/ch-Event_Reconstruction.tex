@@ -19,7 +19,7 @@ KF assumes that the residuals between the predicted and measured trajectories ar
 The algorithm is seeded with tracks generated from two hits in consecutive layers in the pixel detector.
 The KF fits the expected trajectory of the particles based on measured charge and momentum, accounts for multiple scattering and energy loss of particles in the detector material, and updates the track parameters based on measurements in each detector layer.
 A visualization of the reconstructed tracks and identified vertices for an event with high PU recorded by the CMS detector in 2016 is shown in figure~\ref{Pileup}.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.6\textwidth]{fig_Event_Reconstruction/Pileup.png}
@@ -33,7 +33,7 @@ A visualization of the reconstructed tracks and identified vertices for an event
 \section{Object Reconstruction}
 The main particles that are directly detected by CMS are muons, electrons, photons, charged hadrons (e.g. protons, pions, kaons), and neutral hadrons (e.g. neutrons).
 An illustration of the signatures left behind by these particles in the various sub-detectors is shown in figure~\ref{CMS_Layers}.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CMS_Layers.png}
@@ -91,7 +91,7 @@ This property is useful for inferring the production of particles invisible to t
 \end{align}
 \end{linenomath*}
 the negative vector sum of the transverse momenta for all PF reconstructed particles in an event, illustrated in figure~\ref{met_schematic}.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.3\textwidth]{fig_Event_Reconstruction/met_schematic.pdf}.

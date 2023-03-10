@@ -7,7 +7,7 @@ Instead, numerical Monte Carlo (MC) techniques employ a combination of analytica
 MC simulations are used to optimize the analysis of data, study the performance of the detector, and to compare the results of experiments to theoretical predictions.
 These simulations are not perfect, as they do contain approximations, modeling assumptions, and systematic uncertainties, but they are accurate enough to make per cent precision measurements possible.
 A schematic representation of the different steps of MC simulation for $pp$ collisions is shown in figure~\ref{MC_simulation}.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_Event_Simulation/MC_simulation.png}
@@ -31,7 +31,7 @@ where $w$ is the global event weight, $\mathcal{L}$ is the measured integrated l
 For inelastic $pp$ collisions at the LHC, partons within the proton are at sufficient energies to be asymptotically free, and the hard process can be treated as a direct parton-parton interaction.
 Protons are composed of not only three valence quarks, but also gluons and a sea of virtual quarks.
 The proton parton distribution functions (PDF), shown in figure~\ref{Parton_Distribution_Functions}, give the probability density $f$ of finding a specific parton within the proton with a certain fraction $x$ of the proton's longitudinal momentum at factorization scale $\mu_F$.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.80\textwidth]{fig_Event_Simulation/Parton_Distribution_Functions.png}
@@ -102,7 +102,7 @@ To more accurately describe the data, phenomenological CR models are used to sim
 
 \section{Detector Response}
 The interaction of the MC generated final state particles with the CMS detector are simulated with the GEometry ANd Tracking (\Geant v10.4.3) toolkit.
-\Geant\ divides the the trajectory of particles traversing the detector into small, finite steps and calculates the probability that the particles will interact with the material in the detector based on their properties and the properties of the material they are passing through~\cite{AGOSTINELLI2003250}.
+\Geant\ divides the trajectory of particles traversing the detector into small, finite steps and calculates the probability that the particles will interact with the material in the detector based on their properties and the properties of the material they are passing through~\cite{AGOSTINELLI2003250}.
 A complete set physics models for the electromagnetic, strong and weak interactions are included in \Geant.
 If an interaction occurs, \Geant\ calculates the resulting energy deposition, generates any secondary particles that are produced, and simulates the response of the readout electronics and trigger system including the effects of noise and other sources of background.
 To provide an accurate simulation, \Geant\ uses a detailed description of the detector geometry and materials, calibrations, and electronics performance including dead channels.

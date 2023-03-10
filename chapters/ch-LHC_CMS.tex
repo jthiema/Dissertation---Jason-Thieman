@@ -15,7 +15,7 @@ The De Broglie relation states that the wavelength of a particle is inversely pr
 According to Heisenberg's uncertainty principle, the position of a particle with a short wavelength cannot be precisely determined.
 Thus, the motivation for building higher energy particle colliders is to probe smaller distance scales.
 In the 20th century, particle accelerator energy increased many orders of magnitude from \sim$\SI{100}{\keV}$ in the 1930s to \sim$\SI{10}{\TeV}$ in the 2010s (see table~\ref{energy_distanceprobed}), and current distance scales probed are down to \sim$\SI{e-19}{\m}$.
-\begin{table}[!htb]
+\begin{table}[htb]
 \begin{center}
 \begin{math}
 \begin{array}{|c|c|c|}
@@ -37,7 +37,7 @@ In the 20th century, particle accelerator energy increased many orders of magnit
 \subsection{Accelerator Complex at CERN}
 Before reaching the LHC, protons must first be accelerated through a series of smaller accelerators at CERN's accelerator complex.
 A schematic of the LHC at CERN's accelerator complex in Geneva at the border of Switzerland and France is shown in figure~\ref{CERN_LHC}.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CERN_LHC.png}
@@ -90,7 +90,7 @@ For a particular process, the total number of events that occur in a recorded da
 N_{\text {Events}}= \mathcal{L} \cdot \sigma_{\text{Process}}
 \end{align}
 \end{linenomath*}
-where $\mathcal{L} = \int \mathcal{L}_{\text{Inst}} \,dt$ is the instantaneous luminosity integrated over the corresponding period of time the data was recorded, i.e. the integrated luminosity.
+where the integrated luminosity $\mathcal{L} = \int \mathcal{L}_{\text{Inst}} \,dt$ is the instantaneous luminosity integrated over the corresponding periods of time the data was recorded.
 
 \subsection{Upcoming High Luminosity - LHC Phase}
 During 2016, 2017, and 2018, the LHC operated with beam energies of $\SI{6.5}{\TeV}$, corresponding to center-of-mass collision energies of $\SI{13}{\TeV}$.
@@ -103,7 +103,7 @@ The Compact Muon Solenoid (CMS) is a general-purpose detector, built for testing
 The primary design benchmarks for CMS were precision studies of QCD, electroweak, and flavor physics, as well as detection of the Higgs boson.
 CMS is a collection of sub-detectors that are layered cylindrically around the IP, with barrel and end-cap/disk components, that provide the detector with near-hermetic coverage of the solid angle.
 An exploded view of the CMS detector layout with labeled sub-detectors is shown in figure~\ref{CMS_Detector}.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CMS_Detector.pdf}
@@ -157,7 +157,7 @@ this quantity is useful for clustering particle showers into jets and rejecting 
 Central to the design of the CMS detector, and the source of its name, is the $\SI{12.9}{\m}$-long, $\SI{5.9}{\m}$ inner diameter, $\SI{200}{\t}$, niobium-titanium alloy superconducting solenoid, providing an axial and uniform $\SI{3.8}{\T}$ magnetic field within the solenoid, and a return field outside the solenoid that is confined by an iron yoke that contains and guides the field.
 The solenoid is large enough that the inner tracking detectors and calorimeters fit inside, which advantageously eliminates energy losses caused by showering in the coil material before energy can be measured in the calorimeters.
 The magnetic field of the solenoid, depicted in figure~\ref{Solenoid}, bends the paths of charged particles as they move through the detector, enabling the tracker to make good resolution measurements of their transverse momentum and charge from their curvature.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.65\textwidth]{fig_LHC_CMS/Solenoid.png}
@@ -189,7 +189,7 @@ During the LHC winter shutdown between 2016 and 2017, the entire pixel tracker w
 A fourth layer was added in the barrel region , the radius of the innermost layer was reduced from $r = \SI{4.4}{\cm}$ to $r = \SI{2.9}{\cm}$, a fifth layer was added in the forward regions, and the total number of pixels increased to 124 million.
 The cooling system was replaced with evaporative \ce{CO2} cooling technology, which efficiently removes heat using of the latent heat of vaporization.
 After the replacement, the silicon inner tracker altogether contributes total radiation length up to \sim$0.5 X_0$ and total interaction length up to \sim$1.8 \lambda_I$, mostly from supports, cables, and cooling~\cite{Sirunyan:2270046}.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{cc}
         \includegraphics[width=0.45\textwidth]{fig_LHC_CMS/Pixel_Upgrade.png}
@@ -226,7 +226,7 @@ The scintillation decay time of lead tungstate is less than $\SI{25}{\ns}$, and 
 The crystals are fully polished to totally internally reflect light down the crystal where it is collected by a silicon avalanche photodiodes in the EB and vacuum phototriodes in the EE, which are designed to be radiation-hard operate in the high magnetic field.
 In the $1.653 < \vert \eta \vert < 2.6$ region are preshower detectors that are primarily designed to distinguish photons originating from $\pi^0$ decays.
 
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{cc}
         \includegraphics[width=0.45\textwidth]{fig_LHC_CMS/ECAL.pdf}
@@ -258,7 +258,7 @@ The muon system is designed with three different types of gaseous particle detec
 The layout for one quadrant of the muon system is shown in figure~\ref{Muon_System}.
 The RPCs have inferior spatial resolution compared to the DTs and CSCs, but have excellent timing resolution and are primarily used for muon triggering.
 The muon system is aligned with the inner tracker in order for the detectors to work together to identify muons and reconstruct their trajectories.
-\begin{figure}[!htb]
+\begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
         \includegraphics[width=0.65\textwidth]{fig_LHC_CMS/Muon_System.png}

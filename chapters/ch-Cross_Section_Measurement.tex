@@ -17,9 +17,75 @@ Additionally, the following distributions are also measured:
     \item $\cos\varphi_{\mathrm{lab}}=\hat{\bar{\ell}}^{lab}_1 \cdot \hat{\ell}^{lab}_2$, as above but using lepton directions measured in the laboratory frame
     \item Lab frame observables $\vert \Delta\phi_{\ell\bar{\ell}} \vert$ ($\vert \Delta\eta_{\ell\bar{\ell}} \vert$), the difference in azimuthal angle $\phi$ (pseudorapidity $\eta$) between the two leptons in the lab frame, which are indirectly sensitive to the spin density coefficients and have excellent experimental resolution
 \end{itemize}
-Moreover, all measured distributions are measured both in the full selected phase space and differentially, with the phase space partitioned in bins of \ttbar invariant mass $m_{\ttbar}$.
+Table~\ref{observables_coefficients} provides a summary of all spin density observables, their respective coefficients, and which coefficient functions of the spin density matrix they probe.
+\begin{table}[htb]
+\begin{center}
+\begin{adjustbox}{scale=0.85,center}
+\begin{math}
+\begin{array}{l|l|l}
+\hline \text { Observable } & \text { Measured Coefficient } & \text { Coefficient Function } \\
+\hline 
+\cos \theta_1^k & B_1^k & b_k^{+} \\
+\cos \theta_2^k & B_2^k & b_k^{-} \\
+\cos \theta_1^r & B_1^r & b_r^{+} \\
+\cos \theta_2^r & B_2^r & b_r^{-} \\
+\cos \theta_1^n & B_1^n & b_n^{+} \\
+\cos \theta_2^n & B_2^n & b_n^{-} \\
+\hline 
+\cos \theta_1^{k^*} & B_1^{k^*} & - \\
+\cos \theta_2^{k^*} & B_2^{k^*} & - \\
+\cos \theta_1^{r^*} & B_1^{r^*} & - \\
+\cos \theta_2^{r^*} & B_2^{r^*} & - \\
+\hline 
+\cos \theta_1^k \cos \theta_2^k & C_{k k} & c_{k k} \\
+\cos \theta_1^r \cos \theta_2^r & C_{r r} & c_{r r} \\
+\cos \theta_1^n \cos \theta_2^n & C_{n n} & c_{n n} \\
+\hline 
+\cos \theta_1^k \cos \theta_2^{k^*} & C_{k k^*} & - \\
+\cos \theta_1^r \cos \theta_2^{r^*} & C_{r r^*} & - \\
+\hline 
+\cos \theta_1^r \cos \theta_2^k+\cos \theta_1^k \cos \theta_2^r & C_{r k}+C_{k r} & c_{r k} \\
+\cos \theta_1^r \cos \theta_2^k-\cos \theta_1^k \cos \theta_2^r & C_{r k}-C_{k r} & c_n \\
+\cos \theta_1^n \cos \theta_2^r+\cos \theta_1^r \cos \theta_2^n & C_{n r}+C_{r n} & c_{n r} \\
+\cos \theta_1^n \cos \theta_2^r-\cos \theta_1^r \cos \theta_2^n & C_{n r}-C_{r n} & c_k \\
+\cos \theta_1^n \cos \theta_2^k+\cos \theta_1^k \cos \theta_2^n & C_{n k}+C_{k n} & c_{k n} \\
+\cos \theta_1^n \cos \theta_2^k-\cos \theta_1^k \cos \theta_2^n & C_{n k}-C_{k n} & -c_r \\
+\hline 
+\cos \theta_1^r \cos \theta_2^{k^*} + \cos \theta_1^{k^*} \cos \theta_2^r & C_{r k^*}+C_{k^* r} & c_{r k} \\
+\cos \theta_1^r \cos \theta_2^{k^*} - \cos \theta_1^{k^*} \cos \theta_2^r & C_{r k^*}-C_{k^* r} & c_n \\
+\hline 
++ \cos \theta_1^k \cos \theta_2^k - \cos \theta_1^r \cos \theta_2^r - \cos \theta_1^n \cos \theta_2^n & + C_{k k} - C_{r r} - C_{n n} & + c_{k k} - c_{r r} - c_{n n} \\
+- \cos \theta_1^k \cos \theta_2^k + \cos \theta_1^r \cos \theta_2^r - \cos \theta_1^n \cos \theta_2^n & - C_{k k} + C_{r r} - C_{n n} & - c_{k k} + c_{r r} - c_{n n} \\
+- \cos \theta_1^k \cos \theta_2^k - \cos \theta_1^r \cos \theta_2^r + \cos \theta_1^n \cos \theta_2^n & - C_{k k} - C_{r r} + C_{n n} & - c_{k k} - c_{r r} + c_{n n} \\
+\hline 
+- \cos \theta_1^k \cos \theta_2^{k^*} - \cos \theta_1^r \cos \theta_2^r - \cos \theta_1^n \cos \theta_2^n & - C_{k k^*} - C_{r r} - C_{n n} & - \\
+- \cos \theta_1^k \cos \theta_2^k - \cos \theta_1^r \cos \theta_2^{r^*} - \cos \theta_1^n \cos \theta_2^n & - C_{k k} - C_{r r^*} - C_{n n} & - \\
+\hline
+- \cos \theta_1^r \cos \theta_2^k - \cos \theta_1^k \cos \theta_2^r - \cos \theta_1^n \cos \theta_2^n & - C_{r k} - C_{k r} - C_{n n} & - c_{r k} - c_{n n} \\
+- \cos \theta_1^r \cos \theta_2^k + \cos \theta_1^k \cos \theta_2^r - \cos \theta_1^n \cos \theta_2^n & - C_{r k} + C_{k r} - C_{n n} & - c_{n} - c_{n n} \\
+- \cos \theta_1^n \cos \theta_2^r - \cos \theta_1^r \cos \theta_2^n - \cos \theta_1^k \cos \theta_2^k & - C_{n r} - C_{r n} - C_{k k} & - c_{n r} - c_{k k} \\
+- \cos \theta_1^n \cos \theta_2^r + \cos \theta_1^r \cos \theta_2^n - \cos \theta_1^k \cos \theta_2^k & - C_{n r} + C_{r n} - C_{k k} & - c_{k} - c_{k k} \\
+- \cos \theta_1^n \cos \theta_2^k - \cos \theta_1^k \cos \theta_2^n - \cos \theta_1^r \cos \theta_2^r & - C_{n k} - C_{k n} - C_{r r} & - c_{n k} - c_{r r} \\
+- \cos \theta_1^n \cos \theta_2^k + \cos \theta_1^k \cos \theta_2^n - \cos \theta_1^r \cos \theta_2^r & - C_{n k} + C_{k n} - C_{r r} & - c_{r} - c_{r r} \\
+\hline 
+\cos \varphi & D & -\left(c_{k k}+c_{r r}+c_{n n}\right) / 3 \\
+\hline 
+\cos \varphi_{\text {lab}} & A_{\cos \varphi}^{\text {lab}} & - \\
+\left\vert\Delta \phi_{\ell \bar{\ell}}\right\vert & A_{\vert \Delta \phi_{\ell \bar{\ell}}\vert} & - \\
+\left\vert\Delta \eta_{\ell \bar{\ell}}\right\vert & A_{\vert \Delta \eta_{\ell \bar{\ell}}\vert} & - \\
+\hline
+\end{array}
+\end{math}
+\end{adjustbox}
+\caption{A summary of all spin density observables, their respective coefficients, and which coefficient functions they probe. 
+        }
+\label{observables_coefficients}
+\end{center}
+\end{table}
+All measured distributions are measured both in the full selected phase space and differentially, with the phase space partitioned in bins of \ttbar invariant mass $m_{\ttbar}$.
 The differential measurements are well-motivated based on the revelations discussed in section~\ref{Top_Quark_Spin_in_ttbar_Production_and_Top_Decay}, that the kinematic and spin properties of a \ttbar pair can be completely described at LO in the \ttbar ZMF by the invariant mass $m_{\ttbar}$ and the top scattering angle $\Theta$.
 
+\clearpage
 \section{Background Subtraction}
 \label{Background_Subtraction}
 Prior to unfolding, the predicted MC simulated signal and background rates are used to subtract the estimated background contributions in each bin of distributions measured with recorded data:
@@ -35,9 +101,9 @@ Uncertainties on the subtracted background contributions are propagated to the r
 \section{Acceptance, Efficiency, Smearing, Purity, and Stability}
 The CMS detector has limited acceptance and reconstruction efficiency as well as finite resolution.
 Acceptance refers to the total number of events or particles that can be detected within the geometric coverage of the detector, and efficiency is the fraction of those events or particles that are reconstructed.
-The acceptance$\times$efficiency is described by diagonal matrix $\matr{A}$, in each bin of the true distribution, with 
-The smearing of events between bin is described by matrix $\matr{S}$, due to finite detector resolution and imperfect reconstruction techniques.
-The $\matr{A}$ and $\matr{S}$ matrices can be quantified as:
+The acceptance$\times$efficiency is described by diagonal matrix $\matr{A}$. 
+The smearing of events between bins, due to finite detector resolution and imperfect reconstruction techniques, is described by matrix $\matr{S}$.
+Matrices $\matr{A}$ and $\matr{S}$ can be quantified as:
 \begin{linenomath*}
 \begin{align}
 \matr{A}_{ij} = \frac{N_{ \{ x_i \} \cap \{ \vec{y} \}}}{N_{ \{ x_i \} }} \quad \quad
@@ -132,7 +198,7 @@ Fortunately, because the migration matrix is almost diagonal, the chosen regular
 Analogous to the top rest frame observables, $f(x)$ is set equal to the reciprocal of the symmetrized SM distribution $1/\mathrm{SM_{sym}}(x)$, so that the regularization is unbiased to variations of the form $x \mathrm{SM_{sym}}(x)$. 
 
 For differential unfolding of the observables as a function of $m_{\ttbar}$, TUnfold "unwraps" the two-dimensional distributions into one-dimensional distributions and the unfolding procedure is performed similarly to as previously described. 
-TUnfold allows regularization along the axis of the observable to prevent spurious statistical fluctuations as discussed before, while not regularizing along the $m_{\ttbar}$ axis, as its functional form is not known.
+TUnfold allows regularization along the axis of the spin-density observable to prevent spurious statistical fluctuations as discussed before, while not regularizing along the $m_{\ttbar}$ axis, as its functional form is not known.
 
 
 \subsection{Binning}
@@ -152,27 +218,26 @@ To prevent the measurement sensitivity to features in the data smaller than the 
 The $i$th bin of the absolute differential cross-sections are obtained from the unfolded distributions $\vec{x}$ as:
 \begin{linenomath*}
 \begin{align}
-(\frac{d\sigma}{dx})_i = \frac{1}{\Delta x_i} \frac{x_i}{BF \cdot \mathcal{L}} 
+(\frac{d\sigma}{dx})_i = \frac{1}{\Delta x_i} \frac{x_i}{\mathcal{BF} \cdot \mathcal{L}} 
 \end{align}
 \end{linenomath*}
-where $\Delta x_i$ is the bin width, $BF$ is the branching fraction of the \ttbar decay mode and channel, and $\mathcal{L}$ is the integrated luminosity.
-Dividing by the total \ttbar production cross-section $BF \cdot \mathcal{L} \cdot \sum_i x_i$ normalizes the absolute differential cross-sections to unity:
+where $\Delta x_i$ is the bin width, $\mathcal{BF}$ is the branching fraction of the \ttbar dilepton decay mode, and $\mathcal{L}$ is the integrated luminosity.
+Dividing by the total dileptonic \ttbar production cross-section $\sigma =  (\sum_i x_i) / (\mathcal{BF} \cdot \mathcal{L})$ normalizes the absolute differential cross-sections to unity:
 \begin{linenomath*}
 \begin{align}
-(\frac{d\sigma}{dx})_i = \frac{1}{\Delta x_i} \frac{x_i}{\sum_i x_i} 
+(\frac{1}{\sigma} \frac{d\sigma}{dx})_i = \frac{1}{\Delta x_i} \frac{x_i}{\sum_i x_i} 
 \end{align}
 \end{linenomath*}
-which is independent of $BF$ and $\mathcal{L}$, as these factors only effect the total rate of the distribution and not the shape.
-
+which is independent of $\mathcal{BF}$ and $\mathcal{L}$, as these factors only effect the total rate of the process and not the shape of the distribution.
 
 
 \section{Systematic Uncertainties}
 \label{Systematic_Uncertainties}
 Each systematic uncertainty is evaluated in every measurement bin by repeating the full analysis with up and down $\pm \; 1 \sigma$ variations of an input parameter or event weight correction factor.
-For each systematic source, the difference between the varied result and the nominal result provides the uncertainty.
+For each systematic source, the difference between the varied result and the nominal result provides the respective uncertainty.
 For systematics that have many highly-correlated contributions, the combined impact of all contributions is obtained by enveloping largest difference between the nominal value and varied results in each bin.
 The total up and down systematic uncertainties in each bin is then obtained by adding the uncorrelated systematic uncertainties in quadrature.
-The averaged differences of the total up and down variations in each bin from the nominal provides the final estimate of the total systematic uncertainty.
+The average of the total up and down variations provides the final estimate of the total systematic uncertainty for that bin.
 
 \subsection{Experimental Systematics}
 \label{Experimental_Systematics}
@@ -185,6 +250,21 @@ Sources of experimental systematic uncertainties include detector response, obje
     This uncertainty is a flat percentage in all measured bins, only impacts rate and not shape, and cancels out in the measurements of normalized differential cross sections.
     \item {\bf Pileup} \\
     PU reweighting is performed using the instantaneous luminosity per bunch crossing in data, and the total $pp$ inelastic cross section of $\SI{69.2}{\m \b}$, to correct the PU distribution of the MC simulation.
+    The effect of PU re-weighting is shown in figure~\ref{PU_re-weighting}.
+    \begin{figure}[htb]
+    \begin{center}
+        \begin{tabular}{cc}
+            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/vertMulti_noPU_step8.pdf}
+            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/vertMulti_step8.pdf}
+        \end{tabular}
+        \caption{\footnotesize Number of primary vertices distributions before (Left) and after (Right) PU re-weighting, for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
+        The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
+        Trigger efficiency and lepton selection scale factors discussed in section~\ref{Experimental_Systematics} are applied.
+        No \zjets\ scaling has been applied yet.
+        \label{PU_re-weighting}
+        }
+    \end{center}
+\end{figure}
     To estimate the systematic uncertainty due to PU modeling, the measurement is repeated with variations of $\pm 4.6\%$ on the total $pp$ inelastic cross section input for PU reweighting.
     \item {\bf Trigger Efficiency} \\
     The trigger efficiencies are measured two-dimensionally, as a function of \pT for both leptons, using \ETmiss-based triggers that are effectively uncorrelated with the dilepton triggers used in the measurement. 
@@ -193,6 +273,7 @@ Sources of experimental systematic uncertainties include detector response, obje
     Time-dependent uncertainties are estimated by recalculating the SFs in each of the run periods.
     The total trigger SF uncertainty is the quadrature sum of the event topology, run-dependency, and statistical sources.
     The measurement is repeated with the trigger SFs varied up and down $\pm \; 1 \sigma$.
+    More information pertaining to trigger SFs can be found in Appendix~\ref{Trigger_Efficiency_Scale_Factors}.
     \item {\bf L1 ECAL and Muon Prefiring} \\
     In 2016 and 2017, a gradual timing shift of the ECAL was not properly propagated to the L1 trigger primitives, leading to an incorrect association of a significant fraction of high-$\vert \eta \vert$ trigger primitives to the previous bunch crossing.
     As L1 forbids firing of two consecutive bunch crossings, events can self-veto due to this effect if a significant amount of ECAL energy is found in the region of $2<\vert \eta \vert<3$ (known as L1 ECAL prefiring).
@@ -226,7 +307,19 @@ Sources of experimental systematic uncertainties include detector response, obje
     This uncertainty includes only the variation due to the unclustered energy, which is accounted for by varying the deposited energy from the charged hadrons, neutral hadrons, and photons according to the corresponding energy resolutions and recalculating the \ETmiss four-vector. 
     The recalculated \ETmiss is propagated through the measurement, and the difference of the variation from the nominal is taken as the systematic uncertainty.
     \item {\bf b-Tagging} \\
-    Due to the differences between b-tagging algorithm efficiencies in recorded data and MC simulation, MC simulated events are reweighted with corrective SFs after selection.
+    Due to the differences between $b$-tagging algorithm efficiencies in recorded data and MC simulation, MC simulated events are re-weighted with corrective scale factors after selection.
+    Data-to-simulation corrective scale factors ($SF_{BTV}$) for the $b$-tagging efficiency of individual $b$-jets, and \textit{mistag rate} $c$-jets and light-($l$) jets, are measured with an orthogonal QCD multi-jet dataset and parameterized as a function of the jet \pT.
+    To correct the possible differences of the b-tagging efficiency due to the different kinematics of the \ttbar events and the QCD multijet events used to measure the data-to-simulation corrective scale factors, the $b$-tagging efficiency ($\mathcal{E}_{MC}$) of $b$-jets and mistag rate for $c$- and $l$-jets, which do not only depend on the jet kinematic properties but also on the event selection, are estimated in this analysis using the MC simulated \ttbar signal events.
+    The probability $P$ of a given configuration of jets in MC simulation and data is defined as:
+    \begin{linenomath*}
+    \begin{align}
+    P(MC) = \prod_{\substack{i=tagged}} \mathcal{E}_i \prod_{\substack{j=not~tagged}} (1 - \mathcal{E}_j) \\
+    P(Data) = \prod_{\substack{i=tagged}} SF_i\mathcal{E}_i \prod_{\substack{j=not~tagged}} (1 - SF_j\mathcal{E}_j),
+    \end{align}
+    \end{linenomath*}
+    where $\mathcal{E}_i$ and $ SF_i $ refer respectively to $\mathcal{E}_{MC}$ and $SF_{BTV}$, which are functions of the jet flavor, jet \pT, and jet $\eta$. 
+    Afterwards, the event weight is computed accordingly to $w_{b-tag} = \frac{P(Data)}{P(MC)}$.
+    
     Depending on the flavour of the original parton that originated the jet shower, the measurement is repeated with the corrective SFs varied by $\pm \; 1 \sigma$.
     The heavy flavour (b and c) jet SFs are varied separately from the light flavour jets.
     \item {\bf Kinematic Reconstruction Efficiency} \\
@@ -291,7 +384,7 @@ The impact of modelling assumptions is determined by repeating the analysis with
     \end{figure}
 \end{itemize}
 
-
+\subsection{Unfolding Systematic Uncertainties}
 
 
 
