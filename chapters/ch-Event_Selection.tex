@@ -10,7 +10,7 @@ The analysis has been carried out using the CMS EDM and official software framew
 \subsection{Recorded Datasets}
 These measurements are performed using \lumivalueSixPreVFP $\pm$ \lumierrSixPreVFP~\cite{bib:lumipas16}, \lumivalueSixPostVFP $\pm$ \lumierrSixPostVFP~\cite{bib:lumipas16}, \lumivalueSeven $\pm$ \lumierrSeven~\cite{bib:lumipas17}, and \lumivalueEight $\pm$ \lumierrEight~\cite{bib:lumipas18} (Total: \lumivalueRuniiUL $\pm$ \lumierrRuniiUL) of data collected with the CMS experiment at the LHC with \beamenergy, during 2016, 2017, and 2018 respectively.
 Only the runs and luminosity sections that had good functioning of every CMS sub-detector were selected for analysis.
-The measurements are performed using ultra legacy CMS data sets, which are are comprehensively documented, designed to be useful for a wide range of studies, preserved for long term access, and include high-level physics objects such as reconstructed leptons, jets, and missing transverse energy.
+The measurements are performed using ultra legacy CMS data sets, which are comprehensively documented, designed to be useful for a wide range of studies, preserved for long-term access, and include high-level physics objects such as reconstructed leptons, jets, and missing transverse energy.
 The 2016 data set is separated into preVFP and postVFP, partitioning the year into the periods before and after heavily ionizing particle mitigation (HIPM) was implemented.
 
 \subsection{Simulated Datasets}
@@ -26,7 +26,7 @@ The following \ttbar dilepton branching fraction global correction factors were 
 \ttbar dilepton events with at least one leptonic tau decay are considered as signal in this analysis and the following branching fraction global correction factors were applied per dilepton channel via tau: $\mathcal{C}_{\ee} = 1.0298$, $\mathcal{C}_{\emu} = 1.0262$, and $\mathcal{C}_{\mumu} = 1.0227$.
 
 The major sources of background contributions are semi-leptonic \ttbar, fully hadronic \ttbar, dileptonic decays of single top quarks in association with a $W$ boson ($tW$ and $\bar{t}W$), \ttbar in association with $W/Z$ bosons, \zjets, \wjets, and $WW$, $WZ$, $ZZ$ diboson processes. 
-A summary of the MC simulated process for background processes is shown in table~\ref{simulated_Datasets}, including the ME generator, PS algorithm, and cross-section used for luminosity scaling.
+A summary of the MC simulations for signal and background processes is shown in table~\ref{simulated_Datasets}, including the ME generator, PS algorithm, and cross-section used for luminosity scaling.
 
 \begin{table}[htb]
  \begin{center}
@@ -45,15 +45,16 @@ A summary of the MC simulated process for background processes is shown in table
       { $\bar{t}+W$ (Dileptonic)} & \Powheg & \Pythia &  $\xsecSINGLETOPtw$ \\
       { $W+\text{Jets}$} & \MG & \Pythia &  $\xsecWlnu$ \\
       { $Z/\gamma^*+\text{Jets} \quad (\SI{10}{\GeV} < m_{\ell\bar{\ell}} < \SI{50}{\GeV})$} & \MG & \Pythia &  $\xsecDYTenFifty$ \\
-      { $Z/\gamma^*+\text{Jets} \quad (\SI{50}{\GeV} < m_{\ell\bar{\ell}})$} & \MG & \Pythia &  $0.5 \times \xsecDYFiftyInf$ \\
-      { $Z/\gamma^*+\text{Jets} \quad (\SI{50}{\GeV} < m_{\ell\bar{\ell}})$} & \MGaMCatNLO & \Pythia &  $0.5 \times \xsecDYFiftyInf$ \\
+      { $Z/\gamma^*+\text{Jets} \quad (m_{\ell\bar{\ell}} > \SI{50}{\GeV})$} & \MG & \Pythia &  $0.5 \times \xsecDYFiftyInf$ \\
+      { $Z/\gamma^*+\text{Jets} \quad (m_{\ell\bar{\ell}} > \SI{50}{\GeV})$} & \MGaMCatNLO & \Pythia &  $0.5 \times \xsecDYFiftyInf$ \\
       { $WW$} & \Pythia & \Pythia &  $\xsecWW$ \\
       { $WZ$} & \Pythia & \Pythia &  $\xsecWZ$ \\
       { $ZZ$} & \Pythia & \Pythia &  $\xsecZZ$ \\
       \hline
       \end{tabular}
    \end{adjustbox}
-  \caption{}
+  \caption{A summary of the MC simulations for signal and background processes including the ME generator, PS algorithm, and cross-section used for luminosity scaling.
+  }
   \label{simulated_Datasets}     
  \end{center}
 \end{table}
@@ -64,15 +65,15 @@ The reconstruction of the different objects is performed using the PF algorithm.
 The object identification criteria follow the recommendations for ultra-legacy Run II analyses by the CMS Top Physics Analysis Group (Top PAG).
 
 \subsection{Triggers}
-To maximize the trigger efficiency, dilepton data streams and single lepton streams are both used for this measurement.
+To maximize the trigger efficiency, dilepton data streams and single-lepton streams are both used for this measurement.
 In order to ensure no double-counting of events, events passing the dilepton triggers are vetoed when processing the single lepton data streams.
 Approximately 10\% of dilepton events that failed to pass the dilepton trigger requirements are recovered by including the single lepton data streams.
 The trigger efficiency is measured in data as a function of the lepton \pT and used to correct the MC simulations.
 
 \subsection{Primary Vertex Requirements and Pileup Corrections}
-The PV of an event is required to associated with at least four tracks and be in the vicinity of the nominal interaction point with $\vert r \vert < \SI{2}{\cm}$ and $\vert z \vert < \SI{24}{\cm}$. 
+The PV of an event is required to be associated with at least four tracks and be in the vicinity of the nominal interaction point with $\vert r \vert < \SI{2}{\cm}$ and $\vert z \vert < \SI{24}{\cm}$. 
 Charged-hadron subtraction (CHS) is used to remove charged PU contributions and the L1FastJet algorithm is applied to subtract the remaining neutral contributions.
-The number of PU events in MC simulations is typically based on an estimate of the expected number of interactions per bunch crossing and PU re-weighting is performed using the instantaneous luminosity per bunch crossing in data, and the total $pp$ inelastic cross section of $\SI{69.2}{\m \b}$, to correct the PU distribution of the MC simulation.
+The number of PU events in MC simulations is typically based on an estimate of the expected number of interactions per bunch crossing and PU re-weighting is performed using the instantaneous luminosity per bunch crossing in data, and the total $pp$ inelastic cross section of $\SI{69.2}{\milli \b}$, to correct the PU distribution of the MC simulation.
 
 \subsection{Muons}
 PF muon candidates are required to have a transverse momentum $\pT > \SI{20}{\GeV}$ and a pseudorapidity restricted to the coverage of the inner tracker $\vert \eta \vert < 2.4$.
@@ -93,25 +94,25 @@ I^{PF}_{Rel} = \frac{1}{\pT(\mu)}(I_\mathrm{CH} + \max(0, I_\mathrm{N} + I_\math
 \end{align}
 \end{linenomath*}
 and divided by the \pT of the muon.
-It is the \pT-sum of charged (CH), neutral (N), and photon-like (PH) transverse energy deposits from charged hadron, neutral hadron and photon PF candidates, relative to the \pT of the muon, inside a cone, in $\eta$-$\phi$ space, of $\Delta R < 0.4$ around the muon.
-$I_\mathrm{CH,pu}$ is the sum over charged PF candidates not originating from the main primary vertex and its subtraction compensates for PU contributions. 
+It is the \pT-sum of charged (CH), neutral (N), and photon-like (PH) transverse energy deposits from charged hadron, neutral hadron, and photon PF candidates, relative to the \pT of the muon, inside a cone, in $\eta$-$\phi$ space, of $\Delta R < 0.4$ around the muon.
+$I_\mathrm{CH,pu}$ is the sum of charged PF candidates not originating from the main primary vertex and its subtraction compensates for PU contributions. 
 Corrections are also applied that scale the raw energy measurements and smear the muon resolutions to match the accuracy and precision of reconstructed muons in MC simulation to those in recorded data.
-Identification and isolation efficiency corrections for muons are also applied, and are measured as a function of \pT and $\eta$ using a "tag-and-probe" method with an orthogonal dataset.
+Identification and isolation efficiency corrections for muons are also applied and are measured as a function of \pT and $\eta$ using a "tag-and-probe" method with an orthogonal dataset.
 
 \subsection{Electrons}
 PF electron candidates are required to have transverse momentum $\pT > \SI{20}{\GeV}$ and a pseudorapidity restricted to the coverage of the inner tracker $\vert \eta \vert < 2.4$.
 The gap between the barrel and endcap region of the ECAL ($1.4442 < \vert \eta_\mathrm{sc} \vert < 1.5660$) is excluded, where $\eta_\mathrm{sc}$ is the pseudorapidity of the ECAL supercluster.
-To ensure high purity, the electron selection uses tight identification and isolation criteria.
-The electron isolation considers photons $\gamma$, neutral hadrons $\mathrm{nh}$, and charged hadrons $\mathrm{ch}$ as identified by the PF algorithm in a $\eta$-$\phi$ space cone of $\Delta R < 0.3$ around the electron.
+To ensure high purity, electron selection uses tight identification and isolation criteria.
+The electron isolation considers photons, neutral hadrons, and charged hadrons as identified by the PF algorithm in a $\eta$-$\phi$ space cone of $\Delta R < 0.3$ around the electron.
 Corrections are also applied that scale the raw energy measurements and smear the electron resolutions to match the accuracy and precision of reconstructed electrons in MC simulation to those in recorded data.
-Identification and reconstruction efficiency corrections for electrons are also applied, and are measured as a function of \pT and $\eta$ using a "tag-and-probe" method with an orthogonal dataset.
+Identification and reconstruction efficiency corrections for electrons are also applied and are measured as a function of \pT and $\eta$ using a "tag-and-probe" method with an orthogonal dataset.
 
 \subsection{Lepton Pair}
 Events with a dilepton system consisting of exactly two oppositely-charged leptons passing the electron and muon object selection criteria are accepted for further consideration.
 If more than two leptons are reconstructed in the event, then the event is vetoed.
 The leading selected lepton is required to have $\pT > \SI{25}{\GeV}$.
 The event is then unambiguously classified as \ee, \emu, or \mumu depending on the type of the selected lepton pair, and the event is discarded if there are additional leptons in the event, other than the two which enter the defined lepton pair.
-The invariant mass of the selected lepton pair is required to be larger than $\SI{20}{\GeV}$ to suppress background events from decays of heavy-flavour resonances and Drell-Yan processes.
+The invariant mass of the selected lepton pair is required to be larger than $\SI{20}{\GeV}$ to suppress background events from decays of heavy-flavor resonances and Drell-Yan processes.
 Moreover, in the \ee and \mumu decay channels, events are rejected if the dilepton invariant mass is within the vicinity of the $Z$ boson mass $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$, where background from $Z$ boson production is dominant.
 
 \subsection{Jets}
@@ -127,7 +128,7 @@ The following identification criteria is applied to efficiently identify jets (e
 \item Charged Multiplicity $> 0$
 \item Charged EM Fraction $<0.8$ 
 \end{itemize}
-Additionally, a cleaning of leptons from jets is applied if $\Delta R(jet,lepton)<0.4$, to exclude jets overlapping with selected leptons used in the analysis.
+To exclude jets overlapping with selected leptons used in the analysis, a cleaning of leptons from jets is applied if $\Delta R(jet,lepton)<0.4$.
 Events with jets in regions of the calorimeter that produced anomalously high or low jet rates are vetoed in MC and recorded data.
 
 Jet energy corrections (JEC) are applied that adjust the jet energy scale (JES) to match the accuracy of reconstructed jet energies in MC simulation to those in recorded data.
@@ -144,15 +145,15 @@ Events in the \ee and \mumu channels are required to have $\ETmiss > \SI{40}{\Ge
 
 \subsection{Tagging of b-Jets}
 Selected events are required to have at least one jet tagged as having originated from a $b$-quark.
-In this analysis, the DeepJet $b$-tagging algorithm~\cite{bib:Bols_2020}, which uses uses approximately 650 input variables, divided into four categories (global variables, charged PF candidate features, neutral PF candidate features, and secondary (SV) features associated with the jet) as inputs for a deep neural network, is used to tag all reconstructed jets in the event.
+In this analysis, the DeepJet $b$-tagging algorithm~\cite{bib:Bols_2020}, which uses approximately 650 input variables, divided into four categories (global variables, charged PF candidate features, neutral PF candidate features, and secondary vertex (SV) features associated with the jet) as inputs for a deep neural network, is used to tag all reconstructed jets in the event.
 A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of \sim$1\%$.
 \begin{figure}[htb]
   \begin{center}
     \begin{tabular}{cc}
-        \includegraphics[width=0.325\textwidth]{fig_Event_Selection/Secondary_Vertex.png}
-        \includegraphics[width=0.325\textwidth]{fig_Event_Selection/DeepJet.png}
+        \includegraphics[width=0.40\textwidth]{fig_Event_Selection/Secondary_Vertex.png}
+        \includegraphics[width=0.40\textwidth]{fig_Event_Selection/DeepJet.png}
     \end{tabular}
-    \caption{Illustration of a heavy-flavour jet with a SV from the decay of a $b$ or $c$ hadron resulting in charged-particle tracks (including possibly a soft lepton) that are displaced with respect to the PV, and hence with a large impact parameter (IP) value (Right)~\cite{app122010574}.
+    \caption{Illustration of a heavy-flavor jet with a SV from the decay of a $b$ or $c$ hadron resulting in charged-particle tracks (including possibly a soft lepton) that are displaced with respect to the PV, and hence with a large impact parameter (IP) value (Right)~\cite{app122010574}.
     Misidentification probability for $c$ and $l$-jets versus $b$ jet identification efficiency for DeepJet and DeepCSV $b$ tagging algorithms applied to jets in \ttbar events~\cite{app122010574}.
             }
     \label{bTagging}
@@ -163,8 +164,8 @@ A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{cc}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/DIMFull.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypjetMulti_diLep.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/DIMFull.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypjetMulti_diLep.pdf}
         \end{tabular}
         \caption{\footnotesize Dilepton invariant mass and jet multiplicity distributions for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after selection of two isolated leptons passing the trigger requirements and $m_{\ell\bar{\ell}} > \SI{20}{\GeV}$.
         For the jet multiplicity distribution, events in the \ee and \mumu channels with $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$ have also been rejected.
@@ -178,8 +179,8 @@ A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{cc}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/MET_preMETcut.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypBjetMulti_noBTag.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/MET_preMETcut.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypBjetMulti_noBTag.pdf}
         \end{tabular}
         \caption{\footnotesize \ETmiss and b-tagged jet multiplicity distribution for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after selection of two isolated leptons passing the trigger requirements, $m_{\ell\bar{\ell}} > \SI{20}{\GeV}$, $N_{jets} \geq 2$, and rejecting events in the \ee and \mumu channels with $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$.
         For the b-tagged jet multiplicity distribution, events in the \ee and \mumu channels with $\ETmiss < \SI{40}{\GeV}$ have also been rejected.
@@ -193,10 +194,10 @@ A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{cc}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypLeptonpT.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypLeptonEta.pdf} \\
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiLeptonpT.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiLeptonEta.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypLeptonpT.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypLeptonEta.pdf} \\
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiLeptonpT.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiLeptonEta.pdf}
         \end{tabular}
         \caption{\footnotesize \pT and $\eta$ distributions for selected leptons and anti-leptons for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
@@ -244,19 +245,19 @@ m_{\bar{t}}^2 &= \left(E_{\ell}+E_{\bar{\nu}}+E_{\bar{b}}\right)^2 - \sum_{i = x
 The constraint equations can be simplified to a single $4^{\text{th}}$ order polynomial equation for one of the neutrino four-momenta components, which can be solved analytically with up to a four-fold ambiguity to obtain the neutrino and top quark four-momenta.
 If an event may contain more than two b-jet candidates, then each pair of jet--lepton assignments are tried.
 Jets b-tagged by the DeepJet algorithm are tried first, and only if no solution is found are the untagged jets considered.
-The solution which yields the minimum invariant mass of the \ttbar system has been shown~\cite{PhysRevD.73.112006} to, in most cases, provide the solution with correct jet--lepton assignments and is the method used in this measurement to resolve the ambiguities arising from having multiple solutions.
+The solution which yields the minimum invariant mass of the \ttbar system has been shown~\cite{PhysRevD.73.112006} to provide, in most cases, the solution with correct jet--lepton assignments and is the method used in this measurement to resolve the ambiguities arising from having multiple solutions.
 
 Due to fluctuations in the measured jet momenta and missing transverse energy, the simplified constraint equation is not always solvable.
-To enhance reconstruction efficiency, each event is reconstructed 100 times with a different random smearing of jet and lepton energies and directions within their resolutions.
+To enhance reconstruction efficiency, each event is reconstructed 100 times with different random smearings of jet and lepton energies and directions within their resolutions.
 The resolutions are determined using the signal MC simulation after event selection by comparing the reconstructed jet and lepton energies and directions to the true b-quark and lepton values.
 The jet and lepton energies are smeared by randomly sampling a distribution of the ratio of the true energy divided by the reconstructed energy (the ratio distributions are shown in figure~\ref{fig:energyFactor}).
-The directions are smeared randomly about the reconstructed direction with magnitude sampled from a Gaussian distribution with resolution taken from the average of the angular difference between the reconstructed and true directions (the distributions from which the average resolutions were obtained are shown in figure~\ref{fig:angleFactor}).
+The directions are smeared randomly about the reconstructed direction with magnitude sampled from a Gaussian distribution with the resolution taken from the average of the angular difference between the reconstructed and true directions (the distributions from which the average resolutions were obtained are shown in figure~\ref{fig:angleFactor}).
 The $W$ boson masses used in the constraints are also smeared randomly about their central values using the width of their relativistic Breit-Wigner mass distribution (shown in figure~\ref{fig:inputDists}).
 
 \begin{figure}[htb]
     \begin{center}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_fE_jet_step7.pdf}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_fE_lep_step7.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_fE_jet_step7.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_fE_lep_step7.pdf}
         \caption{\small Distributions of the true energy divided by the reconstructed energy used for the energy smearing in the \ttbar full kinematic reconstruction. 
         The factors are shown for the b quarks (left) and the leptons (right).}
     \label{fig:energyFactor}
@@ -265,8 +266,8 @@ The $W$ boson masses used in the constraints are also smeared randomly about the
 
 \begin{figure}[htb]
     \begin{center}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_d_angle_jet_step7.pdf}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_d_angle_lep_step7.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_d_angle_jet_step7.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_d_angle_lep_step7.pdf}
         \caption{\small Distributions of the angle between the true direction and the reconstructed direction for jets (left) and leptons (right).}
        \label{fig:angleFactor}
     \end{center}
@@ -274,16 +275,16 @@ The $W$ boson masses used in the constraints are also smeared randomly about the
 
 \begin{figure}[htb]
     \begin{center}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_W_mass_step0.pdf}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_mbl_true_step0.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_W_mass_step0.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/SmearingPlots/ULcomp_KinReco_mbl_true_step0.pdf}
         \caption{\small Distributions of the true W boson mass (left) and invariant mass distribution of reconstructed leptons and b-jets (right).}
        \label{fig:inputDists}
     \end{center}
 \end{figure}
 
 Likelihood weights for each smeared solution are calculated from the invariant mass of reconstructed leptons and b-jets relative to the true invariant mass distributions.
-The true lepton-b-jet invariant mass distribution used to calculated solution likelihood weights is shown in figure~\ref{fig:inputDists}.
-For each smearing, the jet--lepton assignments which yield the maximum weight are chosen.
+The true lepton-b-jet invariant mass distribution used to calculate solution likelihood weights is shown in figure~\ref{fig:inputDists}.
+For each smearing, the jet--lepton assignment that yields the maximum weight is chosen.
 A weighted average of all smeared solutions provides the final solution to the top quark three-momentum:
 \begin{align}
 %\langle \vec{p}_{t} \rangle = \frac{1}{w_s} \sum_{i=1}^{100} w_i \cdot \vec{p}_{t,\,i} \quad \mbox{with} \quad w_s = \sum_{i=1}^{100} w_{i}
@@ -292,7 +293,7 @@ A weighted average of all smeared solutions provides the final solution to the t
 where $w(m_{\ell b})_i$ and $\vec{p}_{{(t / \bar{t})}_i}$ denote the weight and reconstructed top quark three-momentum obtained for the $i$-th smearing of the event.
 Smearings without any solutions are given null weights.
 The top quark energy is calculated from its three-momentum and the top quark mass constraint $m_{t} = \SI{172.5}{\GeV}$.
-The final solution for top anti-quark four-momentum determined in an analogous procedure.
+The final solution for the top anti-quark four-momentum is determined in an analogous procedure.
 
 \clearpage
 \subsection{Kinematic Reconstruction Control Plots}
@@ -300,10 +301,10 @@ The final solution for top anti-quark four-momentum determined in an analogous p
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{cc}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypBJetpT.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypBJetEta.pdf} \\
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiBJetpT.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiBJetEta.pdf} 
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypBJetpT.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypBJetEta.pdf} \\
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiBJetpT.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiBJetEta.pdf} 
         \end{tabular}
         \caption{\footnotesize \pT and $\eta$ distributions for b-jet and anti-b-jet solutions to the kinematic reconstruction for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
@@ -316,8 +317,8 @@ The final solution for top anti-quark four-momentum determined in an analogous p
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{cc}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiLeptonBjetMass.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypLeptonBjetMass.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiLeptonBjetMass.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypLeptonBjetMass.pdf}
         \end{tabular}
         \caption{\footnotesize Left (Right): Kinematic reconstruction solutions for anti-lepton and b-jet (lepton and anti-b-jet) invariant mass distributions for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
@@ -330,12 +331,12 @@ The final solution for top anti-quark four-momentum determined in an analogous p
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{cc}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypToppT.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypTopRapidity.pdf} \\
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiToppT.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiTopRapidity.pdf} 
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypToppT.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypTopRapidity.pdf} \\
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiToppT.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypAntiTopRapidity.pdf} 
         \end{tabular}
-        \caption{\footnotesize \pT and $\eta$ distributions for top quark and anti-top quark solutions to the kinematic reconstruction for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
+        \caption{\footnotesize \pT and $\eta$ distributions for the top quark and anti-top quark solutions to the kinematic reconstruction for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
         Trigger efficiency, lepton selection, b-tagging efficiency, and kinematic reconstruction efficiency scale factors discussed in section~\ref{Experimental_Systematics} are applied.
         The \zjets\ contributions in MC have been scaled to better describe the number of events observed in recorded data, as discussed in section~\ref{Zjets_Background_Determination}.
@@ -346,9 +347,9 @@ The final solution for top anti-quark four-momentum determined in an analogous p
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{ccc}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypTTBarMass.pdf}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypTTBarpT.pdf} 
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/HypTTBarRapidity.pdf} \\
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypTTBarMass.pdf} \\
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypTTBarpT.pdf} 
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypTTBarRapidity.pdf} \\
         \end{tabular}
         \caption{\footnotesize \pT, $\eta$, and invariant mass distributions for \ttbar solutions to the kinematic reconstruction for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
@@ -361,19 +362,19 @@ The final solution for top anti-quark four-momentum determined in an analogous p
 \clearpage
 \subsection{Comparison of \ensuremath{\mathrm{t\bar{t}}} Reconstruction for Prompt and Via \ensuremath{\mathrm{\tau}} Dilepton Events}
 The assumption that the dilepton decay is prompt and there are only two neutrinos in the final state is not true when the dilepton decay is via intermediate $\tau$ leptons; such decays can have four or six neutrinos in the final state.
-The top quark and \ttbar reconstructed kinematic variables at detector level (REC) are presented versus the true variables at generator level (GEN), and additionally the resolutions are presented as the difference between the true and reconstructed variables in bins of the true variables. 
+The top quark and \ttbar reconstructed kinematic variables at detector-level (REC) are presented versus the true variables at generator level (GEN), and additionally, the resolutions are presented as the difference between the true and reconstructed variables in bins of the true variables. 
 Figures~\ref{fig:kinrec:resolution-mtt} through~\ref{fig:kinrec:resolution-yt} show resolution of \mtt, \ytt, \pttt, \yt, and \ptt\ distributions for both prompt and via tau reconstructed \ttbar dilepton events. 
 The mean and sigma from a Gaussian fit to the kinematic variable resolutions are also included and reflect the bias and resolution of the algorithm, including degradation attributed to wrong jet--lepton assignments. 
 We conclude that the resolution of \ttbar dilepton events via $\tau$ are comparable to prompt events, and thus are included as signal in this measurement.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_genreco_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_genreco_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_residual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_residual_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_multiresidual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_multiresidual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_genreco_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_genreco_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_residual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_residual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_multiresidual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_mass_multiresidual_viatau.pdf}\\
     \caption{\small Top: True and reconstructed \mtt\ obtained for prompt (left) and via tau (right) \ttbar dilepton events.
     Middle: The difference between true and reconstructed \mtt\ in bins of true \mtt\ (fitted with a Gaussian function for illustration).
     Bottom: The differential mean and sigma from Gaussian fits, with respect to true \mtt, of the difference between true and reconstructed \mtt\ obtained for prompt and via tau \ttbar dilepton events.
@@ -384,12 +385,12 @@ We conclude that the resolution of \ttbar dilepton events via $\tau$ are compara
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_genreco_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_genreco_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_residual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_residual_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_multiresidual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_multiresidual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_genreco_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_genreco_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_residual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_residual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_multiresidual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_pT_multiresidual_viatau.pdf}\\
     \caption{\small Top: True and reconstructed \pttt\ obtained for prompt (left) and via tau (right) \ttbar dilepton events.
     Middle: The difference between true and reconstructed \pttt\ in bins of true \pttt\ (fitted with a Gaussian function for illustration).
     Bottom: The differential mean and sigma from Gaussian fits, with respect to true \pttt, of the difference between true and reconstructed \pttt\ obtained for prompt and via tau \ttbar dilepton events.
@@ -400,12 +401,12 @@ We conclude that the resolution of \ttbar dilepton events via $\tau$ are compara
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_genreco_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_genreco_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_residual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_residual_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_multiresidual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_multiresidual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_genreco_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_genreco_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_residual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_residual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_multiresidual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/ttbar_rapidity_multiresidual_viatau.pdf}\\
     \caption{\small Top: True and reconstructed \ytt\ obtained for prompt (left) and via tau (right) \ttbar dilepton events.
     Middle: The difference between true and reconstructed \ytt\ in bins of true \ytt\ (fitted with a Gaussian function for illustration).
     Bottom: The differential mean and sigma from Gaussian fits, with respect to true \ytt, of the difference between true and reconstructed \ytt\ obtained for prompt and via tau \ttbar dilepton events.
@@ -416,12 +417,12 @@ We conclude that the resolution of \ttbar dilepton events via $\tau$ are compara
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_genreco_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_genreco_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_residual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_residual_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_multiresidual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_multiresidual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_genreco_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_genreco_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_residual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_residual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_multiresidual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_pT_multiresidual_viatau.pdf}\\
     \caption{\small Top: True and reconstructed \ptt\ obtained for prompt (left) and via tau (right) \ttbar dilepton events.
     Middle: The difference between true and reconstructed \ptt\ in bins of true \ptt\ (fitted with a Gaussian function for illustration).
     Bottom: The differential mean and sigma from Gaussian fits, with respect to true \ptt, of the difference between true and reconstructed \ptt\ obtained for prompt and via tau \ttbar dilepton events.
@@ -432,12 +433,12 @@ We conclude that the resolution of \ttbar dilepton events via $\tau$ are compara
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_genreco_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_genreco_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_residual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_residual_viatau.pdf}\\
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_multiresidual_prompt.pdf}
-    \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_multiresidual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_genreco_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_genreco_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_residual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_residual_viatau.pdf}\\
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_multiresidual_prompt.pdf}
+    \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/KinRecoResolutions/top_rapidity_multiresidual_viatau.pdf}\\
     \caption{\small Top: True and reconstructed \yt\ obtained for prompt (left) and via tau (right) \ttbar dilepton events.
     Middle: The difference between true and reconstructed \yt\ in bins of true \yt\ (fitted with a Gaussian function for illustration).
     Bottom: The differential mean and sigma from Gaussian fits, with respect to true \yt, of the difference between true and reconstructed \yt\ obtained for prompt and via tau \ttbar dilepton events.
@@ -446,11 +447,11 @@ We conclude that the resolution of \ttbar dilepton events via $\tau$ are compara
  \end{center}
 \end{figure}
 
-
+\clearpage
 \section{\ensuremath{\mathrm{Z+Jets}} Background Determination}
 \label{Zjets_Background_Determination}
 The expected background contributions from \ttbar, $tW$, \wjets, and diboson processes are directly taken from the MC simulations.
-The \zjets\ background contribution in the selected phase space is not modeled accurately in MC simulations, and the normalization of the \zjets\ background contribution corrected using global normalization scale factors, which are determined from a binned template fit to the data using TFractionFitter as described in~\cite{CMS-PAS-TOP-20-006}\cite{BARLOW1993219}.
+The \zjets\ background contribution in the selected phase space is not modeled accurately in MC simulations, and the normalization of the \zjets\ background contribution is corrected using global normalization scale factors, which are determined from a binned template fit to the data using TFractionFitter as described in~\cite{CMS-PAS-TOP-20-006}\cite{BARLOW1993219}.
 TFractionFitter is a class in the ROOT~\cite{Antcheva:2011zz} data analysis framework that performs a simultaneous binned Poisson maximum likelihood fit of multiple MC templates in order to determine the linear combination of templates and fractions that best describe the recorded data. 
 Within the vetoed $Z$ boson mass peak control region $\SI{76}{\GeV} < \mll < \SI{106}{\GeV}$, MC templates obtained from the MC simulated samples for \zjets\ processes $\text{T}_{\zjets}$ and the sum of all other MC contributions $\text{T}_\text{Other}$ are fitted to the \mll distributions in the data template $\text{T}_\text{Data}$ as:
 \begin{linenomath*}
@@ -480,10 +481,10 @@ The resulting \zjets\ global normalization scale factors are shown in table~\ref
 
 \begin{figure}[htb]
   \begin{center}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/fit_status_ee.pdf}
-        \includegraphics[width=0.30\textwidth]{fig_fullRun2UL/fit_status_mumu.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/fit_status_ee.pdf}
+        \includegraphics[width=0.35\textwidth]{fig_fullRun2UL/fit_status_mumu.pdf}
         \caption{
-            \small Dilepton mass distributions in the $Z$ boson mass peak control between $\SI{76}{\GeV} < \mll < \SI{106}{\GeV}$ are shown for the \ee (left) and \mumu (right) channels for Full Run II. 
+            \small Dilepton mass distributions in the $Z$ boson mass peak control region between $\SI{76}{\GeV} < \mll < \SI{106}{\GeV}$ are shown for the \ee (left) and \mumu (right) channels for Full Run II. 
             The data template $\text{T}_\text{Data}$ is illustrated by black dots, the \zjets\ template $\text{T}_{\zjets}$ is shown in blue, and the sum of all other MC contributions template $\text{T}_\text{Other}$ is green. 
             The red histogram shows the result of the fit performed by TFractionFitter.
             \label{fig:fitstatusfullRun2UL}
@@ -514,9 +515,9 @@ The resulting \zjets\ global normalization scale factors are shown in table~\ref
 \begin{figure}[htb]
     \begin{center}
         \begin{tabular}{c}
-            \includegraphics[width=0.325\textwidth]{fig_fullRun2UL/controlplots/combined/DIMFull_fullSel.pdf}
+            \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/DIMFull_fullSel.pdf}
         \end{tabular}
-        \caption{\footnotesize Dilepton invariant mass distribution for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria has been applied, with \zjets\ contributions in MC scaled to better describe the number of events observed in recorded data.
+        \caption{\footnotesize Dilepton invariant mass distribution for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied, with \zjets\ contributions in MC scaled to better describe the number of events observed in recorded data.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
         Trigger efficiency, lepton selection, b-tagging efficiency, and kinematic reconstruction efficiency scale factors discussed in section~\ref{Experimental_Systematics} are applied.
         }
@@ -544,7 +545,7 @@ The numbers of observed events in the data compared to the expected events from 
  \begin{center}
     \caption{\small Full Run II (\lumivalueRuniiUL) expected event yields for signal and background processes, compared to the event yields in recorded data, after each step of event selection.} 
     \label{t-cutflowfullRun2UL}
-      \begin{adjustbox}{scale=0.70,center}
+      \begin{adjustbox}{scale=1.00,center}
        {\footnotesize
         \begin{tabular}{lrrrrrrr}
 \hline $\boldsymbol{\mu^+\mu^-}$ & Leptons & Jets & \ETmiss & b-Tag & Kin. Reco. \\

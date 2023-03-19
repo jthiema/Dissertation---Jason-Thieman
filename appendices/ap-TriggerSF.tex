@@ -5,10 +5,10 @@
 
 \section{Overview and Motivation}
 Here is presented the measurements of the trigger efficiencies and corrective scale factors that were used by virtually all CMS Run II measurements analyzing \ttbar events that decay via the dileptonic mode with \ee, \emu, \mumu final states.  
-The methods used for the measurements and the determination of systematic uncertainties, were approved by the EGamma and Muon CMS Physics Object Groups, because of the inclusion of electron and muon objects respectively, as well as by the CMS Top Quark Physics Analysis Group.
+The methods used for the measurements and the determination of systematic uncertainties were approved by the EGamma and Muon CMS Physics Object Groups because of the inclusion of electron and muon objects respectively, as well as by the CMS Top Quark Physics Analysis Group.
 
 Trigger efficiencies measure the ability of the CMS trigger system to select potentially interesting events for further analysis.
-Differences between the observed trigger efficiencies of data recorded by the detector and the expected trigger efficiencies of simulated data can bias measured physics results, and these differences are corrected via trigger efficiency scale factors that are applied to the trigger efficiencies of simulated data, so that they match the observed trigger efficiencies of recorded data.
+Differences between the observed trigger efficiencies of data recorded by the detector and the expected trigger efficiencies of simulated data can bias measured physics results, and these differences are corrected via trigger efficiency scale factors that are applied to the trigger efficiencies of simulated data so that they match the observed trigger efficiencies of recorded data.
 Trigger efficiency corrective scale factors ($SF_{\text{Trig}}$) are calculated as:
 \begin{linenomath*}
 \begin{align}
@@ -27,37 +27,37 @@ The trigger efficiencies, for both data and Monte Carlo simulated data, are thus
 \label{efficiency}
 \end{align}
 \end{linenomath*}
-where, in addition to passing the trigger requirements, events have to also pass the event selection criteria for the appropriate dilepton channel. 
+where, in addition to passing the trigger requirements, events must also pass the event selection criteria for the appropriate dilepton channel. 
 
 The dilepton trigger efficiency corrective scale factors are measured, separately in the \ee, \emu, \mumu channels, as one-dimensional and two-dimensional functions of leading and sub-leading lepton \pT.
-The two-dimensional scale factors are the set recommended to be used by by virtually all CMS Run II measurements analyzing \ttbar events that decay via the dileptonic mode with \ee, \emu, \mumu final states.
+The two-dimensional scale factors are the set recommended to be used by virtually all CMS Run II measurements analyzing \ttbar events that decay via the dileptonic mode with \ee, \emu, \mumu final states.
 
 \section{Data Sets and Triggers}
-The measurements were original performed using pre-ultra legacy CMS data sets, but were repeated using the ultra legacy sets, are comprehensively documented, designed to be useful for a wide range of studies, preserved for long term access, and include high-level physics objects such as reconstructed leptons, jets, and missing transverse energy.
-The data streams were collected by the CMS experiment in 2016, 2017 and 2018, and correspond to a combined integrated luminosity of \lumivalueRuniiUL.
+The measurements, which were originally performed using pre-ultra legacy CMS data sets but were repeated using the ultra legacy sets, are comprehensively documented, are designed to be useful for a wide range of studies, are preserved for long-term access, and include high-level physics objects such as reconstructed leptons, jets, and missing transverse energy.
+The data streams were collected by the CMS experiment in 2016, 2017, and 2018, and correspond to a combined integrated luminosity of \lumivalueRuniiUL.
 The 2016 data set is separated into preVFP and postVFP, partitioning the year into the periods before and after HIPM was implemented.
 The lists of triggers for each of the three years were provided in collaboration with trigger experts of the CMS Top Quark Physics Analysis Group. 
-Both dilepton and single lepton triggers are used in order to maximize the trigger efficiency. 
+Both dilepton and single-lepton triggers were used in order to maximize the trigger efficiency. 
 
 \section{Object and Event Selection}
 The dilepton final state of \ttbar events is characterized by the presence of at least two high-\pT isolated leptons with opposite electric charge, large missing transverse energy (\MET), and two jets resulting from the hadronization of bottom quarks.
 The identification and reconstruction of the different objects is performed using the PF object-reconstruction algorithm, which combines information from all the raw sub-detector signals to accurately identify and reconstruct individual particle objects for each event. 
 \subsection{Electrons}
-Electron candidates are selected from the reconstructed GSF electrons (defined in section~\ref{PF_Reconstruction_Electrons}) with $\pT > \SI{15}{\GeV}$ and $\abs{\eta_{SuperCluster}}< 2.4$, removing the barrel-endcap gap $1.4442 < \abs{\eta_{SuperCluster}}< 1.566$. 
-Selected electrons must to pass the tight identification tracking requirements, including relative isolation, as recommended by the CMS EGamma Physics Object Group.
-Corrections to scale the raw energy measurements and smear the electron resolutions, to match the accuracy and precision of reconstructed electrons in MC simulated data to those in recorded data, are also applied.
+Electron candidates are selected from the reconstructed GSF electrons (defined in section~\ref{PF_Reconstruction_Electrons}) with $\pT > \SI{15}{\GeV}$ and $\abs{\eta_{SC}}< 2.4$, removing the barrel-endcap gap $1.4442 < \abs{\eta_{SC}}< 1.566$. 
+Selected electrons must pass the tight identification tracking requirements, including relative isolation, as recommended by the CMS EGamma Physics Object Group.
+Corrections also are applied to scale the raw energy measurements and smear the electron resolutions to match the accuracy and precision of reconstructed electrons in MC simulated data to those in recorded data.
 \subsection{Muons}
 PF muons selected for this measurement are required to be reconstructed as global muons (defined in section~\ref{PF_Reconstruction_Muons}), relatively isolated, with $\pT > \SI{15}{\GeV}$ and $\abs{\eta}<$ 2.4, and to be identified as passing tight identification tracking criteria recommended by the CMS Muon Physics Object Group.
-Corrections to scale the raw energy measurements and smear the muon resolutions, to match the accuracy and precision of reconstructed muons in MC simulated data to those in recorded data, are also applied.
+Corrections are also applied to scale the raw energy measurements and smear the muon resolutions to match the accuracy and precision of reconstructed muons in MC simulated data to those in recorded data.
 \subsection{Jets}
 Particle candidates found by the PF algorithm are clustered into jets using the anti-$k_T$ algorithm with distance parameter $R = 0.4$ (AK4), as discussed in section~\ref{PF_Reconstruction_Jets}. 
 Selected jets should have $\pT > \SI{30}{\GeV}$, $\abs{\eta} <2.4$, and pass tight jet identification requirements recommended by CMS Jet-MET Physics Object Group.
-In order to remove overlap of selected jets with the selected leptons, jet objects within $\Delta R_{jet,lepton} < 0.4$ of selected leptons are not counted, where $\Delta R$ is defined in section~\ref{CMS_Coordinate_System}.
+In order to remove the overlapping of selected jets with the selected leptons, jet objects within $\Delta R_{jet,lepton} < 0.4$ of selected leptons are not counted, where $\Delta R$ is defined in section~\ref{CMS_Coordinate_System}.
 \subsection{Missing Transverse Energy}
-In order to reduce the instrumental noise in the detector, \MET filters are applied as is recommended by CMS Jet-MET Physics Object Group.
+In order to reduce the instrumental noise in the detector, \MET filters are applied as recommended by CMS Jet-MET Physics Object Group.
 An event selection requirement of $\MET > 100$ is included because of the high threshold of \MET triggers.
 \subsection{Event Selection Criteria}
-Events with exactly two high-\pT isolated PF leptons (electrons or muons) with opposite electric charge, PF leptons (electrons or muons) are selected. 
+Events with exactly two high-\pT isolated PF leptons (electrons or muons) with opposite electric charge are selected. 
 Both electrons and muons are required to have $\abs\eta < 2.4$, with $\pT > \SI{25}{\GeV}$ ($\pT > \SI{15}{\GeV}$) for the leading (sub-leading) lepton.  
 The invariant mass of the two leptons is required to be greater than \SI{20}{\GeV}.  
 Selected events are required to have at least one jet passing the loose working point of the DeepCSV b-tagging algorithm.
@@ -68,7 +68,7 @@ For the one-dimensional trigger efficiency scale factor measurements, the sums i
 
 \subsection{Statistical Uncertainties}
 The asymmetric statistical uncertainty for measured trigger efficiencies is determined using Clopper-Pearson intervals ~\cite{bib:Cousins:2009kz}.
-This is in general a conservative method, since Clopper-Pearson intervals have the property that the actual coverage is at least as big as the nominal for any population portion. 
+This is generally a conservative method because Clopper-Pearson intervals have the property that the actual coverage is no smaller than the nominal for any population portion. 
 It is also described in the statistics section of the Particle Data Group (PDG) book ~\cite{bib:PDG}.
 
 The asymmetric statistical uncertainty for measured scale factors $T=(X / m) /(Y / n)$ is determined using the method recommended for ratios of efficiencies, in which $\ln (T)$ is approximately normally distributed \cite{bib:10.2307/2531405}. 
@@ -77,13 +77,13 @@ For the extreme cases in which $x = m$ and $y = n$, $x$ and $y$ are replaced wit
 
 \subsection{Systematic Uncertainties}
 The sources of systematic uncertainties are related to event topology, dependence on era, and correlations between MET and dilepton triggers.
-In order to estimate the effect of event topology on the trigger scale factors, the data and MC samples are partitioned into two mutually exclusive regions using number of jets and number of vertices, and scale factors are computed separately in each region. 
-An envelope of the largest bin-by-bin differences with respective to the nominal is taken from the two partitions for number of jets and number of vertices independently.
+In order to estimate the effect of event topology on the trigger scale factors, the data and MC samples are partitioned into two mutually exclusive regions using the number of jets and the number of vertices, and scale factors are computed separately in each region. 
+An envelope of the largest bin-by-bin differences with respect to the nominal is taken from the two partitions for the number of jets and the number of vertices independently.
 The final event topology systematic uncertainty in each bin is the sum in quadrature of those two independent envelopes.
 The number of jets distributions is relatively stable for different conditions during Run II, and the number of jets partition is [$< 3$, $\geq\ 3$] for all three eras.
 However, the number of primary vertices distributions are more strongly dependent on the luminosity conditions and a different number of vertex partition is chosen for each era such that roughly the same percentage of MC events are below the partition.
-For 2016, 2017, and 2018, the number of vertices partition are [$< 20$, $\geq 20$], [$< 30$, $\geq 30$], and [$< 30$, $\geq 30$] respectively.
-The bin-by bin differences between the nominal measurement of the scale factor and a luminosity-weighted combination of scale factors measured for the individual runs in each era is taken as another source of systematic uncertainty.
+For 2016, 2017, and 2018, the number of vertices partition are [$< 20$, $\geq 20$], [$< 30$, $\geq 30$], and [$< 30$, $\geq 30$], respectively.
+The bin-by-bin differences between the nominal measurement of the scale factor and a luminosity-weighted combination of scale factors measured for the individual runs in each era is taken as another source of systematic uncertainty.
 
 We estimate the correlation factor $(\alpha)$ between MET and dilepton ($DL$) triggers in \ttbar MC events by finding the fraction of events passing only the MET triggers ($\epsilon_{trigMET}^{MC}$), only the dilepton triggers ($\epsilon_{trigDL}^{MC}$) and passing both of them ($\epsilon_{trigDL,trigMET}^{MC}$): 
 \begin{linenomath*}
@@ -94,7 +94,7 @@ We estimate the correlation factor $(\alpha)$ between MET and dilepton ($DL$) tr
 \end{linenomath*}
 If \MET and dilepton triggers are independent with no correlation, then $\epsilon_{trigDL,trigMET}^{MC} = \epsilon_{trigDL}^{MC} \times \epsilon_{trigMET}^{MC}$ or $\alpha = 1$ ($P(A \cap B) = P(A) \times P(B)$).
 The fraction $(\alpha)$ is determined for each channel and data set from equation \ref{alpha} and its difference from 1 is found to be small for all triggers studied. 
-Since these values are negligible with respect to the other systematic uncertainties, they are not added in quadrature for the final total uncertainty. 
+Because these values are negligible with respect to the other systematic uncertainties, they are not added in quadrature for the final total uncertainty. 
 Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel are shown in figures~\ref{TrigSF_2016preVFP_5},~\ref{TrigSF_2016postVFP_5},~\ref{TrigSF_2017_5}, and~\ref{TrigSF_2018_5}. 
 
 \section{Results}
@@ -163,7 +163,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.45\textwidth]{fig_2016preVFP_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.45\textwidth]{fig_2016preVFP_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016preVFP data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016preVFP data set in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2016preVFP_4}
   \end{center}
 \end{figure}
@@ -178,7 +178,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.30\textwidth]{fig_2016preVFP_TrigSF/g_lepApt_mumu_alpha.pdf}
       \includegraphics[width=0.30\textwidth]{fig_2016preVFP_TrigSF/g_lepBpt_mumu_alpha.pdf}\\
     \end{tabular}
-    \caption{Correlations between MET and dilepton triggers for the 2016preVFP dataset in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{Correlations between MET and dilepton triggers for the 2016preVFP dataset in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2016preVFP_5}
   \end{center}
 \end{figure}
@@ -249,7 +249,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.45\textwidth]{fig_2016postVFP_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.45\textwidth]{fig_2016postVFP_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016postVFP data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2016postVFP data set in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2016postVFP_4}
   \end{center}
 \end{figure}
@@ -264,7 +264,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.30\textwidth]{fig_2016postVFP_TrigSF/g_lepApt_mumu_alpha.pdf}
       \includegraphics[width=0.30\textwidth]{fig_2016postVFP_TrigSF/g_lepBpt_mumu_alpha.pdf}\\
     \end{tabular}
-    \caption{Correlations between MET and dilepton triggers for the 2016postVFP dataset in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{Correlations between MET and dilepton triggers for the 2016postVFP dataset in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2016postVFP_5}
   \end{center}
 \end{figure}
@@ -335,7 +335,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.45\textwidth]{fig_2017_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.45\textwidth]{fig_2017_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2017 data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2017 data set in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2017_4}
   \end{center}
 \end{figure}
@@ -350,7 +350,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.30\textwidth]{fig_2017_TrigSF/g_lepApt_mumu_alpha.pdf}
       \includegraphics[width=0.30\textwidth]{fig_2017_TrigSF/g_lepBpt_mumu_alpha.pdf}\\
     \end{tabular}
-    \caption{Correlations between MET and dilepton triggers for the 2017 dataset in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{Correlations between MET and dilepton triggers for the 2017 dataset in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2017_5}
   \end{center}
 \end{figure}
@@ -421,7 +421,7 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.45\textwidth]{fig_2018_TrigSF/h2D_lepABpt_mumu.pdf}
       \includegraphics[width=0.45\textwidth]{fig_2018_TrigSF/h2D_lepABpt_mumu_BinErrors.pdf}\\
     \end{tabular}
-    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2018 data set in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{2D scale factors (Left) and total uncertainties (Right) for the 2018 data set in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2018_4}
   \end{center}
 \end{figure}
@@ -436,14 +436,14 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
       \includegraphics[width=0.30\textwidth]{fig_2018_TrigSF/g_lepApt_mumu_alpha.pdf}
       \includegraphics[width=0.30\textwidth]{fig_2018_TrigSF/g_lepBpt_mumu_alpha.pdf}\\
     \end{tabular}
-    \caption{Correlations between MET and dilepton triggers for the 2018 dataset in the \emu (top), \ee (middle) and \mumu (bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
+    \caption{Correlations between MET and dilepton triggers for the 2018 dataset in the \emu (Top), \ee (Middle) and \mumu (Bottom) channels as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel.}
     \label{TrigSF_2018_5}
   \end{center}
 \end{figure}
 
 
 \section{Search for Lorentz Invariance Violation in \ensuremath{\mathrm{t\bar{t}}} Production}
-Lorentz symmetry, i.e. that the laws of physics are the same in all inertial frames of reference, is a fundamental principle of general relativity and relativistic quantum field theories.
+Lorentz symmetry (i.e. that the laws of physics are the same in all inertial frames of reference) is a fundamental principle of general relativity and relativistic quantum field theories.
 Violation of Lorentz symmetry could indicate the presence of NP.
 One method to search for violation of Lorentz symmetry is to search for a modulation of the \ttbar cross section as a function of sidereal time (the orientation of the experiment relative to the fixed position of stars in the sky).
 In order to accommodate a search and provide time dependence, the dilepton trigger efficiency scale factors were measured one-dimensionally as a function of sidereal time using the same method outlined above, with the exception of using custom time-dependent corrections and not including the number of vertices partition as a source of event topology systematic uncertainty.
