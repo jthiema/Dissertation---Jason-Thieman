@@ -11,8 +11,8 @@ The successful operation of the LHC has contributed to our understanding of the 
 The primary design criteria for the LHC were to provide conditions for elucidating the nature of EWSB, testing the hypothesis of the BEH mechanism, and discovering the Higgs boson.
 
 \subsection{Probing Small Scales with High Energy}
-The De Broglie relation states that the wavelength of a particle is inversely proportional to its energy.
-According to Heisenberg's uncertainty principle, the position of a particle with a short wavelength cannot be precisely determined.
+The De Broglie relation states that the wavelength of a particle is inversely proportional to its momentum~\cite{de1924recherches}.
+According to Heisenberg's uncertainty principle, the position of a particle with a short wavelength cannot be precisely determined~\cite{Heisenberg1927}.
 Thus, the motivation for building higher energy particle colliders is to probe smaller distance scales.
 In the 20th century, particle accelerator energy increased many orders of magnitude from \sim$\SI{100}{\keV}$ in the 1930s to \sim$\SI{10}{\TeV}$ in the 2010s (see table~\ref{energy_distanceprobed}), and current distance scales probed are down to \sim$\SI{e-19}{\m}$.
 \begin{table}[htb]
@@ -40,9 +40,9 @@ A schematic of the LHC at CERN's accelerator complex in Geneva at the border of 
 \begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
-        \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CERN_LHC.png}
+        \includegraphics[width=0.9\textwidth]{fig_LHC_CMS/CERN_LHC.pdf}
     \end{tabular}
-    \caption{A schematic of the LHC at CERN's accelerator complex in Geneva at the border of Switzerland and France~\cite{Christiane:1260465}.
+    \caption{A schematic of the LHC at CERN's accelerator complex in Geneva at the border of Switzerland and France~\cite{Mobs:2197559}.
             }
     \label{CERN_LHC}
   \end{center}
@@ -52,7 +52,7 @@ The $\SI{80}{\m}$ Linear Accelerator 2 (Linac 2) accelerates protons to an energ
 Next, the proton bunches are injected into the $\SI{628}{\m}$ circumference Proton Synchrotron (PS), which accelerates the bunches to $\SI{26}{\GeV}$ before injecting them into the $\SI{7}{\km}$ circumference Super Proton Synchrotron (SPS), which increases the proton energy to $\SI{450}{\GeV}$ before finally injecting them into the LHC, which accelerates them to their final (2016, 2017, and 2018) energy of $\SI{6.5}{\TeV}$.
 
 Ultra-high vacuum conditions \sim$\SI{e-11}{\mbar}$ are maintained in the LHC beam pipes and 16 radiofrequency (RF) cavities with electric fields oscillating at a frequency resonant with the bunching frequency are used to accelerate the protons.
-Superconducting magnets cooled with superfluid helium to temperatures below $\SI{2}{\K}$ and operating at fields exceeding $\SI{8}{\T}$~\cite{LyndonEvans_2008} are used to shape and control the beam directions.
+Superconducting magnets cooled with superfluid helium to temperatures below $\SI{2}{\K}$ and operating with magnetic fields exceeding $\SI{8}{\T}$~\cite{LyndonEvans_2008} are used to shape and control the beam directions.
 1232 dipole magnets bend the beams around the ring and 474 quadrupole magnets are used to focus and collimate the beams.
 The $\SI{25}{\ns}$ bunch separation corresponds to 2808 proton bunches simultaneously in the LHC.
 At the four LHC IPs, proton bunches cross at a rate of $\SI{40}{\MHz}$, creating collisions corresponding to temperatures a billion times hotter than the core of the sun.
@@ -82,7 +82,6 @@ The number of collisions per bunch cross is referred to as pile-up (PU), and is 
 PU = \frac{\mathcal{L}_{\text{Inst}} \cdot \sigma_{\text{Inelastic}}}{n_b f_{\mathrm{rev}}}
 \end{align}
 \end{linenomath*}
-where $\sigma_{\text{Inelastic}} = \SI{69.2}{\milli \b}$ is the total $pp$ inelastic cross section at the \beamenergy LHC.
 Typical PU in CMS recorded data from 2016 through 2018 was around 15-30 interaction vertices per bunch crossing, but high (low) extremes routinely occurred during the beginning (end) of beam fills due to instantaneous luminosity decay.
 For a particular process, the total number of events that occur in a recorded data set is given by:
 \begin{linenomath*}
@@ -196,7 +195,7 @@ After the replacement, the silicon inner tracker altogether contributes total ra
         \includegraphics[width=0.45\textwidth]{fig_LHC_CMS/Inner_Tracker.png}
     \end{tabular}
     \caption{Silicon Pixel Tracker (Left) before and after the Phase-1 upgrade~\cite{Adam_2021}.
-             Silicon Inner Tracker before Pixel Phase-1 upgrade (Right): ~\cite{Chatrchyan:1211825}.
+             Silicon Inner Tracker before Pixel Phase-1 upgrade (Right)~\cite{Chatrchyan:1211825}.
             }
     \label{Inner_Tracker}
   \end{center}
@@ -208,7 +207,7 @@ In the forward regions, the strip tracker is separated into the Tracker Inner Di
 The doping scheme for strips is $p$-on-$n$, which undergoes type inversion after sufficient radiation damage to the crystal lattice and change.
 Strips are only finely segmented in one dimension, with minimum cell sizes of  $\approx \SI{10}{\cm} \times 80 \; \mu \si{\m}$ in the TIB and TID, and maximum cell sizes of $\approx \SI{25}{\cm} \times 180 \; \mu \si{\m}$ in the TOB and TEC.
 The TIB (TOB) has four (six) layers of silicon microstrip detectors, providing up to four (six) $r-\phi$ measurements, while the TID (TEC) has four (nine) layers, providing up to four (nine) $z-\phi$ measurements.
-The $r\-phi$ ($z$) single point resolutions of these measurements are $23-35 \; \mu \si{\m}$ ($23 \; \mu \si{\m}$) in the TIB, $35-52 \; \mu \si{\m}$ ($52 \; \mu \si{\m}$) in the TOB.
+The $r-\phi$ ($z$) single point resolutions of these measurements are $23-35 \; \mu \si{\m}$ ($23 \; \mu \si{\m}$) in the TIB, $35-52 \; \mu \si{\m}$ ($52 \; \mu \si{\m}$) in the TOB.
 Some layers additionally have modules mounted with stereo angles to provide measurements of the second coordinate ($z$ in the barrel region and $r$ in the forward regions).
 The single point resolutions of these measurements are $\approx 230 \; \mu \si{\m}$ in the TIB, $\approx 530 \; \mu \si{\m}$ in the TOB.
 The hit efficiency of the silicon strip tracker is 99.8\%.
@@ -223,7 +222,7 @@ The crystals have a highly-granular $22 \times 22 \si{\mm\squared}$ ($28.6 \time
 The crystal lengths are $\SI{23}{\cm}$ ($\SI{22}{\cm}$) in the EB (EE), corresponding to a total radiation length of $25.8X_0$ ($24.7X_0$).
 The total radiation length of the crystals essentially guarantees that electrons and photons will deposit all of their energy in the ECAL, resulting in an electromagnetic shower that excites nearby atoms which subsequently relax by scintillating light.
 The scintillation decay time of lead tungstate is less than $\SI{25}{\ns}$, and it scintillates a blue-green light.
-The crystals are fully polished to totally internally reflect light down the crystal where it is collected by a silicon avalanche photodiodes in the EB and vacuum phototriodes in the EE, which are designed to be radiation-hard to operate in the high magnetic field.
+The crystals are fully polished to totally internally reflect light down the crystal where it is collected by silicon avalanche photodiodes in the EB and vacuum phototriodes in the EE, which are designed to be radiation-hard to operate in the high magnetic field.
 In the $1.653 < \vert \eta \vert < 2.6$ region are pre-shower detectors that are primarily designed to distinguish photons originating from $\pi^0$ decays.
 
 \begin{figure}[htb]
@@ -270,8 +269,8 @@ The muon system is aligned with the inner tracker in order for the detectors to 
 \end{figure}
 
 \subsection{Trigger and Data Acquisition System}
-CMS wants to collect the most relevant data from bunch crossings with a $\SI{40}{\MHz}$ event rate.
-Each bunch crossing generates \sim$\SI{1}{\M \byte}$ of data, but due to limited bandwidth, the detectors cannot readout and store \sim$\SI{40}{\T \byte \per \s}$, so a trigger system is necessary to reject the least interesting 99.9999\% of events in quasi-real time, and reduce the event rate to \sim$\SI{1}{\kilo \Hz}$ before storage.
+CMS wants to record the most relevant data from bunch crossings with a $\SI{40}{\mega \Hz}$ event rate.
+Each bunch crossing generates \sim$\SI{1}{\mega \byte}$ of data, but due to limited bandwidth, the detectors cannot readout and store \sim$\SI{40}{\tera \byte \per \s}$, so a trigger system is necessary to reject the least interesting 99.9999\% of events in quasi-real time, and reduce the event rate to \sim$\SI{1}{\kilo \Hz}$ before storage.
 This is not an unreasonable constraint, as the total cross-section of proton-proton interactions (elastic and inelastic) at \beamenergy is \sim$\SI{100}{\milli \b}$, while interesting processes such as top quark pair production and Higgs boson production have cross-sections on the orders of \sim$\SI{800}{\pico \b}$ and \sim$\SI{50}{\pico \b}$ respectively.
 To accomplish this, CMS has a highly reliable and efficient trigger system, composed of detector electronics, a level-1 (L1) hardware trigger, a readout network, and a high-level software trigger (HLT).
 The L1 trigger uses hardware processors and raw readouts from the calorimeters and muon systems to reduce the event rate to \sim$\SI{100}{\kHz}$ with a latency of $3.8 \; \mu s$.

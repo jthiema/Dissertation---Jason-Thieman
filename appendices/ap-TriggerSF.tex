@@ -23,7 +23,7 @@ Missing transverse energy (\MET) triggers are shown to be minimally correlated w
 The trigger efficiencies, for both data and Monte Carlo simulated data, are thus calculated as: 
 \begin{linenomath*}
 \begin{align}
-\mathcal{E} = \frac{N_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers}\} \; \cap \; \{\text{Dilepton triggers\}}}}{N_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers\}}}}
+\mathcal{E} = \frac{N^{MC}_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers}\} \; \cap \; \{\text{Dilepton triggers\}}}}{N^{MC}_{\{\text{Selection}\} \; \cap \; \{\text{MET triggers\}}}}
 \label{efficiency}
 \end{align}
 \end{linenomath*}
@@ -85,14 +85,14 @@ However, the number of primary vertices distributions are more strongly dependen
 For 2016, 2017, and 2018, the number of vertices partition are [$< 20$, $\geq 20$], [$< 30$, $\geq 30$], and [$< 30$, $\geq 30$], respectively.
 The bin-by-bin differences between the nominal measurement of the scale factor and a luminosity-weighted combination of scale factors measured for the individual runs in each era is taken as another source of systematic uncertainty.
 
-We estimate the correlation factor $(\alpha)$ between MET and dilepton ($DL$) triggers in \ttbar MC events by finding the fraction of events passing only the MET triggers ($\epsilon_{trigMET}^{MC}$), only the dilepton triggers ($\epsilon_{trigDL}^{MC}$) and passing both of them ($\epsilon_{trigDL,trigMET}^{MC}$): 
+We estimate the correlation factor $(\alpha)$ between MET and dilepton ($DL$) triggers in \ttbar MC events by finding the fraction of events passing only the MET triggers ($\mathcal{E}_{trigMET}^{MC}$), only the dilepton triggers ($\mathcal{E}_{trigDL}^{MC}$) and passing both of them ($\mathcal{E}_{trigDL,trigMET}^{MC}$): 
 \begin{linenomath*}
 \begin{align}
-\alpha=\frac{\epsilon_{trigDL}^{MC} \times \epsilon_{trigMET}^{MC}}{\epsilon_{trigDL,trigMET}^{MC}} \, .
+\alpha=\frac{\mathcal{E}_{trigDL}^{MC} \times \mathcal{E}_{trigMET}^{MC}}{\mathcal{E}_{trigDL,trigMET}^{MC}} \, .
 \label{alpha}
 \end{align}
 \end{linenomath*}
-If \MET and dilepton triggers are independent with no correlation, then $\epsilon_{trigDL,trigMET}^{MC} = \epsilon_{trigDL}^{MC} \times \epsilon_{trigMET}^{MC}$ or $\alpha = 1$ ($P(A \cap B) = P(A) \times P(B)$).
+If \MET and dilepton triggers are independent with no correlation, then $\mathcal{E}_{trigDL,trigMET}^{MC} = \mathcal{E}_{trigDL}^{MC} \times \mathcal{E}_{trigMET}^{MC}$ or $\alpha = 1$ ($P(A \cap B) = P(A) \times P(B)$).
 The fraction $(\alpha)$ is determined for each channel and data set from equation \ref{alpha} and its difference from 1 is found to be small for all triggers studied. 
 Because these values are negligible with respect to the other systematic uncertainties, they are not added in quadrature for the final total uncertainty. 
 Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \pT in the \ee and \mumu channels and as a function of electron \pT and muon \pT in the \emu channel are shown in figures~\ref{TrigSF_2016preVFP_5},~\ref{TrigSF_2016postVFP_5},~\ref{TrigSF_2017_5}, and~\ref{TrigSF_2018_5}. 
@@ -445,13 +445,14 @@ Values of $\alpha$ as a function of leading lepton \pT and sub-leading lepton \p
 \section{Search for Lorentz Invariance Violation in \ensuremath{\mathrm{t\bar{t}}} Production}
 Lorentz symmetry (i.e. that the laws of physics are the same in all inertial frames of reference) is a fundamental principle of general relativity and relativistic quantum field theories.
 Violation of Lorentz symmetry could indicate the presence of NP.
-One method to search for violation of Lorentz symmetry is to search for a modulation of the \ttbar cross section as a function of sidereal time (the orientation of the experiment relative to the fixed position of stars in the sky).
-In order to accommodate a search and provide time dependence, the dilepton trigger efficiency scale factors were measured one-dimensionally as a function of sidereal time using the same method outlined above, with the exception of using custom time-dependent corrections and not including the number of vertices partition as a source of event topology systematic uncertainty.
+One method to search for a violation of Lorentz invariance is to search for a modulation of the \ttbar cross-section as a function of sidereal time (the orientation of the experiment relative to the fixed position of stars in the sky).
+The D0 collaboration performed such a search with semi-leptonic final states and the results were published in Physical Review Letters~\cite{PhysRevLett.108.261603}.
+In order to accommodate a CMS search for a violation of Lorentz invariance, the dilepton trigger efficiency scale factors were measured one-dimensionally as a function of sidereal time using the same method outlined above, with the exception of using custom time-dependent corrections and not including the number of vertices partition as a source of event topology systematic uncertainty.
 
 \subsection{Translating UNIX Time to Sidereal Time}
 Every CMS data event is recorded with a UNIX timestamp. 
 The sidereal day, which is the time it takes for one rotation of the Earth relative to the stars, is about four minutes shorter than the solar day, which is the time it takes for one rotation of the Earth relative to the Sun.
-In UNIX time, the rotational period of the earth (sidereal day) lasts approximately 23h 56min 4s, i.e. 86164 UNIX seconds. 
+In UNIX time, the rotational period of the earth (sidereal day) lasts approximately \SI{23}{\h} \SI{56}{\min} \SI{4}{\s}, i.e. 86164 UNIX seconds. 
 The sidereal second is defined in such a way that the rotational period of the earth is exactly 24h, i.e. 86400 sidereal seconds.
 The following formula is used to translate UNIX time to sidereal time:
 \begin{linenomath*}

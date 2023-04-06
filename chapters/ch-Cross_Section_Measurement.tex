@@ -2,8 +2,8 @@
 
 \chapter{MEASUREMENTS OF DIFFERENTIAL CROSS-SECTIONS}
 \label{Measurements_of_Differential_Cross-sections}
-The measurements follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777} but have been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce systematic uncertainties and significantly increased luminosity.
-All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from MC simulated SM predictions with NLO matrix element accuracy with parton-shower algorithms.
+The measurements of differential cross-sections presented in this dissertation follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777} but have been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce systematic uncertainties and significantly increased luminosity.
+All measured distributions are corrected for detector efficiencies and acceptances and extrapolated to parton-level using a regularized unfolding procedure with detector response obtained from MC simulated SM predictions with NLO matrix element accuracy interfaced with parton-shower algorithms.
 The spin density coefficients are extracted from the unfolded distributions, constituting a precision test of the SM.
 
 \section{Reconstructed Top Quark Polarization and \ensuremath{\mathrm{t\bar{t}}} Spin Correlation Observables}
@@ -13,9 +13,9 @@ Additionally, the following distributions are also measured:
 \begin{itemize}
     \item Top quark polarization and \ttbar spin correlation observables with modified axes $\hat{r^*}$ and $\hat{k^*}$, equal to $\pm \hat{r}$ or $\pm \hat{k}$ depending on $\operatorname{sign}(\vert y_t \vert-\vert y_{\bar{t}} \vert)$, due to their sensitivity to SMEFT dimension-six operators
     %\item Linear Combinations of spin correlation observables $-\cos \theta_1^i \cos \theta_2^i \mp \cos \theta_1^j \cos \theta_2^j - \cos \theta_1^l \cos \theta_2^l$ and $-\cos \theta_1^i \cos \theta_2^j \mp \cos \theta_1^j \cos \theta_2^i - \cos \theta_1^l \cos \theta_2^l$ that have linear single-differential cross-sections in the full phase space with coefficients $-C_{ii} \mp C_{jj} - C_{ll}$ and $-C_{ij} \mp C_{ji} - C_{ll}$
-    \item  $\cos\varphi=\hat{\bar{\ell}}_{1} \cdot \hat{\ell}_2$, the dot product of the charged lepton directions in their grandfather top quark's ZMF, sensitive to coefficient $D = -\frac{1}{3}Tr[\matr{C}] = -\frac{1}{3}(C_{kk} + C_{rr} + C_{nn})$ with single-differential cross-section $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\varphi} = \tfrac{1}{2}(1-D\cos\varphi)$
+    \item  $\cos\varphi=\hat{\bar{\ell}}_{1} \cdot \hat{\ell}_2$, the dot product of the charged lepton directions in their grandfather top quark's ZMF, sensitive to coefficient $D = -\frac{1}{3}\text{Tr}[\matr{C}] = -\frac{1}{3}(C_{kk} + C_{rr} + C_{nn})$ with single-differential cross-section $\tfrac{1}{\sigma}\tfrac{d\sigma}{d\cos\varphi} = \tfrac{1}{2}(1-D\cos\varphi)$
     \item $\cos\varphi_{\mathrm{lab}}=\hat{\bar{\ell}}^{lab}_1 \cdot \hat{\ell}^{lab}_2$, as above but using lepton directions measured in the laboratory frame
-    \item Lab frame observables $\vert \Delta\phi_{\ell\bar{\ell}} \vert$ ($\vert \Delta\eta_{\ell\bar{\ell}} \vert$), the difference in azimuthal angle $\phi$ (pseudorapidity $\eta$) between the two leptons in the lab frame, which are indirectly sensitive to the spin density coefficients and have excellent experimental resolution
+    \item Lab frame observables $\vert \Delta\phi_{\ell\bar{\ell}} \vert$ and $\vert \Delta\eta_{\ell\bar{\ell}} \vert$, the difference in azimuthal angle $\phi$ and the difference in pseudorapidity $\eta$ between the two leptons in the lab frame, which are indirectly sensitive to the spin density coefficients and have excellent experimental resolution
 \end{itemize}
 Table~\ref{observables_coefficients} provides a summary of all spin density observables, their respective coefficients, and which coefficient functions of the spin density matrix they probe.
 \begin{table}[htb]
@@ -32,18 +32,18 @@ Table~\ref{observables_coefficients} provides a summary of all spin density obse
 \cos \theta_1^n & B_1^n & b_n^{+} \\
 \cos \theta_2^n & B_2^n & b_n^{-} \\
 \hline 
-\cos \theta_1^{k^*} & B_1^{k^*} & - \\
-\cos \theta_2^{k^*} & B_2^{k^*} & - \\
-\cos \theta_1^{r^*} & B_1^{r^*} & - \\
-\cos \theta_2^{r^*} & B_2^{r^*} & - \\
-\hline 
+%\cos \theta_1^{k^*} & B_1^{k^*} & - \\
+%\cos \theta_2^{k^*} & B_2^{k^*} & - \\
+%\cos \theta_1^{r^*} & B_1^{r^*} & - \\
+%\cos \theta_2^{r^*} & B_2^{r^*} & - \\
+%\hline 
 \cos \theta_1^k \cos \theta_2^k & C_{k k} & c_{k k} \\
 \cos \theta_1^r \cos \theta_2^r & C_{r r} & c_{r r} \\
 \cos \theta_1^n \cos \theta_2^n & C_{n n} & c_{n n} \\
 \hline 
-\cos \theta_1^k \cos \theta_2^{k^*} & C_{k k^*} & - \\
-\cos \theta_1^r \cos \theta_2^{r^*} & C_{r r^*} & - \\
-\hline 
+%\cos \theta_1^k \cos \theta_2^{k^*} & C_{k k^*} & - \\
+%\cos \theta_1^r \cos \theta_2^{r^*} & C_{r r^*} & - \\
+%\hline 
 \cos \theta_1^r \cos \theta_2^k+\cos \theta_1^k \cos \theta_2^r & C_{r k}+C_{k r} & c_{r k} \\
 \cos \theta_1^r \cos \theta_2^k-\cos \theta_1^k \cos \theta_2^r & C_{r k}-C_{k r} & c_n \\
 \cos \theta_1^n \cos \theta_2^r+\cos \theta_1^r \cos \theta_2^n & C_{n r}+C_{r n} & c_{n r} \\
@@ -51,8 +51,8 @@ Table~\ref{observables_coefficients} provides a summary of all spin density obse
 \cos \theta_1^n \cos \theta_2^k+\cos \theta_1^k \cos \theta_2^n & C_{n k}+C_{k n} & c_{k n} \\
 \cos \theta_1^n \cos \theta_2^k-\cos \theta_1^k \cos \theta_2^n & C_{n k}-C_{k n} & -c_r \\
 \hline 
-\cos \theta_1^r \cos \theta_2^{k^*} + \cos \theta_1^{k^*} \cos \theta_2^r & C_{r k^*}+C_{k^* r} & - \\
-\cos \theta_1^r \cos \theta_2^{k^*} - \cos \theta_1^{k^*} \cos \theta_2^r & C_{r k^*}-C_{k^* r} & - \\
+%\cos \theta_1^r \cos \theta_2^{k^*} + \cos \theta_1^{k^*} \cos \theta_2^r & C_{r k^*}+C_{k^* r} & - \\
+%\cos \theta_1^r \cos \theta_2^{k^*} - \cos \theta_1^{k^*} \cos \theta_2^r & C_{r k^*}-C_{k^* r} & - \\
 %\hline 
 %+ \cos \theta_1^k \cos \theta_2^k - \cos \theta_1^r \cos \theta_2^r - \cos \theta_1^n \cos \theta_2^n & - & - \\
 %- \cos \theta_1^k \cos \theta_2^k + \cos \theta_1^r \cos \theta_2^r - \cos \theta_1^n \cos \theta_2^n & - & - \\
@@ -67,7 +67,7 @@ Table~\ref{observables_coefficients} provides a summary of all spin density obse
 %- \cos \theta_1^n \cos \theta_2^r + \cos \theta_1^r \cos \theta_2^n - \cos \theta_1^k \cos \theta_2^k & - & - \\
 %- \cos \theta_1^n \cos \theta_2^k - \cos \theta_1^k \cos \theta_2^n - \cos \theta_1^r \cos \theta_2^r & - & - \\
 %- \cos \theta_1^n \cos \theta_2^k + \cos \theta_1^k \cos \theta_2^n - \cos \theta_1^r \cos \theta_2^r & - & - \\
-\hline 
+%\hline 
 \cos \varphi & D & -\left(c_{k k}+c_{r r}+c_{n n}\right) / 3 \\
 \hline 
 \cos \varphi_{\text {lab}} & A_{\cos \varphi}^{\text {lab}} & - \\
@@ -91,7 +91,7 @@ The differential measurements are well-motivated based on the revelations discus
 Prior to unfolding, the predicted MC simulated signal and background rates are used to subtract the estimated background contributions in each bin of distributions measured with recorded data:
 \begin{linenomath*}
 \begin{align}
-N^{Signal}_{Data} = N^{Total}_{Data} \times \frac{N^{Signal}_{MC}}{N^{Total}_{MC}}.
+N^{Data}_{Signal} = N^{Data}_{Total} - N^{MC}_{Background}.
 \label{Data_Background_Subtraction}
 \end{align}
 \end{linenomath*}
@@ -106,11 +106,11 @@ The smearing of events between bins, due to finite detector resolution and imper
 Matrices $\matr{A}$ and $\matr{S}$ can be quantified as:
 \begin{linenomath*}
 \begin{align}
-\matr{A}_{ij} = \frac{N_{ \{ x_i \} \cap \{ \vec{y} \}}}{N_{ \{ x_i \} }} \quad \quad
-\matr{S}_{ij} = \frac{N_{ \{ y_j \} }}{N_{ \{ x_i \} \cap \{ \vec{y} \}}}
+\matr{A}_{ii} = \frac{N_{ \{ x_i^{MC} \} \cap \{ \vec{y}^{MC} \}}}{N_{ \{ x_i^{MC} \} }} \quad \quad
+\matr{S}_{ij} = \frac{N_{ \{ y_j^{MC} \} }}{N_{ \{ x_i^{MC} \} \cap \{ \vec{y}^{MC} \}}}
 \end{align}
 \end{linenomath*}
-where $N_{ \{ x_i \} \cap \{ \vec{y} \}}$ is the number of events generated in the $i$-th bin that were reconstructed in any bin, $N_{ \{ x_i \} }$ is the number of events generated in the $i$-th bin, and $N_{ \{ y_j \} }$ is the number of events reconstructed in the $j$-th bin.
+where $N_{ \{ x_i^{MC} \} \cap \{ \vec{y}^{MC} \}}$ is the number of simulated events generated in the $i$-th bin that were reconstructed in any bin, $N_{ \{ x_i^{MC} \} }$ is the number of events generated in the $i$-th bin, and $N_{ \{ y_j^{MC} \} }$ is the number of simulated events reconstructed in the $j$-th bin.
 
 The migration of events between bins due to smearing is also characterized by measures of purity of stability.
 Purity refers to the fraction of events in the reconstructed detector-level distribution that were actually generated in the same bin of the true generator-level distribution, with a high (low) purity for a bin indicating that a small (large) number of events in that bin of the reconstructed detector-level distribution migrated in from other bins in the true generator-level distribution.
@@ -118,26 +118,28 @@ Stability refers to the fraction of events in a bin of the true generator-level 
 Purity and stability can be quantified as:
 \begin{linenomath*}
 \begin{align}
-(\text{Purity})_i = \frac{N_{ \{ x_i \} \cap \{ y_i \} }}{N_{ \{ y_i \} }} \quad \quad
-(\text{Stability})_i = \frac{N_{ \{ x_i \} \cap \{ y_i \} }}{N_{ \{ x_i \} \cap \{ \vec{y} \}}}
+(\text{Purity})_i = \frac{N_{ \{ x_i^{MC} \} \cap \{ y_i^{MC} \} }}{N_{ \{ y_i^{MC} \} }} \quad \quad
+(\text{Stability})_i = \frac{N_{ \{ x_i^{MC} \} \cap \{ y_i^{MC} \} }}{N_{ \{ x_i^{MC} \} \cap \{ \vec{y}^{MC} \}}}
 \end{align}
 \end{linenomath*}
-where $N_{ \{ y_i \} }$ is the number of events reconstructed in the $i$-th bin, $N_{ \{ x_i \} \cap \{ \vec{y} \}}$ is the number of events generated in the $i$-th bin that were reconstructed in any bin, and $N_{ \{ x_i \} \cap \{ y_i \} }$ is the number of events generated in the $i$-th bin that were also reconstructed in the $i$-th bin.
+where $N_{ \{ y_i^{MC} \} }$ is the number of simulated events reconstructed in the $i$-th bin, $N_{ \{ x_i^{MC} \} \cap \{ \vec{y}^{MC} \}}$ is the number of events generated in the $i$-th bin that were reconstructed in any bin, and $N_{ \{ x_i^{MC} \} \cap \{ y_i^{MC} \} }$ is the number of simulated events generated in the $i$-th bin that were also reconstructed in the $i$-th bin.
 
 \section{Unfolding Procedure}
 The event selection criteria and analysis techniques such as the \ttbar kinematic reconstruction trade acceptance and efficiency in exchange for a high purity of signal events.
 As a result, measured bins of reconstructed detector-level distributions $\vec{y}$ are distorted from the true generator-level distributions $\vec{x}$ by acceptance, efficiency, and bin-to-bin migrations:
 \begin{linenomath*}
 \begin{align}
-\vec{y}_{\text{MC}} = \matr{M} \vec{x}_{\text{MC}} \quad \quad \xrightarrow[\text{Unfolding}]{\text{Naive}} \quad \quad \vec{x} = \matr{M}^{-1} \vec{y}
+\vec{y}^{\text{MC}} = \matr{M} \cdot \vec{x}^{\text{MC}} \quad \quad \xrightarrow[\text{Unfolding}]{\text{Naive}} \quad \quad \vec{x} = \matr{M}^{-1} \vec{y}
 \end{align}
 \end{linenomath*}
 where $\matr{M}$ is the response-matrix constructed from $\matr{A}$ and $\matr{S}$.
 To correct the bin of background-subtracted recorded data distributions for smearing and acceptance effects, the TUnfold~\cite{TUnfold} package of the ROOT data analysis framework is used to simultaneously invert $\matr{M}$ and unfold the detector-level distributions $\vec{y}$ of recorded data into distributions $\vec{x}$ that have been corrected for bin migrations and extrapolated to parton-level.
-The response-matrices $\matr{M}$ are constructed using signal process events from the $\Powheg + \Pythia$ MC simulation including smearing from the \Geant-simulated detector response.
-For each measured observable, the response-matrices are two-dimensional, reconstructed detector-level versus true generator-level distributions containing events that pass the event selection.
+The response-matrix $\matr{M}$ are constructed using signal process events from the $\Powheg + \Pythia$ MC simulation including smearing from the \Geant-simulated detector response.
+For each 1D (2D) measured observable, the response-matrix is a 2(4)-dimensional, reconstructed detector-level versus true generator-level distribution containing events that pass the event selection.
 In each generator-level bin, the true generated events in that bin that do not pass the event selection are filled in the underflow.
 For each measured distribution, the absolute differential cross-section, the differential cross-section normalized to unit area, and the extracted spin-density coefficients constitute the final results of the unfolding procedure.
+
+
 
 \subsection{Regularization}
 \label{Regularization}
@@ -358,21 +360,21 @@ The impact of modeling assumptions is determined by repeating the analysis with 
     The uncertainties due to the ISR and FSR are estimated via separate up and down variations of the $\alpha_S^{ISR}$ and $\alpha_S^{FSR}$. 
     Both $\alpha_S^{ISR}$ and $\alpha_S^{FSR}$ are treated as uncorrelated sources of uncertainty.
     \item {\bf Matrix Element and Parton Shower Matching} \\
-    The uncertainty for the matching of the matrix element emissions to those of the parton shower is evaluated with dedicated \Powheg+\Pythia\ simulation samples with up and down variations of the $h_{damp} = 1.379^{+0.926}_{-0.5052}m_t$ parameter with respect to its nominal value~\cite{Sirunyan:2669320}.
+    The uncertainty for the matching of the matrix element emissions to those of the parton shower is evaluated with dedicated \Powheg+\Pythia\ simulation samples with up and down variations of the $h_{damp} = 1.379^{+0.926}_{-0.505}m_t$ parameter with respect to its nominal value~\cite{Sirunyan:2669320}.
     \item {\bf Underlying Event Tune} \\
     An underlying event tune is a set of parameters of the MC event generator parton showering algorithm, describing beam-beam remnants (BBR), particles arising from multiple parton interactions (MPI), hadronization, initial-state radiation (ISR), final-state radiation (FSR), etc., that has been adjusted to better describe some aspects of the data.
     The choice of the underlying event tune, which is CP5 for all simulated samples used in this analysis, can impact the results of the measurements, and the related uncertainty is estimated using dedicated \Powheg+\Pythia\ simulations with up/down variations of the CP5 tune parameters accordingly to their uncertainties~\cite{Sirunyan:2669320}.
     \item {\bf Color Reconnection} \\
     The CR model used in the nominal \ttbar simulation is an MPI-based scheme with the early resonance decays (ERD) switched off, as implemented in \Pythia. 
     The measurement is repeated using dedicated \ttbar samples corresponding to three alternative CR schemes: an MPI-based scheme with ERD switched on, a QCD-inspired scheme, and a gluon-move scheme. 
-    The total systematic uncertainty due to CR is an envelope of uncertainties from the three alternative CR schemes about the nominal results using the default model.
+    The total systematic uncertainty due to CR effects is an envelope of uncertainties from the three alternative CR schemes about the nominal results using the default model.
     \item {\bf Semi-Leptonic Branching Fraction} \\
     A reweighting of \ttbar signal events, with weights obtained via value maps in the EDM analyzer applied to gen jets, is done to correct the generator-level \Pythia\ semi-leptonic B decay tables to the measured PDG branching ratios and their corresponding uncertainties.
     \item {\bf Top Quark Mass} \\
     To estimate the impact on the analysis of the uncertainty related to the mass of the top quark, which is assumed to be $\SI{172.5}{\GeV}$ in the default simulation, the measurement is repeated using two dedicated samples assuming top quark masses of $\SI{173.5}{\GeV}$ and $\SI{171.5}{\GeV}$.
     \item {\bf Top Quark Transverse Momentum} \\
     The \pT spectrum of top quarks in \ttbar\ data has been found to be softer than modeled by MC simulations.
-    To assess the systematic variation of correcting the top quark \pT in the MC simulation to that measured in data, we use the \beamenergy top \pT reweighting function: $e^{p+q \cdot p_T}$, with $p = 0.0615$ and $q = -0.0005$.
+    To assess the systematic variation of correcting the top quark \pT in the MC simulation to that measured in data, we use thetop \pT reweighting function: $e^{p+q \cdot p_T}$, with $p = 0.0615$ and $q = -0.0005$, derived from data recorded at \beamenergy.
     For each event, the overall weight is the geometric average of the weights obtained for the top quark and the top anti-quark.
     Figure~\ref{fig:fullRun2ULtopptreweighting} demonstrates the effect of reweighting function on the top $p_T$ spectrum.
     \begin{figure}
