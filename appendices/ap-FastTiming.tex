@@ -24,12 +24,12 @@ Smaller pixels provide better resolution, have better efficiency by avoiding in-
     \begin{tabular}{c}
         \includegraphics[width=0.45\textwidth]{fig_FastTiming/Jitter.png}
     \end{tabular}
-    \caption{Fluctuations in signal amplitude crossing a voltage threshold translate into timing fluctuations called "jitter."
+    \caption{Fluctuations in signal amplitude crossing a voltage threshold translate into timing fluctuations called ``jitter.''
             }            
     \label{Jitter}
   \end{center}
 \end{figure}
-The timing resolution ($\sigma_t$) in a system limited by "jitter" (i.e. early or late firing fluctuations due to the presence of noise as illustrated in figure~\ref{Jitter}) can be expressed as:
+The timing resolution ($\sigma_t$) in a system limited by jitter (i.e. early or late firing fluctuations due to the presence of noise as illustrated in figure~\ref{Jitter}) can be expressed as:
 \begin{linenomath*}
 \begin{align}
 \sigma_t =\frac{\sigma_n}{\frac{d V}{d t}\vert_{V_T}} \approx t_r\frac{Noise}{Signal}
@@ -62,7 +62,7 @@ In general, 3DIC technologies have many potential implementations for integratin
 \section{Induced Currents for Fast Timing}
 Signal current, as registered by an electrode, begins before any charge is collected by the electrode.  
 Current is instantaneously induced in the electrode as electrostatic flux lines ending on the electrode change due to charges moving in the vicinity~\cite{doi:10.1063/1.1710367}.
-According to the Ramo-Shockley theorem, current induced on an electrode in a multi-electrode system can be calculated from the coupling between the moving charge and the electrode, using a "weighting field," depending on geometry and doping, that is determined by setting the potential of the electrode under consideration to unity, and setting the potential of all other electrodes to zero~\cite{1686997}.
+According to the Ramo-Shockley theorem, current induced on an electrode in a multi-electrode system can be calculated from the coupling between the moving charge and the electrode, using a ``weighting field,'' depending on geometry and doping, that is determined by setting the potential of the electrode under consideration to unity, and setting the potential of all other electrodes to zero~\cite{1686997}.
 The instantaneous current registered by an electrode by a charge moving in the vicinity can be expressed in terms of charge $q$, velocity $\vec{v}$, and weighting field $\vec{E_W}$ as:
 \begin{linenomath*}
 \begin{align}
@@ -79,9 +79,9 @@ The TCAD simulation uses finite element analysis (FEA) to simulate the electrica
 Both three-dimensional ($3 \times 3$) and two-dimensional ($1 \times 9$) models of pixel arrays, consisting of aluminum electrodes coupled to a silicon substrate, are simulated~\ref{Materials_Model}.
 Different pixel pitches (\SI{25}{\micron} - \SI{100}{\micron}), substrate thicknesses (\SI{50}{\micron} - \SI{300}{\micron}), doping schemes ($n$-on-$n$, $n$-on-$p$), and bias voltages (\SI{100}{\V} - \SI{400}{\V}) were considered for these simulations.
 Electrons are the preferred charge carrier, as they have higher mobility than holes and thus higher velocity, thereby inducing larger currents for the same electric field strength.
-Even in the absence of an externally applied voltage, every $pn$-junction has a "built-in" electric field between the $p$ and $n$ sides from the thermal diffusion of mobile charge carriers.
+Even in the absence of an externally applied voltage, every $pn$-junction has a ``built-in'' electric field between the $p$ and $n$ sides from the thermal diffusion of mobile charge carriers.
 For the doping scheme, $n$-on-$n$ has a maximal electric field near the bottom side, whereas $n$-on-$p$ has a maximal electric field near the top~\ref{Doping_ElectricField}.
-Intermediate p-regions between electrodes, called "$p$-stops," help shape the electric field and prevent unwanted diffusion of charges away from collecting electrodes.
+Intermediate p-regions between electrodes, called ``$p$-stops,'' help shape the electric field and prevent unwanted diffusion of charges away from collecting electrodes.
 \begin{figure}[htb]
   \begin{center}
     \begin{tabular}{cc}
@@ -101,7 +101,7 @@ Intermediate p-regions between electrodes, called "$p$-stops," help shape the el
       \includegraphics[width=0.45\textwidth]{fig_FastTiming/Net_Doping_nonp.png}
       \includegraphics[width=0.45\textwidth]{fig_FastTiming/ElectricField_nonp.png} \\
     \end{tabular}
-    \caption{Doping (Left) and "built-in" electric field (Right) profiles for TCAD simulated models of $1 \times 9$ (two-dimensional) array of pixels with 25 \si{\micron} pitch between aluminum electrodes coupled to a silicon substrate.
+    \caption{Doping (Left) and built-in electric field (Right) profiles for TCAD simulated models of $1 \times 9$ (two-dimensional) array of pixels with 25 \si{\micron} pitch between aluminum electrodes coupled to a silicon substrate.
             $n$-on-$n$ (Top) has an electric field maximal near the bottom side, whereas $n$-on-$p$ (Bottom) has an electric field maximal near the top.
             }
     \label{Doping_ElectricField}

@@ -5,12 +5,14 @@
 \label{Introduction}
 Experiments to discover and determine the properties of Standard Model (SM) elementary particles are performed at particle accelerator facilities, such as the Large Hadron Collider (LHC) at the European Center for Nuclear Research (CERN), which is the largest and most powerful particle accelerator ever built.
 The LHC is capable of producing tens of millions of top quarks from high-energy proton-proton ($pp$) collisions every year, making it a ``top quark factory.''
-Due to its unique properties and role in exotic processes, the top quark is important for precision measurements of the SM and is sensitive to new physics (NP) beyond the SM (BSM), as top quark measurements are the only opportunities to study the properties of bare quarks, free of hadronization effects.
+Due to its unique properties and role in exotic processes, the top quark is important for precision measurements of the SM and is sensitive to new physics (NP) beyond the SM (BSM).
 With a very short lifetime caused by its exceptionally large mass, the top quark decays before hadronizing, and its properties, including spin information, are transferred undiluted to its decay products and observable in their kinematic distributions.
 
 This dissertation presents differential measurements of top quark ($t$ and $\bar{t}$) polarizations and top quark pair (\ttbar) spin correlations, which probe the independent coefficients of the top-spin components of the \ttbar production density matrix, using \lumivalueRuniiUL $\pm$ \lumierrRuniiUL\ of data recorded by the CMS experiment at the LHC with \beamenergy, during 2016, 2017, and 2018.
 The measurements target all channels (\ee, \emu, \mumu) of the \ttbar dileptonic decay mode with final states containing two oppositely charged leptons.
-The measurements follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777} but have been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce background contributions and systematic uncertainties, and significantly increased luminosity.
+The measurements follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777}, published in Physics Review D, for which I collaborated as a co-author.
+Compared to CMS TOP-18-006, the measurement has been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce background contributions and systematic uncertainties, and significantly increased luminosity.
+With these optimizations and the inclusion of \ttbar events the via $\tau$ decays as signal, signal purity has been increased from \sim$79\%$ to \sim$93\%$.
 All measured observables are corrected for detector efficiencies, acceptances, and migrations, unfolded to parton-level, and extrapolated to the full phase space using a regularized unfolding procedure with detector response obtained from MC simulated SM predictions with next-to-leading-order (NLO) matrix element accuracy interfaced with parton-shower and hadronization algorithms.
 The spin density coefficients are extracted from the unfolded distributions and compared to theoretical predictions, constituting a precision test of the SM.
 The measurement results can be used for a multitude of subsequent analyses:
@@ -33,10 +35,10 @@ During the long shutdown phase between Runs II and III, I was promoted to on-cal
 Moreover, I developed data quality monitoring tools for the monitoring of inefficient modules in the silicon strip sub-detector.
 
 Also at FNAL, I contributed to the testing of HL-LHC pixel detector prototypes at the FNAL Test Beam Facility (FTBF).
-The FTBF is an environment to probe the prototypes, consisting of RD-53a readout chips bump-bonded to planar or three-dimensional sensors, under controlled conditions.
-Spills of several hundred thousand protons with energies up to $\SI{100}{\GeV}$ are provided by the accelerator facility every $\SI{60}{\s}$.
-The CMS Tracking Telescope is placed along the beamline and consists of silicon strip and pixel planes constructed from surplus silicon tracker modules of the same design as those currently installed in CMS.
-The prototypes under testing are placed between two sections of planes in the telescope and their performance is probed with a set of beam tracks that are well-identified and reconstructed by the tracking telescope.
+%The FTBF is an environment to probe the prototypes, consisting of RD-53a readout chips bump-bonded to planar or three-dimensional sensors, under controlled conditions.
+%Spills of several hundred thousand protons with energies up to $\SI{100}{\GeV}$ are provided by the accelerator facility every $\SI{60}{\s}$.
+%The CMS Tracking Telescope is placed along the beamline and consists of silicon strip and pixel planes constructed from surplus silicon tracker modules of the same design as those currently installed in CMS.
+%The prototypes under testing are placed between two sections of planes in the telescope and their performance is probed with a set of beam tracks that are well-identified and reconstructed by the tracking telescope.
 Besides data acquisition, I also contributed to the offline analysis of the data by identifying the reconstruction and alignment routines that were most effective and automating these routines in a workflow with built-in quality checks that allowed us to efficiently align the telescope and produce measurement results for large quantities of data.
 The results of the efficiency, resolution, charge response, and I-V curves of some of these prototypes were presented at the TREDI2020 Workshop on Advanced Silicon Radiation Detectors~\cite{TREDI2020}.
 
@@ -49,8 +51,7 @@ The contents of this dissertation are outlined as follows:
     \item Descriptions of the LHC and the CMS experiment are in Chapter~\ref{The_CMS_Experiment_at_the_LHC}.
     \item A summary of top quark physics at hadronic colliders, with particular emphasis on the spin properties of \ttbar production and top quark decay, is set forth in Chapter~\ref{Top_Quark_Physics_at_the_LHC}. 
     \item An overview of $pp$ collision MC event simulation is given in Chapter~\ref{Monte_Carlo_Event_Simulation}.
-    \item The particle-flow (PF) algorithm for reconstruction of tracks, vertices, muons, electrons, jets, and missing transverse energy is described in Chapter~\ref{Particle-Flow_Reconstruction}.
-    \item Chapter~\ref{Datasets_Event_Selection_Kinematic_Reconstruction} contains details regarding object and event selection, kinematic reconstruction of top quark pairs, background determination, event yields, and data sets used in the measurement.
+    \item Chapter~\ref{Datasets_Event_Selection_Kinematic_Reconstruction} contains details regarding event reconstruction and selection, kinematic reconstruction of top quark pairs, background determination, event yields, and data sets used in the measurement.
     \item The unfolding procedure to obtain parton-level differential cross-sections extrapolated to the full phase space and sources of systematic uncertainties are explained in Chapter~\ref{Measurements_of_Differential_Cross-sections}.
     \item Measurement results and the method for extracting spin density coefficients from the differential cross-sections are presented in Chapter~\ref{Results}.
     \item Appendix~\ref{Trigger_Efficiency_Scale_Factors} contains a complete overview of trigger efficiency and corrective scale factor measurements that were used by virtually all CMS Run II measurements analyzing \ttbar events decaying via the dileptonic mode.
