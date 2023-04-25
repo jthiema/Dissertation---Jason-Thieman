@@ -6,7 +6,8 @@
 \section{The Large Hadron Collider}
 Experiments to discover and determine the properties of SM particles are performed at particle accelerator facilities.
 The Large Hadron Collider (LHC) is a $\SI{27}{\km}$ circular particle accelerator located at the European Center for Nuclear Research (CERN) designed to accelerate two counter-rotating proton beams to energies up to $\SI{6.8}{\TeV}$ ($99.999999\%$ the speed of light) and collide them at designated interaction points (IP).
-The LHC is the largest and most powerful particle accelerator ever built; its design, construction, and operation are towering engineering achievements of mankind, requiring an international collaboration of thousands of scientists, engineers, and technicians from more than 100 countries.
+The LHC is the largest and most powerful particle accelerator ever built.
+Its design, construction, and operation are towering engineering achievements of mankind, requiring an international collaboration of thousands of scientists, engineers, and technicians from more than 100 countries.
 The successful operation of the LHC has contributed to our understanding of the fundamental nature of matter by providing conditions to test the hypotheses of the SM and enabling many important discoveries in particle physics.
 The primary design criteria for the LHC were to provide conditions for elucidating the nature of EWSB, testing the hypothesis of the BEH mechanism, and discovering the Higgs boson.
 
@@ -91,7 +92,7 @@ N_{\text {Events}}= \mathcal{L} \cdot \sigma_{\text{Process}}
 \end{linenomath*}
 where the integrated luminosity $\mathcal{L} = \int \mathcal{L}_{\text{Inst}} \,dt$ is the instantaneous luminosity integrated over the corresponding periods of time the data was recorded.
 
-\subsection{Upcoming High Luminosity - LHC Phase}
+\subsection{Upcoming LHC High Luminosity Phase}
 During 2016, 2017, and 2018, the LHC operated with beam energies of $\SI{6.5}{\TeV}$, corresponding to center-of-mass collision energies of $\SI{13}{\TeV}$.
 Recently, the LHC finished upgrading the beam energies to $\SI{6.8}{\TeV}$.
 After operating at $\sqrt{s}=\SI{13.6}{\TeV}$ through 2025, the LHC plans to vastly increase the instantaneous luminosity, and substantial R\&D effort is underway to prepare accelerator and detector upgrades for high luminosity (HL-LHC) environments.
@@ -154,7 +155,7 @@ A measure of angular separation between objects $i$ and $j$ can be defined using
 this quantity is useful for clustering particle showers into jets and rejecting events with overlapping objects.
 
 \subsection{Solenoid Magnet}
-Central to the design of the CMS detector, and the source of its name, is the $\SI{12.9}{\m}$-long, $\SI{5.9}{\m}$ inner diameter, $\SI{200}{\t}$, niobium-titanium alloy superconducting solenoid, providing an axial and uniform $\SI{3.8}{\T}$ magnetic field within the solenoid, and a return field outside the solenoid that is confined by an iron yoke that contains and guides the field.
+Central to the design of the CMS detector, and the source of its name, is the $\SI{12.9}{\m}$-long, $\SI{5.9}{\m}$ inner diameter~\cite{Bayatian:922757}, $\SI{220}{\t}$~\cite{Chatrchyan:1129810}, niobium-titanium alloy superconducting solenoid, providing an axial and uniform $\SI{3.8}{\T}$ magnetic field within the solenoid, and a return field outside the solenoid that is confined by an iron yoke that contains and guides the field.
 The solenoid is large enough that the inner tracking detectors and calorimeters fit inside, which advantageously eliminates energy losses caused by showering in the coil material before energy can be measured in the calorimeters.
 The magnetic field of the solenoid, depicted in figure~\ref{Solenoid}, bends the paths of charged particles as they move through the detector, enabling the tracker to make good resolution measurements of their transverse momentum and charge from their curvature.
 \begin{figure}[htb]
@@ -172,18 +173,18 @@ The magnetic field of the solenoid, depicted in figure~\ref{Solenoid}, bends the
 \subsection{Silicon Inner Tracker}
 The inner tracker consists of silicon pixel detectors surrounded by silicon strip detectors.
 Silicon detector technology provides high granularity, fast response, radiation hardness, and efficient cooling, while also minimizing material to limit multiple scattering, bremsstrahlung, photon conversion, and nuclear interactions.
-High-energy charged particles ionize the silicon as they traverse the detectors, leaving trails of position measurements that are used to reconstruct the particle trajectories with sophisticated algorithms.
+High-energy charged particles ionize the silicon as they traverse the detectors, leaving trails of position measurements that are used to reconstruct the particle trajectories with sophisticated tracking algorithms.
 The magnetic field of the solenoid exerts a force perpendicular to a charged particle's transverse momentum, and transverse momentum magnitude is measured from the curvature of its trajectory.
-The inner tracker cylindrical volume of length $\SI{5.8}{\m}$ and diameter $\SI{2.6}{\m}$ covers out to $\vert \eta \vert < 2.5$ and is separated into the barrel and forward regions.
+The inner tracker cylindrical volume of length $\SI{5.8}{\m}$ and diameter $\SI{2.6}{\m}$ covers out to $\vert \eta \vert < 2.5$ and is separated into the barrel and forward regions~\cite{Chatrchyan:1129810}.
 
 The silicon pixel tracker operates closest to the IP, in the region with the highest radiation and particle flux from the $pp$ collisions.
 The primary limiting factor for impact parameter resolution is the radial distance of the innermost tracking layer.
-In the barrel region, three layers of pixel detectors, $\SI{53}{\cm}$ long, are at radial distances $r = 4.4, 7.3, 10.2 \si{\cm}$ from the beam, while in the forward regions, two end-cap disks with radii $\SI{6}{\cm}$ and $\SI{15}{\cm}$ are placed on each side at $z = \pm \SI{34.5}{\cm}$ and $\SI{46.5}{\cm}$.
+In the barrel region, three layers of pixel detectors, $\SI{53}{\cm}$ long, are at radial distances $r = 4.4, 7.3, 10.2 \si{\cm}$ from the beam, while in the forward regions, two end-cap disks with radii $\SI{6}{\cm}$ and $\SI{15}{\cm}$ are placed on each side at $z = \pm \SI{34.5}{\cm}$ and $\SI{46.5}{\cm}$~\cite{Chatrchyan:1129810}.
 The doping scheme for the pixels is $n$-on-$n$, which can be operated partially depleted even at high fluence.
-To minimize occupancy in the inner region of high particle flux and achieve good vertex resolution for the identification of primary and secondary vertices, pixel detectors are highly granular and finely segmented in two dimensions with pixel size $\simeq 100 \times 150 \; \mu \si{\m \squared}$.
-The pixel detector consists of 1440 modules that cover a total area of $\simeq \SI{1}{\m \squared}$, so altogether it contains about 66 million pixels.
+To minimize occupancy in the inner region of high particle flux and achieve good vertex resolution for the identification of primary and secondary vertices, pixel detectors are highly granular and finely segmented in two dimensions with pixel size $\simeq 100 \times 150 \; \mu \si{\m \squared}$~\cite{Chatrchyan:1129810}.
+The pixel detector consists of 1440 modules that cover a total area of $\simeq \SI{1}{\m \squared}$, so altogether it contains about 66 million pixels~\cite{Bayatian:922757}.
 In the barrel region, $r-\phi$ resolution is improved through charge-sharing among pixels due to the Lorentz effect, while in the forward region, modules are rotated in a turbine-like geometry to improve the resolution by inducing charge-sharing.
-The spatial resolution of the pixel detector is $10 \; \mu \si{\m}$ ($20 \; \mu \si{\m}$) for $r-\phi$ ($z$) measurements.
+The spatial resolution of the pixel detector is $10 \; \mu \si{\m}$ ($20 \; \mu \si{\m}$) for $r-\phi$ ($z$) measurements~\cite{Chatrchyan:1129810}.
 
 During the LHC winter shutdown between 2016 and 2017, the entire pixel tracker was replaced (see figure~\ref{Inner_Tracker}) with the Phase-1 upgrade~\cite{Lipinski_2017}.
 A fourth layer was added in the barrel region, and the radius of the innermost layer was reduced from $r = \SI{4.4}{\cm}$ to $r = \SI{2.9}{\cm}$, a fifth layer was added in the forward regions, and the total number of pixels increased to 124 million.
@@ -202,25 +203,25 @@ After the replacement, the silicon inner tracker altogether contributes total ra
   \end{center}
 \end{figure}
 
-Surrounding the pixel tracker is the silicon strip tracker (see figure~\ref{Inner_Tracker}), consisting of 15,148 modules with 24,244 silicon sensors, that cover a total area of $\simeq \SI{198}{\m \squared}$, and altogether contains 9.6 million microstrips.
-In the barrel region, the strip tracker is separated into the Tracker Inner Barrel (TIB), which covers from $\SI{20}{\cm} < r < \SI{55}{\cm}$ out to $z = \pm \SI{65}{\cm}$, and the Tracker Outer Barrel (TOB), which covers from $\SI{55}{\cm} < r < \SI{116}{\cm}$ out to $z = \pm \SI{118}{\cm}$.
-In the forward regions, the strip tracker is separated into the Tracker Inner Disks (TID$^\pm$), which cover $\pm\SI{65}{\cm} < z < \pm\SI{124}{\cm}$ and $\SI{20}{\cm} < r < \SI{55}{\cm}$, and Tracker End-Caps (TEC$^\pm$), which cover $\pm\SI{124}{\cm} < z < \pm\SI{282}{\cm}$ and $\SI{22.5}{\cm} < r < \SI{113.5}{\cm}$.
-The doping scheme for strips is $p$-on-$n$, which undergoes type inversion after sufficient radiation damage to the crystal lattice and change.
+Surrounding the pixel tracker is the silicon strip tracker (see figure~\ref{Inner_Tracker}), consisting of 15,148 modules with 24,244 silicon sensors, that cover a total area of $\simeq \SI{198}{\m \squared}$, and altogether contains 9.6 million microstrips~\cite{Chatrchyan:1129810}.
+In the barrel region, the strip tracker is separated into the Tracker Inner Barrel (TIB), which covers from $\SI{20}{\cm} < r < \SI{55}{\cm}$ out to $z = \pm \SI{65}{\cm}$, and the Tracker Outer Barrel (TOB), which covers from $\SI{55}{\cm} < r < \SI{116}{\cm}$ out to $z = \pm \SI{118}{\cm}$~\cite{Bayatian:922757}.
+In the forward regions, the strip tracker is separated into the Tracker Inner Disks (TID$^\pm$), which cover $\pm\SI{65}{\cm} < z < \pm\SI{124}{\cm}$ and $\SI{20}{\cm} < r < \SI{55}{\cm}$, and Tracker End-Caps (TEC$^\pm$), which cover $\pm\SI{124}{\cm} < z < \pm\SI{282}{\cm}$ and $\SI{22.5}{\cm} < r < \SI{113.5}{\cm}$~\cite{Bayatian:922757}.
+The doping scheme for strips is $p$-on-$n$, which undergoes type inversion after sufficient radiation damage to the crystal lattice and change~\cite{Chatrchyan:1129810}.
 Strips are only finely segmented in one dimension, with minimum cell sizes of  $\simeq \SI{10}{\cm} \times 80 \; \mu \si{\m}$ in the TIB and TID, and maximum cell sizes of $\simeq \SI{25}{\cm} \times 180 \; \mu \si{\m}$ in the TOB and TEC.
 The TIB (TOB) has four (six) layers of silicon microstrip detectors, providing up to four (six) $r-\phi$ measurements, while the TID (TEC) has four (nine) layers, providing up to four (nine) $z-\phi$ measurements.
-The $r-\phi$ ($z$) single point resolutions of these measurements are $23-35 \; \mu \si{\m}$ ($23 \; \mu \si{\m}$) in the TIB, $35-52 \; \mu \si{\m}$ ($52 \; \mu \si{\m}$) in the TOB.
+The $r-\phi$ ($z$) single point resolutions of these measurements are $23-35 \; \mu \si{\m}$ ($23 \; \mu \si{\m}$) in the TIB, $35-52 \; \mu \si{\m}$ ($52 \; \mu \si{\m}$) in the TOB~\cite{Bayatian:922757}.
 Some layers additionally have modules mounted with stereo angles to provide measurements of the second coordinate ($z$ in the barrel region and $r$ in the forward regions).
-The single point resolutions of these measurements are $\simeq 230 \; \mu \si{\m}$ in the TIB, $\simeq 530 \; \mu \si{\m}$ in the TOB.
+The single point resolutions of these measurements are $\simeq 230 \; \mu \si{\m}$ in the TIB, $\simeq 530 \; \mu \si{\m}$ in the TOB~\cite{Chatrchyan:1129810}.
 The hit efficiency of the silicon strip tracker is 99.8\%.
 
 \subsection{Electromagnetic Calorimeter}
-Surrounding the silicon inner tracker is the electromagnetic calorimeter (ECAL), consisting of 61,200 lead tungstate (\ce{PbWO4}) scintillating crystals in the barrel region (EB) and 7,324 crystals in each of the end-caps (EC).
-The EB covers out to $\vert \eta \vert < 1.479$, with inner radius $\SI{1.29}{\m}$, while the EE covers $1.479 < \vert \eta \vert < 3.0$, at a longitudinal distance $\vert z \vert = \SI{3.15}{\m}$ from the IP (see figure~\ref{ECAL_HCAL}).
+Surrounding the silicon inner tracker is the electromagnetic calorimeter (ECAL), consisting of 61,200 lead tungstate (\ce{PbWO4}) scintillating crystals in the barrel region (EB) and 7,324 crystals in each of the end-caps (EC)~\cite{Bayatian:922757}.
+The EB covers out to $\vert \eta \vert < 1.479$, with inner radius $\SI{1.29}{\m}$, while the EE covers $1.479 < \vert \eta \vert < 3.0$, at a longitudinal distance $\vert z \vert = \SI{3.15}{\m}$ from the IP (see figure~\ref{ECAL_HCAL})~\cite{Bayatian:922757}.
 
 The ECAL measures the energy of particles, such as electrons, positrons, and photons, that primarily interact electromagnetically.
 Lead tungstate is high density $\SI{8.28}{\g\per\cm\cubed}$, optically transparent, radiation-hard, fast, and has a short radiation length ($X_0 = \SI{0.89}{\cm}$).
-The crystals have a highly-granular $22 \times 22 \si{\mm\squared}$ ($28.6 \times 28.6 \si{\mm\squared}$) front-face cross-section in the EB (EE) that matches the Molière radius of lead tungstate, i.e. the radius of a cylinder that contains a fraction $90 \%$ of the energy deposited by the shower.
-The crystal lengths are $\SI{23}{\cm}$ ($\SI{22}{\cm}$) in the EB (EE), corresponding to a total radiation length of $25.8X_0$ ($24.7X_0$).
+The crystals have a highly-granular $22 \times 22 \si{\mm\squared}$ ($28.6 \times 28.6 \si{\mm\squared}$) front-face cross-section in the EB (EE) that matches the Molière radius of lead tungstate, i.e. the radius of a cylinder that contains a fraction $90 \%$ of the energy deposited by the shower~\cite{Chatrchyan:1129810}.
+The crystal lengths are $\SI{23}{\cm}$ ($\SI{22}{\cm}$) in the EB (EE), corresponding to a total radiation length of $25.8X_0$ ($24.7X_0$)~\cite{Chatrchyan:1129810}.
 The total radiation length of the crystals essentially guarantees that electrons and photons will deposit all of their energy in the ECAL, resulting in an electromagnetic shower that excites nearby atoms which subsequently relax by scintillating light.
 The scintillation decay time of lead tungstate is less than $\SI{25}{\ns}$, and it scintillates a blue-green light.
 The crystals are fully polished to totally internally reflect light down the crystal where it is collected by silicon avalanche photodiodes in the EB and vacuum phototriodes in the EE, which are designed to be radiation-hard to operate in the high magnetic field.
@@ -232,24 +233,24 @@ In the $1.653 < \vert \eta \vert < 2.6$ region are pre-shower detectors that are
         \includegraphics[width=0.45\textwidth]{fig_LHC_CMS/ECAL.pdf}
         \includegraphics[width=0.40\textwidth]{fig_LHC_CMS/HCAL.png}
     \end{tabular}
-    \caption{Schematic views of the ECAL (Left) ~\cite{Bayatian:922757} and HCAL (Right) ~\cite{Chatrchyan:1129810}.
+    \caption{Schematic views of the ECAL (Left)~\cite{Bayatian:922757} and HCAL (Right)~\cite{Chatrchyan:1129810}.
             }
     \label{ECAL_HCAL}
   \end{center}
 \end{figure}
 
 \subsection{Hadronic Calorimeter}
-Outside the ECAL is the hadronic calorimeter (HCAL), consisting of the HCAL Barrel (HB), which covers out to $\vert \eta \vert < 1.3$, the HCAL End-caps (HE), which cover $1.3 < \vert \eta \vert < 3$, and radiation-hard, quartz fiber hadron calorimeters that are placed in the forward region (HF) $3 < \vert \eta \vert < 5.2$ (see figure~\ref{ECAL_HCAL}).
+Outside the ECAL is the hadronic calorimeter (HCAL), consisting of the HCAL Barrel (HB), which covers out to $\vert \eta \vert < 1.3$, the HCAL End-caps (HE), which cover $1.3 < \vert \eta \vert < 3$, and radiation-hard, quartz fiber hadron calorimeters that are placed in the forward region (HF) $3 < \vert \eta \vert < 5.2$ (see figure~\ref{ECAL_HCAL})~\cite{Bayatian:922757}.
 The HCAL is designed to measure jet energy by forcing their strongly-interacting hadron constituents to shower in brass absorber layers that alternate with scintillating plastic layers, in which the showers deposit their energy by exciting nearby atoms which subsequently relax by emitting light collected by hybrid photodiodes.
-The non-magnetic brass absorber layer is composed of 70\% \ce{Cu} and 30\% \ce{Zn} and has a nuclear interaction length of $\lambda_I = \SI{16.42}{\cm}$.
+The non-magnetic brass absorber layer is composed of 70\% \ce{Cu} and 30\% \ce{Zn} and has a nuclear interaction length of $\lambda_I = \SI{16.42}{\cm}$~\cite{Chatrchyan:1129810}.
 In the barrel region, the HB does not have sufficient total interaction length for hadron showers to completely exhaust their energy in the calorimeter, so an Outer HCAL (HO) of scintillating plastic layers, that uses the solenoid as an additional absorber layer, is placed outside the solenoid and covers out to $\vert \eta \vert < 1.3$.
-The ECAL, which radially precedes the HCAL, contributes $1.1\lambda_I$.
-At $\eta = 0$, the total interaction length of the absorber layers is $5.82\lambda_I$, and increases with $\eta$, so that at $\vert \eta \vert = 1.3$ it is $10.6\lambda_I$.
+The ECAL, which radially precedes the HCAL, contributes $1.1\lambda_I$~\cite{Chatrchyan:1129810}.
+At $\eta = 0$, the total interaction length of the absorber layers is $5.82\lambda_I$, and increases with $\eta$, so that at $\vert \eta \vert = 1.3$ it is $10.6\lambda_I$~\cite{Chatrchyan:1129810}.
 
 \subsection{Muon System}
 Unlike most particles, muons are not stopped by any of the calorimeters, superconducting solenoid, or iron flux-return yoke. 
 Four layers of chambers to detect muons are placed at the very outer layers of the experiment in the iron flux-return yoke. 
-The muon system is designed with three different types of gaseous particle detectors: 
+The muon system is designed with three different types of gaseous particle detectors~\cite{Bayatian:922757}: 
 \begin{itemize}
 \item drift tube (DT) chambers covering $\vert \eta \vert < 1.2$,
 \item cathode strip chambers (CSC) covering $0.9 < \vert \eta \vert < 2.4$, and
@@ -271,11 +272,11 @@ The muon system is aligned with the inner tracker in order for the detectors to 
 
 \subsection{Trigger and Data Acquisition System}
 CMS wants to record the most relevant data from bunch crossings with a $\SI{40}{\mega \Hz}$ event rate.
-Each bunch crossing generates \sim$\SI{1}{\mega \byte}$ of data, but due to limited bandwidth, the detectors cannot readout and store \sim$\SI{40}{\tera \byte \per \s}$, so a trigger system is necessary to reject the least interesting 99.9999\% of events in quasi-real time, and reduce the event rate to \sim$\SI{1}{\kilo \Hz}$ before storage.
+Each bunch crossing generates \sim$\SI{1}{\mega \byte}$ of data, but due to limited bandwidth, the detectors cannot readout and store \sim$\SI{40}{\tera \byte \per \s}$, so a trigger system is necessary to reject the least interesting 99.9999\% of events in quasi-real time, and reduce the event rate to \sim$\SI{1}{\kilo \Hz}$ before storage~\cite{Chatrchyan:1129810}.
 This is not an unreasonable constraint, as the total cross-section of proton-proton interactions (elastic and inelastic) at \beamenergy is \sim$\SI{100}{\milli \b}$, while interesting processes such as top quark pair production and Higgs boson production have cross-sections on the orders of \sim$\SI{800}{\pico \b}$ and \sim$\SI{50}{\pico \b}$ respectively.
 To accomplish this, CMS has a highly reliable and efficient trigger system, composed of detector electronics, a level-1 (L1) hardware trigger, a readout network, and a high-level software trigger (HLT).
-The L1 trigger uses hardware processors and raw readouts from the calorimeters and muon systems to reduce the event rate to \sim$\SI{100}{\kHz}$ with a latency of $3.8 \; \mu s$.
-The data acquisition then passes the complete readout of the event data to the HLT, which has a latency of $320 \; \mu s$ and performs fast reconstruction and event selection to filter events and reduce the rate of stored events to \sim$\SI{1}{\kilo \Hz}$.
+The L1 trigger uses hardware processors and raw readouts from the calorimeters and muon systems to reduce the event rate to \sim$\SI{100}{\kHz}$ with a latency of $3.8 \; \mu s$~\cite{Chatrchyan:1129810}.
+The data acquisition then passes the complete readout of the event data to the HLT, which has a latency of $320 \; \mu s$ and performs fast reconstruction and event selection to filter events and reduce the rate of stored events to \sim$\SI{1}{\kilo \Hz}$~\cite{Chatrchyan:1129810}.
 The events that pass the HLT filter are saved for offline analysis to one or several HLT paths, which correspond to specific selection criteria, physics objects, or event signatures.
 
 

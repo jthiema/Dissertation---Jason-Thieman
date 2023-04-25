@@ -192,10 +192,10 @@ All the distributions $g(x)$ considered are parameterized by only a single coeff
 The choice of the constant factor for $f(x)$ is inconsequential, as it is reabsorbed into the value of $\tau$, and is arbitrarily chosen such that the average value of the distribution is unity.
 To apply the derived continuous bin factor functions to the binned distributions, $f(x)$ must be integrated over the boundaries of each bin to calculate the appropriate $f_i$ for that bin. 
 
-For the observables measured in the laboratory frame ($\cos\varphi_{\mathrm{lab}}$, $\vert \Delta\phi_{\ell\bar{\ell}} \vert$, and $\vert \Delta\eta_{\ell\bar{\ell}} \vert$), analytical forms of the differential cross-sections are not known. 
-Furthermore, the distributions depend on more than a single coefficient, so the regularization cannot be made perfectly unbiased with respect to all of them simultaneously. 
+%For the observables measured in the laboratory frame ($\cos\varphi_{\mathrm{lab}}$, $\vert \Delta\phi_{\ell\bar{\ell}} \vert$, and $\vert \Delta\eta_{\ell\bar{\ell}} \vert$), analytical forms of the differential cross-sections are not known. 
+%Furthermore, the distributions depend on more than a single coefficient, so the regularization cannot be made perfectly unbiased with respect to all of them simultaneously. 
 Fortunately, because the migration matrix is almost diagonal, the chosen regularization strength for these variables is so weak that the choice of $f$ makes little difference. 
-Analogous to the top rest frame observables, $f(x)$ is set equal to the reciprocal of the symmetrized SM distribution $1/\mathrm{SM_{sym}}(x)$, so that the regularization is unbiased to variations of the form $x \mathrm{SM_{sym}}(x)$. 
+%Analogous to the top rest frame observables, $f(x)$ is set equal to the reciprocal of the symmetrized SM distribution $1/\mathrm{SM_{sym}}(x)$, so that the regularization is unbiased to variations of the form $x \mathrm{SM_{sym}}(x)$. 
 
 For the differential unfolding of the observables as a function of $m_{\ttbar}$, TUnfold ``unwraps'' the two-dimensional distributions into one-dimensional distributions, and the unfolding procedure is performed similarly to as previously described. 
 TUnfold allows regularization along the axis of the spin-density observable to prevent spurious statistical fluctuations as previously discussed, while not regularizing along the $m_{\ttbar}$ axis, as its functional form is not known.
@@ -299,8 +299,6 @@ Sources of experimental systematic uncertainties include detector response, obje
         \end{tabular}
         \caption{\footnotesize Number of primary vertices distributions before (Left) and after (Right) PU re-weighting, for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
-        Trigger efficiency and lepton selection scale factors discussed in section~\ref{Experimental_Systematics} are applied.
-        No \zjets\ scaling has been applied yet.
         \label{PU_re-weighting}
         }
     \end{center}

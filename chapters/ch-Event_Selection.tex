@@ -89,7 +89,7 @@ Every $\SI{25}{\ns}$, an average bunch crossing results in 1000 or more particle
 Track reconstruction is the determination of final state particle trajectories using the ionization trails left behind in the tracker sub-detector layers and is crucial for the identification and momenta measurement of charged particles.
 The situation where multiple $pp$ collisions (vertices) occur within the same bunch crossing is referred to as PU, and vertexing is the determination of vertices from the intersection of trajectories.
 The primary vertex (PV) of an event is the vertex corresponding to the hard-scattering interaction in the collision and is identified as the vertex with the highest sum of squared transverse momenta of its associated tracks.
-Vertexing is also important for the identification of secondary vertices (SV), i.e. vertices separated from the beamline by $\gtrsim \SI{1}{\mm}$ or more, which are usually attributed to the decay of short-lived heavy flavor mesons.
+Vertexing is also important for the identification of secondary vertices (SV), i.e. vertices separated from the beamline by $\gtrsim \SI{1}{\mm}$, which are usually attributed to the decay of short-lived heavy flavor mesons.
 
 In the PF algorithm, iterative Kalman filtering (KF) is used to reconstruct the tracks and vertices of charged particles~\cite{Sirunyan:2270046}.
 KF assumes that the residuals between the predicted and measured trajectories are Gaussian distributions.
@@ -145,7 +145,7 @@ Identification and reconstruction efficiency corrections for electrons are also 
 Events with a dilepton system consisting of exactly two oppositely-charged leptons passing the electron and muon object selection criteria are accepted for further consideration.
 If more than two leptons are reconstructed in the event, then the event is vetoed.
 The leading selected lepton is required to have $\pT > \SI{25}{\GeV}$.
-The event is then unambiguously classified as \ee, \emu, or \mumu depending on the type of the selected lepton pair, and the event is discarded if there are additional leptons in the event, other than the two which enter the defined lepton pair.
+The event is then unambiguously classified as \ee, \emu, or \mumu depending on the type of the selected lepton pair.
 The invariant mass of the selected lepton pair is required to be larger than $\SI{20}{\GeV}$ to suppress background events from decays of heavy-flavor resonances and Drell-Yan processes.
 Moreover, in the \ee and \mumu decay channels, events are rejected if the dilepton invariant mass is within the vicinity of the $Z$ boson mass $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$, where background from $Z$ boson production is dominant.
 
@@ -164,8 +164,8 @@ d_{ij} = min(\sfrac{1}{p_{T,i}^2}, \sfrac{1}{p_{T,j}^2}) \times \sfrac{{\Delta R
 \end{align}
 \end{linenomath*}
 where $\Delta R$ is the angular separation between objects, defined in equation~\ref{DeltaR}, and $R$ is the radius parameter that determines the size of individual jets.
-The PF algorithm reduces the amount of energy that is mistakenly assigned to a jet due to pileup by removing clusters attributed to tracks originating at pileup vertices.
-Due to complications such as assumptions about particle separation in the clustering algorithm, energy loss in the detector material, detector noise, pileup, detector granularity, the association of neutral hadrons with interaction vertices, and the stochastic nature of particle showers in the HCAL, reconstructed jet energies and trajectories are typically associated with large systematic uncertainties.
+The PF algorithm reduces the amount of energy that is mistakenly assigned to a jet due to PU by removing clusters attributed to tracks originating at PU vertices.
+Due to complications such as assumptions about particle separation in the clustering algorithm, energy loss in the detector material, detector noise, PU, detector granularity, the association of neutral hadrons with interaction vertices, and the stochastic nature of particle showers in the HCAL, reconstructed jet energies and trajectories are typically associated with large systematic uncertainties.
 
 For the measurements presented in this dissertation, jets are clustered from reconstructed PF candidates using the anti-$k_T$ clustering algorithm with radius parameter $R = 0.4$ (AK4).
 Events are required to have at least two jets with transverse momentum $\pT > \SI{30}{\GeV}$ and within the coverage of the inner tracker $\vert \eta \vert < 2.4$. 
@@ -191,7 +191,7 @@ the negative vector sum of the transverse momenta for all PF reconstructed parti
 \begin{figure}[htb]
   \begin{center}
     \begin{tabular}{c}
-        \includegraphics[width=0.3\textwidth]{fig_Event_Reconstruction/met_schematic.pdf}.
+        \includegraphics[width=0.5\textwidth]{fig_Event_Reconstruction/met_schematic.pdf}.
     \end{tabular}
     \caption{Schematic diagram for \MET, the negative vector sum of the transverse momenta for all reconstructed particles in an event~\cite{METSchematicDiagram}.
             }
@@ -207,7 +207,7 @@ Events in the \ee and \mumu channels are required to have $\ETmiss > \SI{40}{\Ge
 \subsection{Tagging of b-Jets}
 Selected events are required to have at least one jet tagged as having originated from a $b$-quark.
 In this analysis, the DeepJet $b$-tagging algorithm~\cite{bib:Bols_2020}, which uses approximately 650 input variables, divided into four categories (global variables, charged PF candidate features, neutral PF candidate features, and SV features associated with the jet) as inputs for a deep neural network, is used to tag all reconstructed jets in the event.
-A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of \sim$1\%$.
+A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of \sim$1\%$ (see figure~\ref{bTagging}).
 \begin{figure}[htb]
   \begin{center}
     \begin{tabular}{cc}
@@ -363,7 +363,7 @@ The final solution for the top anti-quark four-momentum is determined in an anal
 \clearpage
 \subsection{Kinematic Reconstruction Control Plots}
 Kinematic reconstruction control distributions for solutions to the kinematic reconstruction for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after all object and event selection criteria have been applied are shown in figure~\ref{bjet_control} for $b$-jets, figure~\ref{leptonbjet_control} for lepton and $b$-jet invariant mass, figure~\ref{top_control} for top quarks, and figure~\ref{ttbar_control} for the \ttbar\ system.
-The \pT spectra of top quark and anti-quarks in \ttbar\ data are known to be softer than modeled by MC simulations.
+The \pT spectra of top quarks and anti-quarks in \ttbar\ data are known to be softer than modeled by MC simulations.
 Modeling systematics associated with this deficiency are discussed in section~\ref{Model_Systematics} and it is also evident in the \pT distributions of downstream top quark decay products such as those for leptons (figure~\ref{lepton_control}) and $b$-jets (figure~\ref{bjet_control}).
 
 
@@ -441,9 +441,9 @@ Modeling systematics associated with this deficiency are discussed in section~\r
 \subsection{Comparison of \ensuremath{\mathrm{t\bar{t}}} Reconstruction for Prompt and Via \ensuremath{\mathrm{\tau}} Dilepton Events}
 The assumption that the dilepton decay is prompt and there are only two neutrinos in the final state is not true when the dilepton decay is via intermediate $\tau$ leptons; such decays can have four or six neutrinos in the final state.
 The top quark and \ttbar reconstructed kinematic variables at detector-level (rec) are presented versus the true variables at generator level (gen), and additionally, the resolutions are presented as the difference between the true and reconstructed variables in bins of the true variables. 
-Figures~\ref{fig:kinrec:resolution-mtt} through~\ref{fig:kinrec:resolution-yt} show resolution of \mtt, \ytt, \pttt, \yt, and \ptt\ distributions for both prompt and via tau reconstructed \ttbar dilepton events. 
-The means and sigmas from Gaussian fits to the kinematic variable resolutions are also included and reflect the bias and resolution of the algorithm, including degradation attributed to wrong jet--lepton assignments. 
-From the standard deviation parameters of the fits, we conclude that the kinematic variable resolutions of \ttbar dilepton events via $\tau$ are \sim$5\% - 15\%$ degraded relative to prompt events, but are sufficiently comparable to be included as signal in this measurement.
+Figures~\ref{fig:kinrec:resolution-mtt} through~\ref{fig:kinrec:resolution-yt} show the resolutions of \mtt, \ytt, \pttt, \yt, and \ptt\ for both prompt and via tau reconstructed \ttbar dilepton events. 
+The means and standard deviation parameters (sigmas) from Gaussian fits to the kinematic variable resolutions are also included and reflect the bias and resolution of the algorithm, including degradation attributed to wrong jet--lepton assignments. 
+From the sigmas of the fits, we conclude that the kinematic variable resolutions of \ttbar dilepton events via $\tau$ are \sim$5\% - 15\%$ degraded relative to prompt events, but are sufficiently comparable to be included as signal in this measurement.
 
 \begin{figure}
   \begin{center}

@@ -3,13 +3,22 @@
 \chapter{RESULTS}
 \label{Results}
 
-
+At the time of writing this dissertation, any results shown in this section are not explicitly approved for public release by CMS and are to be regarded as private, in-progress work utilizing CMS recorded data and MC simulations.
+By the time the embargo on this dissertation has been lifted, the results shown in this section will have been superseded by CMS public results.
+Thus, the reader is advised to refer to the CMS public results instead.
 
 \section{Measured Top Quark Polarization and \ensuremath{\mathrm{t\bar{t}}} Spin Correlation Observables and Cross-Sections}
-The set\footnote{A summary of all spin density observables, their respective coefficients, and which coefficient functions of the spin density matrix they probe is provided in table~\ref{observables_coefficients}.} of one-dimensional reconstructed detector-level distributions, detector response matrices, absolute differential cross-sections unfolded to parton-level, and normalized differential cross-sections unfolded to parton-level is shown for all spin density observables in figures~\ref{fig:b1k} through~\ref{fig:ll_cHel}, and the two-dimensional set, as a function of $m_{\ttbar}$, is shown in figures~\ref{fig:b1k_mttbar} through~\ref{fig:ll_cHel_mttbar}.
+The set\footnote{A summary of all spin density observables, their respective coefficients, and which coefficient functions of the spin density matrix they probe is provided in table~\ref{observables_coefficients}.} of one-dimensional reconstructed detector-level distributions, absolute differential cross-sections unfolded to parton-level, normalized differential cross-sections unfolded to parton-level, detector response matrices, statistical covariance matrices, total systematic covariance matrices, breakdown of uncertainties, and distributions for purity, stability, and efficiency$\times$acceptance is shown for all spin density observables in figures~\ref{fig:b1k} through~\ref{fig:ll_cHel_uncertainties}, and the two-dimensional set, as a function of $m_{\ttbar}$, is shown in figures~\ref{fig:b1k_mttbar} through~\ref{fig:ll_cHel_mttbar_uncertainties}.
+
+The presence of the spin correlations is most evident in the slope of the unfolded distribution of $\cos\varphi$, which would be flat in the case of their absence.
+In agreement with predictions, sizeable asymmetries are also observed in the $C$, $CP$, and $T_N$-even distributions of $\cos\theta_{1}^{k}\cos\theta_{2}^{k}$, $\cos\theta_{1}^{r}\cos\theta_{2}^{r}$, $\cos\theta_{1}^{n}\cos\theta_{2}^{n}$, and $\cos\theta_{1}^{r}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{r}$, while asymmetries the remaining $C$, $CP$, and $T_N$-odd distributions are suppressed (refer to table~\ref{coefficient_function_symmetries}).
+
+The statistical and total systematic covariances exhibit a typical pattern of correlation and anti-correlation arising from unfolding, with systematic correlations being significantly stronger in general, reflecting the relative changes in shape of the different distributions in response to the systematic variations.
+Overall, the most dominant source of systematic uncertainties are due to JES, electron identification, background normalization, and top \pT modelling.
+
 The measured distributions are compared with predictions from the \Powheg+\Pythia\ MC simulation.
-The presence of the spin correlations is most evident in the unfolded distribution of $\cos\varphi$, which would be flat in the case of their absence.
-In agreement with predictions, sizeable asymmetries are also observed in the $C$, $CP$, and $T_N$-even distributions of $\cos\theta_{1}^{k}\cos\theta_{2}^{k}$, $\cos\theta_{1}^{r}\cos\theta_{2}^{r}$, $\cos\theta_{1}^{n}\cos\theta_{2}^{n}$, and $\cos\theta_{1}^{r}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{r}$, while asymmetries the remaining $C$, $CP$, and $T_N$-odd distributions are suppressed (refer to tables~\ref{coefficient_function_symmetries} and ~\ref{observables_coefficients}).
+There is generally decent agreement between the measured distributions and the predictions, although improved agreement is expected when compared to perturbative calculations for \ttbar\ production at NLO in QCD with electroweak corrections.
+Due to significantly increased luminosity and several optimizations that reduced background contributions and systematic uncertainties, the measurement precision for one-dimensional normalized unfolded cross-sections is improved by around a factor of two compared to CMS TOP-18-006~\cite{Sirunyan:2681777}.
 
 \begin{figure}[htb]
 \begin{center}
@@ -19,7 +28,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b1k.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b1k.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b1k.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{k}$, from which spin-density coefficient $B_{1}^{k}$ (sensitive to spin-density coefficient function $b_k^{+}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{k}$, from which spin-density coefficient $B_{1}^{k}$ (sensitive to spin-density coefficient function $b_k^{+}$) is extracted.}
 \label{fig:b1k}
 \end{center}
 \end{figure}
@@ -45,7 +54,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b2k.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b2k.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b2k.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{k}$, from which spin-density coefficient $B_{2}^{k}$ (sensitive to spin-density coefficient function $b_k^{-}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{k}$, from which spin-density coefficient $B_{2}^{k}$ (sensitive to spin-density coefficient function $b_k^{-}$) is extracted.}
 \label{fig:b2k}
 \end{center}
 \end{figure}
@@ -65,13 +74,65 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
 \clearpage
 \begin{figure}[htb]
 \begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/controlplots/combined/Hyp_AntiLeptonBn.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResults_b1n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResultsNorm_b1n.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b1n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b1n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b1n.pdf} \\
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{n}$, from which spin-density coefficient $B_{1}^{n}$ (sensitive to spin-density coefficient function $b_n^{+}$) is extracted.}
+\label{fig:b1n}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlog_rebinnedB_b1n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrix_rebinnedB_b1n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrix_rebinnedB_b1n.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlogNorm_rebinnedB_b1n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrixNorm_rebinnedB_b1n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrixNorm_rebinnedB_b1n.pdf} \\
+\caption{Unfolded-cross section breakdown of uncertainties (Top Left), unfolded cross-section statistical covariance matrix (Top Middle), unfolded cross-section total systematic covariance matrix (Top Right), normalized unfolded-cross section breakdown of uncertainties (Bottom Left), normalized unfolded cross-section statistical covariance matrix (Bottom Middle), normalized unfolded cross-section total systematic covariance matrix (Bottom Right) for polarization observable $\cos\theta_{1}^{n}$.}
+\label{fig:b1n_uncertainties}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/controlplots/combined/Hyp_LeptonBn.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResults_b2n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResultsNorm_b2n.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b2n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b2n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b2n.pdf} \\
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{n}$, from which spin-density coefficient $B_{2}^{n}$ (sensitive to spin-density coefficient function $b_n^{-}$) is extracted.}
+\label{fig:b2n}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlog_rebinnedB_b2n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrix_rebinnedB_b2n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrix_rebinnedB_b2n.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlogNorm_rebinnedB_b2n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrixNorm_rebinnedB_b2n.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrixNorm_rebinnedB_b2n.pdf} \\
+\caption{Unfolded-cross section breakdown of uncertainties (Top Left), unfolded cross-section statistical covariance matrix (Top Middle), unfolded cross-section total systematic covariance matrix (Top Right), normalized unfolded-cross section breakdown of uncertainties (Bottom Left), normalized unfolded cross-section statistical covariance matrix (Bottom Middle), normalized unfolded cross-section total systematic covariance matrix (Bottom Right) for polarization observable $\cos\theta_{2}^{n}$.}
+\label{fig:b2n_uncertainties}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/controlplots/combined/Hyp_AntiLeptonBr.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResults_b1r.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResultsNorm_b1r.pdf} \\
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b1r.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b1r.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b1r.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{r}$, from which spin-density coefficient $B_{1}^{r}$ (sensitive to spin-density coefficient function $b_r^{+}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{r}$, from which spin-density coefficient $B_{1}^{r}$ (sensitive to spin-density coefficient function $b_r^{+}$) is extracted.}
 \label{fig:b1r}
 \end{center}
 \end{figure}
@@ -97,7 +158,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b2r.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b2r.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b2r.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{r}$, from which spin-density coefficient $B_{2}^{r}$ (sensitive to spin-density coefficient function $b_r^{-}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{r}$, from which spin-density coefficient $B_{2}^{r}$ (sensitive to spin-density coefficient function $b_r^{-}$) is extracted.}
 \label{fig:b2r}
 \end{center}
 \end{figure}
@@ -123,7 +184,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_kk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_kk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_kk.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{k}\cos\theta_{2}^{k}$, from which spin-density coefficient $C_{kk}$ (sensitive to spin-density coefficient function $c_{k k}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{k}\cos\theta_{2}^{k}$, from which spin-density coefficient $C_{kk}$ (sensitive to spin-density coefficient function $c_{k k}$) is extracted.}
 \label{fig:c_kk}
 \end{center}
 \end{figure}
@@ -149,7 +210,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_rr.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_rr.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_rr.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{r}\cos\theta_{2}^{r}$, from which spin-density coefficient $C_{rr}$ (sensitive to spin-density coefficient function $c_{r r}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{r}\cos\theta_{2}^{r}$, from which spin-density coefficient $C_{rr}$ (sensitive to spin-density coefficient function $c_{r r}$) is extracted.}
 \label{fig:c_rr}
 \end{center}
 \end{figure}
@@ -175,7 +236,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_nn.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_nn.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_nn.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{n}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nn}$ (sensitive to spin-density coefficient function $c_{n n}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{n}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nn}$ (sensitive to spin-density coefficient function $c_{n n}$) is extracted.}
 \label{fig:c_nn}
 \end{center}
 \end{figure}
@@ -201,7 +262,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Prk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Prk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Prk.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{r}$, from which spin-density coefficient $C_{rk}+C_{kr}$ (sensitive to spin-density coefficient function $c_{r k}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{r}$, from which spin-density coefficient $C_{rk}+C_{kr}$ (sensitive to spin-density coefficient function $c_{r k}$) is extracted.}
 \label{fig:c_Prk}
 \end{center}
 \end{figure}
@@ -227,7 +288,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Mrk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Mrk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Mrk.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{r}$, from which spin-density coefficient $C_{rk}-C_{kr}$ (sensitive to spin-density coefficient function $c_n$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{r}$, from which spin-density coefficient $C_{rk}-C_{kr}$ (sensitive to spin-density coefficient function $c_n$) is extracted.}
 \label{fig:c_Mrk}
 \end{center}
 \end{figure}
@@ -253,7 +314,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Pnr.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Pnr.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Pnr.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}+\cos\theta_{1}^{r}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nr}+C_{rn}$ (sensitive to spin-density coefficient function $c_{n r}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}+\cos\theta_{1}^{r}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nr}+C_{rn}$ (sensitive to spin-density coefficient function $c_{n r}$) is extracted.}
 \label{fig:c_Pnr}
 \end{center}
 \end{figure}
@@ -279,7 +340,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Mnr.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Mnr.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Mnr.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}-\cos\theta_{1}^{r}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nr}-C_{rn}$ (sensitive to spin-density coefficient function $c_k$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}-\cos\theta_{1}^{r}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nr}-C_{rn}$ (sensitive to spin-density coefficient function $c_k$) is extracted.}
 \label{fig:c_Mnr}
 \end{center}
 \end{figure}
@@ -305,7 +366,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Pnk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Pnk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Pnk.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nk}+C_{kn}$ (sensitive to spin-density coefficient function $c_{k n}$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nk}+C_{kn}$ (sensitive to spin-density coefficient function $c_{k n}$) is extracted.}
 \label{fig:c_Pnk}
 \end{center}
 \end{figure}
@@ -331,7 +392,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Mnk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Mnk.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Mnk.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nk}-C_{kn}$ (sensitive to spin-density coefficient function $-c_r$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{n}$, from which spin-density coefficient $C_{nk}-C_{kn}$ (sensitive to spin-density coefficient function $-c_r$) is extracted.}
 \label{fig:c_Mnk}
 \end{center}
 \end{figure}
@@ -357,7 +418,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_ll_cHel.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_ll_cHel.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_ll_cHel.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for  observable $\cos\varphi$, from which spin-density coefficient $D = -\frac{1}{3}(C_{kk} + C_{rr} + C_{nn})$ (sensitive to spin-density coefficient function $-\frac{1}{3}(c_{kk} + c_{rr} + c_{nn})$) is extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for  observable $\cos\varphi$, from which spin-density coefficient $D = -\frac{1}{3}(C_{kk} + C_{rr} + C_{nn})$ (sensitive to spin-density coefficient function $-\frac{1}{3}(c_{kk} + c_{rr} + c_{nn})$) is extracted.}
 \label{fig:ll_cHel}
 \end{center}
 \end{figure}
@@ -383,7 +444,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b1k_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b1k_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b1k_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{k}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{1}^{k}$ (sensitive to spin-density coefficient functions $b_k^{+}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{k}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{1}^{k}$ (sensitive to spin-density coefficient functions $b_k^{+}$) are extracted.}
 \label{fig:b1k_mttbar}
 \end{center}
 \end{figure}
@@ -409,7 +470,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b2k_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b2k_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b2k_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{k}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{2}^{k}$ (sensitive to spin-density coefficient functions $b_k^{-}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{k}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{2}^{k}$ (sensitive to spin-density coefficient functions $b_k^{-}$) are extracted.}
 \label{fig:b2k_mttbar}
 \end{center}
 \end{figure}
@@ -429,13 +490,65 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
 \clearpage
 \begin{figure}[htb]
 \begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/controlplots/combined/Hyp_AntiLeptonBn_vs_TTBarMass.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResults_b1n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResultsNorm_b1n_mttbar.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b1n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b1n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b1n_mttbar.pdf} \\
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{1}^{n}$ (sensitive to spin-density coefficient functions $b_n^{+}$) are extracted.}
+\label{fig:b1n_mttbar}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlog_rebinnedB_b1n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrix_rebinnedB_b1n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrix_rebinnedB_b1n_mttbar.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlogNorm_rebinnedB_b1n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrixNorm_rebinnedB_b1n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrixNorm_rebinnedB_b1n_mttbar.pdf} \\
+\caption{Unfolded-cross section breakdown of uncertainties (Top Left), unfolded cross-section statistical covariance matrix (Top Middle), unfolded cross-section total systematic covariance matrix (Top Right), normalized unfolded-cross section breakdown of uncertainties (Bottom Left), normalized unfolded cross-section statistical covariance matrix (Bottom Middle), normalized unfolded cross-section total systematic covariance matrix (Bottom Right) for polarization observable $\cos\theta_{1}^{n}$ as a function of $m_{t\bar{t}}$.}
+\label{fig:b1n_mttbar_uncertainties}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/controlplots/combined/Hyp_LeptonBn_vs_TTBarMass.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResults_b2n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResultsNorm_b2n_mttbar.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b2n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b2n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b2n_mttbar.pdf} \\
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{2}^{n}$ (sensitive to spin-density coefficient functions $b_n^{-}$) are extracted.}
+\label{fig:b2n_mttbar}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlog_rebinnedB_b2n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrix_rebinnedB_b2n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrix_rebinnedB_b2n_mttbar.pdf} \\
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/deltaSystCombinedlogNorm_rebinnedB_b2n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/StatCovMatrixNorm_rebinnedB_b2n_mttbar.pdf}
+ \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotalSystCovMatrixNorm_rebinnedB_b2n_mttbar.pdf} \\
+\caption{Unfolded-cross section breakdown of uncertainties (Top Left), unfolded cross-section statistical covariance matrix (Top Middle), unfolded cross-section total systematic covariance matrix (Top Right), normalized unfolded-cross section breakdown of uncertainties (Bottom Left), normalized unfolded cross-section statistical covariance matrix (Bottom Middle), normalized unfolded cross-section total systematic covariance matrix (Bottom Right) for polarization observable $\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$.}
+\label{fig:b2n_mttbar_uncertainties}
+\end{center}
+\end{figure}
+\clearpage
+\begin{figure}[htb]
+\begin{center}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/controlplots/combined/Hyp_AntiLeptonBr_vs_TTBarMass.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResults_b1r_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/UnfoldedResultsNorm_b1r_mttbar.pdf} \\
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b1r_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b1r_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b1r_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{1}^{r}$ (sensitive to spin-density coefficient functions $b_r^{+}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{1}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{1}^{r}$ (sensitive to spin-density coefficient functions $b_r^{+}$) are extracted.}
 \label{fig:b1r_mttbar}
 \end{center}
 \end{figure}
@@ -461,7 +574,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_b2r_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_b2r_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_b2r_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{2}^{r}$ (sensitive to spin-density coefficient functions $b_r^{-}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for polarization observable $\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $B_{2}^{r}$ (sensitive to spin-density coefficient functions $b_r^{-}$) are extracted.}
 \label{fig:b2r_mttbar}
 \end{center}
 \end{figure}
@@ -487,7 +600,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_kk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_kk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_kk_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{k}\cos\theta_{2}^{k}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{kk}$ (sensitive to spin-density coefficient functions $c_{k k}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{k}\cos\theta_{2}^{k}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{kk}$ (sensitive to spin-density coefficient functions $c_{k k}$) are extracted.}
 \label{fig:c_kk_mttbar}
 \end{center}
 \end{figure}
@@ -513,7 +626,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_rr_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_rr_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_rr_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{r}\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{rr}$ (sensitive to spin-density coefficient functions $c_{r r}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{r}\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{rr}$ (sensitive to spin-density coefficient functions $c_{r r}$) are extracted.}
 \label{fig:c_rr_mttbar}
 \end{center}
 \end{figure}
@@ -539,7 +652,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_nn_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_nn_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_nn_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{n}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nn}$ (sensitive to spin-density coefficient functions $c_{n n}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for diagonal spin correlation observable $\cos\theta_{1}^{n}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nn}$ (sensitive to spin-density coefficient functions $c_{n n}$) are extracted.}
 \label{fig:c_nn_mttbar}
 \end{center}
 \end{figure}
@@ -565,7 +678,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Prk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Prk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Prk_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{rk}+C_{kr}$ (sensitive to spin-density coefficient functions $c_{r k}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{rk}+C_{kr}$ (sensitive to spin-density coefficient functions $c_{r k}$) are extracted.}
 \label{fig:c_Prk_mttbar}
 \end{center}
 \end{figure}
@@ -591,7 +704,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Mrk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Mrk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Mrk_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{rk}-C_{kr}$ (sensitive to spin-density coefficient functions $c_n$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{r}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{r}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{rk}-C_{kr}$ (sensitive to spin-density coefficient functions $c_n$) are extracted.}
 \label{fig:c_Mrk_mttbar}
 \end{center}
 \end{figure}
@@ -617,7 +730,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Pnr_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Pnr_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Pnr_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}+\cos\theta_{1}^{r}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nr}+C_{rn}$ (sensitive to spin-density coefficient functions $c_{n r}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}+\cos\theta_{1}^{r}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nr}+C_{rn}$ (sensitive to spin-density coefficient functions $c_{n r}$) are extracted.}
 \label{fig:c_Pnr_mttbar}
 \end{center}
 \end{figure}
@@ -643,7 +756,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Mnr_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Mnr_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Mnr_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}-\cos\theta_{1}^{r}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nr}-C_{rn}$ (sensitive to spin-density coefficient functions $c_k$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{r}-\cos\theta_{1}^{r}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nr}-C_{rn}$ (sensitive to spin-density coefficient functions $c_k$) are extracted.}
 \label{fig:c_Mnr_mttbar}
 \end{center}
 \end{figure}
@@ -669,7 +782,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Pnk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Pnk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Pnk_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nk}+C_{kn}$ (sensitive to spin-density coefficient functions $c_{k n}$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation sum observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}+\cos\theta_{1}^{k}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nk}+C_{kn}$ (sensitive to spin-density coefficient functions $c_{k n}$) are extracted.}
 \label{fig:c_Pnk_mttbar}
 \end{center}
 \end{figure}
@@ -695,7 +808,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_c_Mnk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_c_Mnk_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_c_Mnk_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nk}-C_{kn}$ (sensitive to spin-density coefficient functions $-c_r$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for off-diagonal spin correlation difference observable $\cos\theta_{1}^{n}\cos\theta_{2}^{k}-\cos\theta_{1}^{k}\cos\theta_{2}^{n}$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $C_{nk}-C_{kn}$ (sensitive to spin-density coefficient functions $-c_r$) are extracted.}
 \label{fig:c_Mnk_mttbar}
 \end{center}
 \end{figure}
@@ -721,7 +834,7 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/ResponseMatrix_ll_cHel_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/TotEff_ll_cHel_mttbar.pdf}
  \includegraphics[width=0.32\textwidth]{fig_fullRun2UL/unfolding/combined/PurStab_ll_cHel_mttbar.pdf} \\
-\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), acceptance times efficiency (Bottom Middle), Purity and Stability (Bottom Right) for  observable $\cos\varphi$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $D = -\frac{1}{3}(C_{kk} + C_{rr} + C_{nn})$ (sensitive to spin-density coefficient functions $-\frac{1}{3}(c_{kk} + c_{rr} + c_{nn})$) are extracted.}
+\caption{Reconstructed detector-level distribution (Top Left), absolute cross-section unfolded to parton-level (Top Middle), normalized cross-section unfolded to parton-level (Top Right), detector response-matrix (Bottom Left), efficiency$\times$acceptance (Bottom Middle), Purity and Stability (Bottom Right) for  observable $\cos\varphi$ as a function of $m_{t\bar{t}}$, from which differential spin-density coefficients $D = -\frac{1}{3}(C_{kk} + C_{rr} + C_{nn})$ (sensitive to spin-density coefficient functions $-\frac{1}{3}(c_{kk} + c_{rr} + c_{nn})$) are extracted.}
 \label{fig:ll_cHel_mttbar}
 \end{center}
 \end{figure}
@@ -743,10 +856,14 @@ In agreement with predictions, sizeable asymmetries are also observed in the $C$
 
 
 
+
 \section{Extracted Top Quark Polarization and \ensuremath{\mathrm{t\bar{t}}} Spin Correlation Coefficients}
 The set\footnote{A summary of all spin density observables, their respective coefficients, and which coefficient functions of the spin density matrix they probe is provided in table~\ref{observables_coefficients}.} of one-dimensional spin density coefficients extracted from the normalized cross-sections unfolded to parton-level (as described in section~\ref{coefficient_extraction}) is shown in table~\ref{tab:Extracted_Coefficients_1D}, and the two-dimensional set, as a function of $m_{\ttbar}$, is shown in tables~\ref{tab:Extracted_Coefficients_2D_Polarizations} through~\ref{tab:Extracted_Coefficients_2D_Cross_Spin_Correlations}.
-The extracted coefficients are compared with predictions from the \Powheg+\Pythia\ MC simulation and the one-dimensional set are compared to calculations for \ttbar\ production at NLO in QCD with electroweak corrections~\cite{Bernreuther}.
 
+The extracted coefficients are compared with predictions from the \Powheg+\Pythia\ MC simulation and the one-dimensional set are additionally compared to calculations for \ttbar\ production at NLO in QCD with electroweak corrections~\cite{Bernreuther}.
+There is generally decent agreement between the measured coefficients and the predictions, with better agreement when compared to perturbative QCD calculations at NLO.
+Due to significantly increased luminosity and several optimizations that reduced background contributions and systematic uncertainties, the measurement precision for extracted coefficients is improved compared to CMS TOP-18-006~\cite{Sirunyan:2681777}, by as much as a factor of two for some coefficients. 
+The only remarkable observed deviations from predictions were for the differential measurements of $B_{1}^{k}$, which may be explained by b-quark fragmentation having a large effect on top quark momentum in the \ttbar ZMF.
 
 \begin{table}[htb]
     \centering
@@ -763,15 +880,15 @@ $C_{kk}$ & $0.351 \pm 0.020$ & $0.308^{+0.005}_{-0.005}$ &  $0.321\,^{+0.002}_{-
 $C_{rr}$ & $0.110 \pm 0.019$ & $0.042^{+0.008}_{-0.006}$ &  $0.071\,^{+0.008}_{-0.006} \:\:\:\:\:\:$  \\  
 $C_{nn}$ & $0.345 \pm 0.018$ & $0.317^{+0.001}_{-0.001}$ &  $0.326\,^{+0.002}_{-0.002} \:\:\:\:\:\:$  \\   
 $C_{rk}+C_{kr}$ & $-0.233 \pm 0.060$ & $-0.206^{+0.004}_{-0.004}$ &  $-0.206\,^{+0.002}_{-0.002} \:\:\:\:\:\:$  \\   
-$C_{rk}-C_{kr}$ & $-0.007 \pm 0.016$ & $0.001^{+0.000}_{-0.000}$ &  \multicolumn{1}{c}{$0$}  \\   
+$C_{rk}-C_{kr}$ & $-0.007 \pm 0.016$ & $0.001^{+0.000}_{-0.000}$ &  $0$  \\   
 $C_{nr}+C_{rn}$ & $-0.015 \pm 0.015$ & $0.000^{+0.000}_{-0.000}$ &  $1.06\,^{+0.01}_{-0.01} \times 10^{-3}$  \\   
-$C_{nr}-C_{rn}$ & $-0.018 \pm 0.012$ & $0.000^{+0.000}_{-0.000}$ &  \multicolumn{1}{c}{$0$}  \\   
+$C_{nr}-C_{rn}$ & $-0.018 \pm 0.012$ & $0.000^{+0.000}_{-0.000}$ &  $0$  \\   
 $C_{nk}+C_{kn}$ & $0.010 \pm 0.015$ & $0.000^{+0.000}_{-0.000}$ &  $2.15\,^{+0.04}_{-0.07} \times 10^{-3}$  \\  
-$C_{nk}-C_{kn}$ & $0.008 \pm 0.011$ & $-0.001^{+0.000}_{-0.000}$ &  \multicolumn{1}{c}{$0$}  \\   
-$D$ & $-0.254 \pm 0.009$ & $-0.222^{+0.003}_{-0.004}$ &  $-0.243\,^{+0.003}_{-0.003} \:\:\:\:\:\:$  \\ 
+$C_{nk}-C_{kn}$ & $0.008 \pm 0.011$ & $-0.001^{+0.000}_{-0.000}$ &  $0$  \\   
+$D$ & $-0.254 \pm 0.009$ & $-0.222^{+0.003}_{-0.004}$ &  $-0.243\,^{+0.003}_{-0.003}$  \\ 
 \hline
 \end{tabular}
-    \caption{Top quark polarization and \ttbar\ spin correlation coefficients with combined statistical and systematic uncertainties extracted from the normalized differential cross-sections. 
+    \caption{Top quark polarization and \ttbar\ spin correlation coefficients extracted from the normalized differential cross-sections with combined statistical and systematic uncertainties. 
     Predicted values from the \Powheg+\Pythia\ MC simulation are quoted with combined statistical and scale uncertainties.
     NLO calculated values are quoted with scale uncertainties~\cite{Bernreuther}.
     }
@@ -811,7 +928,7 @@ $B_{2}^{n}, {800 < m_{t\bar{t}} < 2000}$ & $0.008 \pm 0.022$ & $-0.000^{+0.000}_
 \hline
 \end{tabular}
     \caption{
-    Differential top quark polarization coefficients, as a function of $m_{\ttbar}$, with combined statistical and systematic uncertainties extracted from the normalized differential cross-sections. 
+    Differential top quark polarization coefficients, as a function of $m_{\ttbar}$, extracted from the normalized differential cross-sections with combined statistical and systematic uncertainties. 
     Predicted values from the \Powheg+\Pythia\ MC simulation are quoted with combined statistical and scale uncertainties.
     %NLO calculated values are quoted with their scale uncertainties.
     }
@@ -842,7 +959,7 @@ $D, {800 < m_{t\bar{t}} < 2000}$ & $-0.005 \pm 0.026$ & $0.002^{+0.000}_{-0.000}
 \hline
 \end{tabular}
     \caption{
-    Differential \ttbar\ diagonal spin correlation coefficients, as a function of $m_{\ttbar}$, with combined statistical and systematic uncertainties extracted from the normalized differential cross-sections. 
+    Differential \ttbar\ diagonal spin correlation coefficients, as a function of $m_{\ttbar}$, extracted from the normalized differential cross-sections with combined statistical and systematic uncertainties. 
     Predicted values from the \Powheg+\Pythia\ MC simulation are quoted with combined statistical and scale uncertainties.
     }
     \label{tab:Extracted_Coefficients_2D_Diagonal_Spin_Correlations}
@@ -881,7 +998,7 @@ $C_{nk}-C_{kn}, {800 < m_{t\bar{t}} < 2000}$ & $0.112 \pm 0.056$ & $-0.001^{+0.0
 \hline
 \end{tabular}
     \caption{
-    Differential \ttbar\ cross spin correlation coefficients, as a function of $m_{\ttbar}$, with combined statistical and systematic uncertainties extracted from the normalized differential cross-sections. 
+    Differential \ttbar\ cross spin correlation coefficients, as a function of $m_{\ttbar}$, extracted from the normalized differential cross-sections with combined statistical and systematic uncertainties. 
     Predicted values from the \Powheg+\Pythia\ MC simulation are quoted with combined statistical and scale uncertainties.
     }
     \label{tab:Extracted_Coefficients_2D_Cross_Spin_Correlations}
