@@ -248,7 +248,10 @@
 %     \newcommand{\ZZBibProcessor}{BibLaTeX}
 %     \usepackage[backend=biber, citestyle=apa, dashed=false, sortcites=true, style=apa]{biblatex}
 %     \addbibresource{all-biblatex.bib}
-\ConfigureBibliography
+% \ConfigureBibliography
+\newcommand{\ZZBibProcessor}{BibLaTeX}
+\usepackage[backend=biber, citestyle=numeric-comp, dashed=false, locallabelwidth=true, sortcites=true, style=ieee, refsegment=chapter, defernumbers=true]{biblatex}
+\addbibresource{all-biblatex.bib}
 
 %
 % This is only done if you are using BibLaTeX.
@@ -720,6 +723,8 @@
 %     nomenclature
 %     glossary
 %     abstract
+
+
 \include{chapters/ch-Front}
 
 %
