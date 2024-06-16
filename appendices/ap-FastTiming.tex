@@ -1,7 +1,15 @@
 \ProvidesFile{appendices/ap-FastTiming.tex}
+\begin{refsection}
 
 \chapter{UTILIZING INDUCED CURRENTS FOR FAST TIMING INFORMATION IN PIXEL DETECTORS TO ACHIEVE FOUR-DIMENSIONAL TRACKING}
 \label{Fast_Timing}
+
+\begin{cabstract}
+Appendix~\ref{Fast_Timing} explores the potential of using induced currents for fast timing information in pixel detectors, with the ultimate goal of achieving four-dimensional tracking. 
+It begins with an overview and motivation for the research, explaining the need for precise timing and four-dimensional tracking in high-energy physics experiments. 
+Results from simulations using TCAD and SPICE are presented, highlighting the promise of small pixels, induced currents, and fast electronics in terms of timing precision. 
+The findings suggest that this novel concept has the potential to provide the required timing precision, and if realized, could lead to significant advancements in detector technology.
+\end{cabstract}
 
 \section{Overview and Motivation}
 To increase the physics reach potential of high-energy collision experiments, the HL-LHC upgrade aims to vastly increase the instantaneous luminosity of the LHC beyond its current value. 
@@ -24,7 +32,7 @@ Smaller pixels provide better resolution, have better efficiency by avoiding in-
     \begin{tabular}{c}
         \includegraphics[width=0.45\textwidth]{fig_FastTiming/Jitter.png}
     \end{tabular}
-    \caption{Fluctuations in signal amplitude crossing a voltage threshold translate into timing fluctuations called ``jitter.''
+    \caption{Fluctuations in signal amplitude crossing a voltage threshold translate into timing fluctuations called ``jitter''~\cite{Spieler:369858}.
             }            
     \label{Jitter}
   \end{center}
@@ -201,3 +209,7 @@ Time walk and ionization fluctuation components of timing resolution were not co
 
 As a concluding remark, small pixel detector systems show promise for addressing some of the extreme challenges of future high-energy particle experiments, including precise position and timing resolution, complex event topology, and radiation hardness.
 This study considers some toy models, but for real application of these ideas, there are many more electronics and system engineering considerations that need to be studied.
+
+\clearpage
+\printbibliography[heading=subbibliography,resetnumbers=true]
+\end{refsection}

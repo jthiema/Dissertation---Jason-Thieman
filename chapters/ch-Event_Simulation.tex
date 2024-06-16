@@ -1,10 +1,13 @@
 \ProvidesFile{chapters/ch-Event_Simulation.tex}
+\begin{refsection}
 
 \chapter{MONTE CARLO EVENT SIMULATION}
 \label{Monte_Carlo_Event_Simulation}
 
 \begin{cabstract}
-test test test test test test test
+This chapter provides an overview of the Monte Carlo (MC) simulation techniques used to model proton-proton ($pp$) collisions. 
+The importance of accurate event simulation for interpreting experimental data is discussed. 
+The stages of simulation are summarized, emphasizing the use of probabilistic and phenomenological models for simulating particle interactions and detector effects. 
 \end{cabstract}
 
 In particle physics, completely analytical simulations are far too complicated and computationally expensive to be feasible.
@@ -17,7 +20,7 @@ A schematic representation of the different steps of MC simulation for $pp$ coll
     \begin{tabular}{c}
         \includegraphics[width=0.9\textwidth]{fig_Event_Simulation/MC_simulation.png}
     \end{tabular}
-    \caption{A schematic representation of the different steps of MC simulation for $pp$ collisions~\cite{bartosik}.
+    \caption{A schematic representation of the different steps of MC simulation for $pp$ collisions~\cite{Bartosik:222384}.
             }
     \label{MC_simulation}
   \end{center}
@@ -117,4 +120,6 @@ The collection of \Geant-simulated detector responses for an event is stored in 
 
 
 
-\printbibliography[segment=\therefsegment,heading=subbibliography]
+\clearpage
+\printbibliography[heading=subbibliography,resetnumbers=true]
+\end{refsection}

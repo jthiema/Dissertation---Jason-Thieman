@@ -250,7 +250,8 @@
 %     \addbibresource{all-biblatex.bib}
 % \ConfigureBibliography
 \newcommand{\ZZBibProcessor}{BibLaTeX}
-\usepackage[backend=biber, citestyle=numeric-comp, dashed=false, locallabelwidth=true, sortcites=true, style=ieee, refsegment=chapter, defernumbers=true]{biblatex}
+%\usepackage[backend=biber, citestyle=numeric-comp, dashed=false, locallabelwidth=true, sortcites=true, style=ieee, refsegment=chapter, defernumbers=true]{biblatex}
+\usepackage[backend=biber, citestyle=numeric-comp, dashed=false, locallabelwidth=true, sortcites=true, style=ieee, defernumbers=true]{biblatex}
 \addbibresource{all-biblatex.bib}
 
 %
@@ -798,13 +799,13 @@
 \setlength{\labelwidth}{1.5in}
 \def\sllnsez{[999] }
 
-{%
-  % Make _ in URLs visible.
-  % \def\t{\char'137}%
-  \catcode`*=\active
-  \def*{\char'137}%  \char'137 is _
-  \PrintBibliography
-}
+% {%
+%   % Make _ in URLs visible.
+%   % \def\t{\char'137}%
+%   \catcode`*=\active
+%   \def*{\char'137}%  \char'137 is _
+%   \PrintBibliography
+% }
 
 
 % My filename conventions:

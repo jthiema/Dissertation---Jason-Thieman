@@ -1,10 +1,13 @@
 \ProvidesFile{chapters/ch-Cross_Section_Measurement.tex}
+\begin{refsection}
+
 
 \chapter{MEASUREMENTS OF DIFFERENTIAL CROSS-SECTIONS}
 \label{Measurements_of_Differential_Cross-sections}
 
 \begin{cabstract}
-test test test test test test test
+This chapter discusses the procedures for measurement of differential cross-sections and the unfolding procedure used to correct for detector effects and obtain parton-level differential cross-sections extrapolated to the full phase space that are the focal points of the this dissertation.
+The sources of systematic uncertainties associated with these measurements are highlighted, as well as the methods employed to mitigate them. 
 \end{cabstract}
 
 The measurements of differential cross-sections presented in this dissertation follow the analysis strategy of CMS TOP-18-006~\cite{Sirunyan:2681777} but have been extended with additional observables, differential measurements as a function of \ttbar invariant mass, several optimizations that reduce systematic uncertainties and significantly increased luminosity.
@@ -97,7 +100,7 @@ The differential measurements are well-motivated based on the revelations discus
 Prior to unfolding, the predicted MC simulated signal and background rates are used to subtract the estimated background contributions in each bin of distributions measured with recorded data:
 \begin{linenomath*}
 \begin{align}
-N^{Data}_{Signal} = N^{Data}_{Total} - N^{MC}_{Background}.
+N^{Data}_{Signal} = N^{Data}_{Total} - N^{MC}_{Background}
 \label{Data_Background_Subtraction}
 \end{align}
 \end{linenomath*}
@@ -436,8 +439,6 @@ The impact of modeling assumptions is determined by repeating the analysis with 
 
 
 
-\printbibliography[segment=\therefsegment,heading=subbibliography]
-
-
-
-
+\clearpage
+\printbibliography[heading=subbibliography,resetnumbers=true]
+\end{refsection}

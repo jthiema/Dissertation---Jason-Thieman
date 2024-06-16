@@ -1,7 +1,16 @@
 \ProvidesFile{appendices/ap-TriggerSF.tex}
+\begin{refsection}
+
 
 \chapter{MEASUREMENTS OF TRIGGER EFFICIENCY SCALE FACTORS FOR SELECTION OF \ensuremath{\mathrm{t\bar{t}}} DILEPTON FINAL STATES}
 \label{Trigger_Efficiency_Scale_Factors}
+
+\begin{cabstract}
+Appendix~\ref{Trigger_Efficiency_Scale_Factors} details the method and results of measuring trigger efficiency scale factors for the selection of top quark pair (\ttbar) events that decay via the dileptonic mode with dilepton (\ee, \emu, \mumu) final states.
+The results, which were used by virtually all CMS Run II measurements analyzing \ttbar events that decay via the dileptonic mode, are crucial for correcting the trigger efficiencies in Monte Carlo simulations to match those observed in real data.
+It discusses the datasets and triggers used, the criteria for object and event selection, and also covers statistical and systematic uncertainties associated with these measurements. 
+Additionally, this appendix includes dedicated trigger efficiency scale factor measurements that were used specifically for investigating Lorentz Invariance Violation in \ttbar production.
+\end{cabstract}
 
 \section{Overview and Motivation}
 Here is presented the measurements of the trigger efficiencies and corrective scale factors that were used by virtually all CMS Run II measurements analyzing \ttbar events that decay via the dileptonic mode with \ee, \emu, \mumu final states.  
@@ -447,7 +456,7 @@ Lorentz symmetry (i.e. that the laws of physics are the same in all inertial fra
 Violation of Lorentz symmetry could indicate the presence of NP.
 One method to search for a violation of Lorentz invariance is to search for a modulation of the \ttbar cross-section as a function of sidereal time (the orientation of the experiment relative to the fixed position of stars in the sky).
 The D0 collaboration performed such a search with semi-leptonic final states and the results were published in Physical Review Letters~\cite{PhysRevLett.108.261603}.
-In order to accommodate a CMS search for a violation of Lorentz invariance, the dilepton trigger efficiency scale factors were measured one-dimensionally as a function of sidereal time using the same method outlined above, with the exception of using custom time-dependent corrections and not including the number of vertices partition as a source of event topology systematic uncertainty.
+In order to accommodate a CMS search for a violation of Lorentz invariance (TOP-22-007), the dilepton trigger efficiency scale factors were measured one-dimensionally as a function of sidereal time using the same method outlined above, with the exception of using custom time-dependent corrections and not including the number of vertices partition as a source of event topology systematic uncertainty~\cite{CMS-PAS-TOP-22-007}.
 
 \subsection{Translating UNIX Time to Sidereal Time}
 Every CMS data event is recorded with a UNIX timestamp. 
@@ -502,3 +511,10 @@ In this equation:
 \end{figure}
 
 \clearpage
+
+
+
+
+\clearpage
+\printbibliography[heading=subbibliography,resetnumbers=true]
+\end{refsection}
