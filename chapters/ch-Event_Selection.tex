@@ -158,6 +158,9 @@ The event is then unambiguously classified as \ee, \emu, or \mumu depending on t
 The invariant mass of the selected lepton pair is required to be larger than $\SI{20}{\GeV}$ to suppress background events from decays of heavy-flavor resonances and Drell-Yan processes.
 Moreover, in the \ee and \mumu decay channels, events are rejected if the dilepton invariant mass is within the vicinity of the $Z$ boson mass $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$, where background from $Z$ boson production is dominant.
 
+Control plots of the dilepton invariant mass and jet multiplicity distributions for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after selection of two isolated leptons passing the trigger requirements and $m_{\ell\bar{\ell}} > \SI{20}{\GeV}$ are shown in figure~\ref{fig:AfterLeptonSelection}.
+For the jet multiplicity distribution, events in the \ee and \mumu channels with $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$ have also been rejected.
+
 \subsection{Jets}
 \label{PF_Reconstruction_Jets}
 Quarks and gluons produced in $pp$ collisions hadronize into collimated showers of particles called jets.
@@ -213,6 +216,11 @@ PUPPI is an alternative to the PF CHS algorithm which gives weights to particles
 The JEC (JES and JER) and lepton energy scale corrections are propagated to the \ETmiss.
 Events in the \ee and \mumu channels are required to have $\ETmiss > \SI{40}{\GeV}$, but no requirement on \ETmiss is applied in the \emu channel.
 
+Controls plots of the \ETmiss and $b$-tagged jet multiplicity distributions for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after selection of two isolated leptons passing the trigger requirements, $m_{\ell\bar{\ell}} > \SI{20}{\GeV}$, $N_{jets} \geq 2$, and rejecting events in the \ee and \mumu channels with $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$ are shown in figure~\ref{fig:AfterMETSelection}.
+For the $b$-tagged jet multiplicity distribution, events in the \ee and \mumu channels with $\ETmiss < \SI{40}{\GeV}$ have also been rejected.
+
+
+
 \subsection{Tagging of b-Jets}
 Selected events are required to have at least one jet tagged as having originated from a $b$-quark.
 In this analysis, the DeepJet $b$-tagging algorithm~\cite{bib:Bols_2020}, which uses approximately 650 input variables, divided into four categories (global variables, charged PF candidate features, neutral PF candidate features, and SV features associated with the jet) as inputs for a deep neural network, is used to tag all reconstructed jets in the event.
@@ -244,6 +252,7 @@ A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of
         No \zjets\ scaling has been applied yet.
         Statistical uncertainties are shown as error bars on the data points, and total systematic uncertainties are indicated by the hatched uncertainty band.
         }
+    \label{fig:AfterLeptonSelection}        
     \end{center}
 \end{figure}
 
@@ -253,13 +262,14 @@ A DeepJet medium working point is used with light ($l$)-jet mistag efficiency of
             \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/MET_preMETcut.pdf}
             \includegraphics[width=0.40\textwidth]{fig_fullRun2UL/controlplots/combined/HypBjetMulti_noBTag.pdf}
         \end{tabular}
-        \caption{\footnotesize \ETmiss and $b$-tagged jet multiplicity distribution for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after selection of two isolated leptons passing the trigger requirements, $m_{\ell\bar{\ell}} > \SI{20}{\GeV}$, $N_{jets} \geq 2$, and rejecting events in the \ee and \mumu channels with $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$.
+        \caption{\footnotesize \ETmiss and $b$-tagged jet multiplicity distributions for combined 2016preVFP, 2016postVFP, 2017, 2018 eras and combined \ee, \emu, \mumu channels after selection of two isolated leptons passing the trigger requirements, $m_{\ell\bar{\ell}} > \SI{20}{\GeV}$, $N_{jets} \geq 2$, and rejecting events in the \ee and \mumu channels with $\SI{76}{\GeV} < m_{\ell\bar{\ell}} < \SI{106}{\GeV}$.
         For the $b$-tagged jet multiplicity distribution, events in the \ee and \mumu channels with $\ETmiss < \SI{40}{\GeV}$ have also been rejected.
         The simulated samples are re-weighted to an integrated luminosity of \lumivalueRuniiUL.
         Trigger efficiency, lepton selection, and $b$-tagging efficiency scale factors discussed in section~\ref{Experimental_Systematics} are applied.
         The \zjets\ contributions in MC have been scaled to better describe the number of events observed in recorded data, as discussed in section~\ref{Zjets_Background_Determination}.
         Statistical uncertainties are shown as error bars on the data points, and total systematic uncertainties are indicated by the hatched uncertainty band.        
         }
+    \label{fig:AfterMETSelection}        
     \end{center}
 \end{figure}
 
